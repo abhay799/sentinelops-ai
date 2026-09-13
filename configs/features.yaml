@@ -1,0 +1,34 @@
+feature_platform:
+
+  version: v1
+
+  windows:
+    short_seconds: 60
+    medium_seconds: 300
+
+  latency:
+    percentiles:
+      - 0.95
+      - 0.99
+
+  output:
+    service_features:
+      path: data/processed/features/service_features_v1.parquet
+
+    temporal_features:
+      path: data/processed/features/temporal_features_v1.parquet
+
+  required_features:
+    - request_count
+    - request_rate_per_min
+    - request_rate_change
+    - error_rate
+    - latency_mean_ms
+    - latency_p95_ms
+    - latency_p99_ms
+    - trace_count
+    - change_event_count
+    - dependency_count
+    - cpu_seconds_per_second
+    - memory_rss_bytes
+    - memory_growth_bytes_per_second
