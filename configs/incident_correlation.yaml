@@ -1,0 +1,19 @@
+incident_correlation:
+
+  version: v1
+
+  correlation_window_seconds: 120
+  maximum_graph_hops: 2
+
+  severity:
+    critical: 0.80
+    high: 0.60
+    medium: 0.35
+    low: 0.10
+
+  output:
+    incidents:
+      path: data/processed/incidents/incidents_v1.parquet
+
+    members:
+      path: data/processed/incidents/incident_members_v1.parquet
