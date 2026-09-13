@@ -1,0 +1,19 @@
+rca:
+
+  version: v1
+
+  weights:
+    anomaly_strength: 0.45
+    change_signal: 0.25
+    graph_impact: 0.20
+    primary_service_bonus: 0.10
+
+  confidence:
+    high: 0.75
+    medium: 0.50
+
+  max_candidates: 5
+
+  output:
+    hypotheses:
+      path: data/processed/rca/rca_hypotheses_v1.parquet
