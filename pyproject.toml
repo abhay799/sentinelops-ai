@@ -13,11 +13,29 @@ authors = [
     { name = "Abhay Kumar" }
 ]
 
-dependencies = []
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "sqlalchemy",
+    "psycopg[binary]",
+    "redis",
+    "aiokafka",
+    "prometheus-client",
+    "structlog",
+    "httpx",
+    "pydantic",
+    "pydantic-settings",
+    "PyYAML",
+    "python-dotenv",
+]
 
 
 [project.optional-dependencies]
-dev = []
+dev = [
+    "pytest",
+    "ruff",
+    "mypy",
+]
 
 
 [tool.setuptools]

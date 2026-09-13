@@ -15,7 +15,6 @@ from sentinelops.schemas.rca import (
 )
 from sentinelops.schemas.remediation import (
     GuardDecision,
-    RiskLevel,
     SentinelGuardDecision,
 )
 from sentinelops.schemas.telemetry import (
