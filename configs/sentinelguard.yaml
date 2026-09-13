@@ -1,0 +1,49 @@
+sentinelguard:
+  enabled: true
+  default_mode: recommend_only
+
+  decisions:
+    - AUTO_EXECUTE
+    - APPROVAL_REQUIRED
+    - RECOMMEND_ONLY
+    - BLOCK
+
+  requirements:
+    evidence_required: true
+    confidence_required: true
+    rollback_required: true
+    permissions_required: true
+    blast_radius_check_required: true
+    service_criticality_check_required: true
+
+  confidence:
+    auto_execute_min: 0.95
+    approval_required_min: 0.80
+    recommend_only_min: 0.60
+
+  auto_execute:
+    enabled: false
+
+    allowed_risk_levels:
+      - low
+
+  blocked_actions:
+    - restart_production_database
+    - delete_database
+    - delete_persistent_volume
+    - disable_authentication
+    - remove_all_replicas
+
+  rollback:
+    required: true
+    verify_before_execution: true
+
+  verification:
+    required_after_action: true
+    rollback_on_failed_recovery: true
+
+  audit:
+    log_every_decision: true
+    log_evidence: true
+    log_confidence: true
+    log_actor: true

@@ -1,0 +1,18 @@
+app:
+  name: SentinelOps AI
+  version: 0.1.0
+  environment: development
+  host: 127.0.0.1
+  port: 8000
+
+logging:
+  level: INFO
+  structured: true
+
+runtime:
+  timezone: UTC
+  fail_closed: true
+
+health:
+  live_endpoint: /live
+  ready_endpoint: /ready

@@ -1,0 +1,92 @@
+failure_scenarios:
+
+  - id: F001
+    name: payment_memory_leak
+    target_service: payment-service
+    category: resource_exhaustion
+    severity: high
+
+    trigger:
+      type: memory_leak
+      duration_seconds: 900
+
+    expected_signals:
+      - memory_usage_increase
+      - latency_increase
+      - gc_pressure
+      - downstream_timeout
+
+    expected_rca:
+      primary_service: payment-service
+      suspected_cause: memory_exhaustion
+
+
+  - id: F002
+    name: database_saturation
+    target_service: postgres
+    category: database
+    severity: critical
+
+    trigger:
+      type: connection_saturation
+
+    expected_signals:
+      - query_latency_increase
+      - connection_pool_exhaustion
+      - payment_errors
+      - order_timeouts
+
+    expected_rca:
+      primary_service: postgres
+      suspected_cause: database_contention
+
+
+  - id: F003
+    name: bad_payment_deployment
+    target_service: payment-service
+    category: deployment
+    severity: critical
+
+    trigger:
+      type: bad_release
+      version_before: "2.7"
+      version_after: "2.8"
+
+    expected_signals:
+      - deployment_event
+      - memory_growth
+      - latency_increase
+      - error_rate_increase
+
+    expected_remediation:
+      action: rollback_deployment
+
+
+  - id: F004
+    name: kafka_queue_backlog
+    target_service: kafka
+    category: messaging
+    severity: high
+
+    trigger:
+      type: consumer_slowdown
+
+    expected_signals:
+      - queue_depth_increase
+      - consumer_lag
+      - processing_latency_increase
+
+
+  - id: F005
+    name: service_crash_loop
+    target_service: order-service
+    category: availability
+    severity: high
+
+    trigger:
+      type: repeated_restart
+
+    expected_signals:
+      - pod_restarts
+      - request_failures
+      - downstream_errors

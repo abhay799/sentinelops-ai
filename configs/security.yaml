@@ -1,0 +1,75 @@
+security:
+
+  authentication:
+    enabled: true
+    mode: token_based
+
+  authorization:
+    enabled: true
+    default_deny: true
+
+    roles:
+      - viewer
+      - operator
+      - approver
+      - admin
+
+  permissions:
+
+    viewer:
+      - read_health
+      - read_services
+      - read_incidents
+      - read_rca
+      - read_predictions
+
+    operator:
+      - read_health
+      - read_services
+      - read_incidents
+      - read_rca
+      - read_predictions
+      - propose_remediation
+
+    approver:
+      - read_health
+      - read_services
+      - read_incidents
+      - read_rca
+      - read_predictions
+      - propose_remediation
+      - approve_remediation
+
+    admin:
+      - "*"
+
+  secrets:
+    allow_plaintext_secrets: false
+    allow_secrets_in_git: false
+    environment_file: .env
+
+  api:
+    require_authentication: true
+    rate_limiting_enabled: true
+
+  execution:
+    require_authorization: true
+    require_sentinelguard: true
+    require_audit_log: true
+
+  audit:
+    enabled: true
+    immutable_events: true
+
+    record:
+      - actor
+      - action
+      - target
+      - timestamp
+      - decision
+      - evidence
+      - result
+
+  safety:
+    fail_closed: true
+    deny_unknown_actions: true

@@ -1,0 +1,60 @@
+telemetry:
+  timezone: UTC
+
+  metrics:
+    enabled: true
+    scrape_interval_seconds: 15
+
+    required:
+      - cpu_usage
+      - memory_usage
+      - request_rate
+      - error_rate
+      - latency
+      - queue_depth
+      - disk_io
+      - network_io
+      - pod_restarts
+
+  logs:
+    enabled: true
+
+    required_fields:
+      - event_time
+      - ingest_time
+      - service
+      - level
+      - message
+      - trace_id
+
+  traces:
+    enabled: true
+
+    required_fields:
+      - trace_id
+      - span_id
+      - parent_span_id
+      - service
+      - operation
+      - start_time
+      - end_time
+      - status
+
+  changes:
+    enabled: true
+
+    types:
+      - deployment
+      - configuration_change
+      - scaling_event
+      - feature_release
+      - version_change
+
+event_time:
+  standard: UTC
+  retain_original_timezone: true
+
+ingestion:
+  allow_late_events: true
+  late_event_tolerance_seconds: 300
+  deduplicate_events: true

@@ -1,0 +1,60 @@
+services:
+  - name: api-gateway
+    type: gateway
+    criticality: high
+    owner: platform
+    enabled: true
+
+  - name: user-service
+    type: application
+    criticality: medium
+    owner: backend
+    enabled: true
+
+  - name: order-service
+    type: application
+    criticality: high
+    owner: backend
+    enabled: true
+
+  - name: payment-service
+    type: application
+    criticality: critical
+    owner: payments
+    enabled: true
+
+  - name: inventory-service
+    type: application
+    criticality: high
+    owner: backend
+    enabled: true
+
+  - name: notification-service
+    type: application
+    criticality: low
+    owner: backend
+    enabled: true
+
+  - name: auth-service
+    type: application
+    criticality: critical
+    owner: security
+    enabled: true
+
+  - name: postgres
+    type: database
+    criticality: critical
+    owner: platform
+    enabled: true
+
+  - name: redis
+    type: cache
+    criticality: high
+    owner: platform
+    enabled: true
+
+  - name: kafka
+    type: message_broker
+    criticality: high
+    owner: platform
+    enabled: true

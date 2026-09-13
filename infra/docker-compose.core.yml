@@ -1,0 +1,64 @@
+services:
+
+  postgres:
+    image: postgres:17
+    container_name: sentinelops-postgres
+
+    environment:
+      POSTGRES_DB: sentinelops
+      POSTGRES_USER: sentinelops
+      POSTGRES_PASSWORD: sentinelops_dev
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - sentinelops_postgres_data:/var/lib/postgresql/data
+
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U sentinelops -d sentinelops"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+    restart: unless-stopped
+
+
+  redis:
+    image: redis:7-alpine
+    container_name: sentinelops-redis
+
+    ports:
+      - "6379:6379"
+
+    command:
+      [
+        "redis-server",
+        "--appendonly",
+        "yes"
+      ]
+
+    volumes:
+      - sentinelops_redis_data:/data
+
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "redis-cli",
+          "ping"
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+    restart: unless-stopped
+
+
+volumes:
+  sentinelops_postgres_data:
+  sentinelops_redis_data:

@@ -1,0 +1,43 @@
+evaluation:
+
+  anomaly_detection:
+    metrics:
+      - precision
+      - recall
+      - f1_score
+      - false_positive_rate
+
+  incident_correlation:
+    metrics:
+      - alert_reduction_ratio
+      - incident_grouping_accuracy
+
+  rca:
+    metrics:
+      - top1_accuracy
+      - top3_accuracy
+      - evidence_coverage
+      - false_rca_rate
+
+  prediction:
+    metrics:
+      - precision
+      - recall
+      - lead_time_minutes
+
+  remediation:
+    metrics:
+      - recovery_success_rate
+      - rollback_success_rate
+      - mean_time_to_recovery
+
+  sentinelguard:
+    metrics:
+      - unsafe_action_block_rate
+      - false_auto_execute_rate
+
+  reliability:
+    metrics:
+      - mttr
+      - availability
+      - slo_burn_rate

@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=80", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "sentinelops-ai"
+version = "0.1.0"
+description = "Autonomous Reliability Intelligence & Failure Prevention Platform"
+readme = "README.md"
+requires-python = ">=3.14"
+authors = [
+    { name = "Abhay Kumar" }
+]
+
+dependencies = []
+
+
+[project.optional-dependencies]
+dev = []
+
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+
+[tool.ruff]
+line-length = 100
+target-version = "py314"
+
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
+
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+warn_unused_configs = true
