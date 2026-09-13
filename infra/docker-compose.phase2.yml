@@ -1,0 +1,116 @@
+services:
+
+  gateway:
+    build:
+      context: ..
+      dockerfile: services/gateway/Dockerfile
+    container_name: sentinelops-gateway
+    environment:
+      SERVICE_NAME: api-gateway
+      SERVICE_PORT: 8100
+      DOWNSTREAMS: >-
+        user-service=http://user-service:8101,
+        order-service=http://order-service:8102,
+        auth-service=http://auth-service:8106
+    ports:
+      - "8100:8100"
+    depends_on:
+      user-service:
+        condition: service_healthy
+      order-service:
+        condition: service_healthy
+      auth-service:
+        condition: service_healthy
+    restart: unless-stopped
+
+
+  user-service:
+    build:
+      context: ..
+      dockerfile: services/user/Dockerfile
+    container_name: sentinelops-user
+    environment:
+      SERVICE_NAME: user-service
+      SERVICE_PORT: 8101
+    ports:
+      - "8101:8101"
+    restart: unless-stopped
+
+
+  order-service:
+    build:
+      context: ..
+      dockerfile: services/order/Dockerfile
+    container_name: sentinelops-order
+    environment:
+      SERVICE_NAME: order-service
+      SERVICE_PORT: 8102
+      DOWNSTREAMS: >-
+        payment-service=http://payment-service:8103,
+        inventory-service=http://inventory-service:8104,
+        notification-service=http://notification-service:8105
+    ports:
+      - "8102:8102"
+    depends_on:
+      payment-service:
+        condition: service_healthy
+      inventory-service:
+        condition: service_healthy
+    restart: unless-stopped
+
+
+  payment-service:
+    build:
+      context: ..
+      dockerfile: services/payment/Dockerfile
+    container_name: sentinelops-payment
+    environment:
+      SERVICE_NAME: payment-service
+      SERVICE_PORT: 8103
+      POSTGRES_HOST: sentinelops-postgres
+      REDIS_HOST: sentinelops-redis
+      KAFKA_BOOTSTRAP_SERVERS: sentinelops-kafka:29092
+    ports:
+      - "8103:8103"
+    restart: unless-stopped
+
+
+  inventory-service:
+    build:
+      context: ..
+      dockerfile: services/inventory/Dockerfile
+    container_name: sentinelops-inventory
+    environment:
+      SERVICE_NAME: inventory-service
+      SERVICE_PORT: 8104
+    ports:
+      - "8104:8104"
+    restart: unless-stopped
+
+
+  notification-service:
+    build:
+      context: ..
+      dockerfile: services/notification/Dockerfile
+    container_name: sentinelops-notification
+    environment:
+      SERVICE_NAME: notification-service
+      SERVICE_PORT: 8105
+      KAFKA_BOOTSTRAP_SERVERS: sentinelops-kafka:29092
+    ports:
+      - "8105:8105"
+    restart: unless-stopped
+
+
+  auth-service:
+    build:
+      context: ..
+      dockerfile: services/auth/Dockerfile
+    container_name: sentinelops-auth
+    environment:
+      SERVICE_NAME: auth-service
+      SERVICE_PORT: 8106
+      REDIS_HOST: sentinelops-redis
+    ports:
+      - "8106:8106"
+    restart: unless-stopped

@@ -1,0 +1,28 @@
+topology:
+
+  api-gateway:
+    depends_on:
+      - user-service
+      - order-service
+      - auth-service
+
+  user-service:
+    depends_on: []
+
+  order-service:
+    depends_on:
+      - payment-service
+      - inventory-service
+      - notification-service
+
+  payment-service:
+    depends_on: []
+
+  inventory-service:
+    depends_on: []
+
+  notification-service:
+    depends_on: []
+
+  auth-service:
+    depends_on: []
