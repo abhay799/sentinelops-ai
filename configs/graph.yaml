@@ -1,0 +1,17 @@
+graph_intelligence:
+
+  version: v1
+
+  propagation:
+    decay: 0.60
+    minimum_source_score: 0.10
+
+  severity:
+    critical: 0.80
+    high: 0.60
+    medium: 0.35
+    low: 0.10
+
+  output:
+    service_risk:
+      path: data/processed/graph/service_risk_v1.parquet
