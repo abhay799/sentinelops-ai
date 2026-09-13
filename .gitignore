@@ -1,0 +1,222 @@
+# ============================================================
+# SentinelOps AI
+# Git Ignore Rules
+# ============================================================
+
+
+# ------------------------------------------------------------
+# Python virtual environments
+# ------------------------------------------------------------
+
+.venv/
+venv/
+env/
+ENV/
+
+
+# ------------------------------------------------------------
+# Python cache / compiled files
+# ------------------------------------------------------------
+
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+
+# ------------------------------------------------------------
+# Environment variables / secrets
+# ------------------------------------------------------------
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+secrets/
+credentials/
+
+
+# ------------------------------------------------------------
+# IDE / editor
+# ------------------------------------------------------------
+
+.vscode/
+.idea/
+
+*.swp
+*.swo
+
+
+# ------------------------------------------------------------
+# Operating system
+# ------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# ------------------------------------------------------------
+# Logs
+# ------------------------------------------------------------
+
+*.log
+logs/
+
+
+# ------------------------------------------------------------
+# Temporary files
+# ------------------------------------------------------------
+
+tmp/
+temp/
+.cache/
+
+*.tmp
+*.bak
+
+
+# ------------------------------------------------------------
+# Python packaging
+# ------------------------------------------------------------
+
+build/
+dist/
+*.egg-info/
+.eggs/
+
+
+# ------------------------------------------------------------
+# Jupyter
+# ------------------------------------------------------------
+
+.ipynb_checkpoints/
+
+
+# ------------------------------------------------------------
+# Data
+#
+# Keep directory structure in Git using .gitkeep files.
+# Actual telemetry / generated datasets should not be committed.
+# ------------------------------------------------------------
+
+data/raw/*
+data/processed/*
+data/interim/*
+data/telemetry/*
+data/incidents/*
+data/simulations/*
+
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/interim/.gitkeep
+!data/telemetry/.gitkeep
+!data/incidents/.gitkeep
+!data/simulations/.gitkeep
+
+
+# ------------------------------------------------------------
+# ML / DL model artifacts
+# ------------------------------------------------------------
+
+models/*.pt
+models/*.pth
+models/*.ckpt
+models/*.onnx
+models/*.joblib
+models/*.pkl
+models/*.bin
+
+models/checkpoints/
+models/cache/
+
+
+# ------------------------------------------------------------
+# Generated project artifacts
+# ------------------------------------------------------------
+
+artifacts/*
+!artifacts/.gitkeep
+
+
+# ------------------------------------------------------------
+# Benchmark output
+# ------------------------------------------------------------
+
+benchmarks/results/
+benchmarks/output/
+
+
+# ------------------------------------------------------------
+# Monitoring local data
+# ------------------------------------------------------------
+
+monitoring/data/
+
+
+# ------------------------------------------------------------
+# PostgreSQL / Redis / Kafka local volumes
+# ------------------------------------------------------------
+
+volumes/
+postgres-data/
+redis-data/
+kafka-data/
+
+
+# ------------------------------------------------------------
+# Docker overrides / local-only configuration
+# ------------------------------------------------------------
+
+docker-compose.override.yml
+
+
+# ------------------------------------------------------------
+# Kubernetes local secrets
+# ------------------------------------------------------------
+
+deployments/**/*secret*.yaml
+deployments/**/*secret*.yml
+
+
+# ------------------------------------------------------------
+# Frontend dependencies/build output
+# ------------------------------------------------------------
+
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.next/
+frontend/.vite/
+
+
+# ------------------------------------------------------------
+# MLflow / Airflow local state
+# ------------------------------------------------------------
+
+mlruns/
+mlartifacts/
+
+airflow.db
+airflow.cfg
+airflow-webserver.pid
+
+
+# ------------------------------------------------------------
+# Local databases
+# ------------------------------------------------------------
+
+*.db
+*.sqlite
+*.sqlite3
