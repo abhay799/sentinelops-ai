@@ -62,3 +62,7 @@ services:
 volumes:
   sentinelops_postgres_data:
   sentinelops_redis_data:
+networks:
+  default:
+    name: sentinelops-net
+    external: true

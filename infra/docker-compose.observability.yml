@@ -52,3 +52,7 @@ services:
 
 volumes:
   sentinelops_grafana_data:
+networks:
+  default:
+    name: sentinelops-net
+    external: true

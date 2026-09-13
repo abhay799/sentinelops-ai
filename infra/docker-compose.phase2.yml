@@ -114,3 +114,7 @@ services:
     ports:
       - "8106:8106"
     restart: unless-stopped
+networks:
+  default:
+    name: sentinelops-net
+    external: true

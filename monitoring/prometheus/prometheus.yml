@@ -4,10 +4,21 @@ global:
 
 scrape_configs:
 
-  - job_name: sentinelops
+  - job_name: sentinelops-api
     static_configs:
       - targets:
           - host.docker.internal:8000
+
+  - job_name: sentinelops-services
+    static_configs:
+      - targets:
+          - sentinelops-gateway:8100
+          - sentinelops-user:8101
+          - sentinelops-order:8102
+          - sentinelops-payment:8103
+          - sentinelops-inventory:8104
+          - sentinelops-notification:8105
+          - sentinelops-auth:8106
 
   - job_name: prometheus
     static_configs:

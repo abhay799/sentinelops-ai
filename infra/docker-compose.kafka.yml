@@ -44,3 +44,7 @@ services:
       KAFKA_NUM_PARTITIONS: 3
 
     restart: unless-stopped
+networks:
+  default:
+    name: sentinelops-net
+    external: true
