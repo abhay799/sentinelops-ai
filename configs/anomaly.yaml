@@ -1,0 +1,38 @@
+anomaly_detection:
+
+  version: v1
+
+  features:
+    - request_rate_60s
+    - error_rate_60s
+    - latency_mean_60s
+    - latency_p95_60s
+    - request_rate_300s
+    - error_rate_300s
+    - latency_mean_300s
+    - latency_p95_300s
+    - latency_p99_300s
+    - trace_count_300s
+    - change_count_300s
+
+  statistical:
+    zscore_threshold: 2.5
+
+  ewma:
+    alpha: 0.30
+    threshold_multiplier: 2.5
+
+  isolation_forest:
+    n_estimators: 200
+    contamination: 0.10
+    random_state: 42
+
+  ensemble:
+    minimum_votes: 2
+
+  output:
+    anomaly_scores:
+      path: data/processed/anomalies/anomaly_scores_v1.parquet
+
+    model:
+      path: models/anomaly/isolation_forest_v1.joblib
