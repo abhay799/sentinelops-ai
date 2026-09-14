@@ -1,0 +1,24 @@
+investigation:
+
+  version: v1
+
+  rag:
+    corpus_path: docs/runbooks
+    top_k: 3
+    minimum_similarity: 0.0
+
+  safety:
+    require_evidence: true
+    forbid_agent_rca_confirmation: true
+    forbid_agent_execution: true
+    require_source_references: true
+
+  output:
+    evidence:
+      path: data/processed/investigation/evidence_bundle_v1.json
+
+    retrieval:
+      path: data/processed/investigation/retrieval_v1.json
+
+    report:
+      path: data/processed/investigation/investigation_report_v1.json
