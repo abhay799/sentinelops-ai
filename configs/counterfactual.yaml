@@ -1,0 +1,31 @@
+counterfactual:
+
+  version: v1
+
+  minimum_causal_score: 0.50
+
+  actions:
+
+    rollback:
+      effectiveness: 0.70
+      operational_risk: 0.10
+      requires_change_signal: true
+
+    traffic_shift:
+      effectiveness: 0.55
+      operational_risk: 0.20
+      requires_change_signal: false
+
+    restart:
+      effectiveness: 0.30
+      operational_risk: 0.25
+      requires_change_signal: false
+
+    no_action:
+      effectiveness: 0.00
+      operational_risk: 0.00
+      requires_change_signal: false
+
+  output:
+    simulations:
+      path: data/processed/counterfactual/counterfactual_simulations_v1.parquet

@@ -1,0 +1,33 @@
+failure_prediction:
+
+  version: v1
+
+  lookahead_events: 3
+  minimum_history_events: 3
+  history_window_events: 20
+
+  warning_threshold: 0.55
+
+  weights:
+    latency: 0.40
+    error_rate: 0.30
+    request_rate: 0.15
+    change_signal: 0.15
+
+  supervised:
+    train_fraction: 0.70
+    class_weight: balanced
+    max_iter: 1000
+
+  output:
+    early_warning:
+      path: data/processed/prediction/early_warning_v1.parquet
+
+    predictions:
+      path: data/processed/prediction/supervised_predictions_v1.parquet
+
+    evaluation:
+      path: data/processed/prediction/evaluation_v1.json
+
+    model:
+      path: models/prediction/failure_predictor_v1.joblib
