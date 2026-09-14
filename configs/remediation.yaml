@@ -1,0 +1,37 @@
+remediation:
+
+  version: v1
+
+  allowed_actions:
+    - rollback
+    - traffic_shift
+    - restart
+
+  planner:
+    minimum_causal_score: 0.65
+    minimum_priority_score: 0.35
+    minimum_net_benefit: 0.01
+
+  sentinelguard:
+
+    fail_closed: true
+
+    minimum_causal_score: 0.70
+    minimum_priority_score: 0.35
+    minimum_net_benefit: 0.01
+
+    maximum_projected_failure_risk: 0.70
+
+    require_supported_rca: true
+    require_counterfactual_recommendation: true
+    require_rollback: true
+    require_human_approval: true
+    require_traceable_evidence: true
+
+  output:
+
+    plans:
+      path: data/processed/remediation/remediation_plans_v1.parquet
+
+    guard:
+      path: data/processed/remediation/sentinelguard_decisions_v1.parquet
