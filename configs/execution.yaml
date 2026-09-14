@@ -1,0 +1,49 @@
+execution:
+
+  version: v1
+  mode: local_sandbox
+
+  require_sentinelguard_approval: true
+  require_human_approval: true
+  require_rollback: true
+  fail_closed: true
+
+  allowed_actions:
+    - rollback
+    - traffic_shift
+    - restart
+
+  sandbox_actions:
+    rollback:
+      method: POST
+      path: /failure-mode/reset
+
+  rollback_path: /failure-mode/reset
+
+  services:
+    api-gateway: http://localhost:8100
+    user-service: http://localhost:8101
+    order-service: http://localhost:8102
+    payment-service: http://localhost:8103
+    inventory-service: http://localhost:8104
+    notification-service: http://localhost:8105
+    auth-service: http://localhost:8106
+
+  safety:
+    request_timeout_seconds: 5
+    require_local_target: true
+    require_live_check: true
+    require_ready_check: true
+
+  output:
+    requests:
+      path: data/processed/execution/execution_requests_v1.parquet
+
+    approvals:
+      path: data/processed/execution/execution_approvals_v1.parquet
+
+    results:
+      path: data/processed/execution/execution_results_v1.parquet
+
+    verification:
+      path: data/processed/execution/recovery_verification_v1.parquet
