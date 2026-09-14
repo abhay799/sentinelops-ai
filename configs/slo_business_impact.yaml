@@ -1,0 +1,32 @@
+slo_business_impact:
+
+  version: v1
+
+  slo:
+    target_latency_p95_ms: 250.0
+    target_error_rate: 0.01
+
+  service_criticality:
+    api-gateway: 1.00
+    payment-service: 1.00
+    order-service: 0.90
+    auth-service: 0.90
+    inventory-service: 0.70
+    user-service: 0.70
+    notification-service: 0.40
+
+  weights:
+    service_criticality: 0.30
+    latency_burn: 0.20
+    error_burn: 0.20
+    anomaly_risk: 0.15
+    predicted_failure: 0.15
+
+  severity:
+    critical: 0.80
+    high: 0.60
+    medium: 0.35
+
+  output:
+    service_impact:
+      path: data/processed/impact/service_impact_v1.parquet

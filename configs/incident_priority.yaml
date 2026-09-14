@@ -1,0 +1,19 @@
+incident_priority:
+
+  version: v1
+
+  weights:
+    max_service_impact: 0.55
+    mean_service_impact: 0.25
+    blast_radius: 0.20
+
+  blast_radius_reference_services: 7
+
+  severity:
+    critical: 0.80
+    high: 0.60
+    medium: 0.35
+
+  output:
+    priority:
+      path: data/processed/impact/incident_priority_v1.parquet
