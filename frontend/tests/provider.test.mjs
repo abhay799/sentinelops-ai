@@ -26,3 +26,9 @@ test("local-api provider falls back to deterministic demo data when unavailable"
   assert.equal(snapshot.connection.fallback, true);
   assert.equal(snapshot.scenario.provider, "DeterministicGroundedProvider");
 });
+
+test("provider switches deterministic scenarios by stable ID", async () => {
+  const snapshot = await createDataProvider({ mode: "demo" }).getSnapshot({ scenarioId: "normal-operation" });
+  assert.equal(snapshot.scenario.id, "normal-operation");
+  assert.equal(snapshot.scenario.incident, null);
+});
