@@ -1,14 +1,14 @@
 # SentinelOps AI
 
-### Autonomous Reliability Intelligence & Failure Prevention Platform
+### Reliability Intelligence & Failure Prevention Engineering Platform
 
 SentinelOps AI is an end-to-end AIOps and reliability intelligence platform designed to detect, predict, diagnose, challenge, simulate, prioritize, and safely respond to failures in distributed systems.
 
 Rather than stopping at anomaly detection, SentinelOps follows the complete reliability lifecycle:
 
-**Sense → Detect → Predict → Correlate → Diagnose → Challenge RCA → Simulate → Prioritize → Plan → Guard → Execute → Verify → Learn**
+**Sense → Detect → Predict → Correlate → Diagnose → Challenge RCA → Simulate → Prioritize → Plan → Guard → Human Authorization → Controlled Execution → Verify → Investigate**
 
-The system combines observability, machine learning, graph intelligence, causal reasoning, failure prediction, counterfactual simulation, SLO-aware prioritization, safety-controlled remediation, RAG, and multi-agent investigation.
+The system combines observability, machine learning, graph intelligence, causal reasoning, failure prediction, counterfactual simulation, SLO-aware prioritization, safety-controlled remediation, RAG, and multi-agent investigation. Current remediation is local sandbox execution; production infrastructure is not connected.
 
 ---
 
@@ -19,6 +19,21 @@ SentinelOps follows one strict engineering rule:
 > SentinelOps must never claim root cause or execute remediation without traceable evidence, confidence, safety constraints, and rollback/recovery capability.
 
 The LLM and agent layers have no direct execution authority.
+
+## Implementation Status & Provenance
+
+- **IMPLEMENTED:** Repository code and tests cover Phases 0–15.
+- **LOCAL:** Controlled remediation is a local sandbox path, not production execution.
+- **SIMULATED:** Counterfactual outputs are decision-support simulations, not infrastructure actions.
+- **SYNTHETIC:** Demo/generated telemetry and development evaluation data are not production telemetry.
+- **DETERMINISTIC:** The Phase 15 provider is `DeterministicGroundedProvider`; retrieval is local and deterministic.
+- **NOT CONNECTED:** Production infrastructure is not connected by this repository.
+- **NOT MEASURED:** Failure-prediction metrics are development/synthetic measurements, not production performance.
+- **PLANNED:** `traffic_shift` and `restart` are configured for planning/allowlisting but are not validated sandbox execution adapters. The configured sandbox adapter is `rollback` (`POST /failure-mode/reset`).
+
+Git contains certification tags through Phase 15 and `sentinelops-v1.0.0`; `pyproject.toml` declares version `0.1.0`, so tag and package versions differ. The local `frontend/` directory is ignored/untracked and is not a public/release UI claim.
+
+See [project architecture](docs/architecture/PROJECT_ARCHITECTURE.md), [phase index](docs/architecture/PHASE_INDEX.md), [safety invariants](docs/architecture/SAFETY_INVARIANTS.md), [validation scope](docs/VALIDATION.md), and [limitations](docs/LIMITATIONS.md).
 
 ---
 
@@ -334,7 +349,7 @@ This still does not provide execution permission.
 
 # Human-Controlled Execution
 
-Phase 14 introduces controlled remediation inside the local SentinelOps sandbox.
+Phase 14 introduces controlled remediation inside the local SentinelOps sandbox. The configured sandbox execution adapter is rollback; `traffic_shift` and `restart` may be planned or allowlisted but are not validated execution adapters.
 
 Execution requires:
 
@@ -396,7 +411,6 @@ SentinelOps contains an evidence-grounded reliability knowledge base.
 
 Current runbooks include:
 
-* Payment-service reliability
 * Evidence-based RCA
 * SentinelGuard remediation safety
 
@@ -522,8 +536,6 @@ SentinelOps uses:
 * Grafana
 * OpenTelemetry Collector
 * Docker
-* Kubernetes
-* Helm
 
 ---
 
@@ -569,8 +581,6 @@ SentinelOps uses:
 ### Platform
 
 * Docker
-* Kubernetes
-* Helm
 
 ### AI / RAG
 
@@ -740,15 +750,15 @@ This prevents an implementation from being treated as complete merely because th
 
 # Current Status
 
-SentinelOps AI has been implemented through all **15 phases**.
+SentinelOps AI has repository implementation evidence through all **15 phases**.
 
-Final release target:
+Git release tag:
 
 ```text
 sentinelops-v1.0.0
 ```
 
-The current system demonstrates the complete path from distributed telemetry to evidence-grounded investigation and human-controlled remediation.
+The current system demonstrates a local, evidence-grounded path from generated/development telemetry through investigation and human-controlled sandbox remediation. It does not establish production connectivity or production performance.
 
 ---
 
