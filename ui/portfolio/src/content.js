@@ -25,10 +25,10 @@ export const previews = [
 ];
 
 export const docLinks = [
-  ["README", "../../README.md"],
-  ["Running Guide", "../../docs/RUNNING.md"],
-  ["Architecture", "../../docs/architecture/PROJECT_ARCHITECTURE.md"],
-  ["Demo Scenarios", "../../docs/demo/SCENARIOS.md"],
-  ["Evidence Report", "../../docs/evidence/BENCHMARKS_AND_EVIDENCE.md"],
-  ["Control Center", "../../frontend/"],
+  ["README", "https://github.com/abhay799/sentinelops-ai#readme"],
+  ["Running Guide", "https://github.com/abhay799/sentinelops-ai/blob/main/docs/RUNNING.md"],
+  ["Architecture", "https://github.com/abhay799/sentinelops-ai/blob/main/docs/architecture/PROJECT_ARCHITECTURE.md"],
+  ["Demo Scenarios", "https://github.com/abhay799/sentinelops-ai/blob/main/docs/demo/SCENARIOS.md"],
+  ["Evidence Report", "https://github.com/abhay799/sentinelops-ai/blob/main/docs/evidence/BENCHMARKS_AND_EVIDENCE.md"],
+  ["Control Center", "./control-center/"],
 ];

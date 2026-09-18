@@ -10,7 +10,10 @@ const routes = Object.keys(labels);
 
 function View() {
   const location = useLocation();
-  const provider = useMemo(() => createDataProvider({ mode: new URLSearchParams(location.search).get("mode") === "local-api" ? "local-api" : "demo" }), [location.search]);
+  const provider = useMemo(() => {
+    const search = location.search || window.location.search;
+    return createDataProvider({ mode: new URLSearchParams(search).get("mode") === "local-api" ? "local-api" : "demo" });
+  }, [location.search]);
   const [scenarioId, setScenarioId] = useState("safe-local-recovery");
   const [snapshot, setSnapshot] = useState(null);
   useEffect(() => { provider.getSnapshot({ scenarioId }).then(setSnapshot); }, [provider, scenarioId]);

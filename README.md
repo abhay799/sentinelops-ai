@@ -41,6 +41,7 @@ Nine deterministic scenarios demonstrate cautious operation, RCA uncertainty, Gu
 - [System overview](docs/architecture/SYSTEM_OVERVIEW.md), [execution lifecycle](docs/architecture/EXECUTION_LIFECYCLE.md), and [safety control plane](docs/architecture/SAFETY_CONTROL_PLANE.md)
 - [Safety invariants](docs/architecture/SAFETY_INVARIANTS.md), [limitations](docs/LIMITATIONS.md), and [validation scope](docs/VALIDATION.md)
 - [Benchmarks and evidence](docs/evidence/BENCHMARKS_AND_EVIDENCE.md) and [evidence manifest](docs/evidence/EVIDENCE_MANIFEST.json)
+- [Static Pages packaging](docs/PAGES.md) and [internal release certification](docs/RELEASE_CERTIFICATION.md)
 
 Historical Phase 10 development metrics are measured on synthetic/development data, not production-calibrated. Git tags are historical internal certification markers, not external certification.
 

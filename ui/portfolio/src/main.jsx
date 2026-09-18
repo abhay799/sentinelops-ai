@@ -12,11 +12,11 @@ function Section({ id, eyebrow, title, children }) {
 function App() {
   return <main>
     <header className="nav-wrap">
-      <nav aria-label="Primary navigation" className="nav"><a className="brand" href="#top"><span className="brand-mark">S</span><span>SentinelOps <small>AI</small></span></a><div className="nav-links"><a href="#system">System</a><a href="#safety">Safety</a><a href="#evidence">Evidence</a><a href="#docs">Docs</a></div><Link className="nav-cta" href="../../frontend/">Open Control Center <ArrowRight size={14} /></Link></nav>
+      <nav aria-label="Primary navigation" className="nav"><a className="brand" href="#top"><span className="brand-mark">S</span><span>SentinelOps <small>AI</small></span></a><div className="nav-links"><a href="#system">System</a><a href="#safety">Safety</a><a href="#evidence">Evidence</a><a href="#docs">Docs</a></div><Link className="nav-cta" href="./control-center/">Open Control Center <ArrowRight size={14} /></Link></nav>
     </header>
 
     <section id="top" className="hero section">
-      <div className="hero-copy"><p className="eyebrow">RELIABILITY ENGINEERING PORTFOLIO PROJECT</p><h1>SentinelOps <em>AI</em></h1><p className="hero-title">Autonomous Reliability Intelligence &amp; Failure Prevention Platform</p><p className="lede">An engineering project exploring evidence-grounded reliability intelligence, causal investigation, counterfactual decision support, and safety-gated local remediation.</p><div className="actions"><Link className="button primary" href="../../frontend/">Open Control Center <ArrowRight size={16} /></Link><Link className="button" href="../../docs/architecture/PROJECT_ARCHITECTURE.md">View Architecture</Link><Link className="text-link" href="../../docs/evidence/BENCHMARKS_AND_EVIDENCE.md">View Evidence <ExternalLink size={13} /></Link></div></div>
+      <div className="hero-copy"><p className="eyebrow">RELIABILITY ENGINEERING PORTFOLIO PROJECT</p><h1>SentinelOps <em>AI</em></h1><p className="hero-title">Autonomous Reliability Intelligence &amp; Failure Prevention Platform</p><p className="lede">An engineering project exploring evidence-grounded reliability intelligence, causal investigation, counterfactual decision support, and safety-gated local remediation.</p><div className="actions"><Link className="button primary" href="./control-center/">Open Control Center <ArrowRight size={16} /></Link><Link className="button" href="https://github.com/abhay799/sentinelops-ai/blob/main/docs/architecture/PROJECT_ARCHITECTURE.md">View Architecture</Link><Link className="text-link" href="https://github.com/abhay799/sentinelops-ai/blob/main/docs/evidence/BENCHMARKS_AND_EVIDENCE.md">View Evidence <ExternalLink size={13} /></Link></div></div>
       <div className="hero-card" aria-label="Current project boundaries"><div className="card-top"><span>CONTROL BOUNDARY</span><span className="status">LOCAL LAB</span></div><div className="signal"><i></i><div><strong>Evidence-grounded flow</strong><small>DETERMINISTIC · SYNTHETIC · NOT CONNECTED</small></div></div><div className="flow-mini"><span>Signal</span><b>→</b><span>Hypothesis</span><b>→</b><span>Guard</span><b>→</b><span>Human</span><b>→</b><span>Sandbox</span></div><p>Production infrastructure and telemetry are <strong>NOT CONNECTED</strong>. Production performance is <strong>NOT MEASURED</strong>.</p></div>
     </section>
 
@@ -29,7 +29,7 @@ function App() {
     </Section>
 
     <Section id="system" eyebrow="ARCHITECTURE / ENGINEERING SYSTEM" title="A connected chain of reliability capabilities.">
-      <div className="layer-grid">{layers.map((layer, index) => <div className="layer" key={layer}><span>{String(index + 1).padStart(2, "0")}</span>{layer}</div>)}</div><Link className="text-link below" href="../../docs/architecture/PROJECT_ARCHITECTURE.md">Inspect the architecture documentation <ArrowRight size={13} /></Link>
+      <div className="layer-grid">{layers.map((layer, index) => <div className="layer" key={layer}><span>{String(index + 1).padStart(2, "0")}</span>{layer}</div>)}</div><Link className="text-link below" href="https://github.com/abhay799/sentinelops-ai/blob/main/docs/architecture/PROJECT_ARCHITECTURE.md">Inspect the architecture documentation <ArrowRight size={13} /></Link>
     </Section>
 
     <Section id="safety" eyebrow="SAFETY MODEL" title="No remediation without accountable controls.">
@@ -37,7 +37,7 @@ function App() {
     </Section>
 
     <Section id="preview" eyebrow="CONTROL CENTER PREVIEW" title="The deep operational interface.">
-      <p className="section-intro">Real rendered captures can replace these frames after reproducible browser capture. Until then, no screenshots are represented as captured.</p><div className="preview-grid">{previews.map(([title, filename, scenario, detail]) => <article className="preview" key={title}><div className="placeholder"><TerminalSquare size={24} /><strong>SCREENSHOT PENDING CAPTURE</strong><span>{filename}</span></div><h3>{title}</h3><p>{detail}</p><small>Scenario: <code>{scenario}</code></small></article>)}</div><Link className="text-link below" href="../../docs/media/CAPTURE_GUIDE.md">Open reproducible capture guide <ArrowRight size={13} /></Link>
+      <p className="section-intro">Real rendered captures can replace these frames after reproducible browser capture. Until then, no screenshots are represented as captured.</p><div className="preview-grid">{previews.map(([title, filename, scenario, detail]) => <article className="preview" key={title}><div className="placeholder"><TerminalSquare size={24} /><strong>SCREENSHOT PENDING CAPTURE</strong><span>{filename}</span></div><h3>{title}</h3><p>{detail}</p><small>Scenario: <code>{scenario}</code></small></article>)}</div><Link className="text-link below" href="https://github.com/abhay799/sentinelops-ai/blob/main/docs/media/CAPTURE_GUIDE.md">Open reproducible capture guide <ArrowRight size={13} /></Link>
     </Section>
 
     <Section id="scenarios" eyebrow="DETERMINISTIC DEMO SCENARIOS" title="Nine engineering demonstrations, not incident history.">
@@ -45,7 +45,7 @@ function App() {
     </Section>
 
     <Section id="evidence" eyebrow="ENGINEERING EVIDENCE" title="Evidence is classified before it is presented.">
-      <div className="evidence-grid"><div className="tags">{["IMPLEMENTED", "MEASURED DEVELOPMENT DATA", "SYNTHETIC", "SIMULATED", "DETERMINISTIC", "LOCAL", "NOT CONNECTED", "NOT MEASURED"].map((tag) => <span key={tag}>{tag}</span>)}</div><div className="metrics"><p>Historical Phase 10 measurements</p><div><strong>0.2778</strong><span>Precision</span><strong>1.0000</strong><span>Recall</span><strong>0.4348</strong><span>F1</span><strong>1.8</strong><span>Average lead events</span></div><small>DEVELOPMENT DATA · SYNTHETIC CONTEXT · NOT PRODUCTION-CALIBRATED</small></div></div><Link className="text-link below" href="../../docs/evidence/BENCHMARKS_AND_EVIDENCE.md">Read benchmarks and evidence <ArrowRight size={13} /></Link>
+      <div className="evidence-grid"><div className="tags">{["IMPLEMENTED", "MEASURED DEVELOPMENT DATA", "SYNTHETIC", "SIMULATED", "DETERMINISTIC", "LOCAL", "NOT CONNECTED", "NOT MEASURED"].map((tag) => <span key={tag}>{tag}</span>)}</div><div className="metrics"><p>Historical Phase 10 measurements</p><div><strong>0.2778</strong><span>Precision</span><strong>1.0000</strong><span>Recall</span><strong>0.4348</strong><span>F1</span><strong>1.8</strong><span>Average lead events</span></div><small>DEVELOPMENT DATA · SYNTHETIC CONTEXT · NOT PRODUCTION-CALIBRATED</small></div></div><Link className="text-link below" href="https://github.com/abhay799/sentinelops-ai/blob/main/docs/evidence/BENCHMARKS_AND_EVIDENCE.md">Read benchmarks and evidence <ArrowRight size={13} /></Link>
     </Section>
 
     <Section id="stack" eyebrow="TECHNOLOGY / ENGINEERING STACK" title="Built from repository-backed components.">

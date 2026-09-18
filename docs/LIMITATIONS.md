@@ -23,7 +23,7 @@
 - **IMPLEMENTED / DETERMINISTIC:** Phase 15 uses `DeterministicGroundedProvider` and local retrieval over `docs/runbooks/`. No hosted model-provider connection is established.
 - **IMPLEMENTED / NOT CONNECTED:** Production infrastructure is not connected. The repository contains local Compose services and local URLs only.
 - **IMPLEMENTED / LOCAL:** Agents investigate evidence but cannot independently confirm RCA, execute remediation, bypass SentinelGuard, or bypass human approval.
-- **LOCAL / NOT RELEASED:** `frontend/` exists locally but is ignored/untracked; it is not public/release UI evidence.
+- **IMPLEMENTED / LOCAL / DETERMINISTIC:** `frontend/` is tracked source for the Control Center. Its demo provider remains local, synthetic, and not connected to production infrastructure; tracking the UI does not establish a live operations deployment.
 
 ## Provenance and validation limitations
 
@@ -35,4 +35,4 @@ The current runbook directory contains the evidence-based RCA and SentinelGuard 
 
 ## Explicit non-claims
 
-SentinelOps does not claim production telemetry ingestion, production infrastructure access, autonomous production remediation, independently confirmed RCA by agents, production-grade traffic shifting/restart execution, production failure-prediction performance, or a released frontend from this repository evidence.
+SentinelOps does not claim production telemetry ingestion, production infrastructure access, autonomous production remediation, independently confirmed RCA by agents, production-grade traffic shifting/restart execution, or production failure-prediction performance.
