@@ -1,0 +1,27 @@
+name: Frontend and Evidence
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  frontend-and-evidence:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - run: node --test tests/*.test.mjs
+      - run: npm run lint
+      - run: npm run build
+      - name: Parse evidence manifest
+        working-directory: .
+        run: node -e "JSON.parse(require('node:fs').readFileSync('docs/evidence/EVIDENCE_MANIFEST.json', 'utf8'))"
