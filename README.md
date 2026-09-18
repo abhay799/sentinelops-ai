@@ -35,6 +35,10 @@ Git contains certification tags through Phase 15 and `sentinelops-v1.0.0`; `pypr
 
 See [project architecture](docs/architecture/PROJECT_ARCHITECTURE.md), [phase index](docs/architecture/PHASE_INDEX.md), [safety invariants](docs/architecture/SAFETY_INVARIANTS.md), [validation scope](docs/VALIDATION.md), and [limitations](docs/LIMITATIONS.md).
 
+## Architecture Diagrams
+
+[System overview](docs/architecture/SYSTEM_OVERVIEW.md) · [Phase architecture](docs/architecture/PHASE_ARCHITECTURE.md) · [Incident intelligence](docs/architecture/INCIDENT_INTELLIGENCE_LIFECYCLE.md) · [Execution lifecycle](docs/architecture/EXECUTION_LIFECYCLE.md) · [Safety control plane](docs/architecture/SAFETY_CONTROL_PLANE.md) · [Remediation safety gate](docs/architecture/REMEDIATION_SAFETY_GATE.md) · [Failure to recovery](docs/architecture/FAILURE_TO_RECOVERY_FLOW.md)
+
 ---
 
 # Architecture
