@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
 
 REPORT = Path(
@@ -17,6 +18,15 @@ def create_app() -> FastAPI:
     app = FastAPI(
         title="SentinelOps Investigation API",
         version="1.0.0",
+    )
+
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=[
+            "https://sentinelops-ai-weld.vercel.app",
+        ],
+        allow_methods=["*"],
+        allow_headers=["*"],
     )
 
     @app.get("/live")

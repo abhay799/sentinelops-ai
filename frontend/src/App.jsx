@@ -12,7 +12,7 @@ function View() {
   const location = useLocation();
   const provider = useMemo(() => {
     const search = location.search || window.location.search;
-    return createDataProvider({ mode: new URLSearchParams(search).get("mode") === "local-api" ? "local-api" : "demo" });
+    return createDataProvider({ mode: new URLSearchParams(search).get("mode") === "demo" ? "demo" : (import.meta.env.VITE_API_BASE ? "local-api" : "demo") });
   }, [location.search]);
   const [scenarioId, setScenarioId] = useState("safe-local-recovery");
   const [snapshot, setSnapshot] = useState(null);
@@ -23,3 +23,4 @@ function View() {
 }
 
 export default function App() { return <Routes>{routes.map((path) => <Route key={path} path={path} element={<View />} />)}<Route path="*" element={<View />} /></Routes>; }
+

@@ -7,13 +7,15 @@ export function createDataProvider({ mode = "demo", fetcher = globalThis.fetch }
   return {
     async getSnapshot({ scenarioId } = {}) {
       try {
-        const response = await fetcher("http://127.0.0.1:8200/capabilities");
+        const response = await fetcher(`${import.meta.env.VITE_API_BASE}/capabilities`);
         if (!response.ok) throw new Error(`API status ${response.status}`);
         await response.json();
-        return demoSnapshot(scenarioId, { status: "LOCAL API AVAILABLE", fallback: false, detail: "Capabilities endpoint reached; deterministic UI scenario remains active." });
+        return demoSnapshot(scenarioId, { status: "API AVAILABLE", fallback: false, detail: "Backend capabilities endpoint reached; deterministic UI scenario remains active." });
       } catch {
-        return demoSnapshot(scenarioId, { status: "NOT CONNECTED", fallback: true, detail: "Local API unavailable; deterministic demo provider active." });
+        return demoSnapshot(scenarioId, { status: "NOT CONNECTED", fallback: true, detail: "API unavailable; deterministic demo provider active." });
       }
     },
   };
 }
+
+

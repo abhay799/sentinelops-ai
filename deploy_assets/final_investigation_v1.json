@@ -1,0 +1,86 @@
+{
+  "incident_id": "INC-0001",
+  "orchestration_version": "v1",
+  "agents": {
+    "investigator": {
+      "agent": "investigator",
+      "incident_id": "INC-0001",
+      "leading_candidate": "payment-service",
+      "causal_consistency_score": 0.900987,
+      "candidate_disposition": "supported_candidate",
+      "evidence_source_count": 7,
+      "retrieved_sources": [
+        "sentinelguard-safety.md",
+        "evidence-based-rca.md"
+      ],
+      "root_cause_status": "not_confirmed_by_agent",
+      "execution_authority": false
+    },
+    "challenger": {
+      "agent": "challenger",
+      "supported_candidates": [
+        "payment-service"
+      ],
+      "rejected_candidates": [
+        "notification-service"
+      ],
+      "inconclusive_candidates": [],
+      "root_cause_confirmed": false,
+      "execution_authority": false
+    },
+    "remediation": {
+      "agent": "remediation",
+      "recommendations": [
+        {
+          "plan_id": "PLAN-0001",
+          "action": "rollback",
+          "guard_decision": "eligible_pending_human",
+          "phase14_candidate": true,
+          "human_approval_status": "pending"
+        },
+        {
+          "plan_id": "PLAN-0002",
+          "action": "no_action",
+          "guard_decision": "blocked",
+          "phase14_candidate": false,
+          "human_approval_status": "pending"
+        }
+      ],
+      "can_bypass_sentinelguard": false,
+      "execution_authority": false
+    },
+    "verifier": {
+      "agent": "verifier",
+      "recovery_verified": true,
+      "execution_statuses": [
+        "executed_verified"
+      ],
+      "execution_authority": false
+    }
+  },
+  "grounded_generation": {
+    "provider": "deterministic-grounded-v1",
+    "incident_id": "INC-0001",
+    "summary": "Incident INC-0001 has leading candidate payment-service with disposition supported_candidate. This remains evidence-grounded and is not independently confirmed by the language model.",
+    "source_references": [
+      "sentinelguard-safety.md",
+      "evidence-based-rca.md"
+    ],
+    "root_cause_confirmed": false,
+    "execution_authority": false,
+    "prompt_used": "Explain the incident using only the supplied evidence and retrieved runbooks. Do not confirm root cause independently. Do not authorize or execute remediation."
+  },
+  "evidence_source_count": 7,
+  "retrieved_sources": [
+    "sentinelguard-safety.md",
+    "evidence-based-rca.md"
+  ],
+  "safety": {
+    "root_cause_confirmed_by_agent": false,
+    "agent_execution_authority": false,
+    "sentinelguard_bypass_allowed": false,
+    "human_approval_bypass_allowed": false,
+    "evidence_required": true,
+    "fail_closed": true
+  }
+}

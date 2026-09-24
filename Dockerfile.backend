@@ -1,0 +1,19 @@
+FROM python:3.14-slim
+
+WORKDIR /app
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONPATH=/app/src
+
+COPY requirements-deploy.txt .
+RUN pip install --no-cache-dir -r requirements-deploy.txt
+
+COPY src/ ./src/
+
+COPY deploy_assets/final_investigation_v1.json ./data/processed/investigation/final_investigation_v1.json
+
+EXPOSE 8200
+
+CMD ["sh", "-c", "python -m uvicorn sentinelops.investigation.api:app --host 0.0.0.0 --port ${PORT:-8200}"]
+
