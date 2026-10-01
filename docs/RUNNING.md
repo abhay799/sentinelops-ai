@@ -132,13 +132,21 @@ From the repository root, after the development install above, Python tests use 
 
 On Linux/macOS, use `.venv/bin/python -m pytest`.
 
-The full suite includes `tests/test_phase1_foundation.py::test_readiness_endpoint`, which checks real **LOCAL** PostgreSQL, Redis, and Kafka connections. For that test to pass, start the core and Kafka stacks from section 6, wait for PostgreSQL/Redis health and Kafka startup, and create the required Kafka topic:
+Plain `pytest` skips tests marked `integration` by default and prints a skip reason explaining the live-service requirement and how to opt in. The normal run requires no live PostgreSQL, Redis, or Kafka services.
+
+The integration tests currently consist of `tests/test_phase1_foundation.py::test_readiness_endpoint`, which checks real **LOCAL** PostgreSQL, Redis, and Kafka connections. For that test to pass, start the core and Kafka stacks from section 6, wait for PostgreSQL/Redis health and Kafka startup, and create the required Kafka topic:
 
 ```bash
 docker compose -f infra/docker-compose.kafka.yml exec -T kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --if-not-exists --topic sentinelops.telemetry.raw --partitions 3 --replication-factor 1
 ```
 
-If Kafka is still starting, wait and retry the topic command. The default Python settings match the Compose development credentials; if an existing `.env` overrides them, ensure it points to these local services. Without these prerequisites, pytest still collects and runs the suite, but the readiness test can fail with HTTP 503 after connection retries that may take several minutes. The `python-tests` CI job provisions the same local services and topic before running the unchanged full suite. These services are local development infrastructure; production telemetry remains **NOT CONNECTED**.
+If Kafka is still starting, wait and retry the topic command. The default Python settings match the Compose development credentials; if an existing `.env` overrides them, ensure it points to these local services. Then opt in on Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest -m integration
+```
+
+On Linux/macOS, use `.venv/bin/python -m pytest -m integration`. Without the live-service prerequisites, this explicit integration run can fail with HTTP 503 after connection retries that may take several minutes. The `python-tests` CI job provisions the same local services and topic, then runs both the default suite and `python -m pytest -m integration`. Test bodies and assertions remain unchanged. These services are local development infrastructure; production telemetry remains **NOT CONNECTED**.
 
 From `frontend/`, run the existing Node built-in tests, build, and lint:
 

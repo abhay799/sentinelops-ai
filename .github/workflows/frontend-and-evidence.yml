@@ -34,8 +34,10 @@ jobs:
           done
           docker compose -f infra/docker-compose.kafka.yml logs kafka
           exit 1
-      - name: Run full Python test suite
+      - name: Run default Python test suite
         run: python -m pytest
+      - name: Run live local integration tests
+        run: python -m pytest -m integration
       - name: Stop local readiness dependencies
         if: always()
         run: docker compose -f infra/docker-compose.core.yml -f infra/docker-compose.kafka.yml down
