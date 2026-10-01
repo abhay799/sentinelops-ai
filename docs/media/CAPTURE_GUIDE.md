@@ -4,28 +4,20 @@ No screenshot assets are committed in this repository. This guide is the reprodu
 
 ## Preconditions
 
-Use the deterministic offline demo provider. From the repository root:
+Follow the [shared setup and exact per-capture steps](SCREENSHOT_PLACEHOLDERS.md) for static preview commands, fixed local URLs, explicit offline `?mode=demo` selection, and browser capture controls. Select the named **DEMO SCENARIO** in the Control Center before each capture. Use a desktop viewport of **1440 × 1024** at 100% zoom and device pixel ratio 1, and retain the visible `LOCAL LAB`, connection/provenance, and safety labels. Capture the browser viewport only after the view has finished rendering.
 
-```powershell
-cd frontend
-npm install
-npm run dev
-```
-
-Open the URL printed by Vite. Select the named **DEMO SCENARIO** in the Control Center before each capture. Use a desktop viewport of **1440 × 1024** and retain the visible `LOCAL LAB`, connection/provenance, and safety labels. Capture the browser viewport only after the view has finished rendering.
-
-Store actual reviewed captures in `ui/portfolio/public/media/` using the filenames below. Update the corresponding manifest status only after the file exists and was captured from the rendered Control Center.
+Store actual reviewed captures in `ui/portfolio/public/media/` using the filenames below. Update the corresponding manifest status only after the file exists and was captured from its rendered source view (Control Center or portfolio, as listed below).
 
 | Filename | Scenario | Route | Required visible content |
 |---|---|---|---|
-| `mission-control.png` | `safe-local-recovery` | `/` | Lifecycle, local boundary, evidence, recovery state |
-| `service-health.png` | `correlated-multi-signal` | `/services` | Service health and local/synthetic provenance |
-| `rca-intelligence.png` | `competing-rca-hypotheses` | `/rca` | Ranked candidate hypotheses; no confirmed-RCA language |
-| `rca-challenger.png` | `adversarial-rca-challenge` | `/challenger` | Challenger outcome and contradictory evidence |
-| `sentinelguard.png` | `sentinelguard-rejection` | `/guard` | Rejection/fail-closed Guard result; no execution |
-| `safe-local-recovery.png` | `safe-local-recovery` | `/recovery` | Human approval, configured `rollback`, verification, LOCAL LAB |
-| `investigation.png` | `competing-rca-hypotheses` | `/investigation` | Grounded investigation and candidate-RCA boundary |
-| `system-status.png` | `normal-operation` | `/system` | Stable deterministic system status with provenance |
+| `mission-control.png` | `safe-local-recovery` | `#/` | Lifecycle, local boundary, evidence, recovery state |
+| `service-health.png` | `correlated-multi-signal` | `#/services` | Service health and local/synthetic provenance |
+| `rca-intelligence.png` | `competing-rca-hypotheses` | `#/rca` | Leading candidate hypothesis and evidence; candidate remains unconfirmed |
+| `rca-challenger.png` | `adversarial-rca-challenge` | `#/challenger` | Challenger outcome and contradictory evidence |
+| `sentinelguard.png` | `sentinelguard-rejection` | `#/guard` | Rejection/fail-closed Guard result; no execution |
+| `safe-local-recovery.png` | `safe-local-recovery` | `#/recovery` | Human approval, configured `rollback`, verification, LOCAL LAB |
+| `investigation.png` | `competing-rca-hypotheses` | `#/investigation` | Grounded investigation and candidate-RCA boundary |
+| `system-status.png` | `normal-operation` | `#/system` | Stable deterministic system status with provenance |
 | `portfolio-home.png` | Not applicable | `ui/portfolio/` home | Portfolio page, current boundaries, and no false media state |
 
 ## Review before adding an asset
