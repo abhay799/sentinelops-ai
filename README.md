@@ -1,5 +1,13 @@
 # SentinelOps AI
 
+SentinelOps AI is an engineering demo of how software problems can be detected, investigated, and handled cautiously. Explore made-up scenarios in your browser, follow the evidence, and see why a proposed recovery must pass safety checks and human approval. The configured recovery path runs in a local sandbox; the demo does not operate production systems.
+
+[![CI: Python tests and frontend](https://github.com/abhay799/sentinelops-ai/actions/workflows/frontend-and-evidence.yml/badge.svg?branch=main)](https://github.com/abhay799/sentinelops-ai/actions/workflows/frontend-and-evidence.yml)
+
+[Live demo: Control Center](https://abhay799.github.io/sentinelops-ai/control-center/) · [Portfolio](https://abhay799.github.io/sentinelops-ai/)
+
+The CI badge reports the combined workflow containing the `python-tests` job and frontend/evidence checks. The live demo displays deterministic synthetic scenarios; it does not connect to production infrastructure.
+
 Reliability intelligence and failure-prevention engineering for distributed-system demos. SentinelOps turns local, generated evidence into detection, investigation, safety-gated planning, and controlled local sandbox recovery decisions.
 
 > **Current boundary:** LOCAL, SYNTHETIC, DETERMINISTIC, and NOT CONNECTED to production infrastructure. Counterfactuals are SIMULATED; production performance is NOT MEASURED.
@@ -7,6 +15,30 @@ Reliability intelligence and failure-prevention engineering for distributed-syst
 ## Reliability lifecycle
 
 `Sense → Detect → Predict → Correlate → Diagnose → Challenge RCA → Simulate → Prioritize → Plan → Guard → Human Authorization → Controlled Execution → Verify → Investigate`
+
+```mermaid
+flowchart TD
+    sense[Sense] --> detect[Detect] --> predict[Predict]
+    predict --> correlate[Correlate] --> diagnose[Diagnose: candidate RCA]
+    diagnose --> challenge[Challenge RCA] --> simulate[Simulate]
+    simulate --> prioritize[Prioritize] --> plan[Plan]
+    plan --> guard{SentinelGuard gate}
+    guard -->|Pass| human{Human authorization}
+    guard -->|Reject| blocked[Blocked: no execution]
+    human -->|Pending or denied| blocked
+    human -->|Approved| finalGate{Final local execution gate}
+    finalGate -->|Checks fail| blocked
+    finalGate -->|Checks pass| execute[Controlled LOCAL SANDBOX rollback]
+    execute --> verify[Verify recovery] --> investigate[Investigate]
+    classDef guardGate fill:#fff4ce,stroke:#8a6100,stroke-width:3px,color:#3d2b00
+    classDef humanGate fill:#dbeafe,stroke:#1d4ed8,stroke-width:3px,color:#172554
+    classDef stopped fill:#fee2e2,stroke:#b91c1c,color:#450a0a
+    class guard guardGate
+    class human humanGate
+    class blocked stopped
+```
+
+The final execution gate still checks the local target, rollback availability, and configured adapter. A Guard pass or human approval alone does not authorize execution.
 
 ## Safety invariant
 
@@ -45,9 +77,37 @@ Nine deterministic scenarios demonstrate cautious operation, RCA uncertainty, Gu
 
 Historical Phase 10 development metrics are measured on synthetic/development data, not production-calibrated. Git tags are historical internal certification markers, not external certification.
 
+## Implemented vs simulated vs not connected
+
+These distinctions follow [limitations](docs/LIMITATIONS.md) and [validation scope](docs/VALIDATION.md). **IMPLEMENTED** means repository code, configuration, scripts, or tests provide evidence; it does not alone establish deployment, connectivity, or operational approval.
+
+| Capability | IMPLEMENTED evidence | SIMULATED / SYNTHETIC / DETERMINISTIC boundary | NOT CONNECTED / not validated |
+| --- | --- | --- | --- |
+| Detection and prediction | Feature, anomaly, and temporal prediction code/tests | Development and SYNTHETIC inputs; historical metrics are development measurements | Production prediction performance, calibration, and business impact are NOT MEASURED |
+| Graphs, incidents, and RCA | Graph intelligence, incident correlation, and RCA/challenger tests | Candidate hypotheses from local evidence; RCA remains unconfirmed | Agents cannot independently confirm RCA |
+| Counterfactuals and planning | Counterfactual, priority/impact, and remediation/SentinelGuard code/tests | SIMULATED projected risk and benefit; comparisons cannot authorize execution | Live counterfactual correctness and actual remediation effectiveness are not validated |
+| Controlled recovery | LOCAL SANDBOX `rollback` adapter with Guard, human approval, local-target, rollback, adapter, and verification checks | Control Center recovery scenarios use deterministic SYNTHETIC data | Production execution is NOT CONNECTED; `traffic_shift` and `restart` are planning/allowlist concepts, not validated execution adapters |
+| Grounded investigation | `DeterministicGroundedProvider` and local TF-IDF runbook retrieval | DETERMINISTIC evidence investigation; agents have no execution or independent RCA-confirmation authority | No hosted model-provider connection is established |
+| Control Center | Committed frontend source (27 tracked files) and deterministic demo provider | LOCAL / SYNTHETIC / DETERMINISTIC demonstration UI | Production operations connectivity and frontend production readiness are not established |
+| Infrastructure and telemetry | Local Docker Compose services and local URLs | Local development/demo environment | Production infrastructure and telemetry are NOT CONNECTED; production access control, coverage, and scale are not validated |
+
 ## Screenshot / demo media
 
 No screenshots or demo media are committed yet. This section is intentionally a placeholder until reproducible assets are added.
+
+Placeholder records live in [docs/media/SCREENSHOT_PLACEHOLDERS.md](docs/media/SCREENSHOT_PLACEHOLDERS.md). Every entry below is **PENDING CAPTURE**, not an image or evidence of a completed recovery. The records contain exact browser routes, scenario choices, filenames, and reproduction steps; the [capture guide](docs/media/CAPTURE_GUIDE.md) defines review requirements.
+
+| Planned capture | Placeholder and exact reproduction steps |
+| --- | --- |
+| Mission Control | [PENDING CAPTURE — `mission-control.png`](docs/media/SCREENSHOT_PLACEHOLDERS.md#mission-control) |
+| Service Health | [PENDING CAPTURE — `service-health.png`](docs/media/SCREENSHOT_PLACEHOLDERS.md#service-health) |
+| RCA Intelligence | [PENDING CAPTURE — `rca-intelligence.png`](docs/media/SCREENSHOT_PLACEHOLDERS.md#rca-intelligence) |
+| RCA Challenger | [PENDING CAPTURE — `rca-challenger.png`](docs/media/SCREENSHOT_PLACEHOLDERS.md#rca-challenger) |
+| SentinelGuard | [PENDING CAPTURE — `sentinelguard.png`](docs/media/SCREENSHOT_PLACEHOLDERS.md#sentinelguard) |
+| Safe Local Recovery | [PENDING CAPTURE — `safe-local-recovery.png`](docs/media/SCREENSHOT_PLACEHOLDERS.md#safe-local-recovery) |
+| Investigation | [PENDING CAPTURE — `investigation.png`](docs/media/SCREENSHOT_PLACEHOLDERS.md#investigation) |
+| System Status | [PENDING CAPTURE — `system-status.png`](docs/media/SCREENSHOT_PLACEHOLDERS.md#system-status) |
+| Portfolio Home | [PENDING CAPTURE — `portfolio-home.png`](docs/media/SCREENSHOT_PLACEHOLDERS.md#portfolio-home) |
 
 ## Repository structure
 
