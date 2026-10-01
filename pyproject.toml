@@ -8,7 +8,7 @@ name = "sentinelops-ai"
 version = "0.1.0"
 description = "Autonomous Reliability Intelligence & Failure Prevention Platform"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 authors = [
     { name = "Abhay Kumar" }
 ]
@@ -16,7 +16,7 @@ authors = [
 dependencies = [
     "fastapi",
     "uvicorn[standard]",
-    "sqlalchemy",
+    "sqlalchemy[asyncio]",
     "psycopg[binary]",
     "redis",
     "aiokafka",
@@ -27,6 +27,10 @@ dependencies = [
     "pydantic-settings",
     "PyYAML",
     "python-dotenv",
+    "polars",
+    "numpy",
+    "networkx",
+    "scikit-learn",
 ]
 
 
@@ -53,7 +57,7 @@ pythonpath = ["src"]
 
 [tool.ruff]
 line-length = 100
-target-version = "py314"
+target-version = "py312"
 
 
 [tool.ruff.lint]
@@ -61,6 +65,6 @@ select = ["E", "F", "I", "B"]
 
 
 [tool.mypy]
-python_version = "3.14"
+python_version = "3.12"
 strict = true
 warn_unused_configs = true
