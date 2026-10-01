@@ -4,7 +4,7 @@ SentinelOps AI is an engineering demo of how software problems can be detected, 
 
 [![CI: Python tests and frontend](https://github.com/abhay799/sentinelops-ai/actions/workflows/frontend-and-evidence.yml/badge.svg?branch=main)](https://github.com/abhay799/sentinelops-ai/actions/workflows/frontend-and-evidence.yml)
 
-[Live demo: Control Center](https://abhay799.github.io/sentinelops-ai/control-center/) · [Portfolio](https://abhay799.github.io/sentinelops-ai/)
+[Live demo](https://sentinelops-ai-weld.vercel.app) · [Offline demo](https://abhay799.github.io/sentinelops-ai/control-center/) · [Portfolio](https://abhay799.github.io/sentinelops-ai/)
 
 The CI badge reports the combined workflow containing the `python-tests` job and frontend/evidence checks. The live demo displays deterministic synthetic scenarios; it does not connect to production infrastructure.
 
@@ -48,6 +48,20 @@ EVIDENCE + CONFIDENCE + SAFETY + AUTHORIZATION + ROLLBACK + VERIFICATION
 ```
 
 RCA output remains a hypothesis. Agents cannot independently confirm RCA, execute remediation, bypass SentinelGuard, or bypass human approval. The execution boundary is **LOCAL SANDBOX**: `rollback` is the configured adapter; `traffic_shift` and `restart` are planning/allowlist concepts only.
+
+## Public deployment
+
+Public hosting makes the demo UI and investigation artifact API accessible; it does not establish production infrastructure or telemetry connectivity. The LOCAL / SYNTHETIC / DETERMINISTIC / NOT CONNECTED boundaries remain in effect.
+
+| Component | Host | What it runs | What it does NOT run |
+| --- | --- | --- | --- |
+| Frontend | [Vercel](https://sentinelops-ai-weld.vercel.app) | React/Vite Control Center with deterministic scenarios; can probe Railway API capabilities when `VITE_API_BASE` is configured | Backend services, the ML pipeline, production telemetry ingestion, or remediation execution |
+| Backend | [Railway](https://sentinelops-ai-backend-production.up.railway.app) | FastAPI serving precomputed Phase 15 investigation artifacts and the `/live`, `/ready`, `/capabilities`, and `/investigation/latest` endpoints | Kafka, PostgreSQL, Redis, Prometheus, the ML pipeline, or remediation execution |
+| Offline demo and portfolio | [GitHub Pages](https://abhay799.github.io/sentinelops-ai/) | Static portfolio and [offline Control Center](https://abhay799.github.io/sentinelops-ai/control-center/) using the `demo` provider | A backend API, Railway API calls in the offline demo, infrastructure services, or pipeline execution |
+
+The public backend serves precomputed Phase 15 investigation artifacts via FastAPI. It does **not** run Kafka, PostgreSQL, Redis, Prometheus, or the ML pipeline. An API request reads an existing report; it does not generate a new investigation. Even when API capabilities are reachable, the current frontend continues to display deterministic synthetic scenarios.
+
+Set the Vercel build variable `VITE_API_BASE` to `https://sentinelops-ai-backend-production.up.railway.app`. The backend's CORS origin allowlist includes `https://sentinelops-ai-weld.vercel.app`. `requirements-deploy.txt` is intentionally minimal for this artifact API (FastAPI and Uvicorn), not a full pipeline installation. The first request after idle may be slow. See [deployment details](docs/DEPLOYMENT.md) for configuration, endpoint semantics, and the separate GitHub Pages offline version.
 
 ## Quick demo
 
