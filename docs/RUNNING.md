@@ -8,31 +8,33 @@ The Control Center is the recommended reviewer path. It renders offline determin
 
 ## 2. Prerequisites
 
-- Python **>=3.14** (`pyproject.toml`).
+- Python **>=3.12** (`pyproject.toml`); Python 3.12 is the recommended baseline and CI version. Python 3.11 is unsupported: phase entry points and foundation tests use `asyncio.run(loop_factory=...)`, introduced in 3.12, and the locked NumPy/SciPy versions require 3.12 or newer.
 - `pip` and a virtual environment tool supplied by Python.
 - Node.js and npm for `frontend/`; no Node version is constrained by the repository.
 - Docker Engine with Docker Compose only for infrastructure/demo services.
 - Windows PowerShell, Linux, and macOS can run the Python/Node commands below. The Compose files use Docker networking and local ports.
 
-Python dependencies are declared in `pyproject.toml`; `requirements-lock.txt` is a development lock file. Its editable-path entry is machine-specific, so prefer the project install below for a fresh checkout.
+Python runtime and development dependencies are declared in `pyproject.toml`, including Polars, NumPy, NetworkX, scikit-learn, and SQLAlchemy's asyncio extra (which installs greenlet). `requirements-lock.txt` is a historical development snapshot in UTF-16 with a machine-specific editable-path entry; use the project install below for a fresh checkout. `requirements-deploy.txt` contains only FastAPI and Uvicorn and is not a complete backend installation.
 
 ## 3. Repository setup
 
 Start from an existing checkout. This repository does not publish a canonical clone URL, so no clone command is prescribed.
 
+On Windows PowerShell, first ensure `python` selects Python 3.12 or newer. If needed, select an installed Python 3.12 explicitly with `py -3.12 -m venv .venv` instead of the environment-creation command below. For an existing environment made with another Python version, move it aside before creating a fresh `.venv`.
+
 ```powershell
+python --version
 python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -e ".[dev]"
 ```
 
-On Linux/macOS, activate the same environment with:
+These commands invoke the environment directly and do not require `Activate.ps1` or a PowerShell execution-policy change. On Linux/macOS with Python 3.12 installed:
 
 ```bash
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e '.[dev]'
+python3.12 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install -e '.[dev]'
 ```
 
 Install the frontend dependencies from its package manifest and lock file:
@@ -41,6 +43,8 @@ Install the frontend dependencies from its package manifest and lock file:
 cd frontend
 npm install
 ```
+
+On Windows PowerShell, if execution policy blocks `npm.ps1`, use `npm.cmd install`, `npm.cmd run dev`, `npm.cmd run build`, and `npm.cmd run lint` for the corresponding npm commands. No execution-policy change is needed.
 
 ## 4. Frontend-first quick demo path
 
@@ -68,11 +72,13 @@ Scenario details are in [demo scenarios](demo/SCENARIOS.md). Counterfactual valu
 
 ## 5. Optional Phase 15 local API
 
-With the Python environment activated, from the repository root:
+From the repository root, using the Python environment directly on Windows:
 
 ```powershell
-python scripts\run_phase15_api.py
+.\.venv\Scripts\python.exe scripts\run_phase15_api.py
 ```
+
+On Linux/macOS, use `.venv/bin/python scripts/run_phase15_api.py`.
 
 The API binds to `127.0.0.1:8200`. Supported endpoints are:
 
@@ -118,11 +124,21 @@ Use the matching existing preflight scripts (`phase1`–`phase14`, where present
 
 ## 8. Testing
 
-From the repository root, Python tests use the configuration in `pyproject.toml`:
+From the repository root, after the development install above, Python tests use the configuration in `pyproject.toml`. On Windows PowerShell:
+
+```powershell
+.\.venv\Scripts\python.exe -m pytest
+```
+
+On Linux/macOS, use `.venv/bin/python -m pytest`.
+
+The full suite includes `tests/test_phase1_foundation.py::test_readiness_endpoint`, which checks real **LOCAL** PostgreSQL, Redis, and Kafka connections. For that test to pass, start the core and Kafka stacks from section 6, wait for PostgreSQL/Redis health and Kafka startup, and create the required Kafka topic:
 
 ```bash
-python -m pytest
+docker compose -f infra/docker-compose.kafka.yml exec -T kafka /opt/kafka/bin/kafka-topics.sh --bootstrap-server localhost:9092 --create --if-not-exists --topic sentinelops.telemetry.raw --partitions 3 --replication-factor 1
 ```
+
+If Kafka is still starting, wait and retry the topic command. The default Python settings match the Compose development credentials; if an existing `.env` overrides them, ensure it points to these local services. Without these prerequisites, pytest still collects and runs the suite, but the readiness test can fail with HTTP 503 after connection retries that may take several minutes. The `python-tests` CI job provisions the same local services and topic before running the unchanged full suite. These services are local development infrastructure; production telemetry remains **NOT CONNECTED**.
 
 From `frontend/`, run the existing Node built-in tests, build, and lint:
 
@@ -151,7 +167,7 @@ Do not bypass SentinelGuard, human approval, rollback availability, target valid
 - `scripts/phase15_preflight.py` is absent.
 - `tests/test_phase15_final.py` is absent.
 - Generated processed data and model binaries are ignored, local-only evidence.
-- `pyproject.toml` is `0.1.0`; Git also has the `sentinelops-v1.0.0` tag.
+- The package version is `0.1.0`; `sentinelops-v1.0.0` is an internal milestone marker, not the package version.
 - Production infrastructure/telemetry are **NOT CONNECTED**; production benchmarks are **NOT MEASURED**.
 - Kubernetes and Helm assets are absent.
 
