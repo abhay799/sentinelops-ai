@@ -65,7 +65,7 @@ tests/       Python contract and phase tests
 
 ## Status and limitations
 
-Repository implementation evidence covers Phases 0–15. Generated `data/processed/` artifacts and model binaries are local/Git-ignored and are not durable public evidence. Production infrastructure and telemetry are NOT CONNECTED; production benchmarks are NOT MEASURED. The package version is `0.1.0`, while Git contains the `sentinelops-v1.0.0` tag; this mismatch is documented, not hidden.
+Repository implementation evidence covers Phases 0–15. Generated `data/processed/` artifacts and model binaries are local/Git-ignored and are not durable public evidence. Production infrastructure and telemetry are NOT CONNECTED; production benchmarks are NOT MEASURED. The package version is `0.1.0`. The `sentinelops-v1.0.0` Git tag is an internal milestone marker, not the Python package version; the existing tag and history remain unchanged.
 
 No Kubernetes or Helm assets are present. `scripts/phase15_preflight.py` and `tests/test_phase15_final.py` are absent; existing Phase 15 evidence is documented in the validation and evidence guides.
 

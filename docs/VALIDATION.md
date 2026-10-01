@@ -23,7 +23,7 @@ Repository tests and scripts do not establish:
 - Production failure-prediction precision, recall, lead time, calibration, or business impact.
 - Live counterfactual correctness or actual remediation effectiveness.
 - Production execution adapters for `traffic_shift` or `restart`.
-- A public/release frontend; `frontend/` is a local ignored/untracked directory.
+- Production readiness of the frontend; `frontend/` is committed (27 tracked files) and provides a local deterministic demo.
 
 Counterfactual outputs are simulated decision-support results. Failure-prediction metrics in repository examples are development/synthetic measurements, not production performance metrics.
 
