@@ -53,6 +53,10 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+addopts = "-rs"
+markers = [
+    "integration: requires live LOCAL PostgreSQL, Redis, and Kafka services",
+]
 
 
 [tool.ruff]

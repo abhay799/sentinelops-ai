@@ -1,6 +1,7 @@
 import asyncio
 
 import httpx
+import pytest
 
 from sentinelops.core.event_loop import sentinelops_loop_factory
 from sentinelops.main import app
@@ -73,6 +74,7 @@ def test_services_endpoint():
     assert response.json()["count"] >= 1
 
 
+@pytest.mark.integration
 def test_readiness_endpoint():
     response = run_async(request("/ready"))
 
