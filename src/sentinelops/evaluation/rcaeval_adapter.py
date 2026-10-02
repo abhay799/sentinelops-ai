@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Iterable
 
 import polars as pl
@@ -15,11 +16,20 @@ REQUIRED_TRACE_COLUMNS = {
 
 
 @dataclass(frozen=True)
+class TraceDuplicateStats:
+    duplicate_key_count: int
+    duplicate_row_count: int
+    removed_row_count: int
+    conflicting_duplicate_found: bool
+
+
+@dataclass(frozen=True)
 class TopologyValidation:
     edges: tuple[tuple[str, str], ...]
     unresolved_parent_count: int
     metric_only_services: tuple[str, ...]
     service_mapping: tuple[tuple[str, str], ...]
+    trace_duplicate_stats: TraceDuplicateStats
 
 
 def metric_services_from_columns(
@@ -72,6 +82,21 @@ def normalize_trace_service(
     )
 
 
+def load_rcaeval_traces(
+    path: str | Path,
+) -> pl.DataFrame:
+    return (
+        pl.read_parquet(path)
+        .with_columns(
+            [
+                pl.col("traceID").cast(pl.Utf8),
+                pl.col("spanID").cast(pl.Utf8),
+                pl.col("parentSpanID").cast(pl.Utf8),
+            ]
+        )
+    )
+
+
 def _validate_trace_schema(
     traces: pl.DataFrame,
 ) -> None:
@@ -87,26 +112,42 @@ def _validate_trace_schema(
         )
 
 
-def _validate_trace_keys(
+def clean_exact_trace_duplicates(
     traces: pl.DataFrame,
-) -> None:
-    duplicates = (
-        traces
-        .select(
-            [
-                "traceID",
-                "spanID",
-            ]
-        )
+) -> tuple[pl.DataFrame, TraceDuplicateStats]:
+    key_counts = (
+        traces.group_by(["traceID", "spanID"])
+        .len()
+        .filter(pl.col("len") > 1)
+    )
+    duplicate_key_count = key_counts.height
+    duplicate_row_count = int(
+        key_counts["len"].sum()
+        if duplicate_key_count
+        else 0
+    )
+
+    cleaned = traces.unique(maintain_order=True)
+    remaining_duplicate_rows = int(
+        cleaned.select(["traceID", "spanID"])
         .is_duplicated()
         .sum()
     )
+    conflicting = remaining_duplicate_rows > 0
 
-    if int(duplicates) > 0:
+    if conflicting:
         raise ValueError(
-            "Duplicate (traceID, spanID) identifiers "
-            "found in RCAEval traces"
+            "Conflicting Duplicate (traceID, spanID) "
+            "identifiers found in RCAEval traces"
         )
+
+    stats = TraceDuplicateStats(
+        duplicate_key_count=duplicate_key_count,
+        duplicate_row_count=duplicate_row_count,
+        removed_row_count=traces.height - cleaned.height,
+        conflicting_duplicate_found=False,
+    )
+    return cleaned, stats
 
 
 def derive_pre_injection_topology(
@@ -120,7 +161,9 @@ def derive_pre_injection_topology(
         )
 
     _validate_trace_schema(traces)
-    _validate_trace_keys(traces)
+    traces, duplicate_stats = clean_exact_trace_duplicates(
+        traces
+    )
 
     metric_services = (
         metric_services_from_columns(
@@ -315,4 +358,5 @@ def derive_pre_injection_topology(
                 mapping.items()
             )
         ),
+        trace_duplicate_stats=duplicate_stats,
     )

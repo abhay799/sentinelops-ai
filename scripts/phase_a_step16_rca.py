@@ -13,6 +13,7 @@ import polars as pl
 
 from sentinelops.evaluation.rcaeval_adapter import (
     derive_pre_injection_topology,
+    load_rcaeval_traces,
     metric_services_from_columns,
 )
 from sentinelops.evaluation.rcaeval_rca import (
@@ -47,7 +48,9 @@ def topology_case(case_id: str) -> dict[str, object]:
     try:
         case = ROOT / case_id
         metrics = pl.read_parquet(case / "metrics.parquet")
-        traces = pl.read_parquet(case / "traces.parquet")
+        traces = load_rcaeval_traces(
+            case / "traces.parquet"
+        )
         inject = int((case / "inject_time.txt").read_text().strip())
         result = derive_pre_injection_topology(
             metrics, traces, inject
@@ -62,6 +65,16 @@ def topology_case(case_id: str) -> dict[str, object]:
             "unresolved_parent_count": result.unresolved_parent_count,
             "metric_only_services": list(result.metric_only_services),
             "service_mapping": [list(row) for row in result.service_mapping],
+            "trace_duplicates": {
+                "duplicate_key_count":
+                    result.trace_duplicate_stats.duplicate_key_count,
+                "duplicate_row_count":
+                    result.trace_duplicate_stats.duplicate_row_count,
+                "removed_row_count":
+                    result.trace_duplicate_stats.removed_row_count,
+                "conflicting_duplicate_found":
+                    result.trace_duplicate_stats.conflicting_duplicate_found,
+            },
         }
     except Exception as exc:
         payload = {
@@ -121,6 +134,19 @@ def main() -> None:
         payload for payload in ordered
         if payload["status"] != "ok"
     ]
+    duplicate_affected = [
+        {
+            "case_id": str(payload["case_id"]),
+            **dict(payload["trace_duplicates"]),
+        }
+        for payload in ordered
+        if payload["status"] == "ok"
+        and int(
+            dict(payload["trace_duplicates"])[
+                "duplicate_key_count"
+            ]
+        ) > 0
+    ]
     if failed_topology:
         summary = {
             "step": 16,
@@ -139,6 +165,9 @@ def main() -> None:
                 len(ids) - len(failed_topology),
             "case_count_topology_failed": len(failed_topology),
             "failed_topology_cases": failed_topology,
+            "duplicate_affected_cases": duplicate_affected,
+            "trace_duplicate_policy":
+                "exact full-row duplicates cleaned; conflicts fail",
             "runtime_seconds": time.perf_counter() - started,
         }
         write_json(OUT / "step16_rca_summary.json", summary)
@@ -225,6 +254,9 @@ def main() -> None:
         "case_count_expected": len(ids),
         "ranked_cases": ranked,
         "failed_detection_cases": failed_detection,
+        "duplicate_affected_cases": duplicate_affected,
+        "trace_duplicate_policy":
+            "exact full-row duplicates cleaned; conflicts fail",
         "suite_graph": graph_payload,
         "weights": {
             "anomaly_strength": 0.45,
