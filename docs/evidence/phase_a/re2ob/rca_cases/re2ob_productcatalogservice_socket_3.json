@@ -48,6 +48,69 @@
       "rank": 5,
       "rca_score": 0.45,
       "service": "adservice"
+    },
+    {
+      "anomaly_strength": 1.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 6,
+      "rca_score": 0.45,
+      "service": "frontend"
+    },
+    {
+      "anomaly_strength": 0.9354093270959573,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 7,
+      "rca_score": 0.447601,
+      "service": "currencyservice"
+    },
+    {
+      "anomaly_strength": 0.9549298112168157,
+      "change_signal": 0.0,
+      "graph_impact": 0.06666666666666667,
+      "primary_service_bonus": 0.0,
+      "rank": 8,
+      "rca_score": 0.443052,
+      "service": "checkoutservice"
+    },
+    {
+      "anomaly_strength": 0.9762127791136045,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 9,
+      "rca_score": 0.439296,
+      "service": "cartservice"
+    },
+    {
+      "anomaly_strength": 0.9481629948021872,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 10,
+      "rca_score": 0.426673,
+      "service": "shippingservice"
+    },
+    {
+      "anomaly_strength": 0.8495721453218219,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 11,
+      "rca_score": 0.382307,
+      "service": "redis"
+    },
+    {
+      "anomaly_strength": 0.7304848186763563,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 12,
+      "rca_score": 0.328718,
+      "service": "frontend-external"
     }
   ],
   "status": "ok"

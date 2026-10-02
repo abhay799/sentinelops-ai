@@ -48,6 +48,78 @@
       "rank": 5,
       "rca_score": 0.384145,
       "service": "productcatalogservice"
+    },
+    {
+      "anomaly_strength": 0.7440377297447701,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 6,
+      "rca_score": 0.334817,
+      "service": "adservice"
+    },
+    {
+      "anomaly_strength": 0.6193928000378759,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 7,
+      "rca_score": 0.305393,
+      "service": "currencyservice"
+    },
+    {
+      "anomaly_strength": 0.6251877829966082,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 8,
+      "rca_score": 0.281335,
+      "service": "frontend"
+    },
+    {
+      "anomaly_strength": 0.4991459218432403,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 9,
+      "rca_score": 0.224616,
+      "service": "shippingservice"
+    },
+    {
+      "anomaly_strength": 0.45971115555784153,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 10,
+      "rca_score": 0.20687,
+      "service": "cartservice"
+    },
+    {
+      "anomaly_strength": 0.3857665256970124,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 11,
+      "rca_score": 0.173595,
+      "service": "frontend-external"
+    },
+    {
+      "anomaly_strength": 0.3096986499440792,
+      "change_signal": 0.0,
+      "graph_impact": 0.06666666666666667,
+      "primary_service_bonus": 0.0,
+      "rank": 12,
+      "rca_score": 0.152698,
+      "service": "recommendationservice"
+    },
+    {
+      "anomaly_strength": 0.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 13,
+      "rca_score": 0.0,
+      "service": "frontend-check"
     }
   ],
   "status": "ok"
