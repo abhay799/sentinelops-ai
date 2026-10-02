@@ -1,0 +1,362 @@
+{
+  "allowlist": [
+    "adservice",
+    "cartservice",
+    "checkoutservice",
+    "currencyservice",
+    "emailservice",
+    "frontend",
+    "paymentservice",
+    "productcatalogservice",
+    "recommendationservice",
+    "redis",
+    "shippingservice"
+  ],
+  "allowlist_size": 11,
+  "analytical_chance": {
+    "Chance@1": 0.09090909090909091,
+    "Chance@3": 0.2727272727272727,
+    "Chance@5": 0.45454545454545453
+  },
+  "case_count": 90,
+  "correlated_test_caveat": "AC@1, AC@3, and AC@5 are nested statistics from the same ranking and are therefore correlated; their exact binomial p-values are reported individually and must not be interpreted as independent tests.",
+  "diagnostic_master_seeds": {
+    "count": 1000,
+    "range": [
+      0,
+      999
+    ]
+  },
+  "diagnostic_only": true,
+  "diagnostic_pass": true,
+  "e3_filter_check": {
+    "pass": true,
+    "runs_checked": 90000,
+    "statement": "Filtering was a pure order-preserving projection to all 11 allowlisted services; no candidate was reordered or regenerated."
+  },
+  "full_permutation_check": {
+    "pass": true,
+    "runs_checked": 90000,
+    "statement": "Every native random ranking contained every pre-E3 candidate exactly once; no top-5 truncation occurred."
+  },
+  "max_abs_mean_rank_deviation": 0.015511111111111475,
+  "mean_rank_by_service": {
+    "adservice": {
+      "expected_mean_rank": 6.0,
+      "mean_rank": 5.993233333333333,
+      "mean_rank_minus_expected": -0.0067666666666665876,
+      "observations": 90000
+    },
+    "cartservice": {
+      "expected_mean_rank": 6.0,
+      "mean_rank": 5.995744444444444,
+      "mean_rank_minus_expected": -0.004255555555555901,
+      "observations": 90000
+    },
+    "checkoutservice": {
+      "expected_mean_rank": 6.0,
+      "mean_rank": 5.992666666666667,
+      "mean_rank_minus_expected": -0.007333333333333414,
+      "observations": 90000
+    },
+    "currencyservice": {
+      "expected_mean_rank": 6.0,
+      "mean_rank": 5.987711111111111,
+      "mean_rank_minus_expected": -0.012288888888888572,
+      "observations": 90000
+    },
+    "emailservice": {
+      "expected_mean_rank": 6.0,
+      "mean_rank": 5.992555555555556,
+      "mean_rank_minus_expected": -0.007444444444444365,
+      "observations": 90000
+    },
+    "frontend": {
+      "expected_mean_rank": 6.0,
+      "mean_rank": 6.001988888888889,
+      "mean_rank_minus_expected": 0.001988888888888596,
+      "observations": 90000
+    },
+    "paymentservice": {
+      "expected_mean_rank": 6.0,
+      "mean_rank": 6.0155111111111115,
+      "mean_rank_minus_expected": 0.015511111111111475,
+      "observations": 90000
+    },
+    "productcatalogservice": {
+      "expected_mean_rank": 6.0,
+      "mean_rank": 5.999033333333333,
+      "mean_rank_minus_expected": -0.0009666666666667822,
+      "observations": 90000
+    },
+    "recommendationservice": {
+      "expected_mean_rank": 6.0,
+      "mean_rank": 6.010577777777778,
+      "mean_rank_minus_expected": 0.010577777777777797,
+      "observations": 90000
+    },
+    "redis": {
+      "expected_mean_rank": 6.0,
+      "mean_rank": 5.998466666666666,
+      "mean_rank_minus_expected": -0.0015333333333336086,
+      "observations": 90000
+    },
+    "shippingservice": {
+      "expected_mean_rank": 6.0,
+      "mean_rank": 6.012511111111111,
+      "mean_rank_minus_expected": 0.012511111111111362,
+      "observations": 90000
+    }
+  },
+  "multi_seed_ac_summary": {
+    "AC@1": {
+      "analytical_chance": 0.09090909090909091,
+      "difference_in_se": -0.7868597456722053,
+      "max_across_seeds": 0.17777777777777778,
+      "mean_matches_chance_within_3se": true,
+      "mean_minus_chance": -0.0007424242424242528,
+      "min_across_seeds": 0.022222222222222223,
+      "multi_seed_mean": 0.09016666666666666,
+      "multi_seed_sd": 0.029836976781421068,
+      "standard_error_of_mean": 0.0009435280512285047
+    },
+    "AC@3": {
+      "analytical_chance": 0.2727272727272727,
+      "difference_in_se": -1.6661659278577408,
+      "max_across_seeds": 0.4111111111111111,
+      "mean_matches_chance_within_3se": true,
+      "mean_minus_chance": -0.0024828282828282533,
+      "min_across_seeds": 0.1111111111111111,
+      "multi_seed_mean": 0.27024444444444445,
+      "multi_seed_sd": 0.04712251211928735,
+      "standard_error_of_mean": 0.001490144673658361
+    },
+    "AC@5": {
+      "analytical_chance": 0.45454545454545453,
+      "difference_in_se": -0.19137634996441502,
+      "max_across_seeds": 0.6222222222222222,
+      "mean_matches_chance_within_3se": true,
+      "mean_minus_chance": -0.0003232323232322809,
+      "min_across_seeds": 0.26666666666666666,
+      "multi_seed_mean": 0.45422222222222225,
+      "multi_seed_sd": 0.05341048436715549,
+      "standard_error_of_mean": 0.0016889878153302825
+    }
+  },
+  "position_frequency_uniformity": {
+    "adservice": {
+      "chi_square": 9.750844444444445,
+      "position_counts": {
+        "1": 8207,
+        "10": 8260,
+        "11": 8174,
+        "2": 8170,
+        "3": 8182,
+        "4": 8354,
+        "5": 8161,
+        "6": 8079,
+        "7": 8222,
+        "8": 8184,
+        "9": 8007
+      },
+      "pvalue": 0.46261788405549953
+    },
+    "cartservice": {
+      "chi_square": 10.130955555555555,
+      "position_counts": {
+        "1": 8151,
+        "10": 8104,
+        "11": 8320,
+        "2": 8247,
+        "3": 8350,
+        "4": 8097,
+        "5": 8168,
+        "6": 8210,
+        "7": 8113,
+        "8": 8077,
+        "9": 8163
+      },
+      "pvalue": 0.4290802652615824
+    },
+    "checkoutservice": {
+      "chi_square": 8.810222222222222,
+      "position_counts": {
+        "1": 8181,
+        "10": 8154,
+        "11": 8045,
+        "2": 8136,
+        "3": 8184,
+        "4": 8158,
+        "5": 8190,
+        "6": 8343,
+        "7": 8312,
+        "8": 8197,
+        "9": 8100
+      },
+      "pvalue": 0.550204052880143
+    },
+    "currencyservice": {
+      "chi_square": 14.03497777777778,
+      "position_counts": {
+        "1": 8303,
+        "10": 8228,
+        "11": 8072,
+        "2": 8089,
+        "3": 8311,
+        "4": 8278,
+        "5": 8200,
+        "6": 8053,
+        "7": 8044,
+        "8": 8128,
+        "9": 8294
+      },
+      "pvalue": 0.1714021339552497
+    },
+    "emailservice": {
+      "chi_square": 6.383377777777778,
+      "position_counts": {
+        "1": 8198,
+        "10": 8186,
+        "11": 8096,
+        "2": 8106,
+        "3": 8210,
+        "4": 8225,
+        "5": 8331,
+        "6": 8223,
+        "7": 8075,
+        "8": 8194,
+        "9": 8156
+      },
+      "pvalue": 0.7820911167049615
+    },
+    "frontend": {
+      "chi_square": 6.316644444444445,
+      "position_counts": {
+        "1": 8102,
+        "10": 8161,
+        "11": 8202,
+        "2": 8299,
+        "3": 8163,
+        "4": 8073,
+        "5": 8216,
+        "6": 8285,
+        "7": 8104,
+        "8": 8207,
+        "9": 8188
+      },
+      "pvalue": 0.7879956491398272
+    },
+    "paymentservice": {
+      "chi_square": 10.272244444444445,
+      "position_counts": {
+        "1": 8121,
+        "10": 8185,
+        "11": 8285,
+        "2": 8186,
+        "3": 8141,
+        "4": 8158,
+        "5": 8071,
+        "6": 8078,
+        "7": 8290,
+        "8": 8355,
+        "9": 8130
+      },
+      "pvalue": 0.4169418781889196
+    },
+    "productcatalogservice": {
+      "chi_square": 2.8115555555555556,
+      "position_counts": {
+        "1": 8113,
+        "10": 8171,
+        "11": 8097,
+        "2": 8229,
+        "3": 8199,
+        "4": 8194,
+        "5": 8151,
+        "6": 8169,
+        "7": 8207,
+        "8": 8256,
+        "9": 8214
+      },
+      "pvalue": 0.9855174181373626
+    },
+    "recommendationservice": {
+      "chi_square": 8.237733333333333,
+      "position_counts": {
+        "1": 8252,
+        "10": 8203,
+        "11": 8184,
+        "2": 8110,
+        "3": 8033,
+        "4": 8123,
+        "5": 8170,
+        "6": 8296,
+        "7": 8125,
+        "8": 8202,
+        "9": 8302
+      },
+      "pvalue": 0.6056277981463637
+    },
+    "redis": {
+      "chi_square": 4.588911111111111,
+      "position_counts": {
+        "1": 8241,
+        "10": 8100,
+        "11": 8219,
+        "2": 8201,
+        "3": 8078,
+        "4": 8190,
+        "5": 8201,
+        "6": 8188,
+        "7": 8228,
+        "8": 8099,
+        "9": 8255
+      },
+      "pvalue": 0.9168961098461744
+    },
+    "shippingservice": {
+      "chi_square": 6.799666666666666,
+      "position_counts": {
+        "1": 8131,
+        "10": 8248,
+        "11": 8306,
+        "2": 8227,
+        "3": 8149,
+        "4": 8150,
+        "5": 8141,
+        "6": 8076,
+        "7": 8280,
+        "8": 8101,
+        "9": 8191
+      },
+      "pvalue": 0.7442126176164949
+    }
+  },
+  "position_uniformity_rule": "all service mean ranks within 0.10 of uniform expectation 6.0; chi-square p-values reported descriptively",
+  "positions_roughly_uniform": true,
+  "reported_baseline_seed_unchanged": 42,
+  "seed42": {
+    "AC@1": {
+      "analytical_chance": 0.09090909090909091,
+      "cases": 90,
+      "empirical": 0.03333333333333333,
+      "exact_binomial_two_sided_pvalue": 0.06408845226590759,
+      "hits": 3
+    },
+    "AC@3": {
+      "analytical_chance": 0.2727272727272727,
+      "cases": 90,
+      "empirical": 0.16666666666666666,
+      "exact_binomial_two_sided_pvalue": 0.024093341244843806,
+      "hits": 15
+    },
+    "AC@5": {
+      "analytical_chance": 0.45454545454545453,
+      "cases": 90,
+      "empirical": 0.4222222222222222,
+      "exact_binomial_two_sided_pvalue": 0.5970223594639337,
+      "hits": 38
+    }
+  },
+  "seed42_interpretation": "low draw: AC@3 is below the single-seed 95% binomial interval, while 1000-seed means match analytical Chance@k and service positions are approximately uniform; seed 42 remains the reported baseline."
+}
