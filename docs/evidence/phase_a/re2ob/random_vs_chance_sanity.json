@@ -1,0 +1,90 @@
+{
+  "allowlist": [
+    "adservice",
+    "cartservice",
+    "checkoutservice",
+    "currencyservice",
+    "emailservice",
+    "frontend",
+    "paymentservice",
+    "productcatalogservice",
+    "recommendationservice",
+    "redis",
+    "shippingservice"
+  ],
+  "allowlist_covers_all_ground_truth": true,
+  "allowlist_size": 11,
+  "ground_truth_services": [
+    "checkoutservice",
+    "currencyservice",
+    "emailservice",
+    "productcatalogservice",
+    "recommendationservice"
+  ],
+  "master_seed": 42,
+  "method": "deterministic random",
+  "primary_filtered": {
+    "AC@1": {
+      "analytical_chance": 0.09090909090909091,
+      "cases": 90,
+      "empirical": 0.03333333333333333,
+      "exact_binomial_two_sided_pvalue": 0.06408845226590759,
+      "expected_hits": 8.181818181818182,
+      "hits": 3,
+      "pass": true,
+      "sampling_noise_95pct_hit_interval": [
+        3,
+        14
+      ]
+    },
+    "AC@3": {
+      "analytical_chance": 0.2727272727272727,
+      "cases": 90,
+      "empirical": 0.16666666666666666,
+      "exact_binomial_two_sided_pvalue": 0.024093341244843806,
+      "expected_hits": 24.545454545454543,
+      "hits": 15,
+      "pass": false,
+      "sampling_noise_95pct_hit_interval": [
+        17,
+        33
+      ]
+    },
+    "AC@5": {
+      "analytical_chance": 0.45454545454545453,
+      "cases": 90,
+      "empirical": 0.4222222222222222,
+      "exact_binomial_two_sided_pvalue": 0.5970223594639337,
+      "expected_hits": 40.90909090909091,
+      "hits": 38,
+      "pass": true,
+      "sampling_noise_95pct_hit_interval": [
+        32,
+        50
+      ]
+    }
+  },
+  "sampling_noise_rule": "empirical hit count must lie within the central 95% Binomial(n=90, p=Chance@k) prediction interval",
+  "sanity_pass": false,
+  "secondary_unfiltered": {
+    "AC@1": {
+      "cases": 90,
+      "empirical": 0.03333333333333333,
+      "hits": 3,
+      "note": "secondary native/unfiltered ranking; candidate sizes vary"
+    },
+    "AC@3": {
+      "cases": 90,
+      "empirical": 0.16666666666666666,
+      "hits": 15,
+      "note": "secondary native/unfiltered ranking; candidate sizes vary"
+    },
+    "AC@5": {
+      "cases": 90,
+      "empirical": 0.3888888888888889,
+      "hits": 35,
+      "note": "secondary native/unfiltered ranking; candidate sizes vary"
+    }
+  },
+  "suite": "RE2-OB"
+}
