@@ -4,7 +4,10 @@ import pytest
 
 from sentinelops.evaluation.rcaeval_detection import (
     calibration_ewma,
+    calibration_isolation_forest,
     calibration_zscore,
+    ensemble_two_of_three,
+    normalize_scores_from_calibration,
     prepare_metrics,
 )
 
@@ -169,3 +172,163 @@ def test_ewma_threshold_scale_uses_calibration_only():
         0,
         1,
     ]
+
+
+def test_isolation_forest_fits_calibration_only():
+    calibration = np.array(
+        [
+            [0.00, 0.00],
+            [0.05, 0.02],
+            [-0.03, 0.04],
+            [0.02, -0.02],
+            [-0.04, -0.03],
+            [0.01, 0.03],
+            [-0.02, 0.01],
+            [0.04, -0.01],
+            [-0.01, -0.04],
+            [0.03, 0.00],
+            [0.00, 0.05],
+            [-0.05, 0.00],
+            [0.02, 0.02],
+            [-0.02, -0.02],
+            [0.01, -0.03],
+            [-0.03, 0.01],
+            [0.04, 0.03],
+            [-0.04, 0.02],
+            [0.03, -0.04],
+            [-0.01, 0.02],
+        ]
+    )
+
+    fault = np.array(
+        [
+            [100.0, 100.0],
+        ]
+    )
+
+    matrix = np.vstack(
+        [
+            calibration,
+            fault,
+        ]
+    )
+
+    scores, flags = (
+        calibration_isolation_forest(
+            matrix,
+            calibration_rows=20,
+            n_estimators=200,
+            contamination=0.10,
+            random_state=42,
+        )
+    )
+
+    assert len(scores) == 21
+    assert len(flags) == 21
+    assert flags[-1] == 1
+
+    assert scores[-1] > np.median(
+        scores[:20]
+    )
+
+
+def test_score_normalization_uses_calibration_only():
+    scores = np.array(
+        [
+            10.0,
+            20.0,
+            15.0,
+            1000.0,
+        ]
+    )
+
+    normalized = (
+        normalize_scores_from_calibration(
+            scores,
+            calibration_rows=3,
+        )
+    )
+
+    assert normalized.tolist() == [
+        0.0,
+        1.0,
+        0.5,
+        1.0,
+    ]
+
+
+def test_constant_calibration_normalization():
+    scores = np.array(
+        [
+            5.0,
+            5.0,
+            5.0,
+            8.0,
+        ]
+    )
+
+    normalized = (
+        normalize_scores_from_calibration(
+            scores,
+            calibration_rows=3,
+        )
+    )
+
+    assert normalized.tolist() == [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+    ]
+
+
+def test_ensemble_requires_two_votes():
+    z_scores = np.array(
+        [0.0, 1.0, 5.0]
+    )
+    ewma_scores = np.array(
+        [0.0, 1.0, 4.0]
+    )
+    isolation_scores = np.array(
+        [0.0, 1.0, 3.0]
+    )
+
+    z_flags = np.array(
+        [0, 0, 1]
+    )
+    ewma_flags = np.array(
+        [0, 0, 1]
+    )
+    isolation_flags = np.array(
+        [0, 0, 0]
+    )
+
+    scores, votes, flags = (
+        ensemble_two_of_three(
+            z_scores=z_scores,
+            z_flags=z_flags,
+            ewma_scores=ewma_scores,
+            ewma_flags=ewma_flags,
+            isolation_scores=(
+                isolation_scores
+            ),
+            isolation_flags=(
+                isolation_flags
+            ),
+            calibration_rows=2,
+        )
+    )
+
+    assert votes.tolist() == [
+        0,
+        0,
+        2,
+    ]
+
+    assert flags.tolist() == [
+        0,
+        0,
+        1,
+    ]
+
+    assert len(scores) == 3
