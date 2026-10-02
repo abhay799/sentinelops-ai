@@ -102,3 +102,67 @@ def deterministic_random_ranking(
         )
 
     return ranking, derived_seed
+
+
+def pagerank_ranking(
+    services: Iterable[str],
+    edges: Iterable[tuple[str, str]],
+    service_strengths: dict[str, float],
+    damping: float = 0.85,
+) -> list[dict[str, float | int | str]]:
+    import networkx as nx
+
+    candidates = sorted(set(services))
+    if not candidates:
+        raise ValueError("PageRank candidate set is empty")
+
+    candidate_set = set(candidates)
+    graph = nx.DiGraph()
+    graph.add_nodes_from(candidates)
+    graph.add_edges_from(
+        (source, target)
+        for source, target in edges
+        if source in candidate_set
+        and target in candidate_set
+    )
+
+    weights = {
+        service: max(
+            0.0,
+            float(service_strengths.get(service, 0.0)),
+        )
+        for service in candidates
+    }
+    total = sum(weights.values())
+    if total == 0.0:
+        personalization = {
+            service: 1.0 / len(candidates)
+            for service in candidates
+        }
+    else:
+        personalization = {
+            service: value / total
+            for service, value in weights.items()
+        }
+
+    scores = nx.pagerank(
+        graph,
+        alpha=damping,
+        personalization=personalization,
+    )
+    rows: list[dict[str, float | int | str]] = [
+        {
+            "service": service,
+            "score": float(scores[service]),
+        }
+        for service in candidates
+    ]
+    rows.sort(
+        key=lambda row: (
+            -float(row["score"]),
+            str(row["service"]),
+        )
+    )
+    for rank, row in enumerate(rows, start=1):
+        row["rank"] = rank
+    return rows

@@ -1,0 +1,70 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_recommendationservice_cpu_1",
+  "damping": 0.85,
+  "ground_truth_used_for_ranking": false,
+  "personalization_source": "continuous v1 fault-window anomaly strength",
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 0.16987102555328226,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 2,
+      "score": 0.09926962668731006,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 3,
+      "score": 0.08684387351992343,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 4,
+      "score": 0.08479984860562093,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 5,
+      "score": 0.08411070464508348,
+      "service": "emailservice"
+    },
+    {
+      "rank": 6,
+      "score": 0.07709874898349502,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 7,
+      "score": 0.07162374582612197,
+      "service": "frontend"
+    },
+    {
+      "rank": 8,
+      "score": 0.07016086456478231,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 9,
+      "score": 0.06698200091366183,
+      "service": "adservice"
+    },
+    {
+      "rank": 10,
+      "score": 0.06511267679475041,
+      "service": "redis"
+    },
+    {
+      "rank": 11,
+      "score": 0.06323821971107235,
+      "service": "cartservice"
+    },
+    {
+      "rank": 12,
+      "score": 0.060888664194895345,
+      "service": "shippingservice"
+    }
+  ],
+  "status": "ok"
+}

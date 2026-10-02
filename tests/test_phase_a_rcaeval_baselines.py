@@ -2,6 +2,7 @@ import polars as pl
 
 from sentinelops.evaluation.rcaeval_baselines import (
     deterministic_random_ranking,
+    pagerank_ranking,
     static_threshold_ranking,
 )
 
@@ -47,3 +48,38 @@ def test_deterministic_random_ranking_is_stable_and_lexical_before_shuffle():
         "c",
     ]
     assert [row["rank"] for row in first] == [1, 2, 3]
+
+
+def test_pagerank_ranking_uses_strength_personalization():
+    ranking = pagerank_ranking(
+        services=["a", "b", "c"],
+        edges=[],
+        service_strengths={
+            "a": 1.0,
+            "b": 0.0,
+            "c": 0.0,
+        },
+        damping=0.85,
+    )
+
+    assert ranking[0]["service"] == "a"
+    assert ranking[0]["score"] > ranking[1]["score"]
+
+
+def test_pagerank_zero_strengths_uses_uniform_lexical_ties():
+    ranking = pagerank_ranking(
+        services=["c", "a", "b"],
+        edges=[],
+        service_strengths={
+            "a": 0.0,
+            "b": 0.0,
+            "c": 0.0,
+        },
+        damping=0.85,
+    )
+
+    assert [row["service"] for row in ranking] == [
+        "a",
+        "b",
+        "c",
+    ]

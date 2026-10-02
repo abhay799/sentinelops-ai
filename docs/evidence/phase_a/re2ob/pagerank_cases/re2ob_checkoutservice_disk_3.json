@@ -1,0 +1,65 @@
+{
+  "candidate_count": 11,
+  "case_id": "re2ob_checkoutservice_disk_3",
+  "damping": 0.85,
+  "ground_truth_used_for_ranking": false,
+  "personalization_source": "continuous v1 fault-window anomaly strength",
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 0.16600979281243783,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 2,
+      "score": 0.1047555381441403,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 3,
+      "score": 0.10280838421375546,
+      "service": "emailservice"
+    },
+    {
+      "rank": 4,
+      "score": 0.097093089898464,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 5,
+      "score": 0.09671588977881379,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 6,
+      "score": 0.08225609037068365,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 7,
+      "score": 0.08028627063531747,
+      "service": "adservice"
+    },
+    {
+      "rank": 8,
+      "score": 0.07462578369632927,
+      "service": "cartservice"
+    },
+    {
+      "rank": 9,
+      "score": 0.07225856586999052,
+      "service": "frontend"
+    },
+    {
+      "rank": 10,
+      "score": 0.06301324543142345,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 11,
+      "score": 0.06017734914864426,
+      "service": "redis"
+    }
+  ],
+  "status": "ok"
+}
