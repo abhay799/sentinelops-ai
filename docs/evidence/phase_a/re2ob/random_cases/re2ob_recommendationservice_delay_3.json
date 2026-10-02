@@ -1,0 +1,59 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_recommendationservice_delay_3",
+  "derived_seed": 2481662436751264846,
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 2,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 3,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 4,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 5,
+      "service": "frontend"
+    },
+    {
+      "rank": 6,
+      "service": "cartservice"
+    },
+    {
+      "rank": 7,
+      "service": "redis"
+    },
+    {
+      "rank": 8,
+      "service": "adservice"
+    },
+    {
+      "rank": 9,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 10,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 11,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 12,
+      "service": "emailservice"
+    }
+  ],
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "ok"
+}

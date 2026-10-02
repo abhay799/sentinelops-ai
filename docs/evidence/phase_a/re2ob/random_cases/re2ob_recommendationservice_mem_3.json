@@ -1,0 +1,59 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_recommendationservice_mem_3",
+  "derived_seed": 6267782046687979253,
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "adservice"
+    },
+    {
+      "rank": 2,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 3,
+      "service": "frontend"
+    },
+    {
+      "rank": 4,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 5,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 6,
+      "service": "redis"
+    },
+    {
+      "rank": 7,
+      "service": "cartservice"
+    },
+    {
+      "rank": 8,
+      "service": "emailservice"
+    },
+    {
+      "rank": 9,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 10,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 11,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 12,
+      "service": "frontend-external"
+    }
+  ],
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "ok"
+}

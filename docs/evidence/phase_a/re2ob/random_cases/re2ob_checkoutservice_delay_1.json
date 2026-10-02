@@ -1,0 +1,59 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_checkoutservice_delay_1",
+  "derived_seed": 1399443040540343129,
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "cartservice"
+    },
+    {
+      "rank": 2,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 3,
+      "service": "redis"
+    },
+    {
+      "rank": 4,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 5,
+      "service": "adservice"
+    },
+    {
+      "rank": 6,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 7,
+      "service": "frontend"
+    },
+    {
+      "rank": 8,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 9,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 10,
+      "service": "emailservice"
+    },
+    {
+      "rank": 11,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 12,
+      "service": "shippingservice"
+    }
+  ],
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "ok"
+}

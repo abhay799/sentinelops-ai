@@ -1,0 +1,59 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_productcatalogservice_disk_2",
+  "derived_seed": 13144542678473565627,
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 2,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 3,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 4,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 5,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 6,
+      "service": "emailservice"
+    },
+    {
+      "rank": 7,
+      "service": "cartservice"
+    },
+    {
+      "rank": 8,
+      "service": "adservice"
+    },
+    {
+      "rank": 9,
+      "service": "frontend"
+    },
+    {
+      "rank": 10,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 11,
+      "service": "redis"
+    },
+    {
+      "rank": 12,
+      "service": "paymentservice"
+    }
+  ],
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "ok"
+}

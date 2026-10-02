@@ -1,6 +1,7 @@
 import polars as pl
 
 from sentinelops.evaluation.rcaeval_baselines import (
+    deterministic_random_ranking,
     static_threshold_ranking,
 )
 
@@ -24,3 +25,25 @@ def test_static_threshold_ranking_uses_calibration_only_and_lexical_ties():
     assert ranking[0]["service"] == "b"
     assert ranking[1]["service"] == "a"
     assert ranking[2]["service"] == "c"
+
+
+def test_deterministic_random_ranking_is_stable_and_lexical_before_shuffle():
+    first, first_seed = deterministic_random_ranking(
+        ["c", "a", "b"],
+        case_id="case-1",
+        master_seed=42,
+    )
+    second, second_seed = deterministic_random_ranking(
+        ["b", "c", "a"],
+        case_id="case-1",
+        master_seed=42,
+    )
+
+    assert first_seed == second_seed
+    assert first == second
+    assert sorted(row["service"] for row in first) == [
+        "a",
+        "b",
+        "c",
+    ]
+    assert [row["rank"] for row in first] == [1, 2, 3]

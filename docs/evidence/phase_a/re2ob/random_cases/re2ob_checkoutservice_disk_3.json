@@ -1,0 +1,55 @@
+{
+  "candidate_count": 11,
+  "case_id": "re2ob_checkoutservice_disk_3",
+  "derived_seed": 16651692263702250514,
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 2,
+      "service": "frontend"
+    },
+    {
+      "rank": 3,
+      "service": "cartservice"
+    },
+    {
+      "rank": 4,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 5,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 6,
+      "service": "redis"
+    },
+    {
+      "rank": 7,
+      "service": "adservice"
+    },
+    {
+      "rank": 8,
+      "service": "emailservice"
+    },
+    {
+      "rank": 9,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 10,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 11,
+      "service": "shippingservice"
+    }
+  ],
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "ok"
+}

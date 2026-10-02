@@ -1,0 +1,59 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_productcatalogservice_delay_3",
+  "derived_seed": 16624688399922537278,
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "redis"
+    },
+    {
+      "rank": 2,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 3,
+      "service": "cartservice"
+    },
+    {
+      "rank": 4,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 5,
+      "service": "frontend"
+    },
+    {
+      "rank": 6,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 7,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 8,
+      "service": "adservice"
+    },
+    {
+      "rank": 9,
+      "service": "emailservice"
+    },
+    {
+      "rank": 10,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 11,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 12,
+      "service": "paymentservice"
+    }
+  ],
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "ok"
+}

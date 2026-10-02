@@ -1,0 +1,17 @@
+{
+  "case_count_expected": 90,
+  "case_count_failed": 0,
+  "case_count_ok": 90,
+  "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "exact_command": "python scripts/phase_a_step18_random.py",
+  "execution_date": "2026-10-02",
+  "failed_cases": [],
+  "master_seed": 42,
+  "python": "3.12.14",
+  "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+  "runtime_seconds": 0.14068685200004438,
+  "sentinelops_commit": "da60d6a0bee9b19416a057e1ec4ecdd393ff1b29",
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "complete",
+  "step": 18
+}

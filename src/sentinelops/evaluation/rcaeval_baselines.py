@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 from collections.abc import Iterable
 
 import numpy as np
@@ -69,3 +70,35 @@ def static_threshold_ranking(
     for rank, row in enumerate(rows, start=1):
         row["rank"] = rank
     return rows
+
+
+def deterministic_random_ranking(
+    services: Iterable[str],
+    case_id: str,
+    master_seed: int = 42,
+) -> tuple[list[dict[str, int | str]], int]:
+    ordered = sorted(set(services))
+    if not ordered:
+        raise ValueError("Random baseline candidate set is empty")
+
+    digest = hashlib.sha256(
+        f"{master_seed}:{case_id}".encode("utf-8")
+    ).digest()
+    derived_seed = int.from_bytes(
+        digest[:8],
+        byteorder="big",
+        signed=False,
+    )
+    rng = np.random.default_rng(derived_seed)
+    permutation = rng.permutation(len(ordered))
+    ranking: list[dict[str, int | str]] = []
+
+    for rank, index in enumerate(permutation, start=1):
+        ranking.append(
+            {
+                "service": ordered[int(index)],
+                "rank": rank,
+            }
+        )
+
+    return ranking, derived_seed

@@ -1,0 +1,59 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_recommendationservice_loss_1",
+  "derived_seed": 12004695364379692753,
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "redis"
+    },
+    {
+      "rank": 2,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 3,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 4,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 5,
+      "service": "frontend"
+    },
+    {
+      "rank": 6,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 7,
+      "service": "adservice"
+    },
+    {
+      "rank": 8,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 9,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 10,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 11,
+      "service": "emailservice"
+    },
+    {
+      "rank": 12,
+      "service": "cartservice"
+    }
+  ],
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "ok"
+}

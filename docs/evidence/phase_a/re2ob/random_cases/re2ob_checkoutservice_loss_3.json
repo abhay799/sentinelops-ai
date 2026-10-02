@@ -1,0 +1,63 @@
+{
+  "candidate_count": 13,
+  "case_id": "re2ob_checkoutservice_loss_3",
+  "derived_seed": 216507344590422830,
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 2,
+      "service": "frontend"
+    },
+    {
+      "rank": 3,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 4,
+      "service": "adservice"
+    },
+    {
+      "rank": 5,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 6,
+      "service": "cartservice"
+    },
+    {
+      "rank": 7,
+      "service": "frontend-check"
+    },
+    {
+      "rank": 8,
+      "service": "redis"
+    },
+    {
+      "rank": 9,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 10,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 11,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 12,
+      "service": "emailservice"
+    },
+    {
+      "rank": 13,
+      "service": "frontend-external"
+    }
+  ],
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "ok"
+}

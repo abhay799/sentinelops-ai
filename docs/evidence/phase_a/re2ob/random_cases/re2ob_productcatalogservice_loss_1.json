@@ -1,0 +1,59 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_productcatalogservice_loss_1",
+  "derived_seed": 7447076063652890766,
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "cartservice"
+    },
+    {
+      "rank": 2,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 3,
+      "service": "adservice"
+    },
+    {
+      "rank": 4,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 5,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 6,
+      "service": "frontend"
+    },
+    {
+      "rank": 7,
+      "service": "emailservice"
+    },
+    {
+      "rank": 8,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 9,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 10,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 11,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 12,
+      "service": "redis"
+    }
+  ],
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "ok"
+}

@@ -1,0 +1,59 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_checkoutservice_cpu_3",
+  "derived_seed": 2172604924286374124,
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 2,
+      "service": "cartservice"
+    },
+    {
+      "rank": 3,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 4,
+      "service": "adservice"
+    },
+    {
+      "rank": 5,
+      "service": "emailservice"
+    },
+    {
+      "rank": 6,
+      "service": "frontend"
+    },
+    {
+      "rank": 7,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 8,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 9,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 10,
+      "service": "redis"
+    },
+    {
+      "rank": 11,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 12,
+      "service": "recommendationservice"
+    }
+  ],
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "ok"
+}

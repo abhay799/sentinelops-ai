@@ -1,0 +1,59 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_currencyservice_disk_1",
+  "derived_seed": 13805881300944665112,
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 2,
+      "service": "redis"
+    },
+    {
+      "rank": 3,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 4,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 5,
+      "service": "cartservice"
+    },
+    {
+      "rank": 6,
+      "service": "frontend"
+    },
+    {
+      "rank": 7,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 8,
+      "service": "emailservice"
+    },
+    {
+      "rank": 9,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 10,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 11,
+      "service": "adservice"
+    },
+    {
+      "rank": 12,
+      "service": "frontend-external"
+    }
+  ],
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "ok"
+}

@@ -1,0 +1,63 @@
+{
+  "candidate_count": 13,
+  "case_id": "re2ob_checkoutservice_socket_1",
+  "derived_seed": 2392583401167579300,
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "adservice"
+    },
+    {
+      "rank": 2,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 3,
+      "service": "istio-init"
+    },
+    {
+      "rank": 4,
+      "service": "emailservice"
+    },
+    {
+      "rank": 5,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 6,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 7,
+      "service": "cartservice"
+    },
+    {
+      "rank": 8,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 9,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 10,
+      "service": "frontend"
+    },
+    {
+      "rank": 11,
+      "service": "redis"
+    },
+    {
+      "rank": 12,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 13,
+      "service": "checkoutservice"
+    }
+  ],
+  "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+  "status": "ok"
+}
