@@ -1,7 +1,101 @@
 {
   "case_id": "re2ob_recommendationservice_loss_2",
-  "error": "Duplicate (traceID, spanID) identifiers found in RCAEval traces",
-  "error_type": "ValueError",
-  "runtime_seconds": 0.659005301000434,
-  "status": "failed"
+  "edges": [
+    [
+      "checkoutservice",
+      "currencyservice"
+    ],
+    [
+      "checkoutservice",
+      "emailservice"
+    ],
+    [
+      "checkoutservice",
+      "paymentservice"
+    ],
+    [
+      "checkoutservice",
+      "productcatalogservice"
+    ],
+    [
+      "frontend",
+      "checkoutservice"
+    ],
+    [
+      "frontend",
+      "currencyservice"
+    ],
+    [
+      "frontend",
+      "productcatalogservice"
+    ],
+    [
+      "frontend",
+      "recommendationservice"
+    ],
+    [
+      "recommendationservice",
+      "productcatalogservice"
+    ]
+  ],
+  "metric_only_services": [
+    "adservice",
+    "cartservice",
+    "frontend-external",
+    "redis",
+    "shippingservice"
+  ],
+  "metric_services": [
+    "adservice",
+    "cartservice",
+    "checkoutservice",
+    "currencyservice",
+    "emailservice",
+    "frontend",
+    "frontend-external",
+    "paymentservice",
+    "productcatalogservice",
+    "recommendationservice",
+    "redis",
+    "shippingservice"
+  ],
+  "runtime_seconds": 1.175285659999986,
+  "service_mapping": [
+    [
+      "checkoutservice",
+      "checkoutservice"
+    ],
+    [
+      "currencyservice",
+      "currencyservice"
+    ],
+    [
+      "emailservice",
+      "emailservice"
+    ],
+    [
+      "frontendservice",
+      "frontend"
+    ],
+    [
+      "paymentservice",
+      "paymentservice"
+    ],
+    [
+      "productcatalogservice",
+      "productcatalogservice"
+    ],
+    [
+      "recommendationservice",
+      "recommendationservice"
+    ]
+  ],
+  "status": "ok",
+  "trace_duplicates": {
+    "conflicting_duplicate_found": false,
+    "duplicate_key_count": 99,
+    "duplicate_row_count": 198,
+    "removed_row_count": 99
+  },
+  "unresolved_parent_count": 0
 }

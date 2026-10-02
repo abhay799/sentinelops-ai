@@ -1,0 +1,54 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_emailservice_loss_3",
+  "change_signal": 0.0,
+  "ground_truth_used_for_ranking": false,
+  "ranking": [
+    {
+      "anomaly_strength": 1.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 1.0,
+      "rank": 1,
+      "rca_score": 0.576667,
+      "service": "emailservice"
+    },
+    {
+      "anomaly_strength": 0.968255289207563,
+      "change_signal": 0.0,
+      "graph_impact": 0.2,
+      "primary_service_bonus": 0.0,
+      "rank": 2,
+      "rca_score": 0.475715,
+      "service": "productcatalogservice"
+    },
+    {
+      "anomaly_strength": 0.9604139243990847,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 3,
+      "rca_score": 0.458853,
+      "service": "paymentservice"
+    },
+    {
+      "anomaly_strength": 0.9501036875864964,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 4,
+      "rca_score": 0.454213,
+      "service": "currencyservice"
+    },
+    {
+      "anomaly_strength": 1.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 5,
+      "rca_score": 0.45,
+      "service": "cartservice"
+    }
+  ],
+  "status": "ok"
+}

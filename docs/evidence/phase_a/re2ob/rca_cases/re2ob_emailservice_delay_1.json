@@ -1,0 +1,54 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_emailservice_delay_1",
+  "change_signal": 0.0,
+  "ground_truth_used_for_ranking": false,
+  "ranking": [
+    {
+      "anomaly_strength": 1.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 1.0,
+      "rank": 1,
+      "rca_score": 0.576667,
+      "service": "emailservice"
+    },
+    {
+      "anomaly_strength": 0.9690191006850832,
+      "change_signal": 0.0,
+      "graph_impact": 0.06666666666666667,
+      "primary_service_bonus": 0.0,
+      "rank": 2,
+      "rca_score": 0.449392,
+      "service": "checkoutservice"
+    },
+    {
+      "anomaly_strength": 0.9941064022301728,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 3,
+      "rca_score": 0.447348,
+      "service": "adservice"
+    },
+    {
+      "anomaly_strength": 0.9667186851708444,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 4,
+      "rca_score": 0.435023,
+      "service": "shippingservice"
+    },
+    {
+      "anomaly_strength": 0.9589927602909132,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 5,
+      "rca_score": 0.431547,
+      "service": "frontend"
+    }
+  ],
+  "status": "ok"
+}

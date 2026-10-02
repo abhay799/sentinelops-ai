@@ -59,7 +59,7 @@
     "redis",
     "shippingservice"
   ],
-  "runtime_seconds": 1.602244530000462,
+  "runtime_seconds": 1.8670497269999942,
   "service_mapping": [
     [
       "checkoutservice",
@@ -91,5 +91,11 @@
     ]
   ],
   "status": "ok",
+  "trace_duplicates": {
+    "conflicting_duplicate_found": false,
+    "duplicate_key_count": 0,
+    "duplicate_row_count": 0,
+    "removed_row_count": 0
+  },
   "unresolved_parent_count": 0
 }

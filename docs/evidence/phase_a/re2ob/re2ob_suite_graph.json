@@ -1,0 +1,62 @@
+{
+  "edge_count": 9,
+  "edges": [
+    [
+      "checkoutservice",
+      "currencyservice"
+    ],
+    [
+      "checkoutservice",
+      "emailservice"
+    ],
+    [
+      "checkoutservice",
+      "paymentservice"
+    ],
+    [
+      "checkoutservice",
+      "productcatalogservice"
+    ],
+    [
+      "frontend",
+      "checkoutservice"
+    ],
+    [
+      "frontend",
+      "currencyservice"
+    ],
+    [
+      "frontend",
+      "productcatalogservice"
+    ],
+    [
+      "frontend",
+      "recommendationservice"
+    ],
+    [
+      "recommendationservice",
+      "productcatalogservice"
+    ]
+  ],
+  "node_count": 16,
+  "nodes": [
+    "InboundPassthroughClusterIpv4",
+    "PassthroughCluster",
+    "adservice",
+    "cartservice",
+    "checkoutservice",
+    "currencyservice",
+    "emailservice",
+    "frontend",
+    "frontend-check",
+    "frontend-external",
+    "istio-init",
+    "paymentservice",
+    "productcatalogservice",
+    "recommendationservice",
+    "redis",
+    "shippingservice"
+  ],
+  "source": "union of all RE2-OB pre-injection traces",
+  "unresolved_parent_count_total": 2380
+}
