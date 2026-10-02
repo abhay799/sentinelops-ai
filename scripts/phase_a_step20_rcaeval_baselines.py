@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import argparse
+import contextlib
+import io
 import json
 import sys
 import time
@@ -197,22 +199,73 @@ def run_case(
         data_path=str(path),
     )
     func = METHOD_FUNCS[method]
-    out = func(
-        data,
-        inject_time,
-        dataset="re2-ob",
-        anomalies=None,
-        dk_select_useful=False,
-        sli=sli,
-        verbose=False,
-        n_iter=(
-            len(data["metric"].columns) - 1
-            if isinstance(data, dict)
-            else len(data.columns) - 1
-        ),
-        args=run_args,
-    )
+    stderr_buffer = io.StringIO()
+    with contextlib.redirect_stderr(stderr_buffer):
+        out = func(
+            data,
+            inject_time,
+            dataset="re2-ob",
+            anomalies=None,
+            dk_select_useful=False,
+            sli=sli,
+            verbose=False,
+            n_iter=(
+                len(data["metric"].columns) - 1
+                if isinstance(data, dict)
+                else len(data.columns) - 1
+            ),
+            args=run_args,
+        )
+    rcaeval_stderr = stderr_buffer.getvalue()
+    if rcaeval_stderr:
+        print(rcaeval_stderr, file=sys.stderr, end="")
+
     raw_ranks = [str(x) for x in out.get("ranks", [])]
+    adj = out.get("adj")
+    wrapper_fallback = (
+        "returning the unranked column order" in rcaeval_stderr
+    )
+    mmcirca_fallback = (
+        method == "mmcirca"
+        and isinstance(adj, list)
+        and len(adj) == 0
+    )
+    fallback_detected = wrapper_fallback or mmcirca_fallback
+    if fallback_detected:
+        if wrapper_fallback:
+            fallback_reason = rcaeval_stderr.strip()
+            fallback_signal = "rcaeval_wrapper_warning"
+        else:
+            fallback_reason = (
+                "Pinned mmCIRCA returned its explicit empty-adjacency "
+                "graph-construction fallback."
+            )
+            fallback_signal = "mmcirca_empty_adjacency"
+            print(
+                f"{method} {case_id}: {fallback_reason}",
+                file=sys.stderr,
+            )
+        return {
+            "status": "fallback_unranked",
+            "case_id": case_id,
+            "root_service_from_path": service,
+            "fault": fault,
+            "method": method,
+            "inject_time": inject_time,
+            "native_candidate_count_preprocess": native_candidate_count,
+            "fallback_detected": True,
+            "fallback_signal": fallback_signal,
+            "fallback_reason": fallback_reason,
+            "fallback_returned_feature_order": raw_ranks,
+            "raw_feature_ranking": [],
+            "native_service_ranking": [],
+            "e3_filtered_service_ranking": [],
+            "e3_filtered_present_count": 0,
+            "e3_missing_allowlist_services": sorted(ALLOWSET),
+            "trace_input_policy": trace_policy(method),
+            "runtime_seconds": time.perf_counter() - started,
+        }
+
     native_services = native_service_ranking(raw_ranks)
     filtered_services = [
         service_name
@@ -226,6 +279,9 @@ def run_case(
         "fault": fault,
         "method": method,
         "inject_time": inject_time,
+        "fallback_detected": False,
+        "fallback_signal": None,
+        "fallback_reason": None,
         "native_candidate_count_preprocess": native_candidate_count,
         "raw_feature_ranking": raw_ranks,
         "native_service_ranking": native_services,
@@ -247,6 +303,7 @@ def main() -> None:
     paths = case_paths()
 
     completed = 0
+    fallback_unranked: list[dict[str, object]] = []
     failed: list[dict[str, object]] = []
     missing_allowlist: list[dict[str, object]] = []
     started = time.perf_counter()
@@ -256,20 +313,31 @@ def main() -> None:
         out_path = case_out / f"{case_id}.json"
         if out_path.exists():
             cached = json.loads(out_path.read_text())
-            if cached.get("status") == "ok":
-                completed += 1
-                if cached.get("e3_missing_allowlist_services"):
-                    missing_allowlist.append(cached)
+            cache_is_e4 = "fallback_detected" in cached
+            if cache_is_e4 and cached.get("status") in {
+                "ok",
+                "fallback_unranked",
+            }:
+                if cached["status"] == "ok":
+                    completed += 1
+                    if cached.get("e3_missing_allowlist_services"):
+                        missing_allowlist.append(cached)
+                else:
+                    fallback_unranked.append(cached)
                 print(
-                    f"[{index}/90] {method} {case_id} cached",
+                    f"[{index}/90] {method} {case_id} cached "
+                    f"{cached['status']}",
                     flush=True,
                 )
                 continue
 
         try:
             payload = run_case(path, method)
-            if payload["e3_missing_allowlist_services"]:
-                missing_allowlist.append(payload)
+            if payload["status"] == "ok":
+                if payload["e3_missing_allowlist_services"]:
+                    missing_allowlist.append(payload)
+            elif payload["status"] == "fallback_unranked":
+                fallback_unranked.append(payload)
         except Exception as exc:
             payload = {
                 "status": "failed",
@@ -280,7 +348,8 @@ def main() -> None:
             }
             failed.append(payload)
         else:
-            completed += 1
+            if payload["status"] == "ok":
+                completed += 1
 
         write_json(out_path, payload)
         print(
@@ -294,11 +363,25 @@ def main() -> None:
         "method": method,
         "status": (
             "complete"
-            if not failed
-            else "completed_with_failures"
+            if not failed and not fallback_unranked
+            else (
+                "completed_with_fallbacks"
+                if not failed
+                else "completed_with_failures"
+            )
         ),
         "case_count_expected": len(paths),
         "case_count_ok": completed,
+        "case_count_fallback_unranked": len(fallback_unranked),
+        "valid_ranking_coverage": completed / len(paths),
+        "fallback_unranked_cases": [
+            {
+                "case_id": row["case_id"],
+                "reason": row.get("fallback_reason"),
+                "signal": row.get("fallback_signal"),
+            }
+            for row in fallback_unranked
+        ],
         "case_count_failed": len(failed),
         "failed_cases": failed,
         "e3_allowlist_size": len(ALLOWLIST),
