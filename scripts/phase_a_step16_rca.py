@@ -103,7 +103,14 @@ def main() -> None:
     for case_id in ids:
         path = TOPO_OUT / f"{case_id}.json"
         if path.exists():
-            existing[case_id] = json.loads(path.read_text())
+            cached = json.loads(path.read_text())
+            if (
+                cached.get("status") == "ok"
+                and "trace_duplicates" in cached
+            ):
+                existing[case_id] = cached
+            else:
+                pending.append(case_id)
         else:
             pending.append(case_id)
 
