@@ -1,0 +1,26 @@
+import polars as pl
+
+from sentinelops.evaluation.rcaeval_baselines import (
+    static_threshold_ranking,
+)
+
+
+def test_static_threshold_ranking_uses_calibration_only_and_lexical_ties():
+    metrics = pl.DataFrame(
+        {
+            "time": [1, 2, 3, 4, 5, 6],
+            "a_cpu": [0.0, 1.0, 1.0, 2.0, 2.0, 2.0],
+            "b_cpu": [0.0, 1.0, 1.0, 10.0, 10.0, 10.0],
+            "c_cpu": [0.0, 1.0, 1.0, 2.0, 2.0, 2.0],
+        }
+    )
+
+    ranking = static_threshold_ranking(
+        metrics,
+        inject_time_s=5,
+        threshold=2.5,
+    )
+
+    assert ranking[0]["service"] == "b"
+    assert ranking[1]["service"] == "a"
+    assert ranking[2]["service"] == "c"

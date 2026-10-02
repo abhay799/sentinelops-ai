@@ -1,0 +1,17 @@
+{
+  "case_count_expected": 90,
+  "case_count_failed": 0,
+  "case_count_ok": 90,
+  "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "exact_command": "python scripts/phase_a_step17_threshold.py --workers 4",
+  "execution_date": "2026-10-02",
+  "failed_cases": [],
+  "python": "3.12.14",
+  "ranking_rule": "max post-calibration metric z-score per service",
+  "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+  "runtime_seconds": 1.9193136789999699,
+  "sentinelops_commit": "82ff62eca86aa086c01ed4ab09d611e9774212de",
+  "status": "complete",
+  "step": 17,
+  "threshold": 2.5
+}

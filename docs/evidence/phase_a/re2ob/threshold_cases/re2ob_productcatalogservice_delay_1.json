@@ -1,0 +1,69 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_productcatalogservice_delay_1",
+  "ground_truth_used_for_ranking": false,
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 11561.740145062986,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 2,
+      "score": 3646.2566279141597,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 3,
+      "score": 379.29185114752477,
+      "service": "frontend"
+    },
+    {
+      "rank": 4,
+      "score": 73.44315141149666,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 5,
+      "score": 34.06468832475289,
+      "service": "cartservice"
+    },
+    {
+      "rank": 6,
+      "score": 19.820741920751637,
+      "service": "emailservice"
+    },
+    {
+      "rank": 7,
+      "score": 16.047349119199225,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 8,
+      "score": 7.228457374202623,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 9,
+      "score": 6.914399638451255,
+      "service": "adservice"
+    },
+    {
+      "rank": 10,
+      "score": 5.911579255591318,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 11,
+      "score": 4.723701941874693,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 12,
+      "score": 3.671746298732212,
+      "service": "redis"
+    }
+  ],
+  "runtime_seconds": 0.0339223989999482,
+  "status": "ok"
+}

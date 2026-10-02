@@ -1,0 +1,69 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_recommendationservice_mem_2",
+  "ground_truth_used_for_ranking": false,
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 29588.945984208098,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 2,
+      "score": 122.85961621156163,
+      "service": "frontend"
+    },
+    {
+      "rank": 3,
+      "score": 25.353772065385584,
+      "service": "cartservice"
+    },
+    {
+      "rank": 4,
+      "score": 21.158713239528883,
+      "service": "emailservice"
+    },
+    {
+      "rank": 5,
+      "score": 18.8281843182204,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 6,
+      "score": 14.85158499504764,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 7,
+      "score": 10.531958272297638,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 8,
+      "score": 8.531571265785477,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 9,
+      "score": 6.809892428211624,
+      "service": "adservice"
+    },
+    {
+      "rank": 10,
+      "score": 6.099241896035872,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 11,
+      "score": 5.593969253493589,
+      "service": "redis"
+    },
+    {
+      "rank": 12,
+      "score": 3.64456931769761,
+      "service": "frontend-external"
+    }
+  ],
+  "runtime_seconds": 0.03974949899998137,
+  "status": "ok"
+}

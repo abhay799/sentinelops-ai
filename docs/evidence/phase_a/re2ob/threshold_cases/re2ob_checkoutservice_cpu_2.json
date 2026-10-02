@@ -1,0 +1,79 @@
+{
+  "candidate_count": 14,
+  "case_id": "re2ob_checkoutservice_cpu_2",
+  "ground_truth_used_for_ranking": false,
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 43.16486983720188,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 2,
+      "score": 32.77411021727121,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 3,
+      "score": 29.73439196223784,
+      "service": "frontend"
+    },
+    {
+      "rank": 4,
+      "score": 23.16776941852433,
+      "service": "adservice"
+    },
+    {
+      "rank": 5,
+      "score": 17.45610197370945,
+      "service": "emailservice"
+    },
+    {
+      "rank": 6,
+      "score": 16.400807170074565,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 7,
+      "score": 15.755204348204185,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 8,
+      "score": 15.126647294698705,
+      "service": "cartservice"
+    },
+    {
+      "rank": 9,
+      "score": 7.106509432169869,
+      "service": "redis"
+    },
+    {
+      "rank": 10,
+      "score": 7.036521281638695,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 11,
+      "score": 5.7646892455007555,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 12,
+      "score": 3.6525579875622567,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 13,
+      "score": 0.0,
+      "service": "InboundPassthroughClusterIpv4"
+    },
+    {
+      "rank": 14,
+      "score": 0.0,
+      "service": "PassthroughCluster"
+    }
+  ],
+  "runtime_seconds": 0.15243218600016917,
+  "status": "ok"
+}

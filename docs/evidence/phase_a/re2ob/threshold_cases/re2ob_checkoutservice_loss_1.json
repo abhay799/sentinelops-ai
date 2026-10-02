@@ -1,0 +1,69 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_checkoutservice_loss_1",
+  "ground_truth_used_for_ranking": false,
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 606.1461001771476,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 2,
+      "score": 272.4014018953797,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 3,
+      "score": 106.13431058077545,
+      "service": "emailservice"
+    },
+    {
+      "rank": 4,
+      "score": 10.74337348408232,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 5,
+      "score": 8.05226715397822,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 6,
+      "score": 7.510869778323745,
+      "service": "frontend"
+    },
+    {
+      "rank": 7,
+      "score": 7.119615989760767,
+      "service": "adservice"
+    },
+    {
+      "rank": 8,
+      "score": 5.861900264177934,
+      "service": "cartservice"
+    },
+    {
+      "rank": 9,
+      "score": 5.772854633841418,
+      "service": "redis"
+    },
+    {
+      "rank": 10,
+      "score": 5.007454666271155,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 11,
+      "score": 4.233276149668008,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 12,
+      "score": 3.741150533705905,
+      "service": "frontend-external"
+    }
+  ],
+  "runtime_seconds": 0.047170995999977094,
+  "status": "ok"
+}

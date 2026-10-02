@@ -1,0 +1,69 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_emailservice_loss_2",
+  "ground_truth_used_for_ranking": false,
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 21922.655762916558,
+      "service": "emailservice"
+    },
+    {
+      "rank": 2,
+      "score": 44.695728972113706,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 3,
+      "score": 12.56319515397919,
+      "service": "adservice"
+    },
+    {
+      "rank": 4,
+      "score": 9.135185249191485,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 5,
+      "score": 8.686882548373415,
+      "service": "cartservice"
+    },
+    {
+      "rank": 6,
+      "score": 6.959189525394737,
+      "service": "frontend"
+    },
+    {
+      "rank": 7,
+      "score": 5.958750737070513,
+      "service": "redis"
+    },
+    {
+      "rank": 8,
+      "score": 5.888069086930849,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 9,
+      "score": 5.43843985459056,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 10,
+      "score": 5.412253745864875,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 11,
+      "score": 3.578807234338776,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 12,
+      "score": 1.9772231423400224,
+      "service": "frontend-external"
+    }
+  ],
+  "runtime_seconds": 0.05052209900009075,
+  "status": "ok"
+}

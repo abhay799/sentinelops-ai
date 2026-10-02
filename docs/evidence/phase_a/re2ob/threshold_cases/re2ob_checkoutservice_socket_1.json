@@ -1,0 +1,74 @@
+{
+  "candidate_count": 13,
+  "case_id": "re2ob_checkoutservice_socket_1",
+  "ground_truth_used_for_ranking": false,
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 224.7883791936259,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 2,
+      "score": 9.05612925529964,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 3,
+      "score": 7.486387083231431,
+      "service": "emailservice"
+    },
+    {
+      "rank": 4,
+      "score": 5.002142707515854,
+      "service": "redis"
+    },
+    {
+      "rank": 5,
+      "score": 4.990405342326103,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 6,
+      "score": 4.722149343628617,
+      "service": "adservice"
+    },
+    {
+      "rank": 7,
+      "score": 3.9202812571307337,
+      "service": "frontend"
+    },
+    {
+      "rank": 8,
+      "score": 3.7808938634349114,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 9,
+      "score": 3.246788933338181,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 10,
+      "score": 2.731564763811111,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 11,
+      "score": 1.8243983707715183,
+      "service": "cartservice"
+    },
+    {
+      "rank": 12,
+      "score": 1.7230159295714846,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 13,
+      "score": 0.0,
+      "service": "istio-init"
+    }
+  ],
+  "runtime_seconds": 0.033229097000003094,
+  "status": "ok"
+}

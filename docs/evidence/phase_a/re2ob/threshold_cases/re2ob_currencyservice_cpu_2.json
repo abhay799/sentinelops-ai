@@ -1,0 +1,69 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_currencyservice_cpu_2",
+  "ground_truth_used_for_ranking": false,
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 1003.1490271288873,
+      "service": "cartservice"
+    },
+    {
+      "rank": 2,
+      "score": 232.03994377567273,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 3,
+      "score": 181.56078213433094,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 4,
+      "score": 41.96371031268611,
+      "service": "frontend"
+    },
+    {
+      "rank": 5,
+      "score": 15.011658262562884,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 6,
+      "score": 10.202533707878088,
+      "service": "emailservice"
+    },
+    {
+      "rank": 7,
+      "score": 9.366773713101486,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 8,
+      "score": 7.456336080179871,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 9,
+      "score": 7.035593817611682,
+      "service": "adservice"
+    },
+    {
+      "rank": 10,
+      "score": 4.600608695613753,
+      "service": "redis"
+    },
+    {
+      "rank": 11,
+      "score": 4.176990487584008,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 12,
+      "score": 2.5665420896428937,
+      "service": "frontend-external"
+    }
+  ],
+  "runtime_seconds": 0.03473099699999693,
+  "status": "ok"
+}

@@ -1,0 +1,69 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_currencyservice_loss_1",
+  "ground_truth_used_for_ranking": false,
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 31198.209679529664,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 2,
+      "score": 3651.9554038005544,
+      "service": "frontend"
+    },
+    {
+      "rank": 3,
+      "score": 2511.4899188406202,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 4,
+      "score": 788.0877393876018,
+      "service": "cartservice"
+    },
+    {
+      "rank": 5,
+      "score": 341.06688986373206,
+      "service": "adservice"
+    },
+    {
+      "rank": 6,
+      "score": 186.55801146962742,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 7,
+      "score": 166.22845558094798,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 8,
+      "score": 143.7154284726793,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 9,
+      "score": 69.48672565825684,
+      "service": "emailservice"
+    },
+    {
+      "rank": 10,
+      "score": 18.180590216245804,
+      "service": "frontend-external"
+    },
+    {
+      "rank": 11,
+      "score": 13.171645432161503,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 12,
+      "score": 6.255919565653581,
+      "service": "redis"
+    }
+  ],
+  "runtime_seconds": 0.03294599800005926,
+  "status": "ok"
+}

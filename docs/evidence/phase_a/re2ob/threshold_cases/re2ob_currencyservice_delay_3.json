@@ -1,0 +1,69 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_currencyservice_delay_3",
+  "ground_truth_used_for_ranking": false,
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 2106.7672822421723,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 2,
+      "score": 545.5119880892889,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 3,
+      "score": 470.7253377694481,
+      "service": "frontend"
+    },
+    {
+      "rank": 4,
+      "score": 60.34945512523614,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 5,
+      "score": 38.37602693725671,
+      "service": "emailservice"
+    },
+    {
+      "rank": 6,
+      "score": 24.303422471138195,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 7,
+      "score": 5.750488047889438,
+      "service": "cartservice"
+    },
+    {
+      "rank": 8,
+      "score": 5.425212664672797,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 9,
+      "score": 5.0883957083348,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 10,
+      "score": 4.827632534345475,
+      "service": "adservice"
+    },
+    {
+      "rank": 11,
+      "score": 4.734712618581751,
+      "service": "redis"
+    },
+    {
+      "rank": 12,
+      "score": 4.0592315520688755,
+      "service": "frontend-external"
+    }
+  ],
+  "runtime_seconds": 0.041084795999950074,
+  "status": "ok"
+}

@@ -1,0 +1,69 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_productcatalogservice_disk_3",
+  "ground_truth_used_for_ranking": false,
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 2643.444969176473,
+      "service": "productcatalogservice"
+    },
+    {
+      "rank": 2,
+      "score": 737.2286696679091,
+      "service": "recommendationservice"
+    },
+    {
+      "rank": 3,
+      "score": 21.281812223127258,
+      "service": "frontend"
+    },
+    {
+      "rank": 4,
+      "score": 9.829182264735891,
+      "service": "checkoutservice"
+    },
+    {
+      "rank": 5,
+      "score": 8.591744150586715,
+      "service": "shippingservice"
+    },
+    {
+      "rank": 6,
+      "score": 5.849121169360446,
+      "service": "adservice"
+    },
+    {
+      "rank": 7,
+      "score": 5.802107558910059,
+      "service": "redis"
+    },
+    {
+      "rank": 8,
+      "score": 4.045204131983088,
+      "service": "currencyservice"
+    },
+    {
+      "rank": 9,
+      "score": 4.037853739341221,
+      "service": "emailservice"
+    },
+    {
+      "rank": 10,
+      "score": 2.900611386181081,
+      "service": "cartservice"
+    },
+    {
+      "rank": 11,
+      "score": 2.8150143644399837,
+      "service": "paymentservice"
+    },
+    {
+      "rank": 12,
+      "score": 1.1121977827109928,
+      "service": "frontend-external"
+    }
+  ],
+  "runtime_seconds": 0.03219639899998583,
+  "status": "ok"
+}
