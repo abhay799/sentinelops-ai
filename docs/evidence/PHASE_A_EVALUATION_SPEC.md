@@ -609,3 +609,49 @@ Primary RCA tables use filtered rankings. Secondary tables preserve the
 unfiltered/native rankings for transparency. No threshold, ranking weight,
 topology direction, PageRank damping, detector parameter, graph-construction
 rule, or model parameter is changed by E3.
+
+
+## Amendment A4 — POST-HOC static Online Boutique topology sensitivity (2026-10-02)
+
+**Status: POST-HOC SENSITIVITY ONLY.** This amendment was added after the
+RE2-OB trace-derived graph had been inspected. It does not replace or modify
+the primary trace-derived RCA result. The primary Phase A RE2-OB graph remains
+the frozen union of pre-injection trace edges.
+
+The sensitivity graph is derived from the official Online Boutique repository:
+
+`GoogleCloudPlatform/microservices-demo@38e7348eb289eb5b87c0c6e8cb19ced0449dc389`
+
+Source: `release/kubernetes-manifests.yaml` service-address environment
+variables at that revision. Only E3 RE2-OB allowlist nodes participate in this
+sensitivity graph. The deployment name `redis-cart` is deterministically
+mapped to the benchmark label `redis`. Optional `shoppingassistantservice`
+and workload generator traffic are excluded because they are outside the E3
+candidate allowlist.
+Frozen static sensitivity edges, preserving the same caller -> dependency
+direction as the primary graph:
+
+- `frontend -> productcatalogservice`
+- `frontend -> currencyservice`
+- `frontend -> cartservice`
+- `frontend -> recommendationservice`
+- `frontend -> shippingservice`
+- `frontend -> checkoutservice`
+- `frontend -> adservice`
+- `checkoutservice -> productcatalogservice`
+- `checkoutservice -> shippingservice`
+- `checkoutservice -> paymentservice`
+- `checkoutservice -> emailservice`
+- `checkoutservice -> currencyservice`
+- `checkoutservice -> cartservice`
+- `recommendationservice -> productcatalogservice`
+- `cartservice -> redis`
+
+This variant changes only the graph source for a separately labeled
+sensitivity analysis. It does not change detector outputs, candidate allowlist,
+ranking weights, primary-service bonus, PageRank damping, thresholds, random
+seed, graph direction, RCA metrics, or any baseline parameter.
+
+The variant must be reported separately as
+`POST-HOC static-topology sensitivity`; it must never be substituted for the
+primary trace-derived result or used to tune the primary method.
