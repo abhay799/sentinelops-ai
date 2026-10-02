@@ -227,10 +227,13 @@ def main() -> None:
             service: float(values["fault_max_anomaly_strength"])
             for service, values in detection["per_service"].items()
         }
+        # E3 requires allowlist filtering before any top-k truncation.
+        # Preserve the complete native ranking so excluded mesh nodes cannot
+        # consume a saved top-5 slot and hide the next application service.
         ranking = sentinelops_continuous_ranking(
             strengths,
             graph,
-            max_candidates=5,
+            max_candidates=len(strengths),
         )
         payload = {
             "status": "ok",
