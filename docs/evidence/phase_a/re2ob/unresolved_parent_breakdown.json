@@ -1,0 +1,59 @@
+{
+  "ambiguous_parent_exists_elsewhere_in_full_traces": 0,
+  "case_count": 90,
+  "metric_only_case_counts": {
+    "InboundPassthroughClusterIpv4": 1,
+    "PassthroughCluster": 1,
+    "adservice": 90,
+    "cartservice": 90,
+    "frontend-check": 1,
+    "frontend-external": 88,
+    "istio-init": 1,
+    "redis": 90,
+    "shippingservice": 90
+  },
+  "pre_injection_span_counts_by_service": {
+    "checkoutservice": 415782,
+    "currencyservice": 2561591,
+    "emailservice": 56093,
+    "frontend": 9285497,
+    "paymentservice": 43168,
+    "productcatalogservice": 4621539,
+    "recommendationservice": 1230178
+  },
+  "resolved_parent_counts_by_child_service": {
+    "checkoutservice": {
+      "frontend": 30238
+    },
+    "currencyservice": {
+      "checkoutservice": 104212,
+      "frontend": 2443728
+    },
+    "emailservice": {
+      "checkoutservice": 30242
+    },
+    "paymentservice": {
+      "checkoutservice": 30241
+    },
+    "productcatalogservice": {
+      "checkoutservice": 73973,
+      "frontend": 3919133,
+      "recommendationservice": 602095
+    },
+    "recommendationservice": {
+      "frontend": 602116
+    }
+  },
+  "suite": "RE2-OB",
+  "total_unresolved_parent_references": 2380,
+  "unresolved_parent_count_by_child_service": {
+    "checkoutservice": 42,
+    "currencyservice": 725,
+    "emailservice": 3,
+    "frontend": 1066,
+    "paymentservice": 3,
+    "productcatalogservice": 491,
+    "recommendationservice": 50
+  },
+  "unresolved_parent_service_policy": "unknown when referenced parent span is absent from full traces; never inferred"
+}
