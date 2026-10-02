@@ -1,0 +1,689 @@
+{
+  "always_alert_baseline": {
+    "note": "Always predicts alert in both normal and fault windows.",
+    "timestamp_confusion": {
+      "fn": 0,
+      "fp": 32400,
+      "tn": 0,
+      "tp": 63942
+    },
+    "timestamp_metrics": {
+      "f1": 0.7978588006288838,
+      "precision": 0.6636980756056549,
+      "recall": 1.0
+    },
+    "window_confusion": {
+      "fn": 0,
+      "fp": 90,
+      "tn": 0,
+      "tp": 90
+    },
+    "window_metrics": {
+      "f1": 0.6666666666666666,
+      "precision": 0.5,
+      "recall": 1.0
+    }
+  },
+  "bootstrap_resamples": 10000,
+  "case_count_expected": 90,
+  "case_count_failed": 0,
+  "case_count_ok": 90,
+  "dataset": "RE2-OB",
+  "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "exact_command": "python scripts/phase_a_step15_detection.py --workers 4",
+  "execution_date": "2026-10-02",
+  "failed_cases": [],
+  "notes": [
+    "Calibration rows excluded from detection metrics.",
+    "Window ROC-AUC/PR-AUC use max system continuous anomaly score per normal/fault window.",
+    "No tuning or threshold changes were performed."
+  ],
+  "per_fault": {
+    "cpu": {
+      "bootstrap_95_ci": {
+        "detection_rate": [
+          1.0,
+          1.0
+        ],
+        "median_delay_seconds": [
+          0.0,
+          0.0
+        ],
+        "timestamp_f1": [
+          0.7838864730219953,
+          0.8171224630200498
+        ],
+        "timestamp_precision": [
+          0.6450243035639228,
+          0.6915836219818773
+        ],
+        "timestamp_recall": [
+          0.9971855590062112,
+          1.0
+        ],
+        "window_f1": [
+          0.6666666666666666,
+          0.6666666666666666
+        ],
+        "window_pr_auc": [
+          0.5184333759046402,
+          0.6818181818181818
+        ],
+        "window_precision": [
+          0.5,
+          0.5
+        ],
+        "window_recall": [
+          1.0,
+          1.0
+        ],
+        "window_roc_auc": [
+          0.5333333333333333,
+          0.7666666666666667
+        ]
+      },
+      "case_count": 15,
+      "metrics": {
+        "detection_rate": 1.0,
+        "median_delay_seconds": 0.0,
+        "timestamp_confusion": {
+          "fn": 13,
+          "fp": 4978,
+          "tn": 422,
+          "tp": 10291
+        },
+        "timestamp_metrics": {
+          "f1": 0.804833222539397,
+          "precision": 0.6739799593948523,
+          "recall": 0.9987383540372671
+        },
+        "window_confusion": {
+          "fn": 0,
+          "fp": 15,
+          "tn": 0,
+          "tp": 15
+        },
+        "window_metrics": {
+          "f1": 0.6666666666666666,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "window_pr_auc": 0.582905982905983,
+        "window_roc_auc": 0.64
+      }
+    },
+    "delay": {
+      "bootstrap_95_ci": {
+        "detection_rate": [
+          1.0,
+          1.0
+        ],
+        "median_delay_seconds": [
+          0.0,
+          0.0
+        ],
+        "timestamp_f1": [
+          0.8101929923177815,
+          0.8224821673287819
+        ],
+        "timestamp_precision": [
+          0.6812595472130749,
+          0.6988103167557552
+        ],
+        "timestamp_recall": [
+          0.9985205732778548,
+          1.0
+        ],
+        "window_f1": [
+          0.6666666666666666,
+          0.6666666666666666
+        ],
+        "window_pr_auc": [
+          0.5769230769230769,
+          0.8333333333333334
+        ],
+        "window_precision": [
+          0.5,
+          0.5
+        ],
+        "window_recall": [
+          1.0,
+          1.0
+        ],
+        "window_roc_auc": [
+          0.6333333333333333,
+          0.9
+        ]
+      },
+      "case_count": 15,
+      "metrics": {
+        "detection_rate": 1.0,
+        "median_delay_seconds": 0.0,
+        "timestamp_confusion": {
+          "fn": 7,
+          "fp": 4865,
+          "tn": 535,
+          "tp": 10808
+        },
+        "timestamp_metrics": {
+          "f1": 0.8160676532769555,
+          "precision": 0.6895935685573917,
+          "recall": 0.9993527508090615
+        },
+        "window_confusion": {
+          "fn": 0,
+          "fp": 15,
+          "tn": 0,
+          "tp": 15
+        },
+        "window_metrics": {
+          "f1": 0.6666666666666666,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "window_pr_auc": 0.6818181818181818,
+        "window_roc_auc": 0.7666666666666666
+      }
+    },
+    "disk": {
+      "bootstrap_95_ci": {
+        "detection_rate": [
+          1.0,
+          1.0
+        ],
+        "median_delay_seconds": [
+          0.0,
+          0.0
+        ],
+        "timestamp_f1": [
+          0.8143055542792571,
+          0.8357647922145236
+        ],
+        "timestamp_precision": [
+          0.6880929160372118,
+          0.7195969283139768
+        ],
+        "timestamp_recall": [
+          0.9943596856218215,
+          0.9990753582986592
+        ],
+        "window_f1": [
+          0.6666666666666666,
+          0.6666666666666666
+        ],
+        "window_pr_auc": [
+          0.5698550724637681,
+          0.8152777777777779
+        ],
+        "window_precision": [
+          0.5,
+          0.5
+        ],
+        "window_recall": [
+          1.0,
+          1.0
+        ],
+        "window_roc_auc": [
+          0.6222222222222222,
+          0.8866666666666667
+        ]
+      },
+      "case_count": 15,
+      "metrics": {
+        "detection_rate": 1.0,
+        "median_delay_seconds": 0.0,
+        "timestamp_confusion": {
+          "fn": 33,
+          "fp": 4577,
+          "tn": 823,
+          "tp": 10782
+        },
+        "timestamp_metrics": {
+          "f1": 0.8238710170398105,
+          "precision": 0.7019988280487011,
+          "recall": 0.9969486823855755
+        },
+        "window_confusion": {
+          "fn": 0,
+          "fp": 15,
+          "tn": 0,
+          "tp": 15
+        },
+        "window_metrics": {
+          "f1": 0.6666666666666666,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "window_pr_auc": 0.6676767676767676,
+        "window_roc_auc": 0.7511111111111111
+      }
+    },
+    "loss": {
+      "bootstrap_95_ci": {
+        "detection_rate": [
+          1.0,
+          1.0
+        ],
+        "median_delay_seconds": [
+          0.0,
+          0.0
+        ],
+        "timestamp_f1": [
+          0.8085615525370873,
+          0.8261568700564492
+        ],
+        "timestamp_precision": [
+          0.6791620347250164,
+          0.7043798179538905
+        ],
+        "timestamp_recall": [
+          0.9980582524271845,
+          0.9997226074895977
+        ],
+        "window_f1": [
+          0.6666666666666666,
+          0.6666666666666666
+        ],
+        "window_pr_auc": [
+          0.5639291465378422,
+          0.7894736842105263
+        ],
+        "window_precision": [
+          0.5,
+          0.5
+        ],
+        "window_recall": [
+          1.0,
+          1.0
+        ],
+        "window_roc_auc": [
+          0.6044444444444445,
+          0.8666666666666667
+        ]
+      },
+      "case_count": 15,
+      "metrics": {
+        "detection_rate": 1.0,
+        "median_delay_seconds": 0.0,
+        "timestamp_confusion": {
+          "fn": 11,
+          "fp": 4841,
+          "tn": 559,
+          "tp": 10804
+        },
+        "timestamp_metrics": {
+          "f1": 0.8166288737717309,
+          "precision": 0.6905720677532758,
+          "recall": 0.9989828941285251
+        },
+        "window_confusion": {
+          "fn": 0,
+          "fp": 15,
+          "tn": 0,
+          "tp": 15
+        },
+        "window_metrics": {
+          "f1": 0.6666666666666666,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "window_pr_auc": 0.6592592592592592,
+        "window_roc_auc": 0.7288888888888889
+      }
+    },
+    "mem": {
+      "bootstrap_95_ci": {
+        "detection_rate": [
+          1.0,
+          1.0
+        ],
+        "median_delay_seconds": [
+          0.0,
+          0.0
+        ],
+        "timestamp_f1": [
+          0.7995961507967337,
+          0.8281580452112811
+        ],
+        "timestamp_precision": [
+          0.6667894992944657,
+          0.707699370409234
+        ],
+        "timestamp_recall": [
+          0.996116504854369,
+          1.0
+        ],
+        "window_f1": [
+          0.6666666666666666,
+          0.6666666666666666
+        ],
+        "window_pr_auc": [
+          0.5357142857142857,
+          0.75
+        ],
+        "window_precision": [
+          0.5,
+          0.5
+        ],
+        "window_recall": [
+          1.0,
+          1.0
+        ],
+        "window_roc_auc": [
+          0.5666666666666667,
+          0.8333333333333334
+        ]
+      },
+      "case_count": 15,
+      "metrics": {
+        "detection_rate": 1.0,
+        "median_delay_seconds": 0.0,
+        "timestamp_confusion": {
+          "fn": 17,
+          "fp": 4685,
+          "tn": 715,
+          "tp": 10361
+        },
+        "timestamp_metrics": {
+          "f1": 0.8150566393958465,
+          "precision": 0.6886215605476539,
+          "recall": 0.9983619194449798
+        },
+        "window_confusion": {
+          "fn": 0,
+          "fp": 15,
+          "tn": 0,
+          "tp": 15
+        },
+        "window_metrics": {
+          "f1": 0.6666666666666666,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "window_pr_auc": 0.625,
+        "window_roc_auc": 0.7
+      }
+    },
+    "socket": {
+      "bootstrap_95_ci": {
+        "detection_rate": [
+          1.0,
+          1.0
+        ],
+        "median_delay_seconds": [
+          0.0,
+          0.0
+        ],
+        "timestamp_f1": [
+          0.8104923820218698,
+          0.8245714673063044
+        ],
+        "timestamp_precision": [
+          0.681411468178954,
+          0.7021139940849057
+        ],
+        "timestamp_recall": [
+          0.9984281091077207,
+          1.0
+        ],
+        "window_f1": [
+          0.6666666666666666,
+          0.6666666666666666
+        ],
+        "window_pr_auc": [
+          0.5148148148148148,
+          0.7294312547673524
+        ],
+        "window_precision": [
+          0.5,
+          0.5
+        ],
+        "window_recall": [
+          1.0,
+          1.0
+        ],
+        "window_roc_auc": [
+          0.52,
+          0.8044444444444444
+        ]
+      },
+      "case_count": 15,
+      "metrics": {
+        "detection_rate": 1.0,
+        "median_delay_seconds": 0.0,
+        "timestamp_confusion": {
+          "fn": 6,
+          "fp": 4835,
+          "tn": 565,
+          "tp": 10809
+        },
+        "timestamp_metrics": {
+          "f1": 0.8170376809403228,
+          "precision": 0.6909358220403988,
+          "recall": 0.9994452149791956
+        },
+        "window_confusion": {
+          "fn": 0,
+          "fp": 15,
+          "tn": 0,
+          "tp": 15
+        },
+        "window_metrics": {
+          "f1": 0.6666666666666666,
+          "precision": 0.5,
+          "recall": 1.0
+        },
+        "window_pr_auc": 0.606577480490524,
+        "window_roc_auc": 0.6711111111111111
+      }
+    }
+  },
+  "per_service_alert_rates": {
+    "InboundPassthroughClusterIpv4": {
+      "fault_alert_rate": 0.0,
+      "fault_alerts": 0.0,
+      "fault_rows": 210.0,
+      "normal_alert_rate": 0.0,
+      "normal_alerts": 0.0,
+      "normal_rows": 360.0
+    },
+    "PassthroughCluster": {
+      "fault_alert_rate": 0.0,
+      "fault_alerts": 0.0,
+      "fault_rows": 210.0,
+      "normal_alert_rate": 0.0,
+      "normal_alerts": 0.0,
+      "normal_rows": 360.0
+    },
+    "adservice": {
+      "fault_alert_rate": 0.5706577836164024,
+      "fault_alerts": 36489.0,
+      "fault_rows": 63942.0,
+      "normal_alert_rate": 0.27574074074074073,
+      "normal_alerts": 8934.0,
+      "normal_rows": 32400.0
+    },
+    "cartservice": {
+      "fault_alert_rate": 0.4632479434487504,
+      "fault_alerts": 29621.0,
+      "fault_rows": 63942.0,
+      "normal_alert_rate": 0.18049382716049384,
+      "normal_alerts": 5848.0,
+      "normal_rows": 32400.0
+    },
+    "checkoutservice": {
+      "fault_alert_rate": 0.736354821557036,
+      "fault_alerts": 47084.0,
+      "fault_rows": 63942.0,
+      "normal_alert_rate": 0.1870679012345679,
+      "normal_alerts": 6061.0,
+      "normal_rows": 32400.0
+    },
+    "currencyservice": {
+      "fault_alert_rate": 0.552000250226768,
+      "fault_alerts": 35296.0,
+      "fault_rows": 63942.0,
+      "normal_alert_rate": 0.19,
+      "normal_alerts": 6156.0,
+      "normal_rows": 32400.0
+    },
+    "emailservice": {
+      "fault_alert_rate": 0.5909261518250915,
+      "fault_alerts": 37785.0,
+      "fault_rows": 63942.0,
+      "normal_alert_rate": 0.21401234567901234,
+      "normal_alerts": 6934.0,
+      "normal_rows": 32400.0
+    },
+    "frontend": {
+      "fault_alert_rate": 0.7480998404804354,
+      "fault_alerts": 47835.0,
+      "fault_rows": 63942.0,
+      "normal_alert_rate": 0.23675925925925925,
+      "normal_alerts": 7671.0,
+      "normal_rows": 32400.0
+    },
+    "frontend-check": {
+      "fault_alert_rate": 0.0,
+      "fault_alerts": 0.0,
+      "fault_rows": 721.0,
+      "normal_alert_rate": 0.0,
+      "normal_alerts": 0.0,
+      "normal_rows": 360.0
+    },
+    "frontend-external": {
+      "fault_alert_rate": 0.152528,
+      "fault_alerts": 9533.0,
+      "fault_rows": 62500.0,
+      "normal_alert_rate": 0.03358585858585859,
+      "normal_alerts": 1064.0,
+      "normal_rows": 31680.0
+    },
+    "istio-init": {
+      "fault_alert_rate": 0.0,
+      "fault_alerts": 0.0,
+      "fault_rows": 721.0,
+      "normal_alert_rate": 0.0,
+      "normal_alerts": 0.0,
+      "normal_rows": 360.0
+    },
+    "paymentservice": {
+      "fault_alert_rate": 0.4775421475712364,
+      "fault_alerts": 30535.0,
+      "fault_rows": 63942.0,
+      "normal_alert_rate": 0.26935185185185184,
+      "normal_alerts": 8727.0,
+      "normal_rows": 32400.0
+    },
+    "productcatalogservice": {
+      "fault_alert_rate": 0.5779925557536517,
+      "fault_alerts": 36958.0,
+      "fault_rows": 63942.0,
+      "normal_alert_rate": 0.19527777777777777,
+      "normal_alerts": 6327.0,
+      "normal_rows": 32400.0
+    },
+    "recommendationservice": {
+      "fault_alert_rate": 0.6608332551374684,
+      "fault_alerts": 42255.0,
+      "fault_rows": 63942.0,
+      "normal_alert_rate": 0.2088888888888889,
+      "normal_alerts": 6768.0,
+      "normal_rows": 32400.0
+    },
+    "redis": {
+      "fault_alert_rate": 0.18149260267117076,
+      "fault_alerts": 11605.0,
+      "fault_rows": 63942.0,
+      "normal_alert_rate": 0.15395061728395062,
+      "normal_alerts": 4988.0,
+      "normal_rows": 32400.0
+    },
+    "shippingservice": {
+      "fault_alert_rate": 0.4664383347408589,
+      "fault_alerts": 29825.0,
+      "fault_rows": 63942.0,
+      "normal_alert_rate": 0.24746913580246913,
+      "normal_alerts": 8018.0,
+      "normal_rows": 32400.0
+    }
+  },
+  "primary": "SentinelOps frozen v1 detector",
+  "python": "3.12.14",
+  "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+  "runtime_seconds": 6.781203279999318,
+  "seed": 42,
+  "sentinelops_commit": "ec8c568c306cbf95e0f8d02378fc32d85f9efbdc",
+  "status": "complete",
+  "step": 15,
+  "v1": {
+    "detection_rate": 1.0,
+    "median_delay_seconds": 0.0,
+    "timestamp_confusion": {
+      "fn": 87,
+      "fp": 28781,
+      "tn": 3619,
+      "tp": 63855
+    },
+    "timestamp_metrics": {
+      "f1": 0.8156318256715502,
+      "precision": 0.6893108510730169,
+      "recall": 0.9986393919489538
+    },
+    "window_confusion": {
+      "fn": 0,
+      "fp": 90,
+      "tn": 0,
+      "tp": 90
+    },
+    "window_metrics": {
+      "f1": 0.6666666666666666,
+      "precision": 0.5,
+      "recall": 1.0
+    },
+    "window_pr_auc": 0.6357478749472195,
+    "window_roc_auc": 0.7114814814814816
+  },
+  "v1_bootstrap_95_ci": {
+    "detection_rate": [
+      1.0,
+      1.0
+    ],
+    "median_delay_seconds": [
+      0.0,
+      0.0
+    ],
+    "timestamp_f1": [
+      0.8107820602260234,
+      0.820055506305235
+    ],
+    "timestamp_precision": [
+      0.6823325815368794,
+      0.6957391780069858
+    ],
+    "timestamp_recall": [
+      0.997963058142646,
+      0.9992336805229739
+    ],
+    "window_f1": [
+      0.6666666666666666,
+      0.6666666666666666
+    ],
+    "window_pr_auc": [
+      0.5954059685580344,
+      0.6824218272794284
+    ],
+    "window_precision": [
+      0.5,
+      0.5
+    ],
+    "window_recall": [
+      1.0,
+      1.0
+    ],
+    "window_roc_auc": [
+      0.6588256172839506,
+      0.7653086419753087
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "calibration_rows": 360,
+  "case_id": "re2ob_productcatalogservice_mem_2",
+  "detection_delay_seconds": 0,
+  "fault": "mem",
+  "fault_rows": 721,
+  "fault_window_positive": 1,
+  "fault_window_score": 1.0,
+  "inject_time": 1705491651,
+  "normal_evaluation_rows": 360,
+  "normal_window_positive": 1,
+  "normal_window_score": 0.9955692947566637,
+  "per_service": {
+    "adservice": {
+      "fault_alert_rate": 0.9875173370319001,
+      "fault_max_anomaly_strength": 0.9848195417265692,
+      "normal_alert_rate": 0.4222222222222222
+    },
+    "cartservice": {
+      "fault_alert_rate": 0.9902912621359223,
+      "fault_max_anomaly_strength": 1.0,
+      "normal_alert_rate": 0.2833333333333333
+    },
+    "checkoutservice": {
+      "fault_alert_rate": 0.9639389736477115,
+      "fault_max_anomaly_strength": 1.0,
+      "normal_alert_rate": 0.16944444444444445
+    },
+    "currencyservice": {
+      "fault_alert_rate": 0.9750346740638003,
+      "fault_max_anomaly_strength": 1.0,
+      "normal_alert_rate": 0.10555555555555556
+    },
+    "emailservice": {
+      "fault_alert_rate": 0.2260748959778086,
+      "fault_max_anomaly_strength": 1.0,
+      "normal_alert_rate": 0.022222222222222223
+    },
+    "frontend": {
+      "fault_alert_rate": 0.984743411927878,
+      "fault_max_anomaly_strength": 1.0,
+      "normal_alert_rate": 0.08055555555555556
+    },
+    "frontend-external": {
+      "fault_alert_rate": 0.9001386962552012,
+      "fault_max_anomaly_strength": 0.6415689381735529,
+      "normal_alert_rate": 0.05277777777777778
+    },
+    "paymentservice": {
+      "fault_alert_rate": 0.6893203883495146,
+      "fault_max_anomaly_strength": 1.0,
+      "normal_alert_rate": 0.4722222222222222
+    },
+    "productcatalogservice": {
+      "fault_alert_rate": 1.0,
+      "fault_max_anomaly_strength": 1.0,
+      "normal_alert_rate": 0.11944444444444445
+    },
+    "recommendationservice": {
+      "fault_alert_rate": 0.9805825242718447,
+      "fault_max_anomaly_strength": 1.0,
+      "normal_alert_rate": 0.16666666666666666
+    },
+    "redis": {
+      "fault_alert_rate": 0.260748959778086,
+      "fault_max_anomaly_strength": 0.9474037983099554,
+      "normal_alert_rate": 0.15
+    },
+    "shippingservice": {
+      "fault_alert_rate": 0.9902912621359223,
+      "fault_max_anomaly_strength": 1.0,
+      "normal_alert_rate": 0.2972222222222222
+    }
+  },
+  "repetition": 2,
+  "root_cause_service": "productcatalogservice",
+  "runtime_seconds": 18.939360864000264,
+  "status": "ok",
+  "timestamp_confusion": {
+    "fn": 0,
+    "fp": 336,
+    "tn": 24,
+    "tp": 721
+  },
+  "timestamp_metrics": {
+    "f1": 0.8110236220472441,
+    "precision": 0.6821192052980133,
+    "recall": 1.0
+  },
+  "window_confusion": {
+    "fn": 0,
+    "fp": 1,
+    "tn": 0,
+    "tp": 1
+  },
+  "window_metrics": {
+    "f1": 0.6666666666666666,
+    "precision": 0.5,
+    "recall": 1.0
+  }
+}
