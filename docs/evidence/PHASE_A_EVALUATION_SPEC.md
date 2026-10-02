@@ -397,3 +397,34 @@ If an evaluation choice itself must change after results have been observed:
 5. RE2-SS and RE2-TT remain untouched until the amendment is frozen.
 
 No test-case outcome may be used to tune RE2-SS or RE2-TT.
+
+
+## Erratum E1 — constant-series floating-point handling (2026-10-02)
+
+This erratum records the implementation correction first committed as
+`cefe94d` after the Step 13 smoke diagnostic. It does not change any detector
+threshold, EWMA alpha, Isolation Forest setting, ensemble rule, calibration
+window, or evaluation window.
+
+For a calibration vector `x`, define a machine-precision-only constant-series
+tolerance:
+
+`tol = 8 * eps_float64 * max(1, max(abs(x)))`
+
+where `eps_float64 = np.finfo(np.float64).eps`. The factor 8 is a fixed
+round-off allowance for the small sequence of floating-point arithmetic
+operations involved; it is not fitted from RCAEval data or benchmark outcomes.
+
+A calibration vector is treated as numerically constant when
+`max(x) - min(x) <= tol`. For Z-score and EWMA constant-series branches,
+evaluation values within `tol` of the calibration reference receive score
+`0`; values outside that tolerance receive a score strictly above the frozen
+`2.5` threshold. This preserves the original constant-vs-change rule while
+preventing floating-point residual noise from creating false alerts.
+
+Z-score already had an explicit zero-variance branch; this erratum makes its
+constant-series comparison use the same precision rule as EWMA. Isolation
+Forest accepts zero-variance calibration features without numerical failure and
+returns finite scores. A fully constant multivariate calibration matrix may be
+non-informative to Isolation Forest, so no synthetic fallback or special
+outcome-driven rule is added; its frozen sklearn settings remain unchanged.

@@ -7,6 +7,7 @@ from sentinelops.evaluation.rcaeval_detection import (
     calibration_isolation_forest,
     calibration_zscore,
     ensemble_two_of_three,
+    floating_constant_tolerance,
     normalize_scores_from_calibration,
     prepare_metrics,
 )
@@ -375,3 +376,24 @@ def test_ewma_constant_calibration_ignores_float_roundoff():
     assert flags[:4].tolist() == [0, 0, 0, 0]
     assert scores[4] > 2.5
     assert flags[4] == 1
+
+
+def test_floating_constant_tolerance_is_machine_precision_based():
+    values = np.array([1.0e8, 1.0e8])
+    expected = (
+        8.0
+        * np.finfo(np.float64).eps
+        * 1.0e8
+    )
+    assert floating_constant_tolerance(values) == pytest.approx(expected)
+
+
+def test_isolation_forest_zero_variance_is_finite_and_stable():
+    matrix = np.full((22, 2), 3.0)
+    scores, flags = calibration_isolation_forest(
+        matrix,
+        calibration_rows=20,
+    )
+    assert np.isfinite(scores).all()
+    assert flags[:20].tolist() == [0] * 20
+    assert flags[20:].tolist() == [0, 0]

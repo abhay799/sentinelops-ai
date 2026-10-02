@@ -10,6 +10,36 @@ from sentinelops.evaluation.rcaeval_adapter import (
 )
 
 
+def floating_constant_tolerance(
+    calibration: np.ndarray,
+) -> float:
+    values = np.asarray(calibration, dtype=float)
+    if values.size == 0:
+        raise ValueError("Calibration input is empty")
+    scale = max(
+        1.0,
+        float(np.max(np.abs(values))),
+    )
+    return (
+        8.0
+        * np.finfo(np.float64).eps
+        * scale
+    )
+
+
+def _constant_calibration_reference(
+    calibration: np.ndarray,
+) -> tuple[bool, float, float]:
+    values = np.asarray(calibration, dtype=float)
+    tolerance = floating_constant_tolerance(values)
+    reference = float(values[0])
+    is_constant = bool(
+        float(np.max(values) - np.min(values))
+        <= tolerance
+    )
+    return is_constant, reference, tolerance
+
+
 @dataclass(frozen=True)
 class PreparedMetrics:
     frame: pl.DataFrame
@@ -168,8 +198,23 @@ def calibration_zscore(
             ddof=0,
         )
     )
+    (
+        calibration_is_constant,
+        reference,
+        tolerance,
+    ) = _constant_calibration_reference(calibration)
 
-    if std == 0.0:
+    if calibration_is_constant:
+        scores = np.where(
+            np.abs(values - reference)
+            <= tolerance,
+            0.0,
+            np.nextafter(
+                threshold,
+                np.inf,
+            ),
+        )
+    elif std == 0.0:
         scores = np.where(
             values == mean,
             0.0,
@@ -246,16 +291,18 @@ def calibration_ewma(
         )
     )
     calibration_values = values[:calibration_rows]
-    calibration_is_constant = bool(
-        np.all(
-            calibration_values
-            == calibration_values[0]
-        )
+    (
+        calibration_is_constant,
+        reference,
+        tolerance,
+    ) = _constant_calibration_reference(
+        calibration_values
     )
 
     if calibration_is_constant:
         scores = np.where(
-            values == calibration_values[0],
+            np.abs(values - reference)
+            <= tolerance,
             0.0,
             np.nextafter(
                 threshold,
