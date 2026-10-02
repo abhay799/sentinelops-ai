@@ -1,0 +1,849 @@
+{
+  "calibration_rows": 360,
+  "case_id": "re2ob_checkoutservice_cpu_1",
+  "fault_rows": 721,
+  "interpretation": "Diagnostic only; no threshold or parameter changes.",
+  "normal_rows": 360,
+  "per_service": {
+    "adservice": {
+      "constant_calibration_metrics": 1,
+      "ensemble_fault": {
+        "count": 201,
+        "rate": 0.2787794729542302,
+        "total": 721
+      },
+      "ensemble_normal": {
+        "count": 202,
+        "rate": 0.5611111111111111,
+        "total": 360
+      },
+      "ewma_calibration": {
+        "count": 90,
+        "rate": 0.25,
+        "total": 360
+      },
+      "ewma_fault": {
+        "count": 152,
+        "rate": 0.21081830790568654,
+        "total": 721
+      },
+      "ewma_normal": {
+        "count": 119,
+        "rate": 0.33055555555555555,
+        "total": 360
+      },
+      "iforest_calibration": {
+        "count": 32,
+        "rate": 0.08888888888888889,
+        "total": 360
+      },
+      "iforest_fault": {
+        "count": 180,
+        "rate": 0.24965325936199723,
+        "total": 721
+      },
+      "iforest_normal": {
+        "count": 173,
+        "rate": 0.48055555555555557,
+        "total": 360
+      },
+      "metric_count": 7,
+      "normal_vote_histogram": {
+        "0": 52,
+        "1": 106,
+        "2": 138,
+        "3": 64
+      },
+      "z_calibration": {
+        "count": 29,
+        "rate": 0.08055555555555556,
+        "total": 360
+      },
+      "z_fault": {
+        "count": 483,
+        "rate": 0.6699029126213593,
+        "total": 721
+      },
+      "z_normal": {
+        "count": 282,
+        "rate": 0.7833333333333333,
+        "total": 360
+      }
+    },
+    "cartservice": {
+      "constant_calibration_metrics": 1,
+      "ensemble_fault": {
+        "count": 131,
+        "rate": 0.18169209431345354,
+        "total": 721
+      },
+      "ensemble_normal": {
+        "count": 100,
+        "rate": 0.2777777777777778,
+        "total": 360
+      },
+      "ewma_calibration": {
+        "count": 73,
+        "rate": 0.20277777777777778,
+        "total": 360
+      },
+      "ewma_fault": {
+        "count": 219,
+        "rate": 0.30374479889042993,
+        "total": 721
+      },
+      "ewma_normal": {
+        "count": 109,
+        "rate": 0.30277777777777776,
+        "total": 360
+      },
+      "iforest_calibration": {
+        "count": 36,
+        "rate": 0.1,
+        "total": 360
+      },
+      "iforest_fault": {
+        "count": 176,
+        "rate": 0.24410540915395285,
+        "total": 721
+      },
+      "iforest_normal": {
+        "count": 171,
+        "rate": 0.475,
+        "total": 360
+      },
+      "metric_count": 6,
+      "normal_vote_histogram": {
+        "0": 129,
+        "1": 131,
+        "2": 81,
+        "3": 19
+      },
+      "z_calibration": {
+        "count": 33,
+        "rate": 0.09166666666666666,
+        "total": 360
+      },
+      "z_fault": {
+        "count": 150,
+        "rate": 0.20804438280166435,
+        "total": 721
+      },
+      "z_normal": {
+        "count": 70,
+        "rate": 0.19444444444444445,
+        "total": 360
+      }
+    },
+    "checkoutservice": {
+      "constant_calibration_metrics": 1,
+      "ensemble_fault": {
+        "count": 707,
+        "rate": 0.9805825242718447,
+        "total": 721
+      },
+      "ensemble_normal": {
+        "count": 35,
+        "rate": 0.09722222222222222,
+        "total": 360
+      },
+      "ewma_calibration": {
+        "count": 84,
+        "rate": 0.23333333333333334,
+        "total": 360
+      },
+      "ewma_fault": {
+        "count": 711,
+        "rate": 0.986130374479889,
+        "total": 721
+      },
+      "ewma_normal": {
+        "count": 60,
+        "rate": 0.16666666666666666,
+        "total": 360
+      },
+      "iforest_calibration": {
+        "count": 36,
+        "rate": 0.1,
+        "total": 360
+      },
+      "iforest_fault": {
+        "count": 707,
+        "rate": 0.9805825242718447,
+        "total": 721
+      },
+      "iforest_normal": {
+        "count": 116,
+        "rate": 0.32222222222222224,
+        "total": 360
+      },
+      "metric_count": 6,
+      "normal_vote_histogram": {
+        "0": 206,
+        "1": 119,
+        "2": 29,
+        "3": 6
+      },
+      "z_calibration": {
+        "count": 26,
+        "rate": 0.07222222222222222,
+        "total": 360
+      },
+      "z_fault": {
+        "count": 707,
+        "rate": 0.9805825242718447,
+        "total": 721
+      },
+      "z_normal": {
+        "count": 19,
+        "rate": 0.05277777777777778,
+        "total": 360
+      }
+    },
+    "currencyservice": {
+      "constant_calibration_metrics": 1,
+      "ensemble_fault": {
+        "count": 123,
+        "rate": 0.17059639389736478,
+        "total": 721
+      },
+      "ensemble_normal": {
+        "count": 43,
+        "rate": 0.11944444444444445,
+        "total": 360
+      },
+      "ewma_calibration": {
+        "count": 78,
+        "rate": 0.21666666666666667,
+        "total": 360
+      },
+      "ewma_fault": {
+        "count": 168,
+        "rate": 0.23300970873786409,
+        "total": 721
+      },
+      "ewma_normal": {
+        "count": 80,
+        "rate": 0.2222222222222222,
+        "total": 360
+      },
+      "iforest_calibration": {
+        "count": 36,
+        "rate": 0.1,
+        "total": 360
+      },
+      "iforest_fault": {
+        "count": 133,
+        "rate": 0.18446601941747573,
+        "total": 721
+      },
+      "iforest_normal": {
+        "count": 39,
+        "rate": 0.10833333333333334,
+        "total": 360
+      },
+      "metric_count": 7,
+      "normal_vote_histogram": {
+        "0": 232,
+        "1": 85,
+        "2": 27,
+        "3": 16
+      },
+      "z_calibration": {
+        "count": 46,
+        "rate": 0.12777777777777777,
+        "total": 360
+      },
+      "z_fault": {
+        "count": 165,
+        "rate": 0.2288488210818308,
+        "total": 721
+      },
+      "z_normal": {
+        "count": 68,
+        "rate": 0.18888888888888888,
+        "total": 360
+      }
+    },
+    "emailservice": {
+      "constant_calibration_metrics": 2,
+      "ensemble_fault": {
+        "count": 499,
+        "rate": 0.6920943134535368,
+        "total": 721
+      },
+      "ensemble_normal": {
+        "count": 149,
+        "rate": 0.41388888888888886,
+        "total": 360
+      },
+      "ewma_calibration": {
+        "count": 75,
+        "rate": 0.20833333333333334,
+        "total": 360
+      },
+      "ewma_fault": {
+        "count": 173,
+        "rate": 0.23994452149791956,
+        "total": 721
+      },
+      "ewma_normal": {
+        "count": 69,
+        "rate": 0.19166666666666668,
+        "total": 360
+      },
+      "iforest_calibration": {
+        "count": 35,
+        "rate": 0.09722222222222222,
+        "total": 360
+      },
+      "iforest_fault": {
+        "count": 446,
+        "rate": 0.6185852981969486,
+        "total": 721
+      },
+      "iforest_normal": {
+        "count": 152,
+        "rate": 0.4222222222222222,
+        "total": 360
+      },
+      "metric_count": 7,
+      "normal_vote_histogram": {
+        "0": 67,
+        "1": 144,
+        "2": 110,
+        "3": 39
+      },
+      "z_calibration": {
+        "count": 16,
+        "rate": 0.044444444444444446,
+        "total": 360
+      },
+      "z_fault": {
+        "count": 721,
+        "rate": 1.0,
+        "total": 721
+      },
+      "z_normal": {
+        "count": 260,
+        "rate": 0.7222222222222222,
+        "total": 360
+      }
+    },
+    "frontend": {
+      "constant_calibration_metrics": 1,
+      "ensemble_fault": {
+        "count": 88,
+        "rate": 0.12205270457697642,
+        "total": 721
+      },
+      "ensemble_normal": {
+        "count": 25,
+        "rate": 0.06944444444444445,
+        "total": 360
+      },
+      "ewma_calibration": {
+        "count": 77,
+        "rate": 0.21388888888888888,
+        "total": 360
+      },
+      "ewma_fault": {
+        "count": 197,
+        "rate": 0.27323162274618584,
+        "total": 721
+      },
+      "ewma_normal": {
+        "count": 59,
+        "rate": 0.1638888888888889,
+        "total": 360
+      },
+      "iforest_calibration": {
+        "count": 36,
+        "rate": 0.1,
+        "total": 360
+      },
+      "iforest_fault": {
+        "count": 104,
+        "rate": 0.14424410540915394,
+        "total": 721
+      },
+      "iforest_normal": {
+        "count": 18,
+        "rate": 0.05,
+        "total": 360
+      },
+      "metric_count": 7,
+      "normal_vote_histogram": {
+        "0": 280,
+        "1": 55,
+        "2": 21,
+        "3": 4
+      },
+      "z_calibration": {
+        "count": 28,
+        "rate": 0.07777777777777778,
+        "total": 360
+      },
+      "z_fault": {
+        "count": 66,
+        "rate": 0.09153952843273232,
+        "total": 721
+      },
+      "z_normal": {
+        "count": 32,
+        "rate": 0.08888888888888889,
+        "total": 360
+      }
+    },
+    "frontend-external": {
+      "constant_calibration_metrics": 0,
+      "ensemble_fault": {
+        "count": 5,
+        "rate": 0.006934812760055479,
+        "total": 721
+      },
+      "ensemble_normal": {
+        "count": 16,
+        "rate": 0.044444444444444446,
+        "total": 360
+      },
+      "ewma_calibration": {
+        "count": 28,
+        "rate": 0.07777777777777778,
+        "total": 360
+      },
+      "ewma_fault": {
+        "count": 47,
+        "rate": 0.0651872399445215,
+        "total": 721
+      },
+      "ewma_normal": {
+        "count": 14,
+        "rate": 0.03888888888888889,
+        "total": 360
+      },
+      "iforest_calibration": {
+        "count": 31,
+        "rate": 0.08611111111111111,
+        "total": 360
+      },
+      "iforest_fault": {
+        "count": 90,
+        "rate": 0.12482662968099861,
+        "total": 721
+      },
+      "iforest_normal": {
+        "count": 30,
+        "rate": 0.08333333333333333,
+        "total": 360
+      },
+      "metric_count": 2,
+      "normal_vote_histogram": {
+        "0": 321,
+        "1": 23,
+        "2": 12,
+        "3": 4
+      },
+      "z_calibration": {
+        "count": 16,
+        "rate": 0.044444444444444446,
+        "total": 360
+      },
+      "z_fault": {
+        "count": 0,
+        "rate": 0.0,
+        "total": 721
+      },
+      "z_normal": {
+        "count": 15,
+        "rate": 0.041666666666666664,
+        "total": 360
+      }
+    },
+    "paymentservice": {
+      "constant_calibration_metrics": 1,
+      "ensemble_fault": {
+        "count": 82,
+        "rate": 0.11373092926490985,
+        "total": 721
+      },
+      "ensemble_normal": {
+        "count": 26,
+        "rate": 0.07222222222222222,
+        "total": 360
+      },
+      "ewma_calibration": {
+        "count": 83,
+        "rate": 0.23055555555555557,
+        "total": 360
+      },
+      "ewma_fault": {
+        "count": 123,
+        "rate": 0.17059639389736478,
+        "total": 721
+      },
+      "ewma_normal": {
+        "count": 69,
+        "rate": 0.19166666666666668,
+        "total": 360
+      },
+      "iforest_calibration": {
+        "count": 33,
+        "rate": 0.09166666666666666,
+        "total": 360
+      },
+      "iforest_fault": {
+        "count": 138,
+        "rate": 0.1914008321775312,
+        "total": 721
+      },
+      "iforest_normal": {
+        "count": 72,
+        "rate": 0.2,
+        "total": 360
+      },
+      "metric_count": 6,
+      "normal_vote_histogram": {
+        "0": 236,
+        "1": 98,
+        "2": 24,
+        "3": 2
+      },
+      "z_calibration": {
+        "count": 22,
+        "rate": 0.06111111111111111,
+        "total": 360
+      },
+      "z_fault": {
+        "count": 68,
+        "rate": 0.09431345353675451,
+        "total": 721
+      },
+      "z_normal": {
+        "count": 11,
+        "rate": 0.030555555555555555,
+        "total": 360
+      }
+    },
+    "productcatalogservice": {
+      "constant_calibration_metrics": 2,
+      "ensemble_fault": {
+        "count": 155,
+        "rate": 0.21497919556171982,
+        "total": 721
+      },
+      "ensemble_normal": {
+        "count": 155,
+        "rate": 0.4305555555555556,
+        "total": 360
+      },
+      "ewma_calibration": {
+        "count": 75,
+        "rate": 0.20833333333333334,
+        "total": 360
+      },
+      "ewma_fault": {
+        "count": 141,
+        "rate": 0.1955617198335645,
+        "total": 721
+      },
+      "ewma_normal": {
+        "count": 89,
+        "rate": 0.24722222222222223,
+        "total": 360
+      },
+      "iforest_calibration": {
+        "count": 36,
+        "rate": 0.1,
+        "total": 360
+      },
+      "iforest_fault": {
+        "count": 270,
+        "rate": 0.37447988904299584,
+        "total": 721
+      },
+      "iforest_normal": {
+        "count": 216,
+        "rate": 0.6,
+        "total": 360
+      },
+      "metric_count": 7,
+      "normal_vote_histogram": {
+        "0": 118,
+        "1": 87,
+        "2": 107,
+        "3": 48
+      },
+      "z_calibration": {
+        "count": 44,
+        "rate": 0.12222222222222222,
+        "total": 360
+      },
+      "z_fault": {
+        "count": 143,
+        "rate": 0.19833564493758668,
+        "total": 721
+      },
+      "z_normal": {
+        "count": 140,
+        "rate": 0.3888888888888889,
+        "total": 360
+      }
+    },
+    "recommendationservice": {
+      "constant_calibration_metrics": 2,
+      "ensemble_fault": {
+        "count": 608,
+        "rate": 0.8432732316227461,
+        "total": 721
+      },
+      "ensemble_normal": {
+        "count": 256,
+        "rate": 0.7111111111111111,
+        "total": 360
+      },
+      "ewma_calibration": {
+        "count": 76,
+        "rate": 0.2111111111111111,
+        "total": 360
+      },
+      "ewma_fault": {
+        "count": 208,
+        "rate": 0.2884882108183079,
+        "total": 721
+      },
+      "ewma_normal": {
+        "count": 112,
+        "rate": 0.3111111111111111,
+        "total": 360
+      },
+      "iforest_calibration": {
+        "count": 34,
+        "rate": 0.09444444444444444,
+        "total": 360
+      },
+      "iforest_fault": {
+        "count": 593,
+        "rate": 0.8224687933425797,
+        "total": 721
+      },
+      "iforest_normal": {
+        "count": 254,
+        "rate": 0.7055555555555556,
+        "total": 360
+      },
+      "metric_count": 7,
+      "normal_vote_histogram": {
+        "0": 72,
+        "1": 32,
+        "2": 167,
+        "3": 89
+      },
+      "z_calibration": {
+        "count": 25,
+        "rate": 0.06944444444444445,
+        "total": 360
+      },
+      "z_fault": {
+        "count": 649,
+        "rate": 0.9001386962552012,
+        "total": 721
+      },
+      "z_normal": {
+        "count": 267,
+        "rate": 0.7416666666666667,
+        "total": 360
+      }
+    },
+    "redis": {
+      "constant_calibration_metrics": 1,
+      "ensemble_fault": {
+        "count": 182,
+        "rate": 0.2524271844660194,
+        "total": 721
+      },
+      "ensemble_normal": {
+        "count": 39,
+        "rate": 0.10833333333333334,
+        "total": 360
+      },
+      "ewma_calibration": {
+        "count": 40,
+        "rate": 0.1111111111111111,
+        "total": 360
+      },
+      "ewma_fault": {
+        "count": 104,
+        "rate": 0.14424410540915394,
+        "total": 721
+      },
+      "ewma_normal": {
+        "count": 43,
+        "rate": 0.11944444444444445,
+        "total": 360
+      },
+      "iforest_calibration": {
+        "count": 36,
+        "rate": 0.1,
+        "total": 360
+      },
+      "iforest_fault": {
+        "count": 213,
+        "rate": 0.29542302357836336,
+        "total": 721
+      },
+      "iforest_normal": {
+        "count": 35,
+        "rate": 0.09722222222222222,
+        "total": 360
+      },
+      "metric_count": 4,
+      "normal_vote_histogram": {
+        "0": 283,
+        "1": 38,
+        "2": 27,
+        "3": 12
+      },
+      "z_calibration": {
+        "count": 50,
+        "rate": 0.1388888888888889,
+        "total": 360
+      },
+      "z_fault": {
+        "count": 181,
+        "rate": 0.2510402219140083,
+        "total": 721
+      },
+      "z_normal": {
+        "count": 50,
+        "rate": 0.1388888888888889,
+        "total": 360
+      }
+    },
+    "shippingservice": {
+      "constant_calibration_metrics": 1,
+      "ensemble_fault": {
+        "count": 183,
+        "rate": 0.2538141470180305,
+        "total": 721
+      },
+      "ensemble_normal": {
+        "count": 157,
+        "rate": 0.4361111111111111,
+        "total": 360
+      },
+      "ewma_calibration": {
+        "count": 86,
+        "rate": 0.2388888888888889,
+        "total": 360
+      },
+      "ewma_fault": {
+        "count": 183,
+        "rate": 0.2538141470180305,
+        "total": 721
+      },
+      "ewma_normal": {
+        "count": 103,
+        "rate": 0.2861111111111111,
+        "total": 360
+      },
+      "iforest_calibration": {
+        "count": 36,
+        "rate": 0.1,
+        "total": 360
+      },
+      "iforest_fault": {
+        "count": 253,
+        "rate": 0.3509015256588072,
+        "total": 721
+      },
+      "iforest_normal": {
+        "count": 140,
+        "rate": 0.3888888888888889,
+        "total": 360
+      },
+      "metric_count": 6,
+      "normal_vote_histogram": {
+        "0": 133,
+        "1": 70,
+        "2": 124,
+        "3": 33
+      },
+      "z_calibration": {
+        "count": 52,
+        "rate": 0.14444444444444443,
+        "total": 360
+      },
+      "z_fault": {
+        "count": 185,
+        "rate": 0.2565880721220527,
+        "total": 721
+      },
+      "z_normal": {
+        "count": 174,
+        "rate": 0.48333333333333334,
+        "total": 360
+      }
+    }
+  },
+  "services_by_normal_ensemble_rate": [
+    [
+      "recommendationservice",
+      0.7111111111111111
+    ],
+    [
+      "adservice",
+      0.5611111111111111
+    ],
+    [
+      "shippingservice",
+      0.4361111111111111
+    ],
+    [
+      "productcatalogservice",
+      0.4305555555555556
+    ],
+    [
+      "emailservice",
+      0.41388888888888886
+    ],
+    [
+      "cartservice",
+      0.2777777777777778
+    ],
+    [
+      "currencyservice",
+      0.11944444444444445
+    ],
+    [
+      "redis",
+      0.10833333333333334
+    ],
+    [
+      "checkoutservice",
+      0.09722222222222222
+    ],
+    [
+      "paymentservice",
+      0.07222222222222222
+    ],
+    [
+      "frontend",
+      0.06944444444444445
+    ],
+    [
+      "frontend-external",
+      0.044444444444444446
+    ]
+  ],
+  "system_fault": {
+    "count": 721,
+    "rate": 1.0,
+    "total": 721
+  },
+  "system_normal": {
+    "count": 350,
+    "rate": 0.9722222222222222,
+    "total": 360
+  }
+}

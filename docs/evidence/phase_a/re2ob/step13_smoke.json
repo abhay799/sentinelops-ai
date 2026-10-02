@@ -1,0 +1,19 @@
+{
+  "calibration_rows": 360,
+  "case_id": "re2ob_checkoutservice_cpu_1",
+  "command": "python scripts/phase_a_step13_smoke.py",
+  "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "detection_delay_seconds": 0,
+  "fault_alert_rate": 1.0,
+  "fault_alerts": 721,
+  "fault_rows": 721,
+  "first_fault_alert_time": 1705354566,
+  "inject_time": 1705354566,
+  "normal_evaluation_alerts": 350,
+  "normal_evaluation_rows": 360,
+  "note": "Smoke/runtime validation only; not used for tuning.",
+  "sentinelops_commit": "cefe94d18398852210b157a5f87f9f1f5c56f3c8",
+  "service_count": 12,
+  "status": "runtime_smoke_only",
+  "step": 13
+}
