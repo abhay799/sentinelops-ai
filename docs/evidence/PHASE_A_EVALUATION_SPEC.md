@@ -428,3 +428,58 @@ Forest accepts zero-variance calibration features without numerical failure and
 returns finite scores. A fully constant multivariate calibration matrix may be
 non-informative to Isolation Forest, so no synthetic fallback or special
 outcome-driven rule is added; its frozen sklearn settings remain unchanged.
+
+
+## Erratum E2 — exact trace-row duplicate handling (2026-10-02)
+
+This erratum is triggered by RCAEval trace data quality discovered during
+Phase A Step 16 and recorded in commit `314cdbd`. It was not triggered by
+RCA ranking results: ranking did not run because topology validation stopped
+first.
+
+The affected RE2-OB cases observed before this erratum were:
+
+- `re2ob_recommendationservice_loss_1`: 48 duplicated
+  `(traceID, spanID)` keys, 96 duplicate rows total.
+- `re2ob_recommendationservice_loss_2`: 99 duplicated
+  `(traceID, spanID)` keys, 198 duplicate rows total.
+
+All duplicate rows observed in those two cases were exact full-row duplicates.
+This rule applies uniformly to every evaluated RCAEval suite:
+RE2-OB, RE2-SS, and RE2-TT. It must not be re-decided after held-out suites
+are inspected.
+
+Before trace-key validation, rows sharing the same `(traceID, spanID)` key
+may be deduplicated only when every field in every row for that key matches.
+For this equality check:
+
+- ordinary values must compare equal field by field;
+- null matches null;
+- NaN matches NaN;
+- null does not match NaN;
+- any other field difference makes the duplicate conflicting.
+
+For an all-identical duplicate-key group, retain one row and remove only the
+additional identical copies. A duplicate-key group containing any conflicting
+row remains a hard failure. No partial deduplication of a conflicting group is
+permitted.
+Every per-case topology evidence record must include:
+
+- duplicate key count;
+- duplicate row count;
+- removed row count;
+- whether any conflicting duplicate was found.
+
+The aggregate results must list every affected case and its counts.
+
+Any RCAEval baseline that reads traces, including multi-source BARO
+(`mmBARO`) and multi-source CIRCA (`mmCIRCA`), must receive data under a
+single documented policy for the full evaluation. The harness must explicitly
+record whether each such baseline received raw traces or the same exact-row
+cleaned traces used for SentinelOps topology construction. That policy must be
+kept consistent across cases and suites.
+
+This erratum changes only trace data-quality handling. It does not change any
+detector threshold, ranking weight, graph direction, graph-hops setting,
+PageRank damping, model parameter, random seed, calibration rule, or
+evaluation metric.
