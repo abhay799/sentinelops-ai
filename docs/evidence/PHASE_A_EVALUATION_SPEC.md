@@ -655,3 +655,37 @@ seed, graph direction, RCA metrics, or any baseline parameter.
 The variant must be reported separately as
 `POST-HOC static-topology sensitivity`; it must never be substituted for the
 primary trace-derived result or used to tune the primary method.
+
+## Erratum E4 — RCAEval unranked fallback handling (2026-10-02)
+
+**Status: PRE-SCORING ERRATUM.** This erratum was added after observing the pinned
+RCAEval CIRCA wrapper emit an explicit failure warning and return an unranked
+column-order fallback. No AC@1, AC@3, AC@5, Avg@5, Chance@5, Lift@5, bootstrap
+confidence interval, or per-fault RCA score for the RCAEval baselines had been
+computed before this erratum.
+
+RCAEval method fallbacks that explicitly return an unranked/native column order
+because graph construction or another algorithmic step failed are not valid RCA
+rankings. The Phase A harness must detect such fallbacks from an explicit RCAEval
+warning or method-specific fallback signal and record the per-case status as
+fallback_unranked, together with a machine-readable fallback flag and reason.
+A fallback must never be silently relabeled as ok merely because a list of
+column names was returned.
+
+For each RCAEval baseline, reporting must include valid-ranking coverage as both
+a count and fraction of all 90 RE2-OB cases, plus counts of
+fallback_unranked, hard failures, and any other skipped cases.
+
+Primary RCA accuracy reporting uses the full fixed denominator of 90 RE2-OB
+cases. Every fallback_unranked case counts as a miss at AC@1, AC@3, AC@5 and
+Avg@5 rather than contributing its unranked column order. This preserves the
+end-to-end failure cost of a baseline.
+
+Secondary sensitivity reporting computes the same accuracy metrics over valid
+rankings only, with the reduced denominator stated explicitly. It is labeled
+valid-rankings-only and must not replace the primary all-90 result.
+
+This erratum changes only failure classification and reporting. It does not
+change candidate allowlists, input data, time windows, preprocessing, model or
+algorithm parameters, graph construction, ranking logic for successful cases,
+random seeds, ground truth, or the frozen SentinelOps method.
