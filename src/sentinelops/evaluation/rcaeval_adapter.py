@@ -5,7 +5,6 @@ from typing import Iterable
 
 import polars as pl
 
-
 REQUIRED_TRACE_COLUMNS = {
     "traceID",
     "spanID",
