@@ -1,0 +1,99 @@
+{
+  "case_id": "re2ob_checkoutservice_cpu_2",
+  "edges": [
+    [
+      "checkoutservice",
+      "currencyservice"
+    ],
+    [
+      "checkoutservice",
+      "emailservice"
+    ],
+    [
+      "checkoutservice",
+      "paymentservice"
+    ],
+    [
+      "checkoutservice",
+      "productcatalogservice"
+    ],
+    [
+      "frontend",
+      "checkoutservice"
+    ],
+    [
+      "frontend",
+      "currencyservice"
+    ],
+    [
+      "frontend",
+      "productcatalogservice"
+    ],
+    [
+      "frontend",
+      "recommendationservice"
+    ],
+    [
+      "recommendationservice",
+      "productcatalogservice"
+    ]
+  ],
+  "metric_only_services": [
+    "InboundPassthroughClusterIpv4",
+    "PassthroughCluster",
+    "adservice",
+    "cartservice",
+    "frontend-external",
+    "redis",
+    "shippingservice"
+  ],
+  "metric_services": [
+    "InboundPassthroughClusterIpv4",
+    "PassthroughCluster",
+    "adservice",
+    "cartservice",
+    "checkoutservice",
+    "currencyservice",
+    "emailservice",
+    "frontend",
+    "frontend-external",
+    "paymentservice",
+    "productcatalogservice",
+    "recommendationservice",
+    "redis",
+    "shippingservice"
+  ],
+  "runtime_seconds": 1.3454902010016667,
+  "service_mapping": [
+    [
+      "checkoutservice",
+      "checkoutservice"
+    ],
+    [
+      "currencyservice",
+      "currencyservice"
+    ],
+    [
+      "emailservice",
+      "emailservice"
+    ],
+    [
+      "frontendservice",
+      "frontend"
+    ],
+    [
+      "paymentservice",
+      "paymentservice"
+    ],
+    [
+      "productcatalogservice",
+      "productcatalogservice"
+    ],
+    [
+      "recommendationservice",
+      "recommendationservice"
+    ]
+  ],
+  "status": "ok",
+  "unresolved_parent_count": 169
+}

@@ -1,0 +1,30 @@
+{
+  "case_count_expected": 90,
+  "case_count_topology_failed": 2,
+  "case_count_topology_ok": 88,
+  "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "exact_command": "python scripts/phase_a_step16_rca.py --workers 2",
+  "execution_date": "2026-10-02",
+  "failed_topology_cases": [
+    {
+      "case_id": "re2ob_recommendationservice_loss_1",
+      "error": "Duplicate (traceID, spanID) identifiers found in RCAEval traces",
+      "error_type": "ValueError",
+      "runtime_seconds": 0.5035097770014545,
+      "status": "failed"
+    },
+    {
+      "case_id": "re2ob_recommendationservice_loss_2",
+      "error": "Duplicate (traceID, spanID) identifiers found in RCAEval traces",
+      "error_type": "ValueError",
+      "runtime_seconds": 0.659005301000434,
+      "status": "failed"
+    }
+  ],
+  "python": "3.12.14",
+  "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+  "runtime_seconds": 0.10033811099856393,
+  "sentinelops_commit": "59b57d955f9fdcc5a8ca2616405e6fff3e2b67bd",
+  "status": "failed_topology",
+  "step": 16
+}
