@@ -689,3 +689,64 @@ This erratum changes only failure classification and reporting. It does not
 change candidate allowlists, input data, time windows, preprocessing, model or
 algorithm parameters, graph construction, ranking logic for successful cases,
 random seeds, ground truth, or the frozen SentinelOps method.
+
+
+## Erratum E5 — preserve complete native RCA ranking before E3 filtering (2026-10-03)
+
+**Status: PRE-SCORING FOR SENTINELOPS AND RCAEVAL BASELINES; PRIOR RANDOM
+AC@k DIAGNOSTICS EXIST.** This erratum records implementation commit
+`f0e1f4184486804889b5a6f9dab2f6424fe0e69f` and evidence refresh commit
+`6de02601bfa8d60f154b1480e0768f0a3c08e754`. It is being committed before
+any additional AC@k computation in this continuation.
+
+The old Step 16 harness requested `max_candidates=5` when saving the native
+SentinelOps ranking. E3 requires an order-preserving candidate-allowlist filter
+before headline top-k selection. Saving only five native services could let an
+excluded infrastructure service consume a saved slot and hide the next eligible
+application service. The fix requests `max_candidates=len(strengths)` and
+preserves the complete native ranking; E3 filtering precedes headline top-k
+selection. The production engine default remains five. This explicitly corrects
+Section 13's five-candidate limit for benchmark evidence retention only.
+
+The reason is conformance to E3's filtering rule, not improved accuracy.
+The implementation diff changes only the output-length argument and its
+explanatory comment. The refresh records all 90 complete rankings without
+changing detector inputs, topology, candidate allowlists, or the scoring
+function. No weights, thresholds, score formula, score rounding, primary-service
+selection, or tie-breaking changed. The existing descending rounded score and
+lexical service-name tie-break remain intact.
+
+The reproducible comparison uses `f0e1f41^` as the before revision and
+`6de0260` as the after revision:
+- [All 90 case comparisons](phase_a/re2ob/E5_RANK_COMPARISON.md).
+- [Full before/after rows and audit summary](phase_a/re2ob/e5_rank_comparison.json).
+- Command: `.venv/bin/python scripts/phase_a_e5_rank_comparison.py`.
+
+All 90 native saved five-row prefixes match the new prefixes exactly, including
+every score component and original rank number. The old E3-filtered saved ranking
+contained five services in 83 cases and four in seven cases. All refreshed
+E3-filtered rankings contain all 11 allowlisted services; seven filtered top-five
+lists gain the previously hidden fifth service. Native lengths are 11 in two
+cases, 12 in 85, 13 in two, and 14 in one. The comparison reads no ground-truth
+labels and computes no accuracy metrics.
+
+### E5.1 Observed-results disclosure and stop condition
+
+The requested statement "before any AC@k" cannot be made for all methods:
+`47a80d6` already committed random AC@1/3/5 in
+`random_vs_chance_sanity.json`, and `6a77334` committed an additional
+random multi-seed diagnostic before either E5-covered commit. Those artifacts
+remain unchanged. The random sanity record has `sanity_pass: false`; its
+AC@3 falls outside its recorded 95% sampling interval. The multi-seed artifact
+is diagnostic-only and does not itself amend or revoke E3's stop condition.
+
+No SentinelOps or RCAEval-baseline AC@k result artifact was found in the checkout
+at this continuation's start; their saved rankings were unscored. The change is
+structurally justified by E3 and is not result-motivated, but earlier random
+accuracy results were already available and must not be concealed. No RE2-SS
+or RE2-TT data is inspected by this audit.
+
+Under the unchanged E3 stop rule, subsequent accuracy scoring and Steps 21–24
+remain gated on resolution of the existing random-sanity stop condition and
+receipt of the original step checklist. The background CIRCA/mmCIRCA jobs are
+left running without restart or termination.
