@@ -483,3 +483,129 @@ This erratum changes only trace data-quality handling. It does not change any
 detector threshold, ranking weight, graph direction, graph-hops setting,
 PageRank damping, model parameter, random seed, calibration rule, or
 evaluation metric.
+
+
+## Erratum E3 — post-hoc RCA candidate allowlists (2026-10-02)
+
+**Status: POST-HOC.** This amendment was added after inspecting the RE2-OB
+trace-derived graph and candidate membership. Phase A Step 16 had already
+produced unscored rankings at this point, but no AC@1, AC@3, AC@5, Avg@5,
+Lift@5, or other RCA accuracy metric had been computed from those rankings.
+Earlier diagnostics computed candidate-set sizes and analytical chance only;
+they did not score any ranking against ground truth.
+
+The reason for this amendment is benchmark design rather than any observed RCA
+accuracy: service-mesh, proxy, health-check, load-generator, database, message
+broker, and other infrastructure-only nodes are not admissible application
+fault targets. Therefore every RCA method must be compared on the same frozen
+application-service candidate set.
+### E3.1 Uniform candidate filtering rule
+
+Each suite has a frozen allowlist derived from its official demo-system
+repository at the pinned revision listed below. For every method, the headline
+ranking is obtained by a deterministic, order-preserving filter of the native
+ranking to this allowlist.
+
+The filter:
+- preserves the relative order of all retained candidates;
+- does not recompute scores, graphs, anomaly strengths, or model outputs;
+- does not re-tune any threshold or parameter;
+- does not use case-level outcomes;
+- applies identically to SentinelOps, static threshold, random, PageRank,
+  BARO, CIRCA, mmBARO, and mmCIRCA;
+- leaves PageRank computation on the full frozen graph unchanged, then filters
+  its ranking afterward.
+
+Unfiltered/native rankings are retained and reported as a secondary table.
+For RCAEval baselines, native results are also retained for the published-number
+reproduction sanity check; the filtered ranking is used for the headline
+cross-method comparison.
+### E3.2 RE2-OB allowlist
+
+Official system repository:
+`GoogleCloudPlatform/microservices-demo@38e7348eb289eb5b87c0c6e8cb19ced0449dc389`
+(Online Boutique v0.10.7 snapshot).
+
+Frozen RE2-OB candidate labels are the 11 application/system services present
+in every one of the 90 RE2-OB metric cases and mappable to the official
+Online Boutique deployment:
+
+- `adservice`
+- `cartservice`
+- `checkoutservice`
+- `currencyservice`
+- `emailservice`
+- `frontend`
+- `paymentservice`
+- `productcatalogservice`
+- `recommendationservice`
+- `redis`
+- `shippingservice`
+
+Explicitly excluded observed mesh/infrastructure labels include
+`InboundPassthroughClusterIpv4`, `PassthroughCluster`, `frontend-check`,
+`frontend-external`, and `istio-init`. The official repo's
+`loadgenerator` is also excluded because it is workload generation rather
+than an admissible application root-cause target.
+### E3.3 RE2-SS allowlist frozen before RE2-SS data access
+
+Official system repository:
+`microservices-demo/microservices-demo@9dff06fae4981921caec6a62393a6ebfce4b3e3f`.
+
+Frozen Sock Shop application-service allowlist:
+
+- `front-end`
+- `carts`
+- `catalogue`
+- `orders`
+- `payment`
+- `queue-master`
+- `shipping`
+- `user`
+
+Database and infrastructure deployments such as `carts-db`,
+`catalogue-db`, `orders-db`, `user-db`, `session-db`, and
+`rabbitmq` are excluded from RCA candidates. This allowlist is frozen here
+without reading RE2-SS benchmark cases or labels.
+### E3.4 RE2-TT allowlist frozen before RE2-TT data access
+
+Official system repository:
+`FudanSELab/train-ticket@313886e99befb94be6cd45f085c98e0019f59829`.
+
+The frozen Train Ticket application-service allowlist is the set of top-level
+official service modules at that revision:
+
+`ts-admin-basic-info-service`, `ts-admin-order-service`,
+`ts-admin-route-service`, `ts-admin-travel-service`,
+`ts-admin-user-service`, `ts-assurance-service`, `ts-auth-service`,
+`ts-avatar-service`, `ts-basic-service`, `ts-cancel-service`,
+`ts-config-service`, `ts-consign-price-service`, `ts-consign-service`,
+`ts-contacts-service`, `ts-delivery-service`, `ts-execute-service`,
+`ts-food-delivery-service`, `ts-food-service`, `ts-gateway-service`,
+`ts-inside-payment-service`, `ts-news-service`,
+`ts-notification-service`, `ts-order-other-service`, `ts-order-service`,
+`ts-payment-service`, `ts-preserve-other-service`,
+`ts-preserve-service`, `ts-price-service`, `ts-rebook-service`,
+`ts-route-plan-service`, `ts-route-service`, `ts-seat-service`,
+`ts-security-service`, `ts-station-food-service`, `ts-station-service`,
+`ts-ticket-office-service`, `ts-train-food-service`, `ts-train-service`,
+`ts-travel-plan-service`, `ts-travel-service`, `ts-travel2-service`,
+`ts-user-service`, `ts-verification-code-service`, `ts-voucher-service`,
+`ts-wait-order-service`.
+
+Database, tracing, monitoring, ingress/service-mesh, message-broker, and other
+infrastructure-only components are excluded. This allowlist is frozen here
+without reading RE2-TT benchmark cases or labels.
+### E3.5 Chance and reporting
+
+For RE2-OB, analytical Chance@k is recomputed using the frozen allowlist size
+`N = 11`: `Chance@k = min(k, 11) / 11`.
+
+The random sanity check compares empirical random AC@1/3/5 against those
+analytical values using the frozen random seed policy and sampling uncertainty.
+A disagreement beyond sampling noise remains a stop condition.
+
+Primary RCA tables use filtered rankings. Secondary tables preserve the
+unfiltered/native rankings for transparency. No threshold, ranking weight,
+topology direction, PageRank damping, detector parameter, graph-construction
+rule, or model parameter is changed by E3.
