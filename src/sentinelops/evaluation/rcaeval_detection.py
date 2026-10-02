@@ -170,9 +170,13 @@ def calibration_zscore(
     )
 
     if std == 0.0:
-        scores = np.zeros_like(
-            values,
-            dtype=float,
+        scores = np.where(
+            values == mean,
+            0.0,
+            np.nextafter(
+                threshold,
+                np.inf,
+            ),
         )
     else:
         scores = np.abs(
@@ -241,11 +245,31 @@ def calibration_ewma(
             ddof=0,
         )
     )
+    calibration_values = values[:calibration_rows]
+    calibration_is_constant = bool(
+        np.all(
+            calibration_values
+            == calibration_values[0]
+        )
+    )
 
-    if calibration_std == 0.0:
-        scores = np.zeros_like(
-            residuals,
-            dtype=float,
+    if calibration_is_constant:
+        scores = np.where(
+            values == calibration_values[0],
+            0.0,
+            np.nextafter(
+                threshold,
+                np.inf,
+            ),
+        )
+    elif calibration_std == 0.0:
+        scores = np.where(
+            residuals == 0.0,
+            0.0,
+            np.nextafter(
+                threshold,
+                np.inf,
+            ),
         )
     else:
         scores = (

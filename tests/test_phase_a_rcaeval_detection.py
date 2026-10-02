@@ -332,3 +332,46 @@ def test_ensemble_requires_two_votes():
     ]
 
     assert len(scores) == 3
+
+
+def test_zscore_constant_calibration_flags_change():
+    values = np.array([5.0, 5.0, 7.0])
+    scores, flags = calibration_zscore(
+        values,
+        calibration_rows=2,
+        threshold=2.5,
+    )
+
+    assert scores[:2].tolist() == [0.0, 0.0]
+    assert scores[2] > 2.5
+    assert flags.tolist() == [0, 0, 1]
+
+
+def test_ewma_constant_calibration_flags_change():
+    values = np.array([5.0, 5.0, 7.0])
+    scores, flags = calibration_ewma(
+        values,
+        calibration_rows=2,
+        alpha=0.30,
+        threshold=2.5,
+    )
+
+    assert scores[:2].tolist() == [0.0, 0.0]
+    assert scores[2] > 2.5
+    assert flags.tolist() == [0, 0, 1]
+
+
+
+def test_ewma_constant_calibration_ignores_float_roundoff():
+    values = np.array([3.0, 3.0, 3.0, 3.0, 4.0])
+    scores, flags = calibration_ewma(
+        values,
+        calibration_rows=4,
+        alpha=0.30,
+        threshold=2.5,
+    )
+
+    assert scores[:4].tolist() == [0.0, 0.0, 0.0, 0.0]
+    assert flags[:4].tolist() == [0, 0, 0, 0]
+    assert scores[4] > 2.5
+    assert flags[4] == 1
