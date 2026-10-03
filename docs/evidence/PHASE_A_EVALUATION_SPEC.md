@@ -919,3 +919,19 @@ remain historical. No weights, thresholds, scoring, tie-breaking,
 candidate allowlist, seed, or baseline method changes. E4 fallback
 treatment, E6 uncertainty rules and all other stop rules remain in force.
 RE2-SS and RE2-TT remain untouched. Never push. Stop at Step 25.
+
+
+## Amendment A5 - Step 13 detector investigation resolution (2026-10-03)
+
+**Status: DOCUMENTATION-ONLY RESOLUTION AFTER RE2-OB DIAGNOSTIC REVIEW.**
+The historical Step 13 stop is preserved, but its investigation requirement is
+now resolved by `phase_a/re2ob/STEP13_RESOLUTION.md`. No implementation or
+ground-truth leakage bug was found. Step 15 reproduced detector-v1's behavior
+across all 90 RE2-OB cases: normal-window FP=90/90, fault-window TP=90/90,
+window F1=0.6666666667 equal to always-alert, and timestamp false-positive rate
+=28,781/32,400=88.83%. Maximum system score is exactly 1.0 in 49/90 normal and
+86/90 fault windows. Detector v1 is retained unchanged as a negative baseline;
+no threshold, model setting, voting, aggregation, normalization, calibration,
+or window rule is tuned from RE2-OB. This resolves investigation/provenance,
+not performance. It clears no other stop rule, authorizes no held-out run, and
+RE2-SS/RE2-TT remain untouched. Never push.
