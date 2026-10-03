@@ -10,15 +10,12 @@ from sentinelops.investigation.agents import (
     remediation_agent,
     verifier_agent,
 )
-
 from sentinelops.investigation.evidence import (
     build_evidence_bundle,
 )
-
 from sentinelops.investigation.rag import (
     RunbookRetriever,
 )
-
 
 with open(
     "configs/investigation.yaml",

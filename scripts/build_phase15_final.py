@@ -4,15 +4,12 @@ from pathlib import Path
 from sentinelops.investigation.llm import (
     DeterministicGroundedProvider,
 )
-
 from sentinelops.investigation.orchestrator import (
     InvestigationOrchestrator,
 )
-
 from sentinelops.investigation.validation import (
     validate_final_investigation,
 )
-
 
 EVIDENCE = Path(
     "data/processed/investigation/"

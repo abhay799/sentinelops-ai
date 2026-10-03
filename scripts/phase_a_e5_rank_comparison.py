@@ -64,7 +64,10 @@ lines = ["# E5 before/after rank comparison", "",
          "No ground-truth labels are read and no accuracy metrics are computed.", "",
          "All 90 cases preserve the relative order of shared candidates; 0 differences.",
          "Seven top-five lists gain a missing fifth candidate; this is output completion.", "",
-         "| Case | Native before (5) | E3 before | E3 after (complete) | Relative order changed | Top 5 changed |",
+         (
+             "| Case | Native before (5) | E3 before | E3 after (complete) | "
+             "Relative order changed | Top 5 changed |"
+         ),
          "|---|---|---|---|---|---|"]
 for r in rows:
     lines.append("| " + " | ".join([r["case_id"], ", ".join(r["native_before"]),

@@ -6,7 +6,6 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-
 REPORT = Path(
     "data/processed/investigation/"
     "final_investigation_v1.json"

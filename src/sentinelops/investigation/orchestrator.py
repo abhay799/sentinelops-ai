@@ -8,7 +8,6 @@ from sentinelops.investigation.agents import (
     remediation_agent,
     verifier_agent,
 )
-
 from sentinelops.investigation.llm import (
     GroundedLLMProvider,
 )

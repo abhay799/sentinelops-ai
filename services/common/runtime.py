@@ -26,7 +26,6 @@ from prometheus_client import (
 )
 from pydantic import BaseModel, Field
 
-
 SERVICE_NAME = os.getenv("SERVICE_NAME", "unknown-service")
 SERVICE_PORT = int(os.getenv("SERVICE_PORT", "8000"))
 
