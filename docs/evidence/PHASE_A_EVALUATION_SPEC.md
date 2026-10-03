@@ -991,3 +991,15 @@ committed before SS accuracy scoring in `68ade27`, based on the contract
 rather than results. No mm execution is authorized. The frozen scorer's
 "input unavailable" wording denotes contract availability only.
 [Corrected erratum](phase_a/re2ss/STEP26_MM_UNAVAILABLE_ERRATUM.md).
+
+### RE2-OB input provenance correction (2026-10-03)
+
+SentinelOps v1/v2, threshold and the saved strengths used by PageRank originate
+in pinned HF metric parquet files. Harness BARO/CIRCA/mmBARO/mmCIRCA read native
+archive `simple_metrics.csv`; random reads candidate evidence, not metric
+values. The prior 90-case comparison reports 81 exact, 7 null/NaN and 2
+row-count differences. The latter are checkoutservice CPU repeat 2 (930 vs
+1186 rows) and memory repeat 2 (1004 vs 1262). The CPU case has a saved singular
+Fisher-Z fallback; the memory case does not. Row-count overlap is not a proven
+cause and no input-substitution rerun is performed.
+[Input provenance note](phase_a/re2ob/RE2OB_INPUT_PROVENANCE.md).
