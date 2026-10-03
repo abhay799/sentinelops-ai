@@ -1,0 +1,4721 @@
+{
+  "faults": {
+    "cpu": {
+      "a4_static_topology_sensitivity": {
+        "label": "POST-HOC static-topology sensitivity",
+        "primary": {
+          "BARO": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.7333333333333333,
+              "AC@3": 0.8,
+              "AC@4": 0.8,
+              "AC@5": 0.8666666666666667,
+              "Avg@5": 0.6399999999999999,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.9066666666666667
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "CIRCA": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 1,
+            "metrics": {
+              "AC@1": 0.6,
+              "AC@2": 0.8,
+              "AC@3": 0.8,
+              "AC@4": 0.8,
+              "AC@5": 0.8,
+              "Avg@5": 0.76,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.7600000000000002
+            },
+            "valid_ranking_count": 14,
+            "valid_ranking_coverage": 0.9333333333333333
+          },
+          "PageRank": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.2,
+              "AC@3": 0.2,
+              "AC@4": 0.26666666666666666,
+              "AC@5": 0.6,
+              "Avg@5": 0.29333333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.32
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "SentinelOps": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.26666666666666666,
+              "AC@2": 0.4,
+              "AC@3": 0.6,
+              "AC@4": 0.6666666666666666,
+              "AC@5": 0.7333333333333333,
+              "Avg@5": 0.5333333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.6133333333333333
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "mmBARO": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.7333333333333333,
+              "AC@3": 0.8,
+              "AC@4": 0.8666666666666667,
+              "AC@5": 1.0,
+              "Avg@5": 0.6799999999999999,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "mmCIRCA": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.6,
+              "AC@2": 0.7333333333333333,
+              "AC@3": 0.9333333333333333,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.8266666666666668,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "random": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.0,
+              "AC@3": 0.06666666666666667,
+              "AC@4": 0.26666666666666666,
+              "AC@5": 0.26666666666666666,
+              "Avg@5": 0.12,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 0.5866666666666667
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "threshold": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.8666666666666667,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.9733333333333334,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          }
+        },
+        "valid_rankings_only": {
+          "BARO": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.7333333333333333,
+              "AC@3": 0.8,
+              "AC@4": 0.8,
+              "AC@5": 0.8666666666666667,
+              "Avg@5": 0.6399999999999999,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.9066666666666667
+            }
+          },
+          "CIRCA": {
+            "cohort": "valid-rankings-only",
+            "denominator": 14,
+            "metrics": {
+              "AC@1": 0.6428571428571429,
+              "AC@2": 0.8571428571428571,
+              "AC@3": 0.8571428571428571,
+              "AC@4": 0.8571428571428571,
+              "AC@5": 0.8571428571428571,
+              "Avg@5": 0.8142857142857143,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.8857142857142857
+            }
+          },
+          "PageRank": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.2,
+              "AC@3": 0.2,
+              "AC@4": 0.26666666666666666,
+              "AC@5": 0.6,
+              "Avg@5": 0.29333333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.32
+            }
+          },
+          "SentinelOps": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.26666666666666666,
+              "AC@2": 0.4,
+              "AC@3": 0.6,
+              "AC@4": 0.6666666666666666,
+              "AC@5": 0.7333333333333333,
+              "Avg@5": 0.5333333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.6133333333333333
+            }
+          },
+          "mmBARO": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.7333333333333333,
+              "AC@3": 0.8,
+              "AC@4": 0.8666666666666667,
+              "AC@5": 1.0,
+              "Avg@5": 0.6799999999999999,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "mmCIRCA": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.6,
+              "AC@2": 0.7333333333333333,
+              "AC@3": 0.9333333333333333,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.8266666666666668,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            }
+          },
+          "random": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.0,
+              "AC@3": 0.06666666666666667,
+              "AC@4": 0.26666666666666666,
+              "AC@5": 0.26666666666666666,
+              "Avg@5": 0.12,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 0.5866666666666667
+            }
+          },
+          "threshold": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.8666666666666667,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.9733333333333334,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          }
+        }
+      },
+      "native_unfiltered_secondary": {
+        "BARO": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8,
+            "AC@4": 0.8,
+            "AC@5": 0.8666666666666667,
+            "Avg@5": 0.6399999999999999,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.0799999999999996
+          }
+        },
+        "CIRCA": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.6,
+            "AC@2": 0.8,
+            "AC@3": 0.8,
+            "AC@4": 0.8,
+            "AC@5": 0.8,
+            "Avg@5": 0.76,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 1.9199999999999995
+          }
+        },
+        "PageRank": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 0.8,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.6,
+            "Chance@5": 0.4126984126984128,
+            "Lift@5": 2.261538461538461
+          }
+        },
+        "SentinelOps": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.5333333333333333,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.6533333333333333,
+            "Chance@5": 0.4126984126984128,
+            "Lift@5": 2.261538461538461
+          }
+        },
+        "mmBARO": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 0.8666666666666667,
+            "Avg@5": 0.6533333333333333,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.0799999999999996
+          }
+        },
+        "mmCIRCA": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.6,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.9333333333333333,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.8266666666666668,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.2399999999999993
+          }
+        },
+        "random": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.0,
+            "AC@3": 0.06666666666666667,
+            "AC@4": 0.2,
+            "AC@5": 0.26666666666666666,
+            "Avg@5": 0.10666666666666666,
+            "Chance@5": 0.4126984126984128,
+            "Lift@5": 0.646153846153846
+          }
+        },
+        "threshold": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8666666666666667,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9733333333333334,
+            "Chance@5": 0.4126984126984128,
+            "Lift@5": 2.4230769230769225
+          }
+        }
+      },
+      "primary": {
+        "BARO": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8,
+            "AC@4": 0.8,
+            "AC@5": 0.8666666666666667,
+            "Avg@5": 0.6399999999999999,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.9066666666666667
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "CIRCA": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 1,
+          "metrics": {
+            "AC@1": 0.6,
+            "AC@2": 0.8,
+            "AC@3": 0.8,
+            "AC@4": 0.8,
+            "AC@5": 0.8,
+            "Avg@5": 0.76,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.7600000000000002
+          },
+          "valid_ranking_count": 14,
+          "valid_ranking_coverage": 0.9333333333333333
+        },
+        "PageRank": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 0.8,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.6,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "SentinelOps": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.26666666666666666,
+            "AC@2": 0.5333333333333333,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.6666666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "mmBARO": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 1.0,
+            "Avg@5": 0.6799999999999999,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "mmCIRCA": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.6,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.9333333333333333,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.8266666666666668,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "random": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.0,
+            "AC@3": 0.06666666666666667,
+            "AC@4": 0.26666666666666666,
+            "AC@5": 0.26666666666666666,
+            "Avg@5": 0.12,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 0.5866666666666667
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "threshold": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.8666666666666667,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9733333333333334,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        }
+      },
+      "valid_rankings_only": {
+        "BARO": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8,
+            "AC@4": 0.8,
+            "AC@5": 0.8666666666666667,
+            "Avg@5": 0.6399999999999999,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.9066666666666667
+          }
+        },
+        "CIRCA": {
+          "cohort": "valid-rankings-only",
+          "denominator": 14,
+          "metrics": {
+            "AC@1": 0.6428571428571429,
+            "AC@2": 0.8571428571428571,
+            "AC@3": 0.8571428571428571,
+            "AC@4": 0.8571428571428571,
+            "AC@5": 0.8571428571428571,
+            "Avg@5": 0.8142857142857143,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.8857142857142857
+          }
+        },
+        "PageRank": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 0.8,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.6,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          }
+        },
+        "SentinelOps": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.26666666666666666,
+            "AC@2": 0.5333333333333333,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.6666666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          }
+        },
+        "mmBARO": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 1.0,
+            "Avg@5": 0.6799999999999999,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "mmCIRCA": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.6,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.9333333333333333,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.8266666666666668,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          }
+        },
+        "random": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.0,
+            "AC@3": 0.06666666666666667,
+            "AC@4": 0.26666666666666666,
+            "AC@5": 0.26666666666666666,
+            "Avg@5": 0.12,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 0.5866666666666667
+          }
+        },
+        "threshold": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8666666666666667,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9733333333333334,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        }
+      }
+    },
+    "delay": {
+      "a4_static_topology_sensitivity": {
+        "label": "POST-HOC static-topology sensitivity",
+        "primary": {
+          "BARO": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.6666666666666666,
+              "AC@3": 0.8,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.6666666666666667,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "CIRCA": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 1,
+            "metrics": {
+              "AC@1": 0.4666666666666667,
+              "AC@2": 0.6,
+              "AC@3": 0.8,
+              "AC@4": 0.8,
+              "AC@5": 0.8666666666666667,
+              "Avg@5": 0.7066666666666668,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.9066666666666667
+            },
+            "valid_ranking_count": 14,
+            "valid_ranking_coverage": 0.9333333333333333
+          },
+          "PageRank": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.2,
+              "AC@3": 0.4,
+              "AC@4": 0.4666666666666667,
+              "AC@5": 0.4666666666666667,
+              "Avg@5": 0.3466666666666667,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.0266666666666666
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "SentinelOps": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.3333333333333333,
+              "AC@2": 0.6,
+              "AC@3": 0.7333333333333333,
+              "AC@4": 0.8666666666666667,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.6933333333333334,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "mmBARO": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.6666666666666666,
+              "AC@3": 0.7333333333333333,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.6799999999999999,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "mmCIRCA": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.3333333333333333,
+              "AC@3": 0.4,
+              "AC@4": 0.6,
+              "AC@5": 0.7333333333333333,
+              "Avg@5": 0.4533333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.6133333333333333
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "random": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.06666666666666667,
+              "AC@2": 0.13333333333333333,
+              "AC@3": 0.3333333333333333,
+              "AC@4": 0.4666666666666667,
+              "AC@5": 0.5333333333333333,
+              "Avg@5": 0.30666666666666664,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.1733333333333333
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "threshold": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.8,
+              "AC@2": 0.8,
+              "AC@3": 0.8666666666666667,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.8933333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          }
+        },
+        "valid_rankings_only": {
+          "BARO": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.6666666666666666,
+              "AC@3": 0.8,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.6666666666666667,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            }
+          },
+          "CIRCA": {
+            "cohort": "valid-rankings-only",
+            "denominator": 14,
+            "metrics": {
+              "AC@1": 0.5,
+              "AC@2": 0.6428571428571429,
+              "AC@3": 0.8571428571428571,
+              "AC@4": 0.8571428571428571,
+              "AC@5": 0.9285714285714286,
+              "Avg@5": 0.7571428571428571,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.042857142857143
+            }
+          },
+          "PageRank": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.2,
+              "AC@3": 0.4,
+              "AC@4": 0.4666666666666667,
+              "AC@5": 0.4666666666666667,
+              "Avg@5": 0.3466666666666667,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.0266666666666666
+            }
+          },
+          "SentinelOps": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.3333333333333333,
+              "AC@2": 0.6,
+              "AC@3": 0.7333333333333333,
+              "AC@4": 0.8666666666666667,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.6933333333333334,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            }
+          },
+          "mmBARO": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.6666666666666666,
+              "AC@3": 0.7333333333333333,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.6799999999999999,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "mmCIRCA": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.3333333333333333,
+              "AC@3": 0.4,
+              "AC@4": 0.6,
+              "AC@5": 0.7333333333333333,
+              "Avg@5": 0.4533333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.6133333333333333
+            }
+          },
+          "random": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.06666666666666667,
+              "AC@2": 0.13333333333333333,
+              "AC@3": 0.3333333333333333,
+              "AC@4": 0.4666666666666667,
+              "AC@5": 0.5333333333333333,
+              "Avg@5": 0.30666666666666664,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.1733333333333333
+            }
+          },
+          "threshold": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.8,
+              "AC@2": 0.8,
+              "AC@3": 0.8666666666666667,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.8933333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          }
+        }
+      },
+      "native_unfiltered_secondary": {
+        "BARO": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.6666666666666666,
+            "AC@3": 0.8,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.6666666666666667,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.2399999999999993
+          }
+        },
+        "CIRCA": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.4666666666666667,
+            "AC@2": 0.6,
+            "AC@3": 0.8,
+            "AC@4": 0.8,
+            "AC@5": 0.8666666666666667,
+            "Avg@5": 0.7066666666666668,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.0799999999999996
+          }
+        },
+        "PageRank": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4666666666666667,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 0.8,
+            "AC@5": 1.0,
+            "Avg@5": 0.6266666666666667,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        },
+        "SentinelOps": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.3333333333333333,
+            "AC@2": 0.6666666666666666,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 1.0,
+            "Avg@5": 0.76,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        },
+        "mmBARO": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.6666666666666666,
+            "AC@3": 0.7333333333333333,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 1.0,
+            "Avg@5": 0.6666666666666666,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        },
+        "mmCIRCA": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.3333333333333333,
+            "AC@3": 0.4,
+            "AC@4": 0.6,
+            "AC@5": 0.7333333333333333,
+            "Avg@5": 0.4533333333333333,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 1.7599999999999993
+          }
+        },
+        "random": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.13333333333333333,
+            "AC@3": 0.3333333333333333,
+            "AC@4": 0.4666666666666667,
+            "AC@5": 0.4666666666666667,
+            "Avg@5": 0.29333333333333333,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 1.1199999999999997
+          }
+        },
+        "threshold": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8,
+            "AC@2": 0.8,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8933333333333333,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        }
+      },
+      "primary": {
+        "BARO": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.6666666666666666,
+            "AC@3": 0.8,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.6666666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "CIRCA": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 1,
+          "metrics": {
+            "AC@1": 0.4666666666666667,
+            "AC@2": 0.6,
+            "AC@3": 0.8,
+            "AC@4": 0.8,
+            "AC@5": 0.8666666666666667,
+            "Avg@5": 0.7066666666666668,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.9066666666666667
+          },
+          "valid_ranking_count": 14,
+          "valid_ranking_coverage": 0.9333333333333333
+        },
+        "PageRank": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4666666666666667,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 0.8,
+            "AC@5": 1.0,
+            "Avg@5": 0.6266666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "SentinelOps": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.3333333333333333,
+            "AC@2": 0.6666666666666666,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 1.0,
+            "Avg@5": 0.76,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "mmBARO": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.6666666666666666,
+            "AC@3": 0.7333333333333333,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.6799999999999999,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "mmCIRCA": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.3333333333333333,
+            "AC@3": 0.4,
+            "AC@4": 0.6,
+            "AC@5": 0.7333333333333333,
+            "Avg@5": 0.4533333333333333,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.6133333333333333
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "random": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.13333333333333333,
+            "AC@3": 0.3333333333333333,
+            "AC@4": 0.4666666666666667,
+            "AC@5": 0.5333333333333333,
+            "Avg@5": 0.30666666666666664,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.1733333333333333
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "threshold": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.8,
+            "AC@2": 0.8,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8933333333333333,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        }
+      },
+      "valid_rankings_only": {
+        "BARO": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.6666666666666666,
+            "AC@3": 0.8,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.6666666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          }
+        },
+        "CIRCA": {
+          "cohort": "valid-rankings-only",
+          "denominator": 14,
+          "metrics": {
+            "AC@1": 0.5,
+            "AC@2": 0.6428571428571429,
+            "AC@3": 0.8571428571428571,
+            "AC@4": 0.8571428571428571,
+            "AC@5": 0.9285714285714286,
+            "Avg@5": 0.7571428571428571,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.042857142857143
+          }
+        },
+        "PageRank": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4666666666666667,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 0.8,
+            "AC@5": 1.0,
+            "Avg@5": 0.6266666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "SentinelOps": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.3333333333333333,
+            "AC@2": 0.6666666666666666,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 1.0,
+            "Avg@5": 0.76,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "mmBARO": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.6666666666666666,
+            "AC@3": 0.7333333333333333,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.6799999999999999,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "mmCIRCA": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.3333333333333333,
+            "AC@3": 0.4,
+            "AC@4": 0.6,
+            "AC@5": 0.7333333333333333,
+            "Avg@5": 0.4533333333333333,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.6133333333333333
+          }
+        },
+        "random": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.13333333333333333,
+            "AC@3": 0.3333333333333333,
+            "AC@4": 0.4666666666666667,
+            "AC@5": 0.5333333333333333,
+            "Avg@5": 0.30666666666666664,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.1733333333333333
+          }
+        },
+        "threshold": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8,
+            "AC@2": 0.8,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8933333333333333,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        }
+      }
+    },
+    "disk": {
+      "a4_static_topology_sensitivity": {
+        "label": "POST-HOC static-topology sensitivity",
+        "primary": {
+          "BARO": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.13333333333333333,
+              "AC@2": 0.9333333333333333,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.8133333333333332,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "CIRCA": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 2,
+            "metrics": {
+              "AC@1": 0.8666666666666667,
+              "AC@2": 0.8666666666666667,
+              "AC@3": 0.8666666666666667,
+              "AC@4": 0.8666666666666667,
+              "AC@5": 0.8666666666666667,
+              "Avg@5": 0.8666666666666668,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.9066666666666667
+            },
+            "valid_ranking_count": 13,
+            "valid_ranking_coverage": 0.8666666666666667
+          },
+          "PageRank": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.2,
+              "AC@3": 0.2,
+              "AC@4": 0.4,
+              "AC@5": 0.5333333333333333,
+              "Avg@5": 0.30666666666666664,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.1733333333333333
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "SentinelOps": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.5333333333333333,
+              "AC@3": 0.6666666666666666,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 1.0,
+              "Avg@5": 0.6666666666666666,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "mmBARO": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.06666666666666667,
+              "AC@2": 0.9333333333333333,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.8,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "mmCIRCA": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.9333333333333333,
+              "AC@2": 0.9333333333333333,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.9733333333333334,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "random": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.06666666666666667,
+              "AC@3": 0.13333333333333333,
+              "AC@4": 0.26666666666666666,
+              "AC@5": 0.26666666666666666,
+              "Avg@5": 0.14666666666666667,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 0.5866666666666667
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "threshold": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.8666666666666667,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.9733333333333334,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          }
+        },
+        "valid_rankings_only": {
+          "BARO": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.13333333333333333,
+              "AC@2": 0.9333333333333333,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.8133333333333332,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "CIRCA": {
+            "cohort": "valid-rankings-only",
+            "denominator": 13,
+            "metrics": {
+              "AC@1": 1.0,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 1.0,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "PageRank": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.2,
+              "AC@3": 0.2,
+              "AC@4": 0.4,
+              "AC@5": 0.5333333333333333,
+              "Avg@5": 0.30666666666666664,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.1733333333333333
+            }
+          },
+          "SentinelOps": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.5333333333333333,
+              "AC@3": 0.6666666666666666,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 1.0,
+              "Avg@5": 0.6666666666666666,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "mmBARO": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.06666666666666667,
+              "AC@2": 0.9333333333333333,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.8,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "mmCIRCA": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.9333333333333333,
+              "AC@2": 0.9333333333333333,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.9733333333333334,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "random": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.06666666666666667,
+              "AC@3": 0.13333333333333333,
+              "AC@4": 0.26666666666666666,
+              "AC@5": 0.26666666666666666,
+              "Avg@5": 0.14666666666666667,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 0.5866666666666667
+            }
+          },
+          "threshold": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.8666666666666667,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.9733333333333334,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          }
+        }
+      },
+      "native_unfiltered_secondary": {
+        "BARO": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.13333333333333333,
+            "AC@2": 0.9333333333333333,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8133333333333332,
+            "Chance@5": 0.4217171717171718,
+            "Lift@5": 2.3712574850299397
+          }
+        },
+        "CIRCA": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8666666666666667,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 0.8666666666666667,
+            "Avg@5": 0.8666666666666668,
+            "Chance@5": 0.4217171717171718,
+            "Lift@5": 2.055089820359281
+          }
+        },
+        "PageRank": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4,
+            "AC@3": 0.6,
+            "AC@4": 0.6666666666666666,
+            "AC@5": 1.0,
+            "Avg@5": 0.5733333333333334,
+            "Chance@5": 0.4217171717171718,
+            "Lift@5": 2.3712574850299397
+          }
+        },
+        "SentinelOps": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.76,
+            "Chance@5": 0.4217171717171718,
+            "Lift@5": 2.3712574850299397
+          }
+        },
+        "mmBARO": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.9333333333333333,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8,
+            "Chance@5": 0.4217171717171718,
+            "Lift@5": 2.3712574850299397
+          }
+        },
+        "mmCIRCA": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.9333333333333333,
+            "AC@2": 0.9333333333333333,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9733333333333334,
+            "Chance@5": 0.4217171717171718,
+            "Lift@5": 2.3712574850299397
+          }
+        },
+        "random": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.06666666666666667,
+            "AC@3": 0.13333333333333333,
+            "AC@4": 0.13333333333333333,
+            "AC@5": 0.26666666666666666,
+            "Avg@5": 0.12000000000000002,
+            "Chance@5": 0.4217171717171718,
+            "Lift@5": 0.6323353293413172
+          }
+        },
+        "threshold": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8666666666666667,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9733333333333334,
+            "Chance@5": 0.4217171717171718,
+            "Lift@5": 2.3712574850299397
+          }
+        }
+      },
+      "primary": {
+        "BARO": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.13333333333333333,
+            "AC@2": 0.9333333333333333,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8133333333333332,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "CIRCA": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 2,
+          "metrics": {
+            "AC@1": 0.8666666666666667,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 0.8666666666666667,
+            "Avg@5": 0.8666666666666668,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.9066666666666667
+          },
+          "valid_ranking_count": 13,
+          "valid_ranking_coverage": 0.8666666666666667
+        },
+        "PageRank": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4,
+            "AC@3": 0.6,
+            "AC@4": 0.6666666666666666,
+            "AC@5": 1.0,
+            "Avg@5": 0.5733333333333334,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "SentinelOps": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.76,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "mmBARO": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.9333333333333333,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "mmCIRCA": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.9333333333333333,
+            "AC@2": 0.9333333333333333,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9733333333333334,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "random": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.06666666666666667,
+            "AC@3": 0.13333333333333333,
+            "AC@4": 0.26666666666666666,
+            "AC@5": 0.26666666666666666,
+            "Avg@5": 0.14666666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 0.5866666666666667
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "threshold": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.8666666666666667,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9733333333333334,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        }
+      },
+      "valid_rankings_only": {
+        "BARO": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.13333333333333333,
+            "AC@2": 0.9333333333333333,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8133333333333332,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "CIRCA": {
+          "cohort": "valid-rankings-only",
+          "denominator": 13,
+          "metrics": {
+            "AC@1": 1.0,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 1.0,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "PageRank": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4,
+            "AC@3": 0.6,
+            "AC@4": 0.6666666666666666,
+            "AC@5": 1.0,
+            "Avg@5": 0.5733333333333334,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "SentinelOps": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.76,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "mmBARO": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.9333333333333333,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "mmCIRCA": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.9333333333333333,
+            "AC@2": 0.9333333333333333,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9733333333333334,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "random": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.06666666666666667,
+            "AC@3": 0.13333333333333333,
+            "AC@4": 0.26666666666666666,
+            "AC@5": 0.26666666666666666,
+            "Avg@5": 0.14666666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 0.5866666666666667
+          }
+        },
+        "threshold": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8666666666666667,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9733333333333334,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        }
+      }
+    },
+    "loss": {
+      "a4_static_topology_sensitivity": {
+        "label": "POST-HOC static-topology sensitivity",
+        "primary": {
+          "BARO": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.4,
+              "AC@2": 0.8,
+              "AC@3": 0.8666666666666667,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 1.0,
+              "Avg@5": 0.8,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "CIRCA": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.6666666666666666,
+              "AC@2": 0.8666666666666667,
+              "AC@3": 0.8666666666666667,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.8533333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "PageRank": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.2,
+              "AC@3": 0.2,
+              "AC@4": 0.4,
+              "AC@5": 0.4666666666666667,
+              "Avg@5": 0.29333333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.0266666666666666
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "SentinelOps": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.06666666666666667,
+              "AC@2": 0.4,
+              "AC@3": 0.4,
+              "AC@4": 0.6,
+              "AC@5": 0.6666666666666666,
+              "Avg@5": 0.42666666666666664,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.4666666666666666
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "mmBARO": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.4666666666666667,
+              "AC@2": 0.8,
+              "AC@3": 0.8666666666666667,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 1.0,
+              "Avg@5": 0.8133333333333332,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "mmCIRCA": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 1,
+            "metrics": {
+              "AC@1": 0.4666666666666667,
+              "AC@2": 0.7333333333333333,
+              "AC@3": 0.8666666666666667,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.7866666666666667,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            },
+            "valid_ranking_count": 14,
+            "valid_ranking_coverage": 0.9333333333333333
+          },
+          "random": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.06666666666666667,
+              "AC@2": 0.13333333333333333,
+              "AC@3": 0.2,
+              "AC@4": 0.3333333333333333,
+              "AC@5": 0.4,
+              "Avg@5": 0.22666666666666666,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 0.8800000000000001
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "threshold": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.8,
+              "AC@2": 0.8666666666666667,
+              "AC@3": 0.9333333333333333,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.9199999999999999,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          }
+        },
+        "valid_rankings_only": {
+          "BARO": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.4,
+              "AC@2": 0.8,
+              "AC@3": 0.8666666666666667,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 1.0,
+              "Avg@5": 0.8,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "CIRCA": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.6666666666666666,
+              "AC@2": 0.8666666666666667,
+              "AC@3": 0.8666666666666667,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.8533333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            }
+          },
+          "PageRank": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.2,
+              "AC@3": 0.2,
+              "AC@4": 0.4,
+              "AC@5": 0.4666666666666667,
+              "Avg@5": 0.29333333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.0266666666666666
+            }
+          },
+          "SentinelOps": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.06666666666666667,
+              "AC@2": 0.4,
+              "AC@3": 0.4,
+              "AC@4": 0.6,
+              "AC@5": 0.6666666666666666,
+              "Avg@5": 0.42666666666666664,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.4666666666666666
+            }
+          },
+          "mmBARO": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.4666666666666667,
+              "AC@2": 0.8,
+              "AC@3": 0.8666666666666667,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 1.0,
+              "Avg@5": 0.8133333333333332,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "mmCIRCA": {
+            "cohort": "valid-rankings-only",
+            "denominator": 14,
+            "metrics": {
+              "AC@1": 0.5,
+              "AC@2": 0.7857142857142857,
+              "AC@3": 0.9285714285714286,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.8428571428571429,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "random": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.06666666666666667,
+              "AC@2": 0.13333333333333333,
+              "AC@3": 0.2,
+              "AC@4": 0.3333333333333333,
+              "AC@5": 0.4,
+              "Avg@5": 0.22666666666666666,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 0.8800000000000001
+            }
+          },
+          "threshold": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.8,
+              "AC@2": 0.8666666666666667,
+              "AC@3": 0.9333333333333333,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.9199999999999999,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          }
+        }
+      },
+      "native_unfiltered_secondary": {
+        "BARO": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.4,
+            "AC@2": 0.8,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 1.0,
+            "Avg@5": 0.8,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        },
+        "CIRCA": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.6666666666666666,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.8533333333333333,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.2399999999999993
+          }
+        },
+        "PageRank": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4,
+            "AC@3": 0.6,
+            "AC@4": 0.8,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.5866666666666667,
+            "Chance@5": 0.4145299145299146,
+            "Lift@5": 2.251546391752577
+          }
+        },
+        "SentinelOps": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.3333333333333333,
+            "AC@3": 0.6,
+            "AC@4": 0.7333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.5333333333333334,
+            "Chance@5": 0.4145299145299146,
+            "Lift@5": 2.251546391752577
+          }
+        },
+        "mmBARO": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.4666666666666667,
+            "AC@2": 0.8,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 1.0,
+            "Avg@5": 0.8133333333333332,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        },
+        "mmCIRCA": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.4666666666666667,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.7866666666666667,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.2399999999999993
+          }
+        },
+        "random": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.06666666666666667,
+            "AC@3": 0.2,
+            "AC@4": 0.26666666666666666,
+            "AC@5": 0.3333333333333333,
+            "Avg@5": 0.18666666666666668,
+            "Chance@5": 0.4145299145299146,
+            "Lift@5": 0.804123711340206
+          }
+        },
+        "threshold": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.9333333333333333,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9199999999999999,
+            "Chance@5": 0.4145299145299146,
+            "Lift@5": 2.412371134020618
+          }
+        }
+      },
+      "primary": {
+        "BARO": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.4,
+            "AC@2": 0.8,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 1.0,
+            "Avg@5": 0.8,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "CIRCA": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.6666666666666666,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.8533333333333333,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "PageRank": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4,
+            "AC@3": 0.6,
+            "AC@4": 0.8,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.5866666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "SentinelOps": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.4,
+            "AC@3": 0.6,
+            "AC@4": 0.7333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.5466666666666666,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "mmBARO": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.4666666666666667,
+            "AC@2": 0.8,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 1.0,
+            "Avg@5": 0.8133333333333332,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "mmCIRCA": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 1,
+          "metrics": {
+            "AC@1": 0.4666666666666667,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.7866666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          },
+          "valid_ranking_count": 14,
+          "valid_ranking_coverage": 0.9333333333333333
+        },
+        "random": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.13333333333333333,
+            "AC@3": 0.2,
+            "AC@4": 0.3333333333333333,
+            "AC@5": 0.4,
+            "Avg@5": 0.22666666666666666,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 0.8800000000000001
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "threshold": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.8,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.9333333333333333,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9199999999999999,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        }
+      },
+      "valid_rankings_only": {
+        "BARO": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.4,
+            "AC@2": 0.8,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 1.0,
+            "Avg@5": 0.8,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "CIRCA": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.6666666666666666,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.8533333333333333,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          }
+        },
+        "PageRank": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4,
+            "AC@3": 0.6,
+            "AC@4": 0.8,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.5866666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          }
+        },
+        "SentinelOps": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.4,
+            "AC@3": 0.6,
+            "AC@4": 0.7333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.5466666666666666,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          }
+        },
+        "mmBARO": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.4666666666666667,
+            "AC@2": 0.8,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 1.0,
+            "Avg@5": 0.8133333333333332,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "mmCIRCA": {
+          "cohort": "valid-rankings-only",
+          "denominator": 14,
+          "metrics": {
+            "AC@1": 0.5,
+            "AC@2": 0.7857142857142857,
+            "AC@3": 0.9285714285714286,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8428571428571429,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "random": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.13333333333333333,
+            "AC@3": 0.2,
+            "AC@4": 0.3333333333333333,
+            "AC@5": 0.4,
+            "Avg@5": 0.22666666666666666,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 0.8800000000000001
+          }
+        },
+        "threshold": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.9333333333333333,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9199999999999999,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        }
+      }
+    },
+    "mem": {
+      "a4_static_topology_sensitivity": {
+        "label": "POST-HOC static-topology sensitivity",
+        "primary": {
+          "BARO": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.3333333333333333,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.8666666666666666,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "CIRCA": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.8,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.96,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "PageRank": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.2,
+              "AC@3": 0.2,
+              "AC@4": 0.4666666666666667,
+              "AC@5": 0.6,
+              "Avg@5": 0.33333333333333337,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.32
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "SentinelOps": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.4666666666666667,
+              "AC@3": 0.4666666666666667,
+              "AC@4": 0.6,
+              "AC@5": 0.7333333333333333,
+              "Avg@5": 0.4533333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.6133333333333333
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "mmBARO": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.4666666666666667,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.8933333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "mmCIRCA": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.6,
+              "AC@2": 0.8666666666666667,
+              "AC@3": 0.9333333333333333,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.8533333333333335,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "random": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.13333333333333333,
+              "AC@3": 0.13333333333333333,
+              "AC@4": 0.4,
+              "AC@5": 0.5333333333333333,
+              "Avg@5": 0.24000000000000005,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.1733333333333333
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "threshold": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 1.0,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 1.0,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          }
+        },
+        "valid_rankings_only": {
+          "BARO": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.3333333333333333,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.8666666666666666,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "CIRCA": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.8,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.96,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "PageRank": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.2,
+              "AC@3": 0.2,
+              "AC@4": 0.4666666666666667,
+              "AC@5": 0.6,
+              "Avg@5": 0.33333333333333337,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.32
+            }
+          },
+          "SentinelOps": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.4666666666666667,
+              "AC@3": 0.4666666666666667,
+              "AC@4": 0.6,
+              "AC@5": 0.7333333333333333,
+              "Avg@5": 0.4533333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.6133333333333333
+            }
+          },
+          "mmBARO": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.4666666666666667,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.8933333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "mmCIRCA": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.6,
+              "AC@2": 0.8666666666666667,
+              "AC@3": 0.9333333333333333,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.8533333333333335,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            }
+          },
+          "random": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.13333333333333333,
+              "AC@3": 0.13333333333333333,
+              "AC@4": 0.4,
+              "AC@5": 0.5333333333333333,
+              "Avg@5": 0.24000000000000005,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.1733333333333333
+            }
+          },
+          "threshold": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 1.0,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 1.0,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          }
+        }
+      },
+      "native_unfiltered_secondary": {
+        "BARO": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.3333333333333333,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8666666666666666,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        },
+        "CIRCA": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.96,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        },
+        "PageRank": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4666666666666667,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 0.8,
+            "AC@5": 1.0,
+            "Avg@5": 0.6266666666666667,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        },
+        "SentinelOps": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.4666666666666667,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.6266666666666667,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        },
+        "mmBARO": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.4666666666666667,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8933333333333333,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        },
+        "mmCIRCA": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.6,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.9333333333333333,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.8533333333333335,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.2399999999999993
+          }
+        },
+        "random": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.13333333333333333,
+            "AC@3": 0.13333333333333333,
+            "AC@4": 0.3333333333333333,
+            "AC@5": 0.5333333333333333,
+            "Avg@5": 0.22666666666666666,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 1.2799999999999996
+          }
+        },
+        "threshold": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 1.0,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 1.0,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        }
+      },
+      "primary": {
+        "BARO": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.3333333333333333,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8666666666666666,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "CIRCA": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.8,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.96,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "PageRank": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4666666666666667,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 0.8,
+            "AC@5": 1.0,
+            "Avg@5": 0.6266666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "SentinelOps": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.4666666666666667,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.64,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "mmBARO": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.4666666666666667,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8933333333333333,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "mmCIRCA": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.6,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.9333333333333333,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.8533333333333335,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "random": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.13333333333333333,
+            "AC@3": 0.13333333333333333,
+            "AC@4": 0.4,
+            "AC@5": 0.5333333333333333,
+            "Avg@5": 0.24000000000000005,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.1733333333333333
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "threshold": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 1.0,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 1.0,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        }
+      },
+      "valid_rankings_only": {
+        "BARO": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.3333333333333333,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8666666666666666,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "CIRCA": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.96,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "PageRank": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4666666666666667,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 0.8,
+            "AC@5": 1.0,
+            "Avg@5": 0.6266666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "SentinelOps": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.4666666666666667,
+            "AC@3": 0.6666666666666666,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.64,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "mmBARO": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.4666666666666667,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.8933333333333333,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "mmCIRCA": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.6,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.9333333333333333,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.8533333333333335,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          }
+        },
+        "random": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.13333333333333333,
+            "AC@3": 0.13333333333333333,
+            "AC@4": 0.4,
+            "AC@5": 0.5333333333333333,
+            "Avg@5": 0.24000000000000005,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.1733333333333333
+          }
+        },
+        "threshold": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 1.0,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 1.0,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        }
+      }
+    },
+    "socket": {
+      "a4_static_topology_sensitivity": {
+        "label": "POST-HOC static-topology sensitivity",
+        "primary": {
+          "BARO": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.8,
+              "AC@3": 0.8,
+              "AC@4": 0.8666666666666667,
+              "AC@5": 0.8666666666666667,
+              "Avg@5": 0.6666666666666667,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.9066666666666667
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "CIRCA": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.6,
+              "AC@2": 0.8666666666666667,
+              "AC@3": 0.9333333333333333,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.8533333333333335,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "PageRank": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.2,
+              "AC@3": 0.3333333333333333,
+              "AC@4": 0.5333333333333333,
+              "AC@5": 0.5333333333333333,
+              "Avg@5": 0.36,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.1733333333333333
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "SentinelOps": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.3333333333333333,
+              "AC@2": 0.6,
+              "AC@3": 0.7333333333333333,
+              "AC@4": 0.7333333333333333,
+              "AC@5": 0.8666666666666667,
+              "Avg@5": 0.6533333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.9066666666666667
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "mmBARO": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.8,
+              "AC@3": 0.8666666666666667,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 1.0,
+              "Avg@5": 0.72,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "mmCIRCA": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.5333333333333333,
+              "AC@2": 0.7333333333333333,
+              "AC@3": 0.8,
+              "AC@4": 0.8666666666666667,
+              "AC@5": 1.0,
+              "Avg@5": 0.7866666666666666,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "random": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.06666666666666667,
+              "AC@2": 0.06666666666666667,
+              "AC@3": 0.13333333333333333,
+              "AC@4": 0.4,
+              "AC@5": 0.5333333333333333,
+              "Avg@5": 0.24000000000000005,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.1733333333333333
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          },
+          "threshold": {
+            "denominator": 15,
+            "failed_count": 0,
+            "fallback_unranked_count": 0,
+            "metrics": {
+              "AC@1": 0.8666666666666667,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.9733333333333334,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            },
+            "valid_ranking_count": 15,
+            "valid_ranking_coverage": 1.0
+          }
+        },
+        "valid_rankings_only": {
+          "BARO": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.8,
+              "AC@3": 0.8,
+              "AC@4": 0.8666666666666667,
+              "AC@5": 0.8666666666666667,
+              "Avg@5": 0.6666666666666667,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.9066666666666667
+            }
+          },
+          "CIRCA": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.6,
+              "AC@2": 0.8666666666666667,
+              "AC@3": 0.9333333333333333,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 0.9333333333333333,
+              "Avg@5": 0.8533333333333335,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.0533333333333332
+            }
+          },
+          "PageRank": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.2,
+              "AC@2": 0.2,
+              "AC@3": 0.3333333333333333,
+              "AC@4": 0.5333333333333333,
+              "AC@5": 0.5333333333333333,
+              "Avg@5": 0.36,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.1733333333333333
+            }
+          },
+          "SentinelOps": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.3333333333333333,
+              "AC@2": 0.6,
+              "AC@3": 0.7333333333333333,
+              "AC@4": 0.7333333333333333,
+              "AC@5": 0.8666666666666667,
+              "Avg@5": 0.6533333333333333,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.9066666666666667
+            }
+          },
+          "mmBARO": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.0,
+              "AC@2": 0.8,
+              "AC@3": 0.8666666666666667,
+              "AC@4": 0.9333333333333333,
+              "AC@5": 1.0,
+              "Avg@5": 0.72,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "mmCIRCA": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.5333333333333333,
+              "AC@2": 0.7333333333333333,
+              "AC@3": 0.8,
+              "AC@4": 0.8666666666666667,
+              "AC@5": 1.0,
+              "Avg@5": 0.7866666666666666,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          },
+          "random": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.06666666666666667,
+              "AC@2": 0.06666666666666667,
+              "AC@3": 0.13333333333333333,
+              "AC@4": 0.4,
+              "AC@5": 0.5333333333333333,
+              "Avg@5": 0.24000000000000005,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 1.1733333333333333
+            }
+          },
+          "threshold": {
+            "cohort": "valid-rankings-only",
+            "denominator": 15,
+            "metrics": {
+              "AC@1": 0.8666666666666667,
+              "AC@2": 1.0,
+              "AC@3": 1.0,
+              "AC@4": 1.0,
+              "AC@5": 1.0,
+              "Avg@5": 0.9733333333333334,
+              "Chance@5": 0.45454545454545453,
+              "Lift@5": 2.2
+            }
+          }
+        }
+      },
+      "native_unfiltered_secondary": {
+        "BARO": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.8,
+            "AC@3": 0.8,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 0.8666666666666667,
+            "Avg@5": 0.6666666666666667,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.0799999999999996
+          }
+        },
+        "CIRCA": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.6,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.9333333333333333,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.8533333333333335,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.2399999999999993
+          }
+        },
+        "PageRank": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4666666666666667,
+            "AC@3": 0.7333333333333333,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 1.0,
+            "Avg@5": 0.6533333333333333,
+            "Chance@5": 0.4145299145299146,
+            "Lift@5": 2.412371134020618
+          }
+        },
+        "SentinelOps": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.3333333333333333,
+            "AC@2": 0.6666666666666666,
+            "AC@3": 0.8,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.7200000000000001,
+            "Chance@5": 0.4145299145299146,
+            "Lift@5": 2.251546391752577
+          }
+        },
+        "mmBARO": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.8,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.7066666666666667,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.2399999999999993
+          }
+        },
+        "mmCIRCA": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.5333333333333333,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 1.0,
+            "Avg@5": 0.7866666666666666,
+            "Chance@5": 0.4166666666666668,
+            "Lift@5": 2.3999999999999995
+          }
+        },
+        "random": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.06666666666666667,
+            "AC@3": 0.13333333333333333,
+            "AC@4": 0.4,
+            "AC@5": 0.4666666666666667,
+            "Avg@5": 0.22666666666666666,
+            "Chance@5": 0.4145299145299146,
+            "Lift@5": 1.1257731958762884
+          }
+        },
+        "threshold": {
+          "chance_policy": "mean min(5,N)/N using saved native candidate pool sizes",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8666666666666667,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9733333333333334,
+            "Chance@5": 0.4145299145299146,
+            "Lift@5": 2.412371134020618
+          }
+        }
+      },
+      "primary": {
+        "BARO": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.8,
+            "AC@3": 0.8,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 0.8666666666666667,
+            "Avg@5": 0.6666666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.9066666666666667
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "CIRCA": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.6,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.9333333333333333,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.8533333333333335,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "PageRank": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4666666666666667,
+            "AC@3": 0.7333333333333333,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 1.0,
+            "Avg@5": 0.6533333333333333,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "SentinelOps": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.3333333333333333,
+            "AC@2": 0.6666666666666666,
+            "AC@3": 0.8,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.7200000000000001,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "mmBARO": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.8,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 1.0,
+            "Avg@5": 0.72,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "mmCIRCA": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.5333333333333333,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 1.0,
+            "Avg@5": 0.7866666666666666,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "random": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.06666666666666667,
+            "AC@3": 0.13333333333333333,
+            "AC@4": 0.4,
+            "AC@5": 0.5333333333333333,
+            "Avg@5": 0.24000000000000005,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.1733333333333333
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        },
+        "threshold": {
+          "denominator": 15,
+          "failed_count": 0,
+          "fallback_unranked_count": 0,
+          "metrics": {
+            "AC@1": 0.8666666666666667,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9733333333333334,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          },
+          "valid_ranking_count": 15,
+          "valid_ranking_coverage": 1.0
+        }
+      },
+      "valid_rankings_only": {
+        "BARO": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.8,
+            "AC@3": 0.8,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 0.8666666666666667,
+            "Avg@5": 0.6666666666666667,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.9066666666666667
+          }
+        },
+        "CIRCA": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.6,
+            "AC@2": 0.8666666666666667,
+            "AC@3": 0.9333333333333333,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.8533333333333335,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          }
+        },
+        "PageRank": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.2,
+            "AC@2": 0.4666666666666667,
+            "AC@3": 0.7333333333333333,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 1.0,
+            "Avg@5": 0.6533333333333333,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "SentinelOps": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.3333333333333333,
+            "AC@2": 0.6666666666666666,
+            "AC@3": 0.8,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 0.9333333333333333,
+            "Avg@5": 0.7200000000000001,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.0533333333333332
+          }
+        },
+        "mmBARO": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.0,
+            "AC@2": 0.8,
+            "AC@3": 0.8666666666666667,
+            "AC@4": 0.9333333333333333,
+            "AC@5": 1.0,
+            "Avg@5": 0.72,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "mmCIRCA": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.5333333333333333,
+            "AC@2": 0.7333333333333333,
+            "AC@3": 0.8,
+            "AC@4": 0.8666666666666667,
+            "AC@5": 1.0,
+            "Avg@5": 0.7866666666666666,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        },
+        "random": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.06666666666666667,
+            "AC@2": 0.06666666666666667,
+            "AC@3": 0.13333333333333333,
+            "AC@4": 0.4,
+            "AC@5": 0.5333333333333333,
+            "Avg@5": 0.24000000000000005,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 1.1733333333333333
+          }
+        },
+        "threshold": {
+          "cohort": "valid-rankings-only",
+          "denominator": 15,
+          "metrics": {
+            "AC@1": 0.8666666666666667,
+            "AC@2": 1.0,
+            "AC@3": 1.0,
+            "AC@4": 1.0,
+            "AC@5": 1.0,
+            "Avg@5": 0.9733333333333334,
+            "Chance@5": 0.45454545454545453,
+            "Lift@5": 2.2
+          }
+        }
+      }
+    }
+  },
+  "provenance": {
+    "a4": {
+      "edges": [
+        [
+          "frontend",
+          "productcatalogservice"
+        ],
+        [
+          "frontend",
+          "currencyservice"
+        ],
+        [
+          "frontend",
+          "cartservice"
+        ],
+        [
+          "frontend",
+          "recommendationservice"
+        ],
+        [
+          "frontend",
+          "shippingservice"
+        ],
+        [
+          "frontend",
+          "checkoutservice"
+        ],
+        [
+          "frontend",
+          "adservice"
+        ],
+        [
+          "checkoutservice",
+          "productcatalogservice"
+        ],
+        [
+          "checkoutservice",
+          "shippingservice"
+        ],
+        [
+          "checkoutservice",
+          "paymentservice"
+        ],
+        [
+          "checkoutservice",
+          "emailservice"
+        ],
+        [
+          "checkoutservice",
+          "currencyservice"
+        ],
+        [
+          "checkoutservice",
+          "cartservice"
+        ],
+        [
+          "recommendationservice",
+          "productcatalogservice"
+        ],
+        [
+          "cartservice",
+          "redis"
+        ]
+      ],
+      "excluded_native_graph_impact": 0.0,
+      "graph_direction": "caller -> dependency",
+      "label": "POST-HOC static-topology sensitivity",
+      "nodes": [
+        "adservice",
+        "cartservice",
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontend",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice",
+        "redis",
+        "shippingservice"
+      ],
+      "original_primary_bonus_preserved": true,
+      "pagerank_damping": 0.85,
+      "source_path": "release/kubernetes-manifests.yaml",
+      "source_revision": "38e7348eb289eb5b87c0c6e8cb19ced0449dc389"
+    },
+    "bootstrap": {
+      "case_order": "lexical",
+      "ci": 0.95,
+      "cluster": "case",
+      "method": "percentile",
+      "quantile_interpolation": "linear",
+      "resamples": 10000,
+      "rng": "numpy.random.default_rng(42)"
+    },
+    "candidate_policy": {
+      "allowlist": [
+        "adservice",
+        "cartservice",
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontend",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice",
+        "redis",
+        "shippingservice"
+      ],
+      "fallback_counts_as_miss": true,
+      "filter_before_top_k": true,
+      "primary_denominator": 90
+    },
+    "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "exact_command": ".venv/bin/python scripts/phase_a_steps21_24.py --step 22",
+    "executed_at_utc": "2026-10-03T08:00:17.128795+00:00",
+    "metric_definitions": {
+      "Avg@5": "mean AC@1..AC@5",
+      "Chance@5": "5/11",
+      "Lift@5": "AC@5/Chance@5"
+    },
+    "python": "3.12.14",
+    "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+    "runtime_seconds": 0.13627150699994672,
+    "seeds": {
+      "bootstrap": 42,
+      "reported_random": 42
+    },
+    "sentinelops_commit": "44c06294b41d94b04cdf09bb647f209283ab2693",
+    "source_run_summaries": {
+      "step15_detection_summary.json": {
+        "always_alert_baseline": {
+          "note": "Always predicts alert in both normal and fault windows.",
+          "timestamp_confusion": {
+            "fn": 0,
+            "fp": 32400,
+            "tn": 0,
+            "tp": 63942
+          },
+          "timestamp_metrics": {
+            "f1": 0.7978588006288838,
+            "precision": 0.6636980756056549,
+            "recall": 1.0
+          },
+          "window_confusion": {
+            "fn": 0,
+            "fp": 90,
+            "tn": 0,
+            "tp": 90
+          },
+          "window_metrics": {
+            "f1": 0.6666666666666666,
+            "precision": 0.5,
+            "recall": 1.0
+          }
+        },
+        "bootstrap_resamples": 10000,
+        "case_count_expected": 90,
+        "case_count_failed": 0,
+        "case_count_ok": 90,
+        "dataset": "RE2-OB",
+        "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+        "exact_command": "python scripts/phase_a_step15_detection.py --workers 4",
+        "execution_date": "2026-10-02",
+        "failed_cases": [],
+        "notes": [
+          "Calibration rows excluded from detection metrics.",
+          "Window ROC-AUC/PR-AUC use max system continuous anomaly score per normal/fault window.",
+          "No tuning or threshold changes were performed."
+        ],
+        "per_fault": {
+          "cpu": {
+            "bootstrap_95_ci": {
+              "detection_rate": [
+                1.0,
+                1.0
+              ],
+              "median_delay_seconds": [
+                0.0,
+                0.0
+              ],
+              "timestamp_f1": [
+                0.7838864730219953,
+                0.8171224630200498
+              ],
+              "timestamp_precision": [
+                0.6450243035639228,
+                0.6915836219818773
+              ],
+              "timestamp_recall": [
+                0.9971855590062112,
+                1.0
+              ],
+              "window_f1": [
+                0.6666666666666666,
+                0.6666666666666666
+              ],
+              "window_pr_auc": [
+                0.5184333759046402,
+                0.6818181818181818
+              ],
+              "window_precision": [
+                0.5,
+                0.5
+              ],
+              "window_recall": [
+                1.0,
+                1.0
+              ],
+              "window_roc_auc": [
+                0.5333333333333333,
+                0.7666666666666667
+              ]
+            },
+            "case_count": 15,
+            "metrics": {
+              "detection_rate": 1.0,
+              "median_delay_seconds": 0.0,
+              "timestamp_confusion": {
+                "fn": 13,
+                "fp": 4978,
+                "tn": 422,
+                "tp": 10291
+              },
+              "timestamp_metrics": {
+                "f1": 0.804833222539397,
+                "precision": 0.6739799593948523,
+                "recall": 0.9987383540372671
+              },
+              "window_confusion": {
+                "fn": 0,
+                "fp": 15,
+                "tn": 0,
+                "tp": 15
+              },
+              "window_metrics": {
+                "f1": 0.6666666666666666,
+                "precision": 0.5,
+                "recall": 1.0
+              },
+              "window_pr_auc": 0.582905982905983,
+              "window_roc_auc": 0.64
+            }
+          },
+          "delay": {
+            "bootstrap_95_ci": {
+              "detection_rate": [
+                1.0,
+                1.0
+              ],
+              "median_delay_seconds": [
+                0.0,
+                0.0
+              ],
+              "timestamp_f1": [
+                0.8101929923177815,
+                0.8224821673287819
+              ],
+              "timestamp_precision": [
+                0.6812595472130749,
+                0.6988103167557552
+              ],
+              "timestamp_recall": [
+                0.9985205732778548,
+                1.0
+              ],
+              "window_f1": [
+                0.6666666666666666,
+                0.6666666666666666
+              ],
+              "window_pr_auc": [
+                0.5769230769230769,
+                0.8333333333333334
+              ],
+              "window_precision": [
+                0.5,
+                0.5
+              ],
+              "window_recall": [
+                1.0,
+                1.0
+              ],
+              "window_roc_auc": [
+                0.6333333333333333,
+                0.9
+              ]
+            },
+            "case_count": 15,
+            "metrics": {
+              "detection_rate": 1.0,
+              "median_delay_seconds": 0.0,
+              "timestamp_confusion": {
+                "fn": 7,
+                "fp": 4865,
+                "tn": 535,
+                "tp": 10808
+              },
+              "timestamp_metrics": {
+                "f1": 0.8160676532769555,
+                "precision": 0.6895935685573917,
+                "recall": 0.9993527508090615
+              },
+              "window_confusion": {
+                "fn": 0,
+                "fp": 15,
+                "tn": 0,
+                "tp": 15
+              },
+              "window_metrics": {
+                "f1": 0.6666666666666666,
+                "precision": 0.5,
+                "recall": 1.0
+              },
+              "window_pr_auc": 0.6818181818181818,
+              "window_roc_auc": 0.7666666666666666
+            }
+          },
+          "disk": {
+            "bootstrap_95_ci": {
+              "detection_rate": [
+                1.0,
+                1.0
+              ],
+              "median_delay_seconds": [
+                0.0,
+                0.0
+              ],
+              "timestamp_f1": [
+                0.8143055542792571,
+                0.8357647922145236
+              ],
+              "timestamp_precision": [
+                0.6880929160372118,
+                0.7195969283139768
+              ],
+              "timestamp_recall": [
+                0.9943596856218215,
+                0.9990753582986592
+              ],
+              "window_f1": [
+                0.6666666666666666,
+                0.6666666666666666
+              ],
+              "window_pr_auc": [
+                0.5698550724637681,
+                0.8152777777777779
+              ],
+              "window_precision": [
+                0.5,
+                0.5
+              ],
+              "window_recall": [
+                1.0,
+                1.0
+              ],
+              "window_roc_auc": [
+                0.6222222222222222,
+                0.8866666666666667
+              ]
+            },
+            "case_count": 15,
+            "metrics": {
+              "detection_rate": 1.0,
+              "median_delay_seconds": 0.0,
+              "timestamp_confusion": {
+                "fn": 33,
+                "fp": 4577,
+                "tn": 823,
+                "tp": 10782
+              },
+              "timestamp_metrics": {
+                "f1": 0.8238710170398105,
+                "precision": 0.7019988280487011,
+                "recall": 0.9969486823855755
+              },
+              "window_confusion": {
+                "fn": 0,
+                "fp": 15,
+                "tn": 0,
+                "tp": 15
+              },
+              "window_metrics": {
+                "f1": 0.6666666666666666,
+                "precision": 0.5,
+                "recall": 1.0
+              },
+              "window_pr_auc": 0.6676767676767676,
+              "window_roc_auc": 0.7511111111111111
+            }
+          },
+          "loss": {
+            "bootstrap_95_ci": {
+              "detection_rate": [
+                1.0,
+                1.0
+              ],
+              "median_delay_seconds": [
+                0.0,
+                0.0
+              ],
+              "timestamp_f1": [
+                0.8085615525370873,
+                0.8261568700564492
+              ],
+              "timestamp_precision": [
+                0.6791620347250164,
+                0.7043798179538905
+              ],
+              "timestamp_recall": [
+                0.9980582524271845,
+                0.9997226074895977
+              ],
+              "window_f1": [
+                0.6666666666666666,
+                0.6666666666666666
+              ],
+              "window_pr_auc": [
+                0.5639291465378422,
+                0.7894736842105263
+              ],
+              "window_precision": [
+                0.5,
+                0.5
+              ],
+              "window_recall": [
+                1.0,
+                1.0
+              ],
+              "window_roc_auc": [
+                0.6044444444444445,
+                0.8666666666666667
+              ]
+            },
+            "case_count": 15,
+            "metrics": {
+              "detection_rate": 1.0,
+              "median_delay_seconds": 0.0,
+              "timestamp_confusion": {
+                "fn": 11,
+                "fp": 4841,
+                "tn": 559,
+                "tp": 10804
+              },
+              "timestamp_metrics": {
+                "f1": 0.8166288737717309,
+                "precision": 0.6905720677532758,
+                "recall": 0.9989828941285251
+              },
+              "window_confusion": {
+                "fn": 0,
+                "fp": 15,
+                "tn": 0,
+                "tp": 15
+              },
+              "window_metrics": {
+                "f1": 0.6666666666666666,
+                "precision": 0.5,
+                "recall": 1.0
+              },
+              "window_pr_auc": 0.6592592592592592,
+              "window_roc_auc": 0.7288888888888889
+            }
+          },
+          "mem": {
+            "bootstrap_95_ci": {
+              "detection_rate": [
+                1.0,
+                1.0
+              ],
+              "median_delay_seconds": [
+                0.0,
+                0.0
+              ],
+              "timestamp_f1": [
+                0.7995961507967337,
+                0.8281580452112811
+              ],
+              "timestamp_precision": [
+                0.6667894992944657,
+                0.707699370409234
+              ],
+              "timestamp_recall": [
+                0.996116504854369,
+                1.0
+              ],
+              "window_f1": [
+                0.6666666666666666,
+                0.6666666666666666
+              ],
+              "window_pr_auc": [
+                0.5357142857142857,
+                0.75
+              ],
+              "window_precision": [
+                0.5,
+                0.5
+              ],
+              "window_recall": [
+                1.0,
+                1.0
+              ],
+              "window_roc_auc": [
+                0.5666666666666667,
+                0.8333333333333334
+              ]
+            },
+            "case_count": 15,
+            "metrics": {
+              "detection_rate": 1.0,
+              "median_delay_seconds": 0.0,
+              "timestamp_confusion": {
+                "fn": 17,
+                "fp": 4685,
+                "tn": 715,
+                "tp": 10361
+              },
+              "timestamp_metrics": {
+                "f1": 0.8150566393958465,
+                "precision": 0.6886215605476539,
+                "recall": 0.9983619194449798
+              },
+              "window_confusion": {
+                "fn": 0,
+                "fp": 15,
+                "tn": 0,
+                "tp": 15
+              },
+              "window_metrics": {
+                "f1": 0.6666666666666666,
+                "precision": 0.5,
+                "recall": 1.0
+              },
+              "window_pr_auc": 0.625,
+              "window_roc_auc": 0.7
+            }
+          },
+          "socket": {
+            "bootstrap_95_ci": {
+              "detection_rate": [
+                1.0,
+                1.0
+              ],
+              "median_delay_seconds": [
+                0.0,
+                0.0
+              ],
+              "timestamp_f1": [
+                0.8104923820218698,
+                0.8245714673063044
+              ],
+              "timestamp_precision": [
+                0.681411468178954,
+                0.7021139940849057
+              ],
+              "timestamp_recall": [
+                0.9984281091077207,
+                1.0
+              ],
+              "window_f1": [
+                0.6666666666666666,
+                0.6666666666666666
+              ],
+              "window_pr_auc": [
+                0.5148148148148148,
+                0.7294312547673524
+              ],
+              "window_precision": [
+                0.5,
+                0.5
+              ],
+              "window_recall": [
+                1.0,
+                1.0
+              ],
+              "window_roc_auc": [
+                0.52,
+                0.8044444444444444
+              ]
+            },
+            "case_count": 15,
+            "metrics": {
+              "detection_rate": 1.0,
+              "median_delay_seconds": 0.0,
+              "timestamp_confusion": {
+                "fn": 6,
+                "fp": 4835,
+                "tn": 565,
+                "tp": 10809
+              },
+              "timestamp_metrics": {
+                "f1": 0.8170376809403228,
+                "precision": 0.6909358220403988,
+                "recall": 0.9994452149791956
+              },
+              "window_confusion": {
+                "fn": 0,
+                "fp": 15,
+                "tn": 0,
+                "tp": 15
+              },
+              "window_metrics": {
+                "f1": 0.6666666666666666,
+                "precision": 0.5,
+                "recall": 1.0
+              },
+              "window_pr_auc": 0.606577480490524,
+              "window_roc_auc": 0.6711111111111111
+            }
+          }
+        },
+        "per_service_alert_rates": {
+          "InboundPassthroughClusterIpv4": {
+            "fault_alert_rate": 0.0,
+            "fault_alerts": 0.0,
+            "fault_rows": 210.0,
+            "normal_alert_rate": 0.0,
+            "normal_alerts": 0.0,
+            "normal_rows": 360.0
+          },
+          "PassthroughCluster": {
+            "fault_alert_rate": 0.0,
+            "fault_alerts": 0.0,
+            "fault_rows": 210.0,
+            "normal_alert_rate": 0.0,
+            "normal_alerts": 0.0,
+            "normal_rows": 360.0
+          },
+          "adservice": {
+            "fault_alert_rate": 0.5706577836164024,
+            "fault_alerts": 36489.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.27574074074074073,
+            "normal_alerts": 8934.0,
+            "normal_rows": 32400.0
+          },
+          "cartservice": {
+            "fault_alert_rate": 0.4632479434487504,
+            "fault_alerts": 29621.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.18049382716049384,
+            "normal_alerts": 5848.0,
+            "normal_rows": 32400.0
+          },
+          "checkoutservice": {
+            "fault_alert_rate": 0.736354821557036,
+            "fault_alerts": 47084.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.1870679012345679,
+            "normal_alerts": 6061.0,
+            "normal_rows": 32400.0
+          },
+          "currencyservice": {
+            "fault_alert_rate": 0.552000250226768,
+            "fault_alerts": 35296.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.19,
+            "normal_alerts": 6156.0,
+            "normal_rows": 32400.0
+          },
+          "emailservice": {
+            "fault_alert_rate": 0.5909261518250915,
+            "fault_alerts": 37785.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.21401234567901234,
+            "normal_alerts": 6934.0,
+            "normal_rows": 32400.0
+          },
+          "frontend": {
+            "fault_alert_rate": 0.7480998404804354,
+            "fault_alerts": 47835.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.23675925925925925,
+            "normal_alerts": 7671.0,
+            "normal_rows": 32400.0
+          },
+          "frontend-check": {
+            "fault_alert_rate": 0.0,
+            "fault_alerts": 0.0,
+            "fault_rows": 721.0,
+            "normal_alert_rate": 0.0,
+            "normal_alerts": 0.0,
+            "normal_rows": 360.0
+          },
+          "frontend-external": {
+            "fault_alert_rate": 0.152528,
+            "fault_alerts": 9533.0,
+            "fault_rows": 62500.0,
+            "normal_alert_rate": 0.03358585858585859,
+            "normal_alerts": 1064.0,
+            "normal_rows": 31680.0
+          },
+          "istio-init": {
+            "fault_alert_rate": 0.0,
+            "fault_alerts": 0.0,
+            "fault_rows": 721.0,
+            "normal_alert_rate": 0.0,
+            "normal_alerts": 0.0,
+            "normal_rows": 360.0
+          },
+          "paymentservice": {
+            "fault_alert_rate": 0.4775421475712364,
+            "fault_alerts": 30535.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.26935185185185184,
+            "normal_alerts": 8727.0,
+            "normal_rows": 32400.0
+          },
+          "productcatalogservice": {
+            "fault_alert_rate": 0.5779925557536517,
+            "fault_alerts": 36958.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.19527777777777777,
+            "normal_alerts": 6327.0,
+            "normal_rows": 32400.0
+          },
+          "recommendationservice": {
+            "fault_alert_rate": 0.6608332551374684,
+            "fault_alerts": 42255.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.2088888888888889,
+            "normal_alerts": 6768.0,
+            "normal_rows": 32400.0
+          },
+          "redis": {
+            "fault_alert_rate": 0.18149260267117076,
+            "fault_alerts": 11605.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.15395061728395062,
+            "normal_alerts": 4988.0,
+            "normal_rows": 32400.0
+          },
+          "shippingservice": {
+            "fault_alert_rate": 0.4664383347408589,
+            "fault_alerts": 29825.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.24746913580246913,
+            "normal_alerts": 8018.0,
+            "normal_rows": 32400.0
+          }
+        },
+        "primary": "SentinelOps frozen v1 detector",
+        "python": "3.12.14",
+        "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+        "runtime_seconds": 6.781203279999318,
+        "seed": 42,
+        "sentinelops_commit": "ec8c568c306cbf95e0f8d02378fc32d85f9efbdc",
+        "status": "complete",
+        "step": 15,
+        "v1": {
+          "detection_rate": 1.0,
+          "median_delay_seconds": 0.0,
+          "timestamp_confusion": {
+            "fn": 87,
+            "fp": 28781,
+            "tn": 3619,
+            "tp": 63855
+          },
+          "timestamp_metrics": {
+            "f1": 0.8156318256715502,
+            "precision": 0.6893108510730169,
+            "recall": 0.9986393919489538
+          },
+          "window_confusion": {
+            "fn": 0,
+            "fp": 90,
+            "tn": 0,
+            "tp": 90
+          },
+          "window_metrics": {
+            "f1": 0.6666666666666666,
+            "precision": 0.5,
+            "recall": 1.0
+          },
+          "window_pr_auc": 0.6357478749472195,
+          "window_roc_auc": 0.7114814814814816
+        },
+        "v1_bootstrap_95_ci": {
+          "detection_rate": [
+            1.0,
+            1.0
+          ],
+          "median_delay_seconds": [
+            0.0,
+            0.0
+          ],
+          "timestamp_f1": [
+            0.8107820602260234,
+            0.820055506305235
+          ],
+          "timestamp_precision": [
+            0.6823325815368794,
+            0.6957391780069858
+          ],
+          "timestamp_recall": [
+            0.997963058142646,
+            0.9992336805229739
+          ],
+          "window_f1": [
+            0.6666666666666666,
+            0.6666666666666666
+          ],
+          "window_pr_auc": [
+            0.5954059685580344,
+            0.6824218272794284
+          ],
+          "window_precision": [
+            0.5,
+            0.5
+          ],
+          "window_recall": [
+            1.0,
+            1.0
+          ],
+          "window_roc_auc": [
+            0.6588256172839506,
+            0.7653086419753087
+          ]
+        }
+      },
+      "step16_rca_summary.json": {
+        "case_count_expected": 90,
+        "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+        "duplicate_affected_cases": [
+          {
+            "case_id": "re2ob_recommendationservice_loss_1",
+            "conflicting_duplicate_found": false,
+            "duplicate_key_count": 48,
+            "duplicate_row_count": 96,
+            "removed_row_count": 48
+          },
+          {
+            "case_id": "re2ob_recommendationservice_loss_2",
+            "conflicting_duplicate_found": false,
+            "duplicate_key_count": 99,
+            "duplicate_row_count": 198,
+            "removed_row_count": 99
+          }
+        ],
+        "exact_command": "python scripts/phase_a_step16_rca.py --workers 2",
+        "execution_date": "2026-10-02",
+        "failed_detection_cases": [],
+        "python": "3.12.14",
+        "ranked_cases": 90,
+        "ranking_signal": "max fault-window continuous v1 anomaly strength per service",
+        "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+        "runtime_seconds": 0.44714159699924494,
+        "sentinelops_commit": "f0e1f4184486804889b5a6f9dab2f6424fe0e69f",
+        "status": "complete",
+        "step": 16,
+        "suite_graph": {
+          "edge_count": 9,
+          "edges": [
+            [
+              "checkoutservice",
+              "currencyservice"
+            ],
+            [
+              "checkoutservice",
+              "emailservice"
+            ],
+            [
+              "checkoutservice",
+              "paymentservice"
+            ],
+            [
+              "checkoutservice",
+              "productcatalogservice"
+            ],
+            [
+              "frontend",
+              "checkoutservice"
+            ],
+            [
+              "frontend",
+              "currencyservice"
+            ],
+            [
+              "frontend",
+              "productcatalogservice"
+            ],
+            [
+              "frontend",
+              "recommendationservice"
+            ],
+            [
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          ],
+          "node_count": 16,
+          "nodes": [
+            "InboundPassthroughClusterIpv4",
+            "PassthroughCluster",
+            "adservice",
+            "cartservice",
+            "checkoutservice",
+            "currencyservice",
+            "emailservice",
+            "frontend",
+            "frontend-check",
+            "frontend-external",
+            "istio-init",
+            "paymentservice",
+            "productcatalogservice",
+            "recommendationservice",
+            "redis",
+            "shippingservice"
+          ],
+          "source": "union of all RE2-OB pre-injection traces",
+          "unresolved_parent_count_total": 2380
+        },
+        "trace_duplicate_policy": "exact full-row duplicates cleaned; conflicts fail",
+        "weights": {
+          "anomaly_strength": 0.45,
+          "change_signal": 0.25,
+          "graph_impact": 0.2,
+          "primary_service_bonus": 0.1
+        }
+      },
+      "step17_threshold_summary.json": {
+        "case_count_expected": 90,
+        "case_count_failed": 0,
+        "case_count_ok": 90,
+        "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+        "exact_command": "python scripts/phase_a_step17_threshold.py --workers 4",
+        "execution_date": "2026-10-02",
+        "failed_cases": [],
+        "python": "3.12.14",
+        "ranking_rule": "max post-calibration metric z-score per service",
+        "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+        "runtime_seconds": 1.9193136789999699,
+        "sentinelops_commit": "82ff62eca86aa086c01ed4ab09d611e9774212de",
+        "status": "complete",
+        "step": 17,
+        "threshold": 2.5
+      },
+      "step18_random_summary.json": {
+        "case_count_expected": 90,
+        "case_count_failed": 0,
+        "case_count_ok": 90,
+        "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+        "exact_command": "python scripts/phase_a_step18_random.py",
+        "execution_date": "2026-10-02",
+        "failed_cases": [],
+        "master_seed": 42,
+        "python": "3.12.14",
+        "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+        "runtime_seconds": 0.14068685200004438,
+        "sentinelops_commit": "da60d6a0bee9b19416a057e1ec4ecdd393ff1b29",
+        "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+        "status": "complete",
+        "step": 18
+      },
+      "step19_pagerank_summary.json": {
+        "case_count_expected": 90,
+        "case_count_failed": 0,
+        "case_count_ok": 90,
+        "damping": 0.85,
+        "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+        "exact_command": "python scripts/phase_a_step19_pagerank.py",
+        "execution_date": "2026-10-02",
+        "failed_cases": [],
+        "graph_source": "union of all RE2-OB pre-injection traces",
+        "personalization": "continuous v1 fault-window anomaly strength",
+        "python": "3.12.14",
+        "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+        "runtime_seconds": 0.5438751209999282,
+        "sentinelops_commit": "b12bb362488e4815eccaa6c2faa3fc2e3258dda2",
+        "status": "complete",
+        "step": 19
+      }
+    },
+    "step": 22,
+    "suite": "RE2-OB",
+    "versions": {
+      "networkx": "3.7",
+      "numpy": "2.5.3",
+      "polars": "1.44.2"
+    }
+  }
+}
