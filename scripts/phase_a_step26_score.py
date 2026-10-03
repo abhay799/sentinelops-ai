@@ -31,9 +31,11 @@ METHODS = (
     "pagerank",
     "baro",
     "circa",
-    "mmbaro",
-    "mmcirca",
 )
+UNAVAILABLE_METHODS = {
+    "mmbaro": "n/a (input unavailable)",
+    "mmcirca": "n/a (input unavailable)",
+}
 FAULTS = ("cpu", "mem", "disk", "socket", "delay", "loss")
 BOOTSTRAP_SEED = 42
 BOOTSTRAP_SAMPLES = 10_000
@@ -122,6 +124,38 @@ def paired_ci(
     return result
 
 
+def strength_distribution(values: np.ndarray) -> dict[str, float | int]:
+    if values.ndim != 1 or values.size == 0:
+        raise ValueError("Strength distribution requires a non-empty 1D array")
+    if not np.isfinite(values).all():
+        raise ValueError("Non-finite V2a strengths found in held-out evidence")
+    result: dict[str, float | int] = {
+        "count": int(values.size),
+        "finite_count": int(np.isfinite(values).sum()),
+        "min": float(np.min(values)),
+        "max": float(np.max(values)),
+        "count_lt_0": int(np.sum(values < 0)),
+        "fraction_lt_0": float(np.mean(values < 0)),
+        "count_eq_0": int(np.sum(values == 0)),
+        "fraction_eq_0": float(np.mean(values == 0)),
+        "count_eq_1": int(np.sum(values == 1)),
+        "fraction_eq_1": float(np.mean(values == 1)),
+        "count_gt_1": int(np.sum(values > 1)),
+        "fraction_gt_1": float(np.mean(values > 1)),
+    }
+    for name, q in (
+        ("p01", 0.01),
+        ("p05", 0.05),
+        ("p25", 0.25),
+        ("median", 0.50),
+        ("p75", 0.75),
+        ("p95", 0.95),
+        ("p99", 0.99),
+    ):
+        result[name] = float(np.quantile(values, q))
+    return result
+
+
 def main() -> None:
     catalog = pl.read_parquet(DATA_ROOT / "cases.parquet")
     ss = catalog.filter(pl.col("dataset") == "RE2-SS").sort("case")
@@ -191,12 +225,27 @@ def main() -> None:
             "ok": statuses["ok"],
             "fallback_unranked": statuses["fallback_unranked"],
             "hard_failed": statuses["hard_failed"],
+            "input_unavailable": 0,
             "other_statuses": {
                 key: value
                 for key, value in statuses.items()
                 if key not in {"ok", "fallback_unranked", "hard_failed"}
             },
             "valid_fraction": statuses["ok"] / 90,
+            "excluded_from_numerical_comparison": False,
+        }
+
+    for method, status in UNAVAILABLE_METHODS.items():
+        coverage[method] = {
+            "case_count": 90,
+            "ok": 0,
+            "fallback_unranked": 0,
+            "hard_failed": 0,
+            "input_unavailable": 90,
+            "other_statuses": {},
+            "valid_fraction": 0.0,
+            "excluded_from_numerical_comparison": True,
+            "status": status,
         }
 
     rng = np.random.default_rng(BOOTSTRAP_SEED)
@@ -243,8 +292,6 @@ def main() -> None:
             "pagerank",
             "baro",
             "circa",
-            "mmbaro",
-            "mmcirca",
         ):
             pairs.append(
                 (f"{focal}_minus_{baseline}", focal, baseline)
@@ -276,6 +323,33 @@ def main() -> None:
             for method in METHODS
         }
 
+    v2a_all_strengths: list[float] = []
+    v2a_case_maxima: list[float] = []
+    for row in saved["v2a"]:
+        strengths = row.get("unclipped_strengths")
+        if not isinstance(strengths, dict):
+            raise RuntimeError("V2a case missing unclipped_strengths")
+        eligible = np.array(
+            [
+                float(value)
+                for service, value in strengths.items()
+                if str(service) in ALLOW
+            ],
+            dtype=float,
+        )
+        if len(eligible) != len(ALLOW):
+            raise RuntimeError("V2a strength evidence missing frozen SS candidate")
+        v2a_all_strengths.extend(eligible.tolist())
+        v2a_case_maxima.append(float(np.max(eligible)))
+    v2a_strength_distribution = {
+        "all_e3_service_strengths": strength_distribution(
+            np.asarray(v2a_all_strengths, dtype=float)
+        ),
+        "case_max_service_strengths": strength_distribution(
+            np.asarray(v2a_case_maxima, dtype=float)
+        ),
+    }
+
     result = {
         "suite": "RE2-SS",
         "held_out": True,
@@ -296,6 +370,8 @@ def main() -> None:
             ).hexdigest(),
         },
         "coverage": coverage,
+        "unavailable_methods": UNAVAILABLE_METHODS,
+        "v2a_strength_distribution": v2a_strength_distribution,
         "overall_primary_all_90": overall,
         "primary_ci95": primary_ci,
         "valid_rankings_only_secondary": valid_only,
@@ -320,11 +396,17 @@ def main() -> None:
             f"{m['Lift@5']:.6f} | {c['ok']} | "
             f"{c['fallback_unranked']} | {c['hard_failed']} |"
         )
+    for method in UNAVAILABLE_METHODS:
+        lines.append(
+            f"| {method} | n/a | n/a | n/a | n/a | n/a | 0 | 0 | 0 |"
+        )
     lines.extend(
         [
             "",
-            "Primary denominator is all 90 held-out RE2-SS cases.",
+            "Primary denominator is all 90 held-out RE2-SS cases for runnable methods.",
             "Fallbacks and hard failures count as misses under E4/E6.",
+            "mmBARO/mmCIRCA are n/a (input unavailable), excluded from numerical "
+            "comparison, and are not scored as 90 misses.",
             "See step26_results.json for paired CIs, per-fault tables, "
             "valid-only secondary metrics, and bootstrap provenance.",
             "",

@@ -57,7 +57,7 @@ EDGES = (
     ("orders", "orders-db"),
     ("user", "user-db"),
 )
-METHODS = ("v1", "v2a", "threshold", "random", "pagerank", "mmbaro", "mmcirca")
+METHODS = ("v1", "v2a", "threshold", "random", "pagerank")
 
 
 def write_json(path: Path, payload: dict[str, object]) -> None:
@@ -101,6 +101,7 @@ def local_ranking(case_id: str, method: str) -> dict[str, object]:
     graph = graph_from_edges(services, EDGES)
 
     v1_strengths: dict[str, float] | None = None
+    v2a_strengths: dict[str, float] | None = None
     if method in {"v1", "pagerank"}:
         detection = summarize_detection_case(
             evaluate_detection_case(metrics, inject), inject
@@ -121,6 +122,12 @@ def local_ranking(case_id: str, method: str) -> dict[str, object]:
         )
     elif method == "v2a":
         strengths = compute_v2_strengths(metrics, inject)
+        v2a_strengths = {
+            service: float(value)
+            for service, value in strengths.unclipped.items()
+        }
+        if not all(np.isfinite(value) for value in v2a_strengths.values()):
+            raise ValueError("non-finite V2a service strength")
         rows, _primary = sentinelops_v2_ranking(strengths, graph, "v2a")
     elif method == "threshold":
         rows = static_threshold_ranking(metrics, inject, threshold=2.5)
@@ -152,6 +159,9 @@ def local_ranking(case_id: str, method: str) -> dict[str, object]:
         "ground_truth_used_for_ranking": False,
         "candidate_count": len(rows),
     }
+    if method == "v2a":
+        assert v2a_strengths is not None
+        payload["unclipped_strengths"] = v2a_strengths
     if method == "random":
         payload["master_seed"] = 42
         payload["derived_seed"] = derived_seed
@@ -197,15 +207,15 @@ def main() -> None:
         path = out_dir / f"{case_id}.json"
         if path.exists():
             cached = json.loads(path.read_text())
-            if cached.get("status") in {"ok", "hard_failed"}:
+            cache_complete = cached.get("status") in {"ok", "hard_failed"}
+            if method == "v2a" and cached.get("status") == "ok":
+                cache_complete = "unclipped_strengths" in cached
+            if cache_complete:
                 completed += 1
                 failures += int(cached.get("status") == "hard_failed")
                 continue
         try:
-            if method in {"mmbaro", "mmcirca"}:
-                payload = unavailable_mm(case_id, method)
-            else:
-                payload = local_ranking(case_id, method)
+            payload = local_ranking(case_id, method)
         except Exception as exc:
             payload = {
                 "status": "hard_failed",
