@@ -973,3 +973,11 @@ n/a representation are disclosed in
 [the implementation provenance note](phase_a/re2ss/STEP26_DCB02F8_PROVENANCE.md).
 It does not change the frozen ranking algorithms or numeric scoring rules.
 This retrospective note must not be described as pre-access preregistration.
+
+### Step 26 smoke-selection provenance correction (2026-10-03)
+
+The first-two-lexical SS smoke selection was documented in `f90609f`
+after smoke scripts/results were committed as `9009bac`; pre-run separate
+registration is not established. The contrary timing claim is withdrawn.
+[The correction](phase_a/re2ss/STEP26_SMOKE_SELECTION.md) preserves both smoke
+cases in the all-90 final cohort; it changes no settings or scoring.

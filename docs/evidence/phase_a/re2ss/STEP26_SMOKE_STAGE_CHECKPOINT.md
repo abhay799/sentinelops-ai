@@ -6,7 +6,8 @@ The smoke implementation/evidence itself was committed earlier as `9009bac`
 (`evidence: validate Step 26 RE2-SS smoke adapters`). Before the full 90-case
 run, this checkpoint confirms that stage remains the authoritative smoke record.
 
-Validated on exactly the two preregistered smoke cases:
+Validated on exactly the two smoke cases (selection documented retrospectively;
+see STEP26_SMOKE_SELECTION.md):
 - v1: non-empty E3-filtered ranking;
 - V2a: non-empty E3-filtered ranking and all strengths finite;
 - static threshold: non-empty E3-filtered ranking;
