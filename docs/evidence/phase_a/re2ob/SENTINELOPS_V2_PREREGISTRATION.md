@@ -133,3 +133,107 @@ No detector threshold, EWMA alpha, Isolation Forest contamination, detector
 vote rule, calibration split, RCA weight, graph setting, E3 allowlist, random
 seed, bootstrap seed, fallback policy, or baseline method may be changed as part
 of v2. No push is authorized.
+
+## Addendum A - numerical handling, diagnostics, and comparison scope
+
+Date: 2026-10-03
+Status: **COMMITTED BEFORE ANY v2 CODE OR v2 RUN.**
+
+This addendum is part of the v2 preregistration and is frozen before implementation.
+It does not create a third variant. Exactly two variants are permitted: V2a and V2b.
+No additional v2 variant, threshold, transform, clipping rule, tie heuristic, or
+selection criterion may be introduced after any v2 result is observed.
+
+### A1. V2a non-finite and extreme-value handling
+
+Raw RCAEval metric preprocessing is unchanged from v1: NaN and +/-inf metric
+values are converted to missing, chronologically forward-filled, and any leading
+missing values are filled with 0 before the frozen calibration/evaluation split.
+No v2-specific imputation is added.
+
+For each detector component's calibration-score vector, the existing E1
+machine-precision constant/min-range rule remains authoritative:
+
+`tol = 8 * eps_float64 * max(1, max(abs(calibration_scores)))`
+
+If `max(calibration_scores) - min(calibration_scores) <= tol`, V2a treats the
+calibration score range as numerically constant and retains the frozen
+constant-series rule: normalized RCA-only strength is 0.0 when the evaluated
+score is within the tolerated calibration reference and 1.0 when it exceeds
+that reference. No epsilon denominator or fitted floor is introduced.
+
+For a non-constant calibration-score range, V2a computes the unclipped finite
+value `(score - low) / (high - low)`. Finite values are retained exactly even if
+they are negative or very large; there is no clipping, winsorization, capping,
+log transform, rescaling, or post-hoc outlier rule.
+
+All calibration component scores and all derived V2a component, timestamp,
+service, and case strengths must be finite. If any NaN or +/-inf is produced
+after preprocessing/arithmetic, the case is a hard validation failure and the
+v2 run stops; the value must not be replaced, capped, dropped, or silently
+excluded.
+
+V2a strength distribution will be reported before interpretation over all
+E3-eligible service strengths across all 90 RE2-OB cases, including: count,
+finite count, min, p01, p05, p25, median, p75, p95, p99, max, count/fraction <0,
+count/fraction exactly 0, count/fraction exactly 1, and count/fraction >1. The
+same summary will also be reported for each case's maximum V2a service strength.
+
+### A2. Effective balance disclosure
+
+Although the numerical RCA weights are unchanged, V2a changes the scale of the
+anomaly-strength input by removing clipping. Therefore V2a can change the
+**effective balance** between the anomaly term and the graph-impact/primary-bonus
+terms even with weights fixed at 0.45, 0.20, and 0.10. This is an intended,
+explicit consequence of V2a and must be disclosed with results; unchanged
+weights must not be described as unchanged effective contribution.
+
+### A3. Required tie and top-1 diagnostics
+
+For frozen v1, V2a, and V2b, report beside Avg@5:
+- AC@1 overall;
+- top-tie case count;
+- AC@1 among cases with a top tie;
+- AC@1 among cases without a top tie.
+
+For this table, a `top tie` means more than one E3-eligible service has exactly
+the maximum full-precision anomaly strength used in that variant's RCA anomaly
+term. V1 uses its frozen clipped anomaly strength. V2a and V2b use the same
+unclipped V2a anomaly strength, so their top-tie case counts are expected to be
+identical even though primary-bonus assignment may differ. For V2b, additionally
+report the number of cases in which the frozen v1 clipped primary-candidate
+group contains more than one service, because that is the group on which V2b's
+raw-strength primary-bonus rule operates.
+
+The already-frozen variant-selection rule remains unchanged: all-90 RE2-OB
+Avg@5 point estimate selects between V2a and V2b, with exact ties selecting the
+simpler V2a. AC@1 and tie diagnostics are descriptive only and cannot alter the
+selection.
+
+### A4. Development-result and paired-comparison scope
+
+All v1/V2a/V2b scores on RE2-OB are development-suite results. RE2-OB has already
+been used for diagnosis, preregistration, and variant selection and must not be
+called held-out. Only RE2-SS and RE2-TT remain held-out for later evaluation,
+and neither may be accessed before the selected v2 is frozen.
+
+Using the same sorted 90 RE2-OB cases, bootstrap seed 42, 10,000 shared paired
+case resamples, and 95% percentile intervals, report paired differences for
+AC@1, AC@3, AC@5, and Avg@5 for:
+- V2a minus frozen v1;
+- V2b minus frozen v1;
+- V2a minus the frozen static-threshold baseline;
+- V2b minus the frozen static-threshold baseline;
+- V2b minus V2a (including the preregistered Avg@5 selection comparison).
+
+All paired CIs are descriptive. No significance threshold, CI-crossing rule, or
+baseline-comparison result may override the frozen V2a/V2b selection rule.
+
+### A5. Variant-count lock
+
+There are exactly two post-hoc SentinelOps v2 variants: V2a and V2b. Once any
+v2 result is computed, no V2c, alternate transform, alternate tie policy,
+parameter sweep, weight change, detector change, or additional candidate variant
+may be introduced in this Phase A selection exercise. If both variants expose a
+problem not covered by this preregistration, record the limitation and stop; do
+not create another variant using RE2-OB outcomes.
