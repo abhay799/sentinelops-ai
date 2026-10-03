@@ -1,0 +1,32 @@
+{
+  "case_count": 90,
+  "dataset": "RE2-TT",
+  "expected_file_count_from_api": 359,
+  "failures": [],
+  "faults": [
+    "cpu",
+    "delay",
+    "disk",
+    "loss",
+    "mem",
+    "socket"
+  ],
+  "ground_truth_services_validity_check": [
+    "ts-auth-service",
+    "ts-order-service",
+    "ts-route-service",
+    "ts-train-service",
+    "ts-travel-service"
+  ],
+  "mandatory_files_per_case": [
+    "inject_time.txt",
+    "metrics.parquet",
+    "traces.parquet"
+  ],
+  "optional_files": [
+    "logs.parquet"
+  ],
+  "raw_case_directory_count": 90,
+  "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "status": "pass"
+}
