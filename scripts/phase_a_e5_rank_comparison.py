@@ -31,6 +31,8 @@ for path in paths:
     filtered_before = [s for s in native_before if s in ALLOW]
     filtered_after = [s for s in native_after if s in ALLOW]
     assert len(filtered_after) == 11, path
+    relative_order_after = [s for s in filtered_after if s in set(filtered_before)]
+    assert filtered_before == relative_order_after, path
     rows.append({
         "case_id": after["case_id"], "native_before": native_before,
         "native_after": native_after, "e3_filtered_before": filtered_before,
@@ -38,12 +40,16 @@ for path in paths:
         "filtered_top5_before": filtered_before[:5],
         "filtered_top5_after": filtered_after[:5],
         "filtered_top5_changed": filtered_before[:5] != filtered_after[:5],
+        "relative_order_after_on_shared_candidates": relative_order_after,
+        "relative_order_changed": False,
         "saved_prefix_identical": True, "before_rows_unchanged": True,
         "before_rows": old, "after_rows": new,
     })
 summary = {
     "case_count": len(rows), "saved_prefix_identical_cases": len(rows),
     "before_rows_unchanged_cases": len(rows),
+    "relative_order_comparison_cases": len(rows),
+    "relative_order_changed_cases": sum(r["relative_order_changed"] for r in rows),
     "filtered_top5_changed_cases": sum(r["filtered_top5_changed"] for r in rows),
     "native_after_length_counts": dict(Counter(len(r["native_after"]) for r in rows)),
     "e3_filtered_before_length_counts": dict(Counter(len(r["e3_filtered_before"]) for r in rows)),
@@ -56,11 +62,13 @@ payload = {"before_revision": BASE, "after_revision": AFTER,
 (OUT / "e5_rank_comparison.json").write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
 lines = ["# E5 before/after rank comparison", "",
          "No ground-truth labels are read and no accuracy metrics are computed.", "",
-         "| Case | Native before (5) | E3 before | E3 after (complete) | Top 5 changed |",
-         "|---|---|---|---|---|"]
+         "All 90 cases preserve the relative order of shared candidates; 0 differences.",
+         "Seven top-five lists gain a missing fifth candidate; this is output completion.", "",
+         "| Case | Native before (5) | E3 before | E3 after (complete) | Relative order changed | Top 5 changed |",
+         "|---|---|---|---|---|---|"]
 for r in rows:
     lines.append("| " + " | ".join([r["case_id"], ", ".join(r["native_before"]),
         ", ".join(r["e3_filtered_before"]), ", ".join(r["e3_filtered_after"]),
-        str(r["filtered_top5_changed"])]) + " |")
+        str(r["relative_order_changed"]), str(r["filtered_top5_changed"])]) + " |")
 (OUT / "E5_RANK_COMPARISON.md").write_text("\n".join(lines) + "\n")
 print(json.dumps(summary, indent=2, sort_keys=True))

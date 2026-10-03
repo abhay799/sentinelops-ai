@@ -693,8 +693,8 @@ random seeds, ground truth, or the frozen SentinelOps method.
 
 ## Erratum E5 — preserve complete native RCA ranking before E3 filtering (2026-10-03)
 
-**Status: PRE-SCORING FOR SENTINELOPS AND RCAEVAL BASELINES; PRIOR RANDOM
-AC@k DIAGNOSTICS EXIST.** This erratum records implementation commit
+**Status: PRE-SCORING FOR SENTINELOPS AND ALL NON-RANDOM BASELINES;
+AC@k HAD BEEN OBSERVED FOR THE RANDOM BASELINE ONLY.** This erratum records implementation commit
 `f0e1f4184486804889b5a6f9dab2f6424fe0e69f` and evidence refresh commit
 `6de02601bfa8d60f154b1480e0768f0a3c08e754`. It is being committed before
 any additional AC@k computation in this continuation.
@@ -750,3 +750,24 @@ Under the unchanged E3 stop rule, subsequent accuracy scoring and Steps 21–24
 remain gated on resolution of the existing random-sanity stop condition and
 receipt of the original step checklist. The background CIRCA/mmCIRCA jobs are
 left running without restart or termination.
+
+### E5.2 Explicit relative-order and timing clarification (2026-10-03)
+
+The changes in f0e1f41 and 6de0260 were made before AC@k was computed
+for SentinelOps or any non-random baseline, according to the available
+committed evidence. AC@k had been observed for the random baseline ONLY:
+the seed-42 sanity check in 47a80d6. The subsequent random-only multi-seed
+diagnostic in 6a77334 had also been observed and is disclosed in E5.1;
+it cannot be omitted from the provenance or presented as clearing the stop.
+
+The before/after comparison covers all 90 RE2-OB cases. Projecting the new
+E3-filtered ranking onto the candidates present in the old E3-filtered
+ranking gives the old order exactly in 90/90 cases: zero relative-order
+differences. The native saved prefixes and their scores are also identical
+in 90/90 cases. The seven completed fifth slots are additions, not
+reordering. The old full tail was not saved, so no claim is made about
+comparing unavailable before-tail rows.
+
+No weights, thresholds, scoring, or tie-breaking changed. This audit reads
+no ground-truth labels and computes no AC@k. The supplied Steps 21-25
+checklist is now available; the E3 random-sanity stop remains unresolved.

@@ -218,6 +218,14 @@
         "checkoutservice",
         "recommendationservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "currencyservice",
+        "emailservice",
+        "cartservice",
+        "checkoutservice",
+        "recommendationservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -456,6 +464,14 @@
         "checkoutservice",
         "recommendationservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "emailservice",
+        "checkoutservice",
+        "recommendationservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -674,6 +690,14 @@
         "checkoutservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "emailservice",
+        "productcatalogservice",
+        "checkoutservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -892,6 +916,14 @@
         "checkoutservice",
         "productcatalogservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "emailservice",
+        "paymentservice",
+        "checkoutservice",
+        "productcatalogservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -1110,6 +1142,14 @@
         "paymentservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "emailservice",
+        "paymentservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -1326,6 +1366,13 @@
         "recommendationservice",
         "frontend-external"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "paymentservice",
+        "checkoutservice",
+        "recommendationservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -1544,6 +1591,14 @@
         "paymentservice",
         "currencyservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "emailservice",
+        "productcatalogservice",
+        "checkoutservice",
+        "paymentservice",
+        "currencyservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -1752,6 +1807,14 @@
         "currencyservice",
         "productcatalogservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "emailservice",
+        "checkoutservice",
+        "paymentservice",
+        "currencyservice",
+        "productcatalogservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -1960,6 +2023,14 @@
         "checkoutservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "emailservice",
+        "productcatalogservice",
+        "checkoutservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -2178,6 +2249,14 @@
         "checkoutservice",
         "currencyservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "paymentservice",
+        "productcatalogservice",
+        "emailservice",
+        "checkoutservice",
+        "currencyservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -2396,6 +2475,14 @@
         "paymentservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "redis",
+        "currencyservice",
+        "emailservice",
+        "paymentservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -2624,6 +2711,14 @@
         "checkoutservice",
         "productcatalogservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "redis",
+        "paymentservice",
+        "emailservice",
+        "checkoutservice",
+        "productcatalogservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -2842,6 +2937,14 @@
         "checkoutservice",
         "currencyservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "paymentservice",
+        "productcatalogservice",
+        "emailservice",
+        "checkoutservice",
+        "currencyservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -3060,6 +3163,14 @@
         "checkoutservice",
         "emailservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "currencyservice",
+        "paymentservice",
+        "checkoutservice",
+        "emailservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -3278,6 +3389,14 @@
         "checkoutservice",
         "cartservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "paymentservice",
+        "currencyservice",
+        "emailservice",
+        "checkoutservice",
+        "cartservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -3506,6 +3625,14 @@
         "productcatalogservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "checkoutservice",
+        "redis",
+        "emailservice",
+        "productcatalogservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -3724,6 +3851,14 @@
         "paymentservice",
         "shippingservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "checkoutservice",
+        "currencyservice",
+        "productcatalogservice",
+        "paymentservice",
+        "shippingservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -3942,6 +4077,14 @@
         "paymentservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "frontend",
+        "emailservice",
+        "productcatalogservice",
+        "paymentservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -4160,6 +4303,14 @@
         "currencyservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "paymentservice",
+        "productcatalogservice",
+        "emailservice",
+        "currencyservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -4378,6 +4529,14 @@
         "emailservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -4596,6 +4755,14 @@
         "checkoutservice",
         "cartservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "checkoutservice",
+        "cartservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -4814,6 +4981,14 @@
         "productcatalogservice",
         "adservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "redis",
+        "currencyservice",
+        "checkoutservice",
+        "productcatalogservice",
+        "adservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -5032,6 +5207,14 @@
         "emailservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "currencyservice",
+        "paymentservice",
+        "emailservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -5250,6 +5433,14 @@
         "checkoutservice",
         "recommendationservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "frontend",
+        "productcatalogservice",
+        "currencyservice",
+        "checkoutservice",
+        "recommendationservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -5468,6 +5659,14 @@
         "emailservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -5686,6 +5885,14 @@
         "productcatalogservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "currencyservice",
+        "emailservice",
+        "productcatalogservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -5904,6 +6111,14 @@
         "recommendationservice",
         "emailservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "currencyservice",
+        "checkoutservice",
+        "recommendationservice",
+        "emailservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -6122,6 +6337,14 @@
         "emailservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -6340,6 +6563,14 @@
         "emailservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -6558,6 +6789,14 @@
         "emailservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -6776,6 +7015,14 @@
         "paymentservice",
         "emailservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "currencyservice",
+        "paymentservice",
+        "emailservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -6994,6 +7241,14 @@
         "emailservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -7212,6 +7467,14 @@
         "paymentservice",
         "emailservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "currencyservice",
+        "paymentservice",
+        "emailservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -7430,6 +7693,14 @@
         "checkoutservice",
         "frontend"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "currencyservice",
+        "checkoutservice",
+        "frontend"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -7648,6 +7919,14 @@
         "checkoutservice",
         "recommendationservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "redis",
+        "currencyservice",
+        "emailservice",
+        "checkoutservice",
+        "recommendationservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -7866,6 +8145,14 @@
         "emailservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -8084,6 +8371,14 @@
         "cartservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "emailservice",
+        "currencyservice",
+        "cartservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -8300,6 +8595,13 @@
         "currencyservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "emailservice",
+        "paymentservice",
+        "currencyservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -8518,6 +8820,14 @@
         "paymentservice",
         "adservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice",
+        "adservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -8736,6 +9046,14 @@
         "shippingservice",
         "frontend"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "emailservice",
+        "checkoutservice",
+        "adservice",
+        "shippingservice",
+        "frontend"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -8954,6 +9272,14 @@
         "productcatalogservice",
         "adservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "emailservice",
+        "checkoutservice",
+        "currencyservice",
+        "productcatalogservice",
+        "adservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -9172,6 +9498,14 @@
         "paymentservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "emailservice",
+        "paymentservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -9390,6 +9724,14 @@
         "recommendationservice",
         "currencyservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "cartservice",
+        "emailservice",
+        "productcatalogservice",
+        "recommendationservice",
+        "currencyservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -9606,6 +9948,13 @@
         "currencyservice",
         "frontend-external"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "emailservice",
+        "checkoutservice",
+        "productcatalogservice",
+        "currencyservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -9824,6 +10173,14 @@
         "paymentservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "emailservice",
+        "currencyservice",
+        "paymentservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -10040,6 +10397,13 @@
         "adservice",
         "cartservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "checkoutservice",
+        "emailservice",
+        "adservice",
+        "cartservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -10258,6 +10622,14 @@
         "checkoutservice",
         "cartservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "emailservice",
+        "currencyservice",
+        "checkoutservice",
+        "cartservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -10476,6 +10848,14 @@
         "currencyservice",
         "cartservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "emailservice",
+        "productcatalogservice",
+        "paymentservice",
+        "currencyservice",
+        "cartservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -10694,6 +11074,14 @@
         "productcatalogservice",
         "cartservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "currencyservice",
+        "emailservice",
+        "checkoutservice",
+        "productcatalogservice",
+        "cartservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -10912,6 +11300,14 @@
         "productcatalogservice",
         "recommendationservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "emailservice",
+        "checkoutservice",
+        "productcatalogservice",
+        "recommendationservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -11130,6 +11526,14 @@
         "adservice",
         "productcatalogservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "paymentservice",
+        "emailservice",
+        "checkoutservice",
+        "adservice",
+        "productcatalogservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -11348,6 +11752,14 @@
         "checkoutservice",
         "recommendationservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "paymentservice",
+        "productcatalogservice",
+        "checkoutservice",
+        "recommendationservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -11564,6 +11976,13 @@
         "checkoutservice",
         "frontend-external"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "paymentservice",
+        "emailservice",
+        "currencyservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -11782,6 +12201,14 @@
         "emailservice",
         "shippingservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "paymentservice",
+        "emailservice",
+        "shippingservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -12000,6 +12427,14 @@
         "recommendationservice",
         "redis"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "emailservice",
+        "productcatalogservice",
+        "paymentservice",
+        "recommendationservice",
+        "redis"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -12218,6 +12653,14 @@
         "emailservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "productcatalogservice",
+        "currencyservice",
+        "paymentservice",
+        "emailservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -12436,6 +12879,14 @@
         "checkoutservice",
         "adservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "currencyservice",
+        "checkoutservice",
+        "adservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -12654,6 +13105,14 @@
         "checkoutservice",
         "recommendationservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "checkoutservice",
+        "recommendationservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -12872,6 +13331,14 @@
         "checkoutservice",
         "emailservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "currencyservice",
+        "checkoutservice",
+        "emailservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -13090,6 +13557,14 @@
         "checkoutservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "currencyservice",
+        "checkoutservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -13308,6 +13783,14 @@
         "checkoutservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "emailservice",
+        "checkoutservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -13526,6 +14009,14 @@
         "checkoutservice",
         "adservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "currencyservice",
+        "checkoutservice",
+        "adservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -13744,6 +14235,14 @@
         "checkoutservice",
         "frontend"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "recommendationservice",
+        "checkoutservice",
+        "frontend"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -13962,6 +14461,14 @@
         "emailservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -14180,6 +14687,14 @@
         "emailservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -14398,6 +14913,14 @@
         "emailservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -14616,6 +15139,14 @@
         "emailservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -14834,6 +15365,14 @@
         "emailservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -15052,6 +15591,14 @@
         "emailservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -15270,6 +15817,14 @@
         "emailservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "currencyservice",
+        "emailservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -15488,6 +16043,14 @@
         "currencyservice",
         "paymentservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "checkoutservice",
+        "currencyservice",
+        "paymentservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -15706,6 +16269,14 @@
         "paymentservice",
         "adservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "emailservice",
+        "paymentservice",
+        "adservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -15924,6 +16495,14 @@
         "currencyservice",
         "frontend"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "paymentservice",
+        "emailservice",
+        "currencyservice",
+        "frontend"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -16142,6 +16721,14 @@
         "currencyservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "emailservice",
+        "currencyservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -16360,6 +16947,14 @@
         "productcatalogservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "redis",
+        "paymentservice",
+        "currencyservice",
+        "productcatalogservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -16578,6 +17173,14 @@
         "paymentservice",
         "frontend"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "currencyservice",
+        "paymentservice",
+        "frontend"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -16796,6 +17399,14 @@
         "paymentservice",
         "emailservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "currencyservice",
+        "paymentservice",
+        "emailservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -17014,6 +17625,14 @@
         "adservice",
         "frontend"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "emailservice",
+        "adservice",
+        "frontend"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -17232,6 +17851,14 @@
         "recommendationservice",
         "currencyservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "paymentservice",
+        "productcatalogservice",
+        "emailservice",
+        "recommendationservice",
+        "currencyservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -17450,6 +18077,14 @@
         "checkoutservice",
         "emailservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "paymentservice",
+        "currencyservice",
+        "checkoutservice",
+        "emailservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -17666,6 +18301,13 @@
         "cartservice",
         "frontend-external"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "paymentservice",
+        "cartservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -17884,6 +18526,14 @@
         "paymentservice",
         "emailservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "paymentservice",
+        "emailservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -18102,6 +18752,14 @@
         "currencyservice",
         "recommendationservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "paymentservice",
+        "currencyservice",
+        "recommendationservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -18320,6 +18978,14 @@
         "paymentservice",
         "recommendationservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "currencyservice",
+        "paymentservice",
+        "recommendationservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -18536,6 +19202,13 @@
         "paymentservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "currencyservice",
+        "paymentservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -18754,6 +19427,14 @@
         "recommendationservice",
         "checkoutservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "paymentservice",
+        "recommendationservice",
+        "checkoutservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -18972,6 +19653,14 @@
         "recommendationservice",
         "adservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "shippingservice",
+        "productcatalogservice",
+        "paymentservice",
+        "recommendationservice",
+        "adservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -19190,6 +19879,14 @@
         "paymentservice",
         "currencyservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "emailservice",
+        "paymentservice",
+        "currencyservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -19408,6 +20105,14 @@
         "currencyservice",
         "frontend"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "productcatalogservice",
+        "paymentservice",
+        "currencyservice",
+        "frontend"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     },
     {
@@ -19626,6 +20331,14 @@
         "productcatalogservice",
         "shippingservice"
       ],
+      "relative_order_after_on_shared_candidates": [
+        "recommendationservice",
+        "adservice",
+        "emailservice",
+        "productcatalogservice",
+        "shippingservice"
+      ],
+      "relative_order_changed": false,
       "saved_prefix_identical": true
     }
   ],
@@ -19649,6 +20362,8 @@
       "13": 2,
       "14": 1
     },
+    "relative_order_changed_cases": 0,
+    "relative_order_comparison_cases": 90,
     "saved_prefix_identical_cases": 90
   }
 }
