@@ -862,3 +862,60 @@ be satisfied. E3's seed-42 random-sanity stop remains unresolved at
 registration. This document does not waive or reinterpret it.
 Stop at Step 25 and present RE2-OB results before any RE2-SS/RE2-TT
 access. Never push.
+
+
+## Erratum E7 - agreed random diagnostic gate resolution (2026-10-03)
+
+**Status: COMMITTED BEFORE STEP 21 AND BEFORE NON-RANDOM AC@k SCORING.**
+This erratum records the diagnostic acceptance rule agreed after the
+seed-42 sanity failure was observed but before the 1000-seed diagnostic
+ran. Its timing and authorization are confirmed by the user's gate
+resolution instruction in this session. It is a post-failure diagnostic
+rule, not a rule frozen before the seed-42 result was observed.
+
+The agreed rule: run 1000 diagnostic master seeds (0-999). The mean
+AC@1/3/5 must each be within 3 standard errors of the corresponding
+analytical Chance@k; native rankings must be full permutations and E3
+must preserve retained order; service mean ranks must be uniform
+(the recorded tolerance is 0.10 around the expected rank 6.0).
+Otherwise stop. Position chi-square p-values are descriptive, not
+an additional acceptance gate.
+
+The previously committed random_multiseed_diagnostic.json records
+diagnostic_pass=true, full_permutation_check.pass=true,
+e3_filter_check.pass=true and positions_roughly_uniform=true.
+All 90,000 case/seed permutations and E3 projections passed.
+
+| Metric | 1000-seed mean | Across-seed SD | SE of mean | Analytical Chance@k | Difference in SE |
+|---|---:|---:|---:|---:|---:|
+| AC@1 | 0.090167 | 0.029837 | 0.000944 | 0.090909 | -0.786860 |
+| AC@3 | 0.270244 | 0.047123 | 0.001490 | 0.272727 | -1.666166 |
+| AC@5 | 0.454222 | 0.053410 | 0.001689 | 0.454545 | -0.191376 |
+
+The maximum absolute service mean-rank deviation is
+0.015511111111111475 (0.01551), within the recorded 0.10 tolerance.
+All three mean differences are within 3 SE. Under the agreed rule,
+the random diagnostic gate is resolved and Steps 21-24 may proceed.
+
+The seed-42 sanity_pass=false remains an unchanged historical value.
+Seed 42 remains the reported random baseline; its rankings are never
+replaced, regenerated, or redrawn in bootstrap resamples. Report its
+AC@1/3/5 beside the diagnostic-only 1000-seed means and across-seed SDs.
+The diagnostic mean is not a replacement baseline.
+
+Verified git log 6de0260..fdd5d74 contains only fdd5d74, the E5
+documentation and label-free rank audit commit. Its four changed paths
+are the evaluation specification, E5_RANK_COMPARISON.md,
+e5_rank_comparison.json, and phase_a_e5_rank_comparison.py.
+The audit explicitly records ground_truth_read=false and
+accuracy_metrics_computed=false. The range contains no scoring or
+AC@k result output for any non-random method. Existing random-only
+observations are disclosed in E5 and remain intact. This is a statement
+about committed contents, not proof of every historical shell command.
+
+This explicit gate resolution supersedes the unresolved E3 gate status
+recorded at E5/E6 registration and in PRE_STEP21_STOP.md; those records
+remain historical. No weights, thresholds, scoring, tie-breaking,
+candidate allowlist, seed, or baseline method changes. E4 fallback
+treatment, E6 uncertainty rules and all other stop rules remain in force.
+RE2-SS and RE2-TT remain untouched. Never push. Stop at Step 25.

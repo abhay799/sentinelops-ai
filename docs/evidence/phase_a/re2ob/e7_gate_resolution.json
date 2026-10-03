@@ -1,0 +1,57 @@
+{
+  "changed_paths": [
+    "docs/evidence/PHASE_A_EVALUATION_SPEC.md",
+    "docs/evidence/phase_a/re2ob/E5_RANK_COMPARISON.md",
+    "docs/evidence/phase_a/re2ob/e5_rank_comparison.json",
+    "scripts/phase_a_e5_rank_comparison.py"
+  ],
+  "commits": [
+    "fdd5d749b1cf8e1d2d6e7b0f4b7d033fa08874fa"
+  ],
+  "diagnostic_pass": true,
+  "diagnostic_revision": "6a77334",
+  "diagnostic_sha256": "301293a367668d8e0f91f34a40197a2d9779c43c7c0e0e2adffb81554d711a19",
+  "max_abs_mean_rank_deviation": 0.015511111111111475,
+  "multi_seed_ac_summary": {
+    "AC@1": {
+      "analytical_chance": 0.09090909090909091,
+      "difference_in_se": -0.7868597456722053,
+      "max_across_seeds": 0.17777777777777778,
+      "mean_matches_chance_within_3se": true,
+      "mean_minus_chance": -0.0007424242424242528,
+      "min_across_seeds": 0.022222222222222223,
+      "multi_seed_mean": 0.09016666666666666,
+      "multi_seed_sd": 0.029836976781421068,
+      "standard_error_of_mean": 0.0009435280512285047
+    },
+    "AC@3": {
+      "analytical_chance": 0.2727272727272727,
+      "difference_in_se": -1.6661659278577408,
+      "max_across_seeds": 0.4111111111111111,
+      "mean_matches_chance_within_3se": true,
+      "mean_minus_chance": -0.0024828282828282533,
+      "min_across_seeds": 0.1111111111111111,
+      "multi_seed_mean": 0.27024444444444445,
+      "multi_seed_sd": 0.04712251211928735,
+      "standard_error_of_mean": 0.001490144673658361
+    },
+    "AC@5": {
+      "analytical_chance": 0.45454545454545453,
+      "difference_in_se": -0.19137634996441502,
+      "max_across_seeds": 0.6222222222222222,
+      "mean_matches_chance_within_3se": true,
+      "mean_minus_chance": -0.0003232323232322809,
+      "min_across_seeds": 0.26666666666666666,
+      "multi_seed_mean": 0.45422222222222225,
+      "multi_seed_sd": 0.05341048436715549,
+      "standard_error_of_mean": 0.0016889878153302825
+    }
+  },
+  "non_random_accuracy_outputs_in_range": false,
+  "reported_random_seed": 42,
+  "rule_timing": "after seed-42 failure, before 1000-seed diagnostic; confirmed by user",
+  "seed42_sanity_pass_historical": false,
+  "seed42_sanity_sha256": "27175a7cc82f17a063eaa725bee1d7995677b16644968f26741249a1332a1779",
+  "status": "resolved_under_agreed_pre_diagnostic_rule",
+  "verified_commit_range": "6de0260..fdd5d74"
+}
