@@ -771,3 +771,94 @@ comparing unavailable before-tail rows.
 No weights, thresholds, scoring, or tie-breaking changed. This audit reads
 no ground-truth labels and computes no AC@k. The supplied Steps 21-25
 checklist is now available; the E3 random-sanity stop remains unresolved.
+
+
+## Erratum E6 - pre-registered uncertainty and metric definitions (2026-10-03)
+
+**Status: PRE-REGISTERED BEFORE SENTINELOPS OR NON-RANDOM BASELINE SCORING.**
+Committed after E5 and before Steps 21-24. Previously observed random-only
+accuracy diagnostics are disclosed in E5. No other accuracy results are used
+to choose these definitions or uncertainty rules.
+
+### E6.1 Metrics and denominators
+
+For a case with one ground-truth root service, service-level AC@k is the
+indicator that the root service occurs in the first k distinct services of
+the ranking. Aggregate AC@k is the mean of those case indicators.
+Apply the same E3 order-preserving candidate filter before every top-k
+selection, for SentinelOps, threshold, random, PageRank, BARO, CIRCA,
+mmBARO, and mmCIRCA. Retain the native rankings separately.
+
+Avg@5 = (AC@1 + AC@2 + AC@3 + AC@4 + AC@5) / 5.
+Chance@5 = min(5, N) / N, with N = 11 for the frozen RE2-OB allowlist,
+so Chance@5 = 5/11. Lift@5 = AC@5 / Chance@5.
+This requested ratio is calculated explicitly; it is not the local
+RCAEval Evaluator.lift() function, which calculates an additive difference
+between average accuracy and average chance. No ranking score changes.
+
+Under E4, primary metrics retain all 90 cases. fallback_unranked is a
+miss at every k and therefore contributes zero to Avg@5; its returned
+column order is never scored. Coverage and hard failures are reported
+separately. A missing, malformed, or unexplained hard-failure record is
+a validation stop, not silently removed or converted to success.
+
+Report a secondary valid-rankings-only table for each method, giving its
+explicit reduced denominator overall and for every fault type. It never
+replaces the all-90 primary table. A group with no valid cases has null
+accuracy and interval values, not invented zero-denominator estimates.
+
+### E6.2 Paired case bootstrap
+
+Freeze bootstrap seed 42, 10,000 resamples, and 95% percentile intervals
+(the 2.5th and 97.5th percentiles, linear quantile interpolation).
+Case IDs are sorted lexically. Use numpy.random.default_rng(42) and draw
+a 10,000 by 90 index matrix, sampling 90 cases with replacement in each
+row. Each sampled case carries all of its outputs. Use this one matrix
+for every primary method, metric, and paired overall comparison.
+Random rankings are generated once with their frozen seed 42 and are
+never redrawn within a bootstrap.
+
+For each baseline and k in 1, 3, 5, report the point difference
+Delta_k = AC@k(SentinelOps) - AC@k(baseline).
+For each shared resample b compute Delta_k_b from the two methods on
+exactly the same sampled cases, equivalently the mean of their paired
+per-case indicator differences. Report the 95% percentile CI of those
+10,000 differences. Do not subtract marginal CI endpoints or use
+independently resampled methods.
+
+Apply case bootstrap also to individual-method AC@1/3/5, Avg@5, and
+Lift@5. Chance@5 is the fixed analytical value. Report point estimates
+and CIs overall and separately for CPU, memory, disk, socket, delay,
+and loss, preserving native fault names in machine-readable evidence.
+For each fault, start a separate default_rng(42), sort that fault's
+case IDs, and sample its original case count with replacement 10,000
+times. Reuse that fault's index matrix across methods and paired
+differences. This avoids changing the overall cohort through stratified
+resampling.
+
+Secondary valid-only method intervals resample only that method's
+valid cases with the same seed/resample/percentile rules. If secondary
+paired differences are reported, both methods must use their common
+valid-case intersection, the same sampled indices, and an explicit
+denominator; never compare differently selected cohorts.
+
+No significance, superiority, or inferiority claim is made without the
+corresponding paired CI. A CI including zero does not establish a
+directional difference. These are descriptive unadjusted 95% intervals;
+they do not establish family-wise significance over multiple comparisons.
+
+### E6.3 A4 and evidence gates
+
+A4 static Online Boutique topology sensitivity uses the same frozen E3
+filter, random seed 42, bootstrap seed 42, and uncertainty rules. Keep it
+in separately labeled evidence and never substitute it for the primary
+pre-injection trace-derived topology result. All other settings remain
+frozen; A4 changes only the documented sensitivity topology.
+
+Steps 21-24 are authorized by the supplied checklist, but remain gated:
+E5 and E6 must be committed; CIRCA and mmCIRCA must finish; fallback
+counts and coverage must be validated; and existing stop rules must
+be satisfied. E3's seed-42 random-sanity stop remains unresolved at
+registration. This document does not waive or reinterpret it.
+Stop at Step 25 and present RE2-OB results before any RE2-SS/RE2-TT
+access. Never push.
