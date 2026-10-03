@@ -129,8 +129,12 @@ def run_case(case_id: str, method: str) -> dict[str, object]:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--method", choices=METHODS, required=True)
+    parser.add_argument("--shard-index", type=int, default=0)
+    parser.add_argument("--shard-count", type=int, default=1)
     args = parser.parse_args()
     method = args.method
+    if args.shard_count < 1 or not 0 <= args.shard_index < args.shard_count:
+        raise ValueError("Invalid shard configuration")
     started = time.perf_counter()
     out_dir = OUT / "cases" / method
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -138,7 +142,8 @@ def main() -> None:
     failures = 0
     fallbacks = 0
 
-    for case_id in case_ids():
+    selected_ids = case_ids()[args.shard_index :: args.shard_count]
+    for case_id in selected_ids:
         path = out_dir / f"{case_id}.json"
         if path.exists():
             cached = json.loads(path.read_text())
@@ -167,7 +172,9 @@ def main() -> None:
 
     summary = {
         "method": method,
-        "case_count_expected": 90,
+        "shard_index": args.shard_index,
+        "shard_count": args.shard_count,
+        "case_count_expected": len(selected_ids),
         "case_count_written_or_cached": completed,
         "hard_failed": failures,
         "fallback_unranked": fallbacks,
@@ -176,7 +183,12 @@ def main() -> None:
         "ground_truth_used_for_ranking": False,
         "re2tt_accessed": False,
     }
-    write_json(OUT / f"step26_{method}_run_summary.json", summary)
+    suffix = (
+        ""
+        if args.shard_count == 1
+        else f"_shard{args.shard_index}of{args.shard_count}"
+    )
+    write_json(OUT / f"step26_{method}_run_summary{suffix}.json", summary)
     print(json.dumps(summary, indent=2, sort_keys=True), flush=True)
 
 
