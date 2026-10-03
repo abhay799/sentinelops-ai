@@ -1,0 +1,20 @@
+{
+  "case_count_expected": 90,
+  "case_count_failed": 0,
+  "case_count_fallback_unranked": 0,
+  "case_count_ok": 90,
+  "cases_missing_allowlist_services": [],
+  "e3_allowlist_size": 11,
+  "failed_cases": [],
+  "fallback_unranked_cases": [],
+  "method": "mmbaro",
+  "runtime_seconds": 61.68102864000048,
+  "status": "complete",
+  "step": 20,
+  "trace_input_policy": {
+    "duplicate_erratum_effect": "not applied at raw-span level; the pinned mmBARO API consumes preaggregated trace time series",
+    "input": "RCAEval-shipped preaggregated tracets_err.csv and tracets_lat.csv",
+    "raw_span_rows_consumed": false
+  },
+  "valid_ranking_coverage": 1.0
+}

@@ -1,0 +1,41 @@
+{
+  "case_count_expected": 90,
+  "case_count_failed": 0,
+  "case_count_fallback_unranked": 4,
+  "case_count_ok": 86,
+  "cases_missing_allowlist_services": [],
+  "e3_allowlist_size": 11,
+  "failed_cases": [],
+  "fallback_unranked_cases": [
+    {
+      "case_id": "re2ob_checkoutservice_cpu_2",
+      "reason": "circa failed (ValueError: Data correlation matrix is singular. Cannot run fisherz test. Please check your data.); returning the unranked column order",
+      "signal": "rcaeval_wrapper_warning"
+    },
+    {
+      "case_id": "re2ob_productcatalogservice_delay_1",
+      "reason": "circa failed (ValueError: Data correlation matrix is singular. Cannot run fisherz test. Please check your data.); returning the unranked column order",
+      "signal": "rcaeval_wrapper_warning"
+    },
+    {
+      "case_id": "re2ob_productcatalogservice_disk_3",
+      "reason": "circa failed (ValueError: Data correlation matrix is singular. Cannot run fisherz test. Please check your data.); returning the unranked column order",
+      "signal": "rcaeval_wrapper_warning"
+    },
+    {
+      "case_id": "re2ob_recommendationservice_disk_1",
+      "reason": "circa failed (ValueError: Data correlation matrix is singular. Cannot run fisherz test. Please check your data.); returning the unranked column order",
+      "signal": "rcaeval_wrapper_warning"
+    }
+  ],
+  "method": "circa",
+  "runtime_seconds": 1830.732273398,
+  "status": "completed_with_fallbacks",
+  "step": 20,
+  "trace_input_policy": {
+    "duplicate_erratum_effect": "not applicable",
+    "input": "metrics only",
+    "raw_span_rows_consumed": false
+  },
+  "valid_ranking_coverage": 0.9555555555555556
+}
