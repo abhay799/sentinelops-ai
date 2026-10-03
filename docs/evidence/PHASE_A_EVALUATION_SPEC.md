@@ -964,3 +964,12 @@ Step 21-24 non-random AC@k artifact was found before E5, while random AC@k and
 its multi-seed diagnostic had been observed. E9 changes provenance wording
 only; no evaluation output or rule changes. See
 `phase_a/re2ob/E9_NATIVE_BASELINE_PROVENANCE_CORRECTION.md`.
+
+## Step 26 implementation provenance addendum (2026-10-03)
+
+Commit `dcb02f8` was made after RE2-SS raw access/smoke but before the SS
+aggregate scorer. Its V2a strength-evidence/cache requirement and mm-method
+n/a representation are disclosed in
+[the implementation provenance note](phase_a/re2ss/STEP26_DCB02F8_PROVENANCE.md).
+It does not change the frozen ranking algorithms or numeric scoring rules.
+This retrospective note must not be described as pre-access preregistration.
