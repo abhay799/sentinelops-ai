@@ -92,3 +92,32 @@ def test_a4_preserves_native_strengths_and_original_excluded_primary_bonus():
     assert by_service["b"]["rca_score"] == pytest.approx(0.65)
     assert by_service["a"]["rca_score"] == pytest.approx(0.45)
     assert by_service["b"]["primary_service_bonus"] == 0
+
+
+def test_pinned_evaluator_uses_its_dependency_environment():
+    import importlib.util
+    from pathlib import Path
+
+    root = Path("/home/dell/benchmarks/RCAEval")
+    if not (root / ".venv/bin/python").exists():
+        pytest.skip("Requires the pinned local RCAEval dependency environment")
+    path = Path(__file__).resolve().parents[1] / "scripts/phase_a_steps21_24.py"
+    spec = importlib.util.spec_from_file_location("phase_a_scoring_driver", path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    methods = (*module.METHODS, "A4_SentinelOps", "A4_PageRank")
+    cases = [
+        {
+            "root_cause_service": "checkoutservice",
+            "methods": {
+                m: {
+                    "native_service_ranking": ["checkoutservice"],
+                    "status": "ok",
+                }
+                for m in methods
+            },
+        }
+    ]
+    result = module.pinned_check(cases)
+    assert result["service_AC@1_to_5_and_Avg@5_match"] is True
+    assert result["methods_checked"] == 10

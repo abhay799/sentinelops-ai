@@ -9,7 +9,6 @@ import importlib.metadata
 import json
 import platform
 import subprocess
-import sys
 import time
 from collections import Counter
 from datetime import datetime, timezone
@@ -430,33 +429,68 @@ def pinned_check(cases: list[dict]) -> dict:
     )
     if path.read_bytes() != pinned:
         raise ValueError("Pinned evaluator changed")
-    sys.path.insert(0, str(RCA_ROOT))
-    from RCAEval.benchmark.evaluation import Evaluator
-    from RCAEval.classes.graph import Node
-
-    for method in (*METHODS, "A4_SentinelOps", "A4_PageRank"):
-        evaluator = Evaluator()
-        values = []
-        for c in cases:
-            r = c["methods"][method]
-            native = r["native_service_ranking"]
-            ranking = [s for s in native if s in ALLOW] if r["status"] == "ok" else []
-            evaluator.add_case(
-                [Node(s, "service") for s in ranking],
-                Node(c["root_cause_service"], "service"),
-                n_candidates=11,
-            )
-            values.append(case_hits(native, c["root_cause_service"], ALLOW, r["status"]))
-        expected = metric_values(np.array(values), CHANCE)
-        for k in range(1, 6):
-            if not np.isclose(evaluator.accuracy_service(k), expected[f"AC@{k}"]):
-                raise ValueError("Pinned service-level accuracy disagreement")
-        if not np.isclose(evaluator.average_service(5), expected["Avg@5"]):
-            raise ValueError("Pinned Avg@5 disagreement")
+    # Run the unchanged evaluator in the same dependency environment as Step 20.
+    payload = {
+        method: [
+            {
+                "ranking": [s for s in c["methods"][method]["native_service_ranking"] if s in ALLOW]
+                if c["methods"][method]["status"] == "ok"
+                else [],
+                "answer": c["root_cause_service"],
+            }
+            for c in cases
+        ]
+        for method in (*METHODS, "A4_SentinelOps", "A4_PageRank")
+    }
+    check_code = """
+import json, platform, sys
+sys.path.insert(0, sys.argv[1])
+from RCAEval.benchmark.evaluation import Evaluator
+from RCAEval.classes.graph import Node
+results = {}
+for method, rows in json.load(sys.stdin).items():
+    evaluator = Evaluator()
+    for row in rows:
+        evaluator.add_case([Node(s, "service") for s in row["ranking"]],
+                           Node(row["answer"], "service"), n_candidates=11)
+    results[method] = {
+        **{f"AC@{k}": evaluator.accuracy_service(k) for k in range(1, 6)},
+        "Avg@5": evaluator.average_service(5),
+    }
+print(json.dumps({"metrics": results, "python": platform.python_version()}))
+"""
+    run = subprocess.run(
+        [str(RCA_ROOT / ".venv/bin/python"), "-c", check_code, str(RCA_ROOT)],
+        input=json.dumps(payload),
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    external = json.loads(run.stdout)
+    for method, values in external["metrics"].items():
+        expected = metric_values(
+            np.array(
+                [
+                    case_hits(
+                        c["methods"][method]["native_service_ranking"],
+                        c["root_cause_service"],
+                        ALLOW,
+                        c["methods"][method]["status"],
+                    )
+                    for c in cases
+                ]
+            ),
+            CHANCE,
+        )
+        for metric, value in values.items():
+            if not np.isclose(value, expected[metric]):
+                raise ValueError(f"Pinned service-level metric disagreement: {method} {metric}")
     return {
         "revision": rev,
         "evaluator_sha256": hashlib.sha256(pinned).hexdigest(),
-        "methods_checked": 10,
+        "interpreter": str(RCA_ROOT / ".venv/bin/python"),
+        "python": external["python"],
+        "methods_checked": len(external["metrics"]),
         "service_AC@1_to_5_and_Avg@5_match": True,
         "Lift@5": "explicit E6 ratio; pinned additive lift() deliberately unused",
     }
