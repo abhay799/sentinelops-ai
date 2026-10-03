@@ -935,3 +935,17 @@ no threshold, model setting, voting, aggregation, normalization, calibration,
 or window rule is tuned from RE2-OB. This resolves investigation/provenance,
 not performance. It clears no other stop rule, authorizes no held-out run, and
 RE2-SS/RE2-TT remain untouched. Never push.
+
+
+## Erratum E8 - post-scoring diagnostic provenance and freeze (2026-10-03)
+
+**Status: POST-SCORING DIAGNOSTIC ERRATUM.**
+E8 records, but does not use to retune, diagnostics performed after RE2-OB
+Steps 21-24 were already scored. Amendment A5 explains detector-v1's negative
+always-alert-like window behavior; the SentinelOps tie diagnostic quantifies
+saved strength saturation and tie-associated AC@1 differences. These are
+explanatory/descriptive only. They do not change rankings, AC@k, thresholds,
+weights, tie-breaking, candidate sets, detector settings, seeds, bootstrap
+resamples, fallback treatment, or denominators. No significance claim is added.
+RE2-SS and RE2-TT remain held out and untouched. See
+`phase_a/re2ob/E8_POST_SCORING_DIAGNOSTICS.md`. Never push.
