@@ -16,7 +16,7 @@ see STEP26_SMOKE_SELECTION.md):
 - BARO: native smoke ranking returned without fallback;
 - CIRCA: native smoke ranking returned without fallback.
 
-mmBARO/mmCIRCA are separately covered by the pre-scoring input-unavailable
+mmBARO/mmCIRCA are separately covered by the pre-scoring input-contract exclusion
 erratum and are not part of the full SS numerical run.
 
 Smoke accuracy remained uncomputed, no smoke case was removed from the final

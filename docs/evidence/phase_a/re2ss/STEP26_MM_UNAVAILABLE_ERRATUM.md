@@ -1,24 +1,33 @@
-# Step 26 Erratum - mmBARO/mmCIRCA unavailable on RE2-SS
+# Step 26 Erratum - mmBARO/mmCIRCA excluded by the pinned SS input contract
 
 Date: 2026-10-03
-Status: decided and committed **before any RE2-SS scoring**.
+Status: exclusion decided and committed before any RE2-SS scoring;
+physical-availability wording corrected retrospectively.
 
-The pinned RE2-SS input bundle provides `metrics.parquet`, `logs.parquet`, and
-`inject_time.txt`, but the pinned RCAEval mmBARO/mmCIRCA path requires the
-preprocessed `logts.csv` input used by the native multi-source benchmark.
-No frozen, audited raw-log-to-logts transform exists in the Phase A harness for
-RE2-SS, and no transform will be invented after held-out access.
+The official RCAEval RE2-SS archive **does ship `logts.csv`**. It is therefore
+incorrect to describe the required preprocessed logs as physically absent
+from all official SS distributions.
 
-Therefore, for Step 26:
-- mmBARO = `n/a (input unavailable)`;
-- mmCIRCA = `n/a (input unavailable)`;
-- both are excluded from the RE2-SS numerical method comparison and paired-CI
-  matrix;
-- they are **not** treated as fallback rankings and **not** scored as 90 misses;
-- coverage reporting will state 0 evaluable cases because the required input
-  modality is unavailable under the frozen contract, not because the methods
-  failed on 90 cases.
+The selected pinned Hugging Face SS bundle provides `metrics.parquet`,
+`logs.parquet` and `inject_time.txt`. The frozen Step 26 contract does not
+include native archive `logts.csv` or a frozen, audited conversion from HF raw
+logs into that input. Adding the archive modality or a new conversion after
+held-out access would change the pinned input contract.
 
-This decision changes only how unavailable methods are represented. It does not
-change any runnable method, candidate allowlist, score, bootstrap rule, or
-held-out ranking. RE2-TT remains untouched.
+The exclusion was recorded in `68ade27` before SS accuracy scoring and was
+based on that contract, not on SS outcomes. This correction does not reverse
+the decision and authorizes no mm run:
+- mmBARO = `n/a (outside pinned input contract)`;
+- mmCIRCA = `n/a (outside pinned input contract)`;
+- both remain excluded from SS numerical comparisons and paired CIs;
+- neither is counted as a fallback or scored as 90 misses;
+- there are 0 evaluable cases for these methods under the selected contract.
+
+The frozen scorer's literal label `n/a (input unavailable)` and its
+`input_unavailable=90` field mean unavailable **under this contract**, not
+absent from the official archive and not 90 execution failures. Its evidence
+will be read with this correction; no code change is made.
+
+No new modality, transform, method, ranking, filter, seed, bootstrap rule or
+denominator is introduced. Do not run mm methods. RE2-TT remains untouched.
+Never push.

@@ -981,3 +981,13 @@ after smoke scripts/results were committed as `9009bac`; pre-run separate
 registration is not established. The contrary timing claim is withdrawn.
 [The correction](phase_a/re2ss/STEP26_SMOKE_SELECTION.md) preserves both smoke
 cases in the all-90 final cohort; it changes no settings or scoring.
+
+### Step 26 mm input-contract correction (2026-10-03)
+
+The official RE2-SS archive ships `logts.csv`. mmBARO/mmCIRCA nevertheless
+remain **n/a (outside pinned input contract)**: the chosen HF input contract
+does not include it or an audited raw-log conversion. This exclusion was
+committed before SS accuracy scoring in `68ade27`, based on the contract
+rather than results. No mm execution is authorized. The frozen scorer's
+"input unavailable" wording denotes contract availability only.
+[Corrected erratum](phase_a/re2ss/STEP26_MM_UNAVAILABLE_ERRATUM.md).
