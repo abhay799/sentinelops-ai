@@ -1,0 +1,87 @@
+{
+  "accuracy_computed": false,
+  "cases": [
+    {
+      "accuracy_computed": false,
+      "case_id": "re2ss_carts_cpu_1",
+      "filtered_ranking_lengths": {
+        "pagerank": 8,
+        "random": 8,
+        "threshold": 8,
+        "v1": 8,
+        "v2a": 8
+      },
+      "frozen_allowlist_present": [
+        "carts",
+        "catalogue",
+        "front-end",
+        "orders",
+        "payment",
+        "queue-master",
+        "shipping",
+        "user"
+      ],
+      "ground_truth_read_for_smoke": false,
+      "metric_service_count": 15,
+      "metric_shape": [
+        1441,
+        76
+      ],
+      "random_derived_seed": 17476937245311160501,
+      "static_topology_edge_count": 14,
+      "threshold_candidate_count": 15,
+      "v1_service_strength_count": 15,
+      "v2a_service_strength_count": 15,
+      "v2a_strengths_all_finite": true
+    },
+    {
+      "accuracy_computed": false,
+      "case_id": "re2ss_carts_cpu_2",
+      "filtered_ranking_lengths": {
+        "pagerank": 8,
+        "random": 8,
+        "threshold": 8,
+        "v1": 8,
+        "v2a": 8
+      },
+      "frozen_allowlist_present": [
+        "carts",
+        "catalogue",
+        "front-end",
+        "orders",
+        "payment",
+        "queue-master",
+        "shipping",
+        "user"
+      ],
+      "ground_truth_read_for_smoke": false,
+      "metric_service_count": 15,
+      "metric_shape": [
+        1441,
+        79
+      ],
+      "random_derived_seed": 13394885674838623429,
+      "static_topology_edge_count": 14,
+      "threshold_candidate_count": 15,
+      "v1_service_strength_count": 15,
+      "v2a_service_strength_count": 15,
+      "v2a_strengths_all_finite": true
+    }
+  ],
+  "ground_truth_read_for_smoke": false,
+  "mm_input_contract": {
+    "action": "do not invent held-out log preprocessing; record mmBARO/mmCIRCA as unavailable/hard-failed under the frozen input contract",
+    "official_pinned_raw_to_logts_transform_found": false,
+    "pinned_hf_case_files": [
+      "inject_time.txt",
+      "logs.parquet",
+      "metrics.parquet"
+    ],
+    "rcaeval_mm_required_preprocessed_input": "logts.csv"
+  },
+  "re2tt_accessed": false,
+  "settings_changed_from_smoke": false,
+  "smoke_case_count": 2,
+  "smoke_case_selection": "first two lexically sorted RE2-SS case IDs, frozen before outputs",
+  "status": "pass"
+}

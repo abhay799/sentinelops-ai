@@ -1,0 +1,48 @@
+{
+  "accuracy_computed": false,
+  "cases": [
+    {
+      "accuracy_computed": false,
+      "case_id": "re2ss_carts_cpu_1",
+      "fallback_detected": false,
+      "ground_truth_read_for_smoke": false,
+      "method": "baro",
+      "rank_count": 52,
+      "status": "ok",
+      "stderr": ""
+    },
+    {
+      "accuracy_computed": false,
+      "case_id": "re2ss_carts_cpu_1",
+      "fallback_detected": false,
+      "ground_truth_read_for_smoke": false,
+      "method": "circa",
+      "rank_count": 55,
+      "status": "ok",
+      "stderr": ""
+    },
+    {
+      "accuracy_computed": false,
+      "case_id": "re2ss_carts_cpu_2",
+      "fallback_detected": false,
+      "ground_truth_read_for_smoke": false,
+      "method": "baro",
+      "rank_count": 53,
+      "status": "ok",
+      "stderr": ""
+    },
+    {
+      "accuracy_computed": false,
+      "case_id": "re2ss_carts_cpu_2",
+      "fallback_detected": false,
+      "ground_truth_read_for_smoke": false,
+      "method": "circa",
+      "rank_count": 53,
+      "status": "ok",
+      "stderr": ""
+    }
+  ],
+  "ground_truth_read_for_smoke": false,
+  "settings_changed_from_smoke": false,
+  "status": "pass"
+}
