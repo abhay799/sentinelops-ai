@@ -1,0 +1,81 @@
+{
+  "candidate_count": 15,
+  "case_id": "re2ss_payment_loss_1",
+  "derived_seed": 11520631653280865819,
+  "e3_filtered_service_ranking": [
+    "orders",
+    "front-end",
+    "payment",
+    "queue-master",
+    "user",
+    "carts",
+    "catalogue",
+    "shipping"
+  ],
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "method": "random",
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "session-db"
+    },
+    {
+      "rank": 2,
+      "service": "orders"
+    },
+    {
+      "rank": 3,
+      "service": "front-end"
+    },
+    {
+      "rank": 4,
+      "service": "payment"
+    },
+    {
+      "rank": 5,
+      "service": "orders-db"
+    },
+    {
+      "rank": 6,
+      "service": "user-db"
+    },
+    {
+      "rank": 7,
+      "service": "queue-master"
+    },
+    {
+      "rank": 8,
+      "service": "user"
+    },
+    {
+      "rank": 9,
+      "service": "carts-db"
+    },
+    {
+      "rank": 10,
+      "service": "rabbitmq"
+    },
+    {
+      "rank": 11,
+      "service": "catalogue-db"
+    },
+    {
+      "rank": 12,
+      "service": "carts"
+    },
+    {
+      "rank": 13,
+      "service": "catalogue"
+    },
+    {
+      "rank": 14,
+      "service": "shipping"
+    },
+    {
+      "rank": 15,
+      "service": "rabbitmq-exporter"
+    }
+  ],
+  "status": "ok"
+}

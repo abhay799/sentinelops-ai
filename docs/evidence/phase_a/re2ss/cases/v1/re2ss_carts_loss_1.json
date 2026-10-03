@@ -1,0 +1,154 @@
+{
+  "candidate_count": 15,
+  "case_id": "re2ss_carts_loss_1",
+  "e3_filtered_service_ranking": [
+    "front-end",
+    "carts",
+    "catalogue",
+    "user",
+    "orders",
+    "shipping",
+    "payment",
+    "queue-master"
+  ],
+  "ground_truth_used_for_ranking": false,
+  "method": "v1",
+  "ranking": [
+    {
+      "anomaly_strength": 1.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 1.0,
+      "rank": 1,
+      "rca_score": 0.55,
+      "service": "front-end"
+    },
+    {
+      "anomaly_strength": 0.9693804970567886,
+      "change_signal": 0.0,
+      "graph_impact": 0.21428571428571427,
+      "primary_service_bonus": 0.0,
+      "rank": 2,
+      "rca_score": 0.479078,
+      "service": "carts-db"
+    },
+    {
+      "anomaly_strength": 0.9992950100146553,
+      "change_signal": 0.0,
+      "graph_impact": 0.14285714285714285,
+      "primary_service_bonus": 0.0,
+      "rank": 3,
+      "rca_score": 0.478254,
+      "service": "carts"
+    },
+    {
+      "anomaly_strength": 0.9410740384619781,
+      "change_signal": 0.0,
+      "graph_impact": 0.21428571428571427,
+      "primary_service_bonus": 0.0,
+      "rank": 4,
+      "rca_score": 0.46634,
+      "service": "user-db"
+    },
+    {
+      "anomaly_strength": 0.9648624525913944,
+      "change_signal": 0.0,
+      "graph_impact": 0.14285714285714285,
+      "primary_service_bonus": 0.0,
+      "rank": 5,
+      "rca_score": 0.46276,
+      "service": "orders-db"
+    },
+    {
+      "anomaly_strength": 0.9957894180621721,
+      "change_signal": 0.0,
+      "graph_impact": 0.07142857142857142,
+      "primary_service_bonus": 0.0,
+      "rank": 6,
+      "rca_score": 0.462391,
+      "service": "catalogue"
+    },
+    {
+      "anomaly_strength": 0.930413321505713,
+      "change_signal": 0.0,
+      "graph_impact": 0.14285714285714285,
+      "primary_service_bonus": 0.0,
+      "rank": 7,
+      "rca_score": 0.447257,
+      "service": "catalogue-db"
+    },
+    {
+      "anomaly_strength": 0.9222599165088644,
+      "change_signal": 0.0,
+      "graph_impact": 0.14285714285714285,
+      "primary_service_bonus": 0.0,
+      "rank": 8,
+      "rca_score": 0.443588,
+      "service": "user"
+    },
+    {
+      "anomaly_strength": 0.945731961474379,
+      "change_signal": 0.0,
+      "graph_impact": 0.07142857142857142,
+      "primary_service_bonus": 0.0,
+      "rank": 9,
+      "rca_score": 0.439865,
+      "service": "orders"
+    },
+    {
+      "anomaly_strength": 0.791405938902261,
+      "change_signal": 0.0,
+      "graph_impact": 0.2857142857142857,
+      "primary_service_bonus": 0.0,
+      "rank": 10,
+      "rca_score": 0.413276,
+      "service": "rabbitmq"
+    },
+    {
+      "anomaly_strength": 0.9007818436716685,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 11,
+      "rca_score": 0.405352,
+      "service": "rabbitmq-exporter"
+    },
+    {
+      "anomaly_strength": 0.8025470397107178,
+      "change_signal": 0.0,
+      "graph_impact": 0.14285714285714285,
+      "primary_service_bonus": 0.0,
+      "rank": 12,
+      "rca_score": 0.389718,
+      "service": "shipping"
+    },
+    {
+      "anomaly_strength": 0.7780474822707549,
+      "change_signal": 0.0,
+      "graph_impact": 0.14285714285714285,
+      "primary_service_bonus": 0.0,
+      "rank": 13,
+      "rca_score": 0.378693,
+      "service": "payment"
+    },
+    {
+      "anomaly_strength": 0.8263399582715993,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 14,
+      "rca_score": 0.371853,
+      "service": "session-db"
+    },
+    {
+      "anomaly_strength": 0.825508325256079,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 15,
+      "rca_score": 0.371479,
+      "service": "queue-master"
+    }
+  ],
+  "status": "ok"
+}

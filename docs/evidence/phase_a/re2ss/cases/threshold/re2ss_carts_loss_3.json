@@ -1,0 +1,94 @@
+{
+  "candidate_count": 15,
+  "case_id": "re2ss_carts_loss_3",
+  "e3_filtered_service_ranking": [
+    "carts",
+    "orders",
+    "front-end",
+    "catalogue",
+    "shipping",
+    "user",
+    "queue-master",
+    "payment"
+  ],
+  "ground_truth_used_for_ranking": false,
+  "method": "threshold",
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 7669.231928560072,
+      "service": "carts"
+    },
+    {
+      "rank": 2,
+      "score": 4171.274047563344,
+      "service": "orders"
+    },
+    {
+      "rank": 3,
+      "score": 582.2801159196425,
+      "service": "front-end"
+    },
+    {
+      "rank": 4,
+      "score": 51.36686944872407,
+      "service": "rabbitmq"
+    },
+    {
+      "rank": 5,
+      "score": 21.105331113955945,
+      "service": "orders-db"
+    },
+    {
+      "rank": 6,
+      "score": 20.171835707740495,
+      "service": "catalogue"
+    },
+    {
+      "rank": 7,
+      "score": 18.800757896145942,
+      "service": "carts-db"
+    },
+    {
+      "rank": 8,
+      "score": 14.149010645519686,
+      "service": "shipping"
+    },
+    {
+      "rank": 9,
+      "score": 12.165970114382896,
+      "service": "user"
+    },
+    {
+      "rank": 10,
+      "score": 9.567020150993569,
+      "service": "user-db"
+    },
+    {
+      "rank": 11,
+      "score": 9.472080657587446,
+      "service": "queue-master"
+    },
+    {
+      "rank": 12,
+      "score": 7.563753492797812,
+      "service": "payment"
+    },
+    {
+      "rank": 13,
+      "score": 5.475922474459551,
+      "service": "session-db"
+    },
+    {
+      "rank": 14,
+      "score": 4.7577172734045865,
+      "service": "catalogue-db"
+    },
+    {
+      "rank": 15,
+      "score": 2.484646110302214,
+      "service": "rabbitmq-exporter"
+    }
+  ],
+  "status": "ok"
+}

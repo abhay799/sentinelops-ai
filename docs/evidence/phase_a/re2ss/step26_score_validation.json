@@ -1,0 +1,32 @@
+{
+  "active_workers": [],
+  "case_artifacts_unchanged_from_prescore_gate": 630,
+  "catalog_access": "eager shared cases.parquet load; only RE2-SS rows selected for labels and scoring; no TT raw case files or TT rankings/results opened",
+  "checked_numeric_values_or_intervals": 925,
+  "fallback_case_ids": {
+    "baro": [],
+    "circa": [
+      "re2ss_orders_delay_1"
+    ],
+    "pagerank": [],
+    "random": [],
+    "threshold": [],
+    "v1": [],
+    "v2a": []
+  },
+  "independent_method": "derive true-service positions from saved rankings, convert ranks to hit indicators; count shared bootstrap samples into case weights and compute weighted means",
+  "limitations": [
+    "Frozen scorer exports overall paired differences; per-fault exports contain individual-method CIs, not per-fault paired differences.",
+    "OB 81 exact / 7 null-versus-NaN comparison was supplied for documentation, not recomputed in this cleanup.",
+    "No input-substitution CIRCA rerun or causal diagnosis of the OB row-count mismatch was performed."
+  ],
+  "mm_methods_excluded_not_misses": true,
+  "overall_metrics_and_ci95_verified": true,
+  "paired_overall_ci95_verified": true,
+  "per_fault_metrics_and_individual_ci95_verified": true,
+  "re2tt_raw_case_accessed": false,
+  "status": "pass",
+  "v2a_strength_distribution_verified": true,
+  "valid_only_ci95_verified": true,
+  "verified_at_utc": "2026-10-03T13:32:36.156456+00:00"
+}

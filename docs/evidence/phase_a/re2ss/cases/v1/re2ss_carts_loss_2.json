@@ -1,0 +1,163 @@
+{
+  "candidate_count": 16,
+  "case_id": "re2ss_carts_loss_2",
+  "e3_filtered_service_ranking": [
+    "orders",
+    "carts",
+    "front-end",
+    "catalogue",
+    "user",
+    "payment",
+    "shipping",
+    "queue-master"
+  ],
+  "ground_truth_used_for_ranking": false,
+  "method": "v1",
+  "ranking": [
+    {
+      "anomaly_strength": 1.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 1.0,
+      "rank": 1,
+      "rca_score": 0.576667,
+      "service": "orders-db"
+    },
+    {
+      "anomaly_strength": 1.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 2,
+      "rca_score": 0.476667,
+      "service": "catalogue-db"
+    },
+    {
+      "anomaly_strength": 0.9887486324211854,
+      "change_signal": 0.0,
+      "graph_impact": 0.06666666666666667,
+      "primary_service_bonus": 0.0,
+      "rank": 3,
+      "rca_score": 0.45827,
+      "service": "orders"
+    },
+    {
+      "anomaly_strength": 0.9585870734660272,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 4,
+      "rca_score": 0.458031,
+      "service": "carts"
+    },
+    {
+      "anomaly_strength": 1.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 5,
+      "rca_score": 0.45,
+      "service": "front-end"
+    },
+    {
+      "anomaly_strength": 0.89829499807256,
+      "change_signal": 0.0,
+      "graph_impact": 0.2,
+      "primary_service_bonus": 0.0,
+      "rank": 6,
+      "rca_score": 0.444233,
+      "service": "carts-db"
+    },
+    {
+      "anomaly_strength": 0.9762527265758584,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 7,
+      "rca_score": 0.439314,
+      "service": "rabbitmq-exporter"
+    },
+    {
+      "anomaly_strength": 0.9585535893369452,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 8,
+      "rca_score": 0.431349,
+      "service": "session-db"
+    },
+    {
+      "anomaly_strength": 0.8249656622659273,
+      "change_signal": 0.0,
+      "graph_impact": 0.26666666666666666,
+      "primary_service_bonus": 0.0,
+      "rank": 9,
+      "rca_score": 0.424568,
+      "service": "rabbitmq"
+    },
+    {
+      "anomaly_strength": 0.9129212661463139,
+      "change_signal": 0.0,
+      "graph_impact": 0.06666666666666667,
+      "primary_service_bonus": 0.0,
+      "rank": 10,
+      "rca_score": 0.424148,
+      "service": "catalogue"
+    },
+    {
+      "anomaly_strength": 0.8295703651714189,
+      "change_signal": 0.0,
+      "graph_impact": 0.2,
+      "primary_service_bonus": 0.0,
+      "rank": 11,
+      "rca_score": 0.413307,
+      "service": "user-db"
+    },
+    {
+      "anomaly_strength": 0.8068205616815806,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 12,
+      "rca_score": 0.389736,
+      "service": "user"
+    },
+    {
+      "anomaly_strength": 0.7731636127740745,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 13,
+      "rca_score": 0.37459,
+      "service": "payment"
+    },
+    {
+      "anomaly_strength": 0.6495139138053954,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 14,
+      "rca_score": 0.318948,
+      "service": "shipping"
+    },
+    {
+      "anomaly_strength": 0.4753748483028539,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 15,
+      "rca_score": 0.213919,
+      "service": "queue-master"
+    },
+    {
+      "anomaly_strength": 0.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 16,
+      "rca_score": 0.0,
+      "service": "istio-init"
+    }
+  ],
+  "status": "ok"
+}

@@ -1,0 +1,171 @@
+{
+  "candidate_count": 15,
+  "case_id": "re2ss_carts_delay_1",
+  "e3_filtered_service_ranking": [
+    "orders",
+    "carts",
+    "front-end",
+    "user",
+    "payment",
+    "queue-master",
+    "shipping",
+    "catalogue"
+  ],
+  "ground_truth_used_for_ranking": false,
+  "method": "v2a",
+  "ranking": [
+    {
+      "anomaly_strength": 279.7148746513642,
+      "change_signal": 0.0,
+      "graph_impact": 0.07142857142857142,
+      "primary_service_bonus": 1.0,
+      "rank": 1,
+      "rca_score": 125.985979,
+      "service": "orders"
+    },
+    {
+      "anomaly_strength": 135.20273974248863,
+      "change_signal": 0.0,
+      "graph_impact": 0.14285714285714285,
+      "primary_service_bonus": 0.0,
+      "rank": 2,
+      "rca_score": 60.869804,
+      "service": "carts"
+    },
+    {
+      "anomaly_strength": 84.59341495440206,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 3,
+      "rca_score": 38.067037,
+      "service": "front-end"
+    },
+    {
+      "anomaly_strength": 6.62984855895603,
+      "change_signal": 0.0,
+      "graph_impact": 0.14285714285714285,
+      "primary_service_bonus": 0.0,
+      "rank": 4,
+      "rca_score": 3.012003,
+      "service": "orders-db"
+    },
+    {
+      "anomaly_strength": 1.9867583179025023,
+      "change_signal": 0.0,
+      "graph_impact": 0.2857142857142857,
+      "primary_service_bonus": 0.0,
+      "rank": 5,
+      "rca_score": 0.951184,
+      "service": "rabbitmq"
+    },
+    {
+      "anomaly_strength": 1.8126200817068299,
+      "change_signal": 0.0,
+      "graph_impact": 0.21428571428571427,
+      "primary_service_bonus": 0.0,
+      "rank": 6,
+      "rca_score": 0.858536,
+      "service": "carts-db"
+    },
+    {
+      "anomaly_strength": 1.7936927972219878,
+      "change_signal": 0.0,
+      "graph_impact": 0.14285714285714285,
+      "primary_service_bonus": 0.0,
+      "rank": 7,
+      "rca_score": 0.835733,
+      "service": "user"
+    },
+    {
+      "anomaly_strength": 1.4093773644366678,
+      "change_signal": 0.0,
+      "graph_impact": 0.14285714285714285,
+      "primary_service_bonus": 0.0,
+      "rank": 8,
+      "rca_score": 0.662791,
+      "service": "payment"
+    },
+    {
+      "anomaly_strength": 1.3511845088809122,
+      "change_signal": 0.0,
+      "graph_impact": 0.21428571428571427,
+      "primary_service_bonus": 0.0,
+      "rank": 9,
+      "rca_score": 0.65089,
+      "service": "user-db"
+    },
+    {
+      "anomaly_strength": 1.1974855684058372,
+      "change_signal": 0.0,
+      "graph_impact": 0.14285714285714285,
+      "primary_service_bonus": 0.0,
+      "rank": 10,
+      "rca_score": 0.56744,
+      "service": "catalogue-db"
+    },
+    {
+      "anomaly_strength": 1.1063804865814226,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 11,
+      "rca_score": 0.497871,
+      "service": "queue-master"
+    },
+    {
+      "anomaly_strength": 0.8366929229054012,
+      "change_signal": 0.0,
+      "graph_impact": 0.14285714285714285,
+      "primary_service_bonus": 0.0,
+      "rank": 12,
+      "rca_score": 0.405083,
+      "service": "shipping"
+    },
+    {
+      "anomaly_strength": 0.8450707225388495,
+      "change_signal": 0.0,
+      "graph_impact": 0.07142857142857142,
+      "primary_service_bonus": 0.0,
+      "rank": 13,
+      "rca_score": 0.394568,
+      "service": "catalogue"
+    },
+    {
+      "anomaly_strength": 0.8147732675994583,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 14,
+      "rca_score": 0.366648,
+      "service": "rabbitmq-exporter"
+    },
+    {
+      "anomaly_strength": 0.7838846767042652,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 15,
+      "rca_score": 0.352748,
+      "service": "session-db"
+    }
+  ],
+  "status": "ok",
+  "unclipped_strengths": {
+    "carts": 135.20273974248863,
+    "carts-db": 1.8126200817068299,
+    "catalogue": 0.8450707225388495,
+    "catalogue-db": 1.1974855684058372,
+    "front-end": 84.59341495440206,
+    "orders": 279.7148746513642,
+    "orders-db": 6.62984855895603,
+    "payment": 1.4093773644366678,
+    "queue-master": 1.1063804865814226,
+    "rabbitmq": 1.9867583179025023,
+    "rabbitmq-exporter": 0.8147732675994583,
+    "session-db": 0.7838846767042652,
+    "shipping": 0.8366929229054012,
+    "user": 1.7936927972219878,
+    "user-db": 1.3511845088809122
+  }
+}

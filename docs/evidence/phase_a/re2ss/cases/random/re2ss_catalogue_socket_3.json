@@ -1,0 +1,81 @@
+{
+  "candidate_count": 15,
+  "case_id": "re2ss_catalogue_socket_3",
+  "derived_seed": 11713207880948197408,
+  "e3_filtered_service_ranking": [
+    "front-end",
+    "catalogue",
+    "payment",
+    "orders",
+    "queue-master",
+    "shipping",
+    "carts",
+    "user"
+  ],
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "method": "random",
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "carts-db"
+    },
+    {
+      "rank": 2,
+      "service": "orders-db"
+    },
+    {
+      "rank": 3,
+      "service": "front-end"
+    },
+    {
+      "rank": 4,
+      "service": "catalogue"
+    },
+    {
+      "rank": 5,
+      "service": "rabbitmq"
+    },
+    {
+      "rank": 6,
+      "service": "catalogue-db"
+    },
+    {
+      "rank": 7,
+      "service": "payment"
+    },
+    {
+      "rank": 8,
+      "service": "orders"
+    },
+    {
+      "rank": 9,
+      "service": "queue-master"
+    },
+    {
+      "rank": 10,
+      "service": "shipping"
+    },
+    {
+      "rank": 11,
+      "service": "user-db"
+    },
+    {
+      "rank": 12,
+      "service": "session-db"
+    },
+    {
+      "rank": 13,
+      "service": "rabbitmq-exporter"
+    },
+    {
+      "rank": 14,
+      "service": "carts"
+    },
+    {
+      "rank": 15,
+      "service": "user"
+    }
+  ],
+  "status": "ok"
+}

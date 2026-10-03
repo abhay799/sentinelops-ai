@@ -1,0 +1,81 @@
+{
+  "candidate_count": 15,
+  "case_id": "re2ss_user_loss_2",
+  "derived_seed": 8681711670795923960,
+  "e3_filtered_service_ranking": [
+    "payment",
+    "front-end",
+    "orders",
+    "catalogue",
+    "carts",
+    "user",
+    "queue-master",
+    "shipping"
+  ],
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "method": "random",
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "orders-db"
+    },
+    {
+      "rank": 2,
+      "service": "rabbitmq-exporter"
+    },
+    {
+      "rank": 3,
+      "service": "payment"
+    },
+    {
+      "rank": 4,
+      "service": "front-end"
+    },
+    {
+      "rank": 5,
+      "service": "carts-db"
+    },
+    {
+      "rank": 6,
+      "service": "user-db"
+    },
+    {
+      "rank": 7,
+      "service": "orders"
+    },
+    {
+      "rank": 8,
+      "service": "session-db"
+    },
+    {
+      "rank": 9,
+      "service": "catalogue"
+    },
+    {
+      "rank": 10,
+      "service": "carts"
+    },
+    {
+      "rank": 11,
+      "service": "user"
+    },
+    {
+      "rank": 12,
+      "service": "rabbitmq"
+    },
+    {
+      "rank": 13,
+      "service": "queue-master"
+    },
+    {
+      "rank": 14,
+      "service": "catalogue-db"
+    },
+    {
+      "rank": 15,
+      "service": "shipping"
+    }
+  ],
+  "status": "ok"
+}

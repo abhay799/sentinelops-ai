@@ -1,0 +1,85 @@
+{
+  "candidate_count": 16,
+  "case_id": "re2ss_carts_loss_2",
+  "derived_seed": 13960508426671438254,
+  "e3_filtered_service_ranking": [
+    "front-end",
+    "catalogue",
+    "orders",
+    "carts",
+    "queue-master",
+    "shipping",
+    "payment",
+    "user"
+  ],
+  "ground_truth_used_for_ranking": false,
+  "master_seed": 42,
+  "method": "random",
+  "ranking": [
+    {
+      "rank": 1,
+      "service": "front-end"
+    },
+    {
+      "rank": 2,
+      "service": "istio-init"
+    },
+    {
+      "rank": 3,
+      "service": "orders-db"
+    },
+    {
+      "rank": 4,
+      "service": "catalogue"
+    },
+    {
+      "rank": 5,
+      "service": "rabbitmq-exporter"
+    },
+    {
+      "rank": 6,
+      "service": "orders"
+    },
+    {
+      "rank": 7,
+      "service": "carts"
+    },
+    {
+      "rank": 8,
+      "service": "queue-master"
+    },
+    {
+      "rank": 9,
+      "service": "carts-db"
+    },
+    {
+      "rank": 10,
+      "service": "rabbitmq"
+    },
+    {
+      "rank": 11,
+      "service": "shipping"
+    },
+    {
+      "rank": 12,
+      "service": "payment"
+    },
+    {
+      "rank": 13,
+      "service": "user"
+    },
+    {
+      "rank": 14,
+      "service": "catalogue-db"
+    },
+    {
+      "rank": 15,
+      "service": "user-db"
+    },
+    {
+      "rank": 16,
+      "service": "session-db"
+    }
+  ],
+  "status": "ok"
+}

@@ -1,0 +1,163 @@
+{
+  "candidate_count": 16,
+  "case_id": "re2ss_user_socket_3",
+  "e3_filtered_service_ranking": [
+    "payment",
+    "user",
+    "orders",
+    "front-end",
+    "shipping",
+    "catalogue",
+    "carts",
+    "queue-master"
+  ],
+  "ground_truth_used_for_ranking": false,
+  "method": "v1",
+  "ranking": [
+    {
+      "anomaly_strength": 1.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.2,
+      "primary_service_bonus": 1.0,
+      "rank": 1,
+      "rca_score": 0.59,
+      "service": "user-db"
+    },
+    {
+      "anomaly_strength": 1.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 2,
+      "rca_score": 0.476667,
+      "service": "orders-db"
+    },
+    {
+      "anomaly_strength": 1.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 3,
+      "rca_score": 0.476667,
+      "service": "payment"
+    },
+    {
+      "anomaly_strength": 0.9905734131022529,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 4,
+      "rca_score": 0.472425,
+      "service": "user"
+    },
+    {
+      "anomaly_strength": 0.9833259176555665,
+      "change_signal": 0.0,
+      "graph_impact": 0.06666666666666667,
+      "primary_service_bonus": 0.0,
+      "rank": 5,
+      "rca_score": 0.45583,
+      "service": "orders"
+    },
+    {
+      "anomaly_strength": 0.9177245703733301,
+      "change_signal": 0.0,
+      "graph_impact": 0.2,
+      "primary_service_bonus": 0.0,
+      "rank": 6,
+      "rca_score": 0.452976,
+      "service": "carts-db"
+    },
+    {
+      "anomaly_strength": 1.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 7,
+      "rca_score": 0.45,
+      "service": "front-end"
+    },
+    {
+      "anomaly_strength": 0.9090260266655347,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 8,
+      "rca_score": 0.435728,
+      "service": "shipping"
+    },
+    {
+      "anomaly_strength": 0.8900525185720164,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 9,
+      "rca_score": 0.42719,
+      "service": "catalogue-db"
+    },
+    {
+      "anomaly_strength": 0.7680281097191202,
+      "change_signal": 0.0,
+      "graph_impact": 0.26666666666666666,
+      "primary_service_bonus": 0.0,
+      "rank": 10,
+      "rca_score": 0.398946,
+      "service": "rabbitmq"
+    },
+    {
+      "anomaly_strength": 0.8112524381733784,
+      "change_signal": 0.0,
+      "graph_impact": 0.06666666666666667,
+      "primary_service_bonus": 0.0,
+      "rank": 11,
+      "rca_score": 0.378397,
+      "service": "catalogue"
+    },
+    {
+      "anomaly_strength": 0.8283686922004242,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 12,
+      "rca_score": 0.372766,
+      "service": "session-db"
+    },
+    {
+      "anomaly_strength": 0.7192405998753015,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 13,
+      "rca_score": 0.323658,
+      "service": "rabbitmq-exporter"
+    },
+    {
+      "anomaly_strength": 0.45583191414279706,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 14,
+      "rca_score": 0.231791,
+      "service": "carts"
+    },
+    {
+      "anomaly_strength": 0.4437153755736954,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 15,
+      "rca_score": 0.199672,
+      "service": "queue-master"
+    },
+    {
+      "anomaly_strength": 0.0,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 16,
+      "rca_score": 0.0,
+      "service": "istio-init"
+    }
+  ],
+  "status": "ok"
+}
