@@ -1,0 +1,170 @@
+{
+  "candidate_count": 12,
+  "case_id": "re2ob_checkoutservice_socket_3",
+  "clipped_v1_strengths": {
+    "adservice": 0.8722868863875671,
+    "cartservice": 0.5994831929738424,
+    "checkoutservice": 1.0,
+    "currencyservice": 0.8796452243566625,
+    "emailservice": 1.0,
+    "frontend": 1.0,
+    "frontend-external": 0.7515633535259748,
+    "paymentservice": 0.9979242062321926,
+    "productcatalogservice": 0.9697839498029053,
+    "recommendationservice": 0.8749004720997405,
+    "redis": 0.7964636923023513,
+    "shippingservice": 0.9347564765631174
+  },
+  "e3_filtered_service_ranking": [
+    "checkoutservice",
+    "emailservice",
+    "paymentservice",
+    "currencyservice",
+    "frontend",
+    "productcatalogservice",
+    "shippingservice",
+    "recommendationservice",
+    "adservice",
+    "redis",
+    "cartservice"
+  ],
+  "ground_truth_used_for_ranking": false,
+  "primary_service": "checkoutservice",
+  "ranking": [
+    {
+      "anomaly_strength": 46.942733561034196,
+      "change_signal": 0.0,
+      "graph_impact": 0.06666666666666667,
+      "primary_service_bonus": 1.0,
+      "rank": 1,
+      "rca_score": 21.237563,
+      "service": "checkoutservice"
+    },
+    {
+      "anomaly_strength": 13.369178856850128,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 2,
+      "rca_score": 6.042797,
+      "service": "emailservice"
+    },
+    {
+      "anomaly_strength": 2.212062489118383,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 3,
+      "rca_score": 1.022095,
+      "service": "paymentservice"
+    },
+    {
+      "anomaly_strength": 1.1285720112703055,
+      "change_signal": 0.0,
+      "graph_impact": 0.13333333333333333,
+      "primary_service_bonus": 0.0,
+      "rank": 4,
+      "rca_score": 0.534524,
+      "service": "currencyservice"
+    },
+    {
+      "anomaly_strength": 1.1698845064056762,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 5,
+      "rca_score": 0.526448,
+      "service": "frontend"
+    },
+    {
+      "anomaly_strength": 1.018386868570546,
+      "change_signal": 0.0,
+      "graph_impact": 0.2,
+      "primary_service_bonus": 0.0,
+      "rank": 6,
+      "rca_score": 0.498274,
+      "service": "productcatalogservice"
+    },
+    {
+      "anomaly_strength": 1.1030563589961158,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 7,
+      "rca_score": 0.496375,
+      "service": "shippingservice"
+    },
+    {
+      "anomaly_strength": 0.9113504150413757,
+      "change_signal": 0.0,
+      "graph_impact": 0.06666666666666667,
+      "primary_service_bonus": 0.0,
+      "rank": 8,
+      "rca_score": 0.423441,
+      "service": "recommendationservice"
+    },
+    {
+      "anomaly_strength": 0.872703187251204,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 9,
+      "rca_score": 0.392716,
+      "service": "adservice"
+    },
+    {
+      "anomaly_strength": 0.7964636923023513,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 10,
+      "rca_score": 0.358409,
+      "service": "redis"
+    },
+    {
+      "anomaly_strength": 0.7515633535259748,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 11,
+      "rca_score": 0.338204,
+      "service": "frontend-external"
+    },
+    {
+      "anomaly_strength": 0.5994831929738424,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 12,
+      "rca_score": 0.269767,
+      "service": "cartservice"
+    }
+  ],
+  "runtime_seconds": 17.019994373000372,
+  "status": "ok",
+  "top_tie_count": 1,
+  "top_tied_services": [
+    "checkoutservice"
+  ],
+  "unclipped_strengths": {
+    "adservice": 0.872703187251204,
+    "cartservice": 0.5994831929738424,
+    "checkoutservice": 46.942733561034196,
+    "currencyservice": 1.1285720112703055,
+    "emailservice": 13.369178856850128,
+    "frontend": 1.1698845064056762,
+    "frontend-external": 0.7515633535259748,
+    "paymentservice": 2.212062489118383,
+    "productcatalogservice": 1.018386868570546,
+    "recommendationservice": 0.9113504150413757,
+    "redis": 0.7964636923023513,
+    "shippingservice": 1.1030563589961158
+  },
+  "v1_clipped_primary_group": [
+    "checkoutservice",
+    "emailservice",
+    "frontend"
+  ],
+  "v1_clipped_primary_group_count": 3,
+  "variant": "v2b"
+}
