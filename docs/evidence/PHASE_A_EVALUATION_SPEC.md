@@ -949,3 +949,18 @@ weights, tie-breaking, candidate sets, detector settings, seeds, bootstrap
 resamples, fallback treatment, or denominators. No significance claim is added.
 RE2-SS and RE2-TT remain held out and untouched. See
 `phase_a/re2ob/E8_POST_SCORING_DIAGNOSTICS.md`. Never push.
+
+
+## Erratum E9 - native baseline provenance correction (2026-10-03)
+
+**Status: POST-HOC PROVENANCE CORRECTION.**
+Earlier wording that could imply only random-baseline scoring had been observed
+before E5 is corrected. Native aggregate RCAEval BARO and mmBARO scoring logs
+predate E5: `logs/step20_native_baro.log` has mtime
+`2026-10-02T18:41:30.282246038Z`, and `logs/step20_native_mmbaro.log` has mtime
+`2026-10-02T18:43:50.814244744Z`; E5 commit `fdd5d74` was created at
+`2026-10-02T18:46:14Z`. The narrower claim remains: no committed Phase A
+Step 21-24 non-random AC@k artifact was found before E5, while random AC@k and
+its multi-seed diagnostic had been observed. E9 changes provenance wording
+only; no evaluation output or rule changes. See
+`phase_a/re2ob/E9_NATIVE_BASELINE_PROVENANCE_CORRECTION.md`.
