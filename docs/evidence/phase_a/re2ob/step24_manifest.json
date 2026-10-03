@@ -1,0 +1,1908 @@
+{
+  "artifact_sha256": {
+    "docs/evidence/phase_a/re2ob/STEP25_RE2OB_RESULTS.md": "5ce9b6951631045e0041ecdf2d51091913a813e5f119166a9d76c5d57806cd4c",
+    "docs/evidence/phase_a/re2ob/step21_cases.json": "5e25f2e2ac42e5d1e673bcdffe36aa11645f8c0391d72119a41b6511b54a6d0f",
+    "docs/evidence/phase_a/re2ob/step21_overall.json": "e5e2ae38a453b50547f5ddbd93a43de6b20ac239ec23049235645a2740b87d2f",
+    "docs/evidence/phase_a/re2ob/step22_per_fault.json": "483ef86156f8662321dd34afdd4310574c499a38fb95cf63afcbfde442114004",
+    "docs/evidence/phase_a/re2ob/step23_uncertainty.json": "5d16e29b9a2d2a8c5b2b5e0cc8f846abb5af44d0768fdcca65b798b73a6d1e6e",
+    "docs/evidence/phase_a/re2ob/step24_metrics.csv": "00f4e3c252e9d9d05518d4aa320b78fabc907b167f61a80a9cb99368cc5897e5",
+    "docs/evidence/phase_a/re2ob/step24_paired_differences.csv": "769190b38ca04b798bfbca1b5499c9c20746ff38d9c6ea627dfe77658d193413",
+    "docs/evidence/phase_a/re2ob/step24_random_diagnostic.csv": "8d1ffd059ba5a6166ad39bf90a3c012381e82abc90f4469ca7d6d388dba6b936",
+    "docs/evidence/phase_a/re2ob/step24_raw_service_rankings.csv": "3d2648cbe532b5846de41e7f526c71eee9df97dfa0c0c1772b2eb5eff8e579b0"
+  },
+  "coverage": {
+    "BARO": {
+      "case_count": 90,
+      "failed": 0,
+      "fallback_unranked": 0,
+      "valid": 90
+    },
+    "CIRCA": {
+      "case_count": 90,
+      "failed": 0,
+      "fallback_unranked": 4,
+      "valid": 86
+    },
+    "PageRank": {
+      "case_count": 90,
+      "failed": 0,
+      "fallback_unranked": 0,
+      "valid": 90
+    },
+    "SentinelOps": {
+      "case_count": 90,
+      "failed": 0,
+      "fallback_unranked": 0,
+      "valid": 90
+    },
+    "mmBARO": {
+      "case_count": 90,
+      "failed": 0,
+      "fallback_unranked": 0,
+      "valid": 90
+    },
+    "mmCIRCA": {
+      "case_count": 90,
+      "failed": 0,
+      "fallback_unranked": 1,
+      "valid": 89
+    },
+    "random": {
+      "case_count": 90,
+      "failed": 0,
+      "fallback_unranked": 0,
+      "valid": 90
+    },
+    "threshold": {
+      "case_count": 90,
+      "failed": 0,
+      "fallback_unranked": 0,
+      "valid": 90
+    }
+  },
+  "exports": {
+    "csv_metric_rows": 1792,
+    "csv_paired_rows": 294,
+    "csv_rank_rows": 20741,
+    "random_seed42_and_diagnostic": [
+      {
+        "analytical_chance": 0.09090909090909091,
+        "diagnostic_SD": 0.029836976781421068,
+        "diagnostic_SE": 0.0009435280512285047,
+        "diagnostic_mean": 0.09016666666666666,
+        "diagnostic_seed_count": 1000,
+        "metric": "AC@1",
+        "reported_seed": 42,
+        "seed42_AC": 0.03333333333333333
+      },
+      {
+        "analytical_chance": 0.2727272727272727,
+        "diagnostic_SD": 0.04712251211928735,
+        "diagnostic_SE": 0.001490144673658361,
+        "diagnostic_mean": 0.27024444444444445,
+        "diagnostic_seed_count": 1000,
+        "metric": "AC@3",
+        "reported_seed": 42,
+        "seed42_AC": 0.16666666666666666
+      },
+      {
+        "analytical_chance": 0.45454545454545453,
+        "diagnostic_SD": 0.05341048436715549,
+        "diagnostic_SE": 0.0016889878153302825,
+        "diagnostic_mean": 0.45422222222222225,
+        "diagnostic_seed_count": 1000,
+        "metric": "AC@5",
+        "reported_seed": 42,
+        "seed42_AC": 0.4222222222222222
+      }
+    ]
+  },
+  "held_out_suites_accessed": false,
+  "method_runtimes_seconds": {
+    "BARO": 37.52655032799976,
+    "CIRCA": 1830.732273398,
+    "PageRank": 0.5438751209999282,
+    "SentinelOps": 0.44714159699924494,
+    "mmBARO": 61.68102864000048,
+    "mmCIRCA": 894.1959427679999,
+    "random": 0.14068685200004438,
+    "threshold": 1.9193136789999699
+  },
+  "provenance": {
+    "a4": {
+      "edges": [
+        [
+          "frontend",
+          "productcatalogservice"
+        ],
+        [
+          "frontend",
+          "currencyservice"
+        ],
+        [
+          "frontend",
+          "cartservice"
+        ],
+        [
+          "frontend",
+          "recommendationservice"
+        ],
+        [
+          "frontend",
+          "shippingservice"
+        ],
+        [
+          "frontend",
+          "checkoutservice"
+        ],
+        [
+          "frontend",
+          "adservice"
+        ],
+        [
+          "checkoutservice",
+          "productcatalogservice"
+        ],
+        [
+          "checkoutservice",
+          "shippingservice"
+        ],
+        [
+          "checkoutservice",
+          "paymentservice"
+        ],
+        [
+          "checkoutservice",
+          "emailservice"
+        ],
+        [
+          "checkoutservice",
+          "currencyservice"
+        ],
+        [
+          "checkoutservice",
+          "cartservice"
+        ],
+        [
+          "recommendationservice",
+          "productcatalogservice"
+        ],
+        [
+          "cartservice",
+          "redis"
+        ]
+      ],
+      "excluded_native_graph_impact": 0.0,
+      "graph_direction": "caller -> dependency",
+      "label": "POST-HOC static-topology sensitivity",
+      "nodes": [
+        "adservice",
+        "cartservice",
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontend",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice",
+        "redis",
+        "shippingservice"
+      ],
+      "original_primary_bonus_preserved": true,
+      "pagerank_damping": 0.85,
+      "source_path": "release/kubernetes-manifests.yaml",
+      "source_revision": "38e7348eb289eb5b87c0c6e8cb19ced0449dc389"
+    },
+    "bootstrap": {
+      "case_order": "lexical",
+      "ci": 0.95,
+      "cluster": "case",
+      "method": "percentile",
+      "quantile_interpolation": "linear",
+      "resamples": 10000,
+      "rng": "numpy.random.default_rng(42)"
+    },
+    "candidate_policy": {
+      "allowlist": [
+        "adservice",
+        "cartservice",
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontend",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice",
+        "redis",
+        "shippingservice"
+      ],
+      "fallback_counts_as_miss": true,
+      "filter_before_top_k": true,
+      "primary_denominator": 90
+    },
+    "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "exact_command": ".venv/bin/python scripts/phase_a_steps21_24.py --step 24",
+    "executed_at_utc": "2026-10-03T08:01:03.534145+00:00",
+    "metric_definitions": {
+      "Avg@5": "mean AC@1..AC@5",
+      "Chance@5": "5/11",
+      "Lift@5": "AC@5/Chance@5"
+    },
+    "python": "3.12.14",
+    "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+    "runtime_seconds": 0.22356870400017215,
+    "seeds": {
+      "bootstrap": 42,
+      "reported_random": 42
+    },
+    "sentinelops_commit": "dc3616a86726e71a775e34b8c33e29b2843cf87d",
+    "source_run_summaries": {
+      "step15_detection_summary.json": {
+        "always_alert_baseline": {
+          "note": "Always predicts alert in both normal and fault windows.",
+          "timestamp_confusion": {
+            "fn": 0,
+            "fp": 32400,
+            "tn": 0,
+            "tp": 63942
+          },
+          "timestamp_metrics": {
+            "f1": 0.7978588006288838,
+            "precision": 0.6636980756056549,
+            "recall": 1.0
+          },
+          "window_confusion": {
+            "fn": 0,
+            "fp": 90,
+            "tn": 0,
+            "tp": 90
+          },
+          "window_metrics": {
+            "f1": 0.6666666666666666,
+            "precision": 0.5,
+            "recall": 1.0
+          }
+        },
+        "bootstrap_resamples": 10000,
+        "case_count_expected": 90,
+        "case_count_failed": 0,
+        "case_count_ok": 90,
+        "dataset": "RE2-OB",
+        "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+        "exact_command": "python scripts/phase_a_step15_detection.py --workers 4",
+        "execution_date": "2026-10-02",
+        "failed_cases": [],
+        "notes": [
+          "Calibration rows excluded from detection metrics.",
+          "Window ROC-AUC/PR-AUC use max system continuous anomaly score per normal/fault window.",
+          "No tuning or threshold changes were performed."
+        ],
+        "per_fault": {
+          "cpu": {
+            "bootstrap_95_ci": {
+              "detection_rate": [
+                1.0,
+                1.0
+              ],
+              "median_delay_seconds": [
+                0.0,
+                0.0
+              ],
+              "timestamp_f1": [
+                0.7838864730219953,
+                0.8171224630200498
+              ],
+              "timestamp_precision": [
+                0.6450243035639228,
+                0.6915836219818773
+              ],
+              "timestamp_recall": [
+                0.9971855590062112,
+                1.0
+              ],
+              "window_f1": [
+                0.6666666666666666,
+                0.6666666666666666
+              ],
+              "window_pr_auc": [
+                0.5184333759046402,
+                0.6818181818181818
+              ],
+              "window_precision": [
+                0.5,
+                0.5
+              ],
+              "window_recall": [
+                1.0,
+                1.0
+              ],
+              "window_roc_auc": [
+                0.5333333333333333,
+                0.7666666666666667
+              ]
+            },
+            "case_count": 15,
+            "metrics": {
+              "detection_rate": 1.0,
+              "median_delay_seconds": 0.0,
+              "timestamp_confusion": {
+                "fn": 13,
+                "fp": 4978,
+                "tn": 422,
+                "tp": 10291
+              },
+              "timestamp_metrics": {
+                "f1": 0.804833222539397,
+                "precision": 0.6739799593948523,
+                "recall": 0.9987383540372671
+              },
+              "window_confusion": {
+                "fn": 0,
+                "fp": 15,
+                "tn": 0,
+                "tp": 15
+              },
+              "window_metrics": {
+                "f1": 0.6666666666666666,
+                "precision": 0.5,
+                "recall": 1.0
+              },
+              "window_pr_auc": 0.582905982905983,
+              "window_roc_auc": 0.64
+            }
+          },
+          "delay": {
+            "bootstrap_95_ci": {
+              "detection_rate": [
+                1.0,
+                1.0
+              ],
+              "median_delay_seconds": [
+                0.0,
+                0.0
+              ],
+              "timestamp_f1": [
+                0.8101929923177815,
+                0.8224821673287819
+              ],
+              "timestamp_precision": [
+                0.6812595472130749,
+                0.6988103167557552
+              ],
+              "timestamp_recall": [
+                0.9985205732778548,
+                1.0
+              ],
+              "window_f1": [
+                0.6666666666666666,
+                0.6666666666666666
+              ],
+              "window_pr_auc": [
+                0.5769230769230769,
+                0.8333333333333334
+              ],
+              "window_precision": [
+                0.5,
+                0.5
+              ],
+              "window_recall": [
+                1.0,
+                1.0
+              ],
+              "window_roc_auc": [
+                0.6333333333333333,
+                0.9
+              ]
+            },
+            "case_count": 15,
+            "metrics": {
+              "detection_rate": 1.0,
+              "median_delay_seconds": 0.0,
+              "timestamp_confusion": {
+                "fn": 7,
+                "fp": 4865,
+                "tn": 535,
+                "tp": 10808
+              },
+              "timestamp_metrics": {
+                "f1": 0.8160676532769555,
+                "precision": 0.6895935685573917,
+                "recall": 0.9993527508090615
+              },
+              "window_confusion": {
+                "fn": 0,
+                "fp": 15,
+                "tn": 0,
+                "tp": 15
+              },
+              "window_metrics": {
+                "f1": 0.6666666666666666,
+                "precision": 0.5,
+                "recall": 1.0
+              },
+              "window_pr_auc": 0.6818181818181818,
+              "window_roc_auc": 0.7666666666666666
+            }
+          },
+          "disk": {
+            "bootstrap_95_ci": {
+              "detection_rate": [
+                1.0,
+                1.0
+              ],
+              "median_delay_seconds": [
+                0.0,
+                0.0
+              ],
+              "timestamp_f1": [
+                0.8143055542792571,
+                0.8357647922145236
+              ],
+              "timestamp_precision": [
+                0.6880929160372118,
+                0.7195969283139768
+              ],
+              "timestamp_recall": [
+                0.9943596856218215,
+                0.9990753582986592
+              ],
+              "window_f1": [
+                0.6666666666666666,
+                0.6666666666666666
+              ],
+              "window_pr_auc": [
+                0.5698550724637681,
+                0.8152777777777779
+              ],
+              "window_precision": [
+                0.5,
+                0.5
+              ],
+              "window_recall": [
+                1.0,
+                1.0
+              ],
+              "window_roc_auc": [
+                0.6222222222222222,
+                0.8866666666666667
+              ]
+            },
+            "case_count": 15,
+            "metrics": {
+              "detection_rate": 1.0,
+              "median_delay_seconds": 0.0,
+              "timestamp_confusion": {
+                "fn": 33,
+                "fp": 4577,
+                "tn": 823,
+                "tp": 10782
+              },
+              "timestamp_metrics": {
+                "f1": 0.8238710170398105,
+                "precision": 0.7019988280487011,
+                "recall": 0.9969486823855755
+              },
+              "window_confusion": {
+                "fn": 0,
+                "fp": 15,
+                "tn": 0,
+                "tp": 15
+              },
+              "window_metrics": {
+                "f1": 0.6666666666666666,
+                "precision": 0.5,
+                "recall": 1.0
+              },
+              "window_pr_auc": 0.6676767676767676,
+              "window_roc_auc": 0.7511111111111111
+            }
+          },
+          "loss": {
+            "bootstrap_95_ci": {
+              "detection_rate": [
+                1.0,
+                1.0
+              ],
+              "median_delay_seconds": [
+                0.0,
+                0.0
+              ],
+              "timestamp_f1": [
+                0.8085615525370873,
+                0.8261568700564492
+              ],
+              "timestamp_precision": [
+                0.6791620347250164,
+                0.7043798179538905
+              ],
+              "timestamp_recall": [
+                0.9980582524271845,
+                0.9997226074895977
+              ],
+              "window_f1": [
+                0.6666666666666666,
+                0.6666666666666666
+              ],
+              "window_pr_auc": [
+                0.5639291465378422,
+                0.7894736842105263
+              ],
+              "window_precision": [
+                0.5,
+                0.5
+              ],
+              "window_recall": [
+                1.0,
+                1.0
+              ],
+              "window_roc_auc": [
+                0.6044444444444445,
+                0.8666666666666667
+              ]
+            },
+            "case_count": 15,
+            "metrics": {
+              "detection_rate": 1.0,
+              "median_delay_seconds": 0.0,
+              "timestamp_confusion": {
+                "fn": 11,
+                "fp": 4841,
+                "tn": 559,
+                "tp": 10804
+              },
+              "timestamp_metrics": {
+                "f1": 0.8166288737717309,
+                "precision": 0.6905720677532758,
+                "recall": 0.9989828941285251
+              },
+              "window_confusion": {
+                "fn": 0,
+                "fp": 15,
+                "tn": 0,
+                "tp": 15
+              },
+              "window_metrics": {
+                "f1": 0.6666666666666666,
+                "precision": 0.5,
+                "recall": 1.0
+              },
+              "window_pr_auc": 0.6592592592592592,
+              "window_roc_auc": 0.7288888888888889
+            }
+          },
+          "mem": {
+            "bootstrap_95_ci": {
+              "detection_rate": [
+                1.0,
+                1.0
+              ],
+              "median_delay_seconds": [
+                0.0,
+                0.0
+              ],
+              "timestamp_f1": [
+                0.7995961507967337,
+                0.8281580452112811
+              ],
+              "timestamp_precision": [
+                0.6667894992944657,
+                0.707699370409234
+              ],
+              "timestamp_recall": [
+                0.996116504854369,
+                1.0
+              ],
+              "window_f1": [
+                0.6666666666666666,
+                0.6666666666666666
+              ],
+              "window_pr_auc": [
+                0.5357142857142857,
+                0.75
+              ],
+              "window_precision": [
+                0.5,
+                0.5
+              ],
+              "window_recall": [
+                1.0,
+                1.0
+              ],
+              "window_roc_auc": [
+                0.5666666666666667,
+                0.8333333333333334
+              ]
+            },
+            "case_count": 15,
+            "metrics": {
+              "detection_rate": 1.0,
+              "median_delay_seconds": 0.0,
+              "timestamp_confusion": {
+                "fn": 17,
+                "fp": 4685,
+                "tn": 715,
+                "tp": 10361
+              },
+              "timestamp_metrics": {
+                "f1": 0.8150566393958465,
+                "precision": 0.6886215605476539,
+                "recall": 0.9983619194449798
+              },
+              "window_confusion": {
+                "fn": 0,
+                "fp": 15,
+                "tn": 0,
+                "tp": 15
+              },
+              "window_metrics": {
+                "f1": 0.6666666666666666,
+                "precision": 0.5,
+                "recall": 1.0
+              },
+              "window_pr_auc": 0.625,
+              "window_roc_auc": 0.7
+            }
+          },
+          "socket": {
+            "bootstrap_95_ci": {
+              "detection_rate": [
+                1.0,
+                1.0
+              ],
+              "median_delay_seconds": [
+                0.0,
+                0.0
+              ],
+              "timestamp_f1": [
+                0.8104923820218698,
+                0.8245714673063044
+              ],
+              "timestamp_precision": [
+                0.681411468178954,
+                0.7021139940849057
+              ],
+              "timestamp_recall": [
+                0.9984281091077207,
+                1.0
+              ],
+              "window_f1": [
+                0.6666666666666666,
+                0.6666666666666666
+              ],
+              "window_pr_auc": [
+                0.5148148148148148,
+                0.7294312547673524
+              ],
+              "window_precision": [
+                0.5,
+                0.5
+              ],
+              "window_recall": [
+                1.0,
+                1.0
+              ],
+              "window_roc_auc": [
+                0.52,
+                0.8044444444444444
+              ]
+            },
+            "case_count": 15,
+            "metrics": {
+              "detection_rate": 1.0,
+              "median_delay_seconds": 0.0,
+              "timestamp_confusion": {
+                "fn": 6,
+                "fp": 4835,
+                "tn": 565,
+                "tp": 10809
+              },
+              "timestamp_metrics": {
+                "f1": 0.8170376809403228,
+                "precision": 0.6909358220403988,
+                "recall": 0.9994452149791956
+              },
+              "window_confusion": {
+                "fn": 0,
+                "fp": 15,
+                "tn": 0,
+                "tp": 15
+              },
+              "window_metrics": {
+                "f1": 0.6666666666666666,
+                "precision": 0.5,
+                "recall": 1.0
+              },
+              "window_pr_auc": 0.606577480490524,
+              "window_roc_auc": 0.6711111111111111
+            }
+          }
+        },
+        "per_service_alert_rates": {
+          "InboundPassthroughClusterIpv4": {
+            "fault_alert_rate": 0.0,
+            "fault_alerts": 0.0,
+            "fault_rows": 210.0,
+            "normal_alert_rate": 0.0,
+            "normal_alerts": 0.0,
+            "normal_rows": 360.0
+          },
+          "PassthroughCluster": {
+            "fault_alert_rate": 0.0,
+            "fault_alerts": 0.0,
+            "fault_rows": 210.0,
+            "normal_alert_rate": 0.0,
+            "normal_alerts": 0.0,
+            "normal_rows": 360.0
+          },
+          "adservice": {
+            "fault_alert_rate": 0.5706577836164024,
+            "fault_alerts": 36489.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.27574074074074073,
+            "normal_alerts": 8934.0,
+            "normal_rows": 32400.0
+          },
+          "cartservice": {
+            "fault_alert_rate": 0.4632479434487504,
+            "fault_alerts": 29621.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.18049382716049384,
+            "normal_alerts": 5848.0,
+            "normal_rows": 32400.0
+          },
+          "checkoutservice": {
+            "fault_alert_rate": 0.736354821557036,
+            "fault_alerts": 47084.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.1870679012345679,
+            "normal_alerts": 6061.0,
+            "normal_rows": 32400.0
+          },
+          "currencyservice": {
+            "fault_alert_rate": 0.552000250226768,
+            "fault_alerts": 35296.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.19,
+            "normal_alerts": 6156.0,
+            "normal_rows": 32400.0
+          },
+          "emailservice": {
+            "fault_alert_rate": 0.5909261518250915,
+            "fault_alerts": 37785.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.21401234567901234,
+            "normal_alerts": 6934.0,
+            "normal_rows": 32400.0
+          },
+          "frontend": {
+            "fault_alert_rate": 0.7480998404804354,
+            "fault_alerts": 47835.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.23675925925925925,
+            "normal_alerts": 7671.0,
+            "normal_rows": 32400.0
+          },
+          "frontend-check": {
+            "fault_alert_rate": 0.0,
+            "fault_alerts": 0.0,
+            "fault_rows": 721.0,
+            "normal_alert_rate": 0.0,
+            "normal_alerts": 0.0,
+            "normal_rows": 360.0
+          },
+          "frontend-external": {
+            "fault_alert_rate": 0.152528,
+            "fault_alerts": 9533.0,
+            "fault_rows": 62500.0,
+            "normal_alert_rate": 0.03358585858585859,
+            "normal_alerts": 1064.0,
+            "normal_rows": 31680.0
+          },
+          "istio-init": {
+            "fault_alert_rate": 0.0,
+            "fault_alerts": 0.0,
+            "fault_rows": 721.0,
+            "normal_alert_rate": 0.0,
+            "normal_alerts": 0.0,
+            "normal_rows": 360.0
+          },
+          "paymentservice": {
+            "fault_alert_rate": 0.4775421475712364,
+            "fault_alerts": 30535.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.26935185185185184,
+            "normal_alerts": 8727.0,
+            "normal_rows": 32400.0
+          },
+          "productcatalogservice": {
+            "fault_alert_rate": 0.5779925557536517,
+            "fault_alerts": 36958.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.19527777777777777,
+            "normal_alerts": 6327.0,
+            "normal_rows": 32400.0
+          },
+          "recommendationservice": {
+            "fault_alert_rate": 0.6608332551374684,
+            "fault_alerts": 42255.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.2088888888888889,
+            "normal_alerts": 6768.0,
+            "normal_rows": 32400.0
+          },
+          "redis": {
+            "fault_alert_rate": 0.18149260267117076,
+            "fault_alerts": 11605.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.15395061728395062,
+            "normal_alerts": 4988.0,
+            "normal_rows": 32400.0
+          },
+          "shippingservice": {
+            "fault_alert_rate": 0.4664383347408589,
+            "fault_alerts": 29825.0,
+            "fault_rows": 63942.0,
+            "normal_alert_rate": 0.24746913580246913,
+            "normal_alerts": 8018.0,
+            "normal_rows": 32400.0
+          }
+        },
+        "primary": "SentinelOps frozen v1 detector",
+        "python": "3.12.14",
+        "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+        "runtime_seconds": 6.781203279999318,
+        "seed": 42,
+        "sentinelops_commit": "ec8c568c306cbf95e0f8d02378fc32d85f9efbdc",
+        "status": "complete",
+        "step": 15,
+        "v1": {
+          "detection_rate": 1.0,
+          "median_delay_seconds": 0.0,
+          "timestamp_confusion": {
+            "fn": 87,
+            "fp": 28781,
+            "tn": 3619,
+            "tp": 63855
+          },
+          "timestamp_metrics": {
+            "f1": 0.8156318256715502,
+            "precision": 0.6893108510730169,
+            "recall": 0.9986393919489538
+          },
+          "window_confusion": {
+            "fn": 0,
+            "fp": 90,
+            "tn": 0,
+            "tp": 90
+          },
+          "window_metrics": {
+            "f1": 0.6666666666666666,
+            "precision": 0.5,
+            "recall": 1.0
+          },
+          "window_pr_auc": 0.6357478749472195,
+          "window_roc_auc": 0.7114814814814816
+        },
+        "v1_bootstrap_95_ci": {
+          "detection_rate": [
+            1.0,
+            1.0
+          ],
+          "median_delay_seconds": [
+            0.0,
+            0.0
+          ],
+          "timestamp_f1": [
+            0.8107820602260234,
+            0.820055506305235
+          ],
+          "timestamp_precision": [
+            0.6823325815368794,
+            0.6957391780069858
+          ],
+          "timestamp_recall": [
+            0.997963058142646,
+            0.9992336805229739
+          ],
+          "window_f1": [
+            0.6666666666666666,
+            0.6666666666666666
+          ],
+          "window_pr_auc": [
+            0.5954059685580344,
+            0.6824218272794284
+          ],
+          "window_precision": [
+            0.5,
+            0.5
+          ],
+          "window_recall": [
+            1.0,
+            1.0
+          ],
+          "window_roc_auc": [
+            0.6588256172839506,
+            0.7653086419753087
+          ]
+        }
+      },
+      "step16_rca_summary.json": {
+        "case_count_expected": 90,
+        "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+        "duplicate_affected_cases": [
+          {
+            "case_id": "re2ob_recommendationservice_loss_1",
+            "conflicting_duplicate_found": false,
+            "duplicate_key_count": 48,
+            "duplicate_row_count": 96,
+            "removed_row_count": 48
+          },
+          {
+            "case_id": "re2ob_recommendationservice_loss_2",
+            "conflicting_duplicate_found": false,
+            "duplicate_key_count": 99,
+            "duplicate_row_count": 198,
+            "removed_row_count": 99
+          }
+        ],
+        "exact_command": "python scripts/phase_a_step16_rca.py --workers 2",
+        "execution_date": "2026-10-02",
+        "failed_detection_cases": [],
+        "python": "3.12.14",
+        "ranked_cases": 90,
+        "ranking_signal": "max fault-window continuous v1 anomaly strength per service",
+        "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+        "runtime_seconds": 0.44714159699924494,
+        "sentinelops_commit": "f0e1f4184486804889b5a6f9dab2f6424fe0e69f",
+        "status": "complete",
+        "step": 16,
+        "suite_graph": {
+          "edge_count": 9,
+          "edges": [
+            [
+              "checkoutservice",
+              "currencyservice"
+            ],
+            [
+              "checkoutservice",
+              "emailservice"
+            ],
+            [
+              "checkoutservice",
+              "paymentservice"
+            ],
+            [
+              "checkoutservice",
+              "productcatalogservice"
+            ],
+            [
+              "frontend",
+              "checkoutservice"
+            ],
+            [
+              "frontend",
+              "currencyservice"
+            ],
+            [
+              "frontend",
+              "productcatalogservice"
+            ],
+            [
+              "frontend",
+              "recommendationservice"
+            ],
+            [
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          ],
+          "node_count": 16,
+          "nodes": [
+            "InboundPassthroughClusterIpv4",
+            "PassthroughCluster",
+            "adservice",
+            "cartservice",
+            "checkoutservice",
+            "currencyservice",
+            "emailservice",
+            "frontend",
+            "frontend-check",
+            "frontend-external",
+            "istio-init",
+            "paymentservice",
+            "productcatalogservice",
+            "recommendationservice",
+            "redis",
+            "shippingservice"
+          ],
+          "source": "union of all RE2-OB pre-injection traces",
+          "unresolved_parent_count_total": 2380
+        },
+        "trace_duplicate_policy": "exact full-row duplicates cleaned; conflicts fail",
+        "weights": {
+          "anomaly_strength": 0.45,
+          "change_signal": 0.25,
+          "graph_impact": 0.2,
+          "primary_service_bonus": 0.1
+        }
+      },
+      "step17_threshold_summary.json": {
+        "case_count_expected": 90,
+        "case_count_failed": 0,
+        "case_count_ok": 90,
+        "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+        "exact_command": "python scripts/phase_a_step17_threshold.py --workers 4",
+        "execution_date": "2026-10-02",
+        "failed_cases": [],
+        "python": "3.12.14",
+        "ranking_rule": "max post-calibration metric z-score per service",
+        "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+        "runtime_seconds": 1.9193136789999699,
+        "sentinelops_commit": "82ff62eca86aa086c01ed4ab09d611e9774212de",
+        "status": "complete",
+        "step": 17,
+        "threshold": 2.5
+      },
+      "step18_random_summary.json": {
+        "case_count_expected": 90,
+        "case_count_failed": 0,
+        "case_count_ok": 90,
+        "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+        "exact_command": "python scripts/phase_a_step18_random.py",
+        "execution_date": "2026-10-02",
+        "failed_cases": [],
+        "master_seed": 42,
+        "python": "3.12.14",
+        "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+        "runtime_seconds": 0.14068685200004438,
+        "sentinelops_commit": "da60d6a0bee9b19416a057e1ec4ecdd393ff1b29",
+        "stable_hash": "sha256(f'{master_seed}:{case_id}') first 8 bytes",
+        "status": "complete",
+        "step": 18
+      },
+      "step19_pagerank_summary.json": {
+        "case_count_expected": 90,
+        "case_count_failed": 0,
+        "case_count_ok": 90,
+        "damping": 0.85,
+        "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+        "exact_command": "python scripts/phase_a_step19_pagerank.py",
+        "execution_date": "2026-10-02",
+        "failed_cases": [],
+        "graph_source": "union of all RE2-OB pre-injection traces",
+        "personalization": "continuous v1 fault-window anomaly strength",
+        "python": "3.12.14",
+        "rcaeval_revision": "259ea4167160256a74ad30004aa3d96a998c846e",
+        "runtime_seconds": 0.5438751209999282,
+        "sentinelops_commit": "b12bb362488e4815eccaa6c2faa3fc2e3258dda2",
+        "status": "complete",
+        "step": 19
+      }
+    },
+    "step": 24,
+    "suite": "RE2-OB",
+    "versions": {
+      "networkx": "3.7",
+      "numpy": "2.5.3",
+      "polars": "1.44.2"
+    }
+  },
+  "pushed": false,
+  "source_sha256": {
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_cpu_1.json": "90f597778727a79e462629c7cb9b512050dcb39a6266acdbac42c31287aa3890",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_cpu_2.json": "a5fdbc73dc1e1bf9e563606cfa816f13547277b432ac51d102095bb882ad095d",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_cpu_3.json": "458c64078b9fbaab5878f8d41ad44efef24ad260dcf92103ddbfd5facf63e0c0",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_delay_1.json": "87dc994ef3aa0a701008fc06b48c1aa89eaaf67b2684174cf33838f3005db7d2",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_delay_2.json": "1c588efb039f264514fecf9c0b1bdfdabc6e190a9a733ee790756cca90aace4e",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_delay_3.json": "a900e2a8efeb9791739c661af2a5ca719ff8cafa4cff9f723454fe33440269e4",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_disk_1.json": "29de408010c10c7c53c6e7094f97a9bf750020870534ff0cd37427105fb5e4a3",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_disk_2.json": "32459ef0820655dbf862787d15935ade941c16de647b0ab4ffea3b2ca4518c4d",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_disk_3.json": "6cd2d9365ba3bcaae68f9fb9484093a01fc5ea82ae9136bfa8f71877c6e7c4b0",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_loss_1.json": "da3668ab619547047c8639901cf58cfe439d0d62c124fa6c1dc845419b701fcc",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_loss_2.json": "fd56ec975f9efac77ddae7279b995b0a43062e875ec2b31d925e20434a89d263",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_loss_3.json": "c9d662b9c3123b6d7a9b3ac7a7285c00cea13a405eba109db93fb87f312896e6",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_mem_1.json": "09ffa2edd331b4534745cf39d058b33789e1cf1e0f63b14ae97c249781e1a527",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_mem_2.json": "a45def44ef82b43dc9ad0409118f8e7730cc25e3e47f3f8003b3d4647b4212e0",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_mem_3.json": "7226cf6aba45a95dd9d1b2c2fd57c6826b229e88a2ee1e36a970b1f778c961b3",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_socket_1.json": "5ff6d261e25ef140154ddd5b32ed5ef9561a1e85bda17390674ce4985119672b",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_socket_2.json": "e62c09984c90474eb9ad2da9a697c1acdf84ed43e2795006d1470e0274e21e8f",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_checkoutservice_socket_3.json": "cc407dcfa7ef119ce895aaea63bfa0c6cbb50c4107bbc3572331b83d394c3e58",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_cpu_1.json": "ba55024789350447efe676234f2bb540e75c834a6d082397def77d132b74fd52",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_cpu_2.json": "da785e563e3b0f8a7c70bb7d319a47fef74dfc2a8b599eefbafb36afda252603",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_cpu_3.json": "a0144f0b55108f2490a1c01fb693d823714d407fb2a58d52b3743f24b4bed35a",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_delay_1.json": "650fb5dbef204a44dc3579f92314984371b510e4203353391b5d52ba29c8e689",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_delay_2.json": "cee3f004ed554d9683ece010c72c32714f3af97f781549f636e6837c6f0dbdf1",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_delay_3.json": "013eb9d4e7dcf65c8fea51c11c3c885b3aa0e2150cdbcb2291f3b57ef8e4cd17",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_disk_1.json": "356c92b9252b694981b242cef6c1d14501c36ef5df72aa1459bde06ae1f77256",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_disk_2.json": "9ef04ffe279d500b19ea5567c9809b945ef432502048f7e891c0c6a07c6f5487",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_disk_3.json": "c8bb43c14a54b32e5809c5473a9bc696355c330c6c7df35d6425a01eb7a15403",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_loss_1.json": "a89ba8a991bc377d85878f439bd9941af02797c15c2ac3bf9c0e99dc3370b2fe",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_loss_2.json": "6ae4adf2aed3edf830acf179fc5c29b51d202b00fb4772e1c497a185d1aa4a6a",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_loss_3.json": "99540c6378b3f3d38b67286e699f2ceaca014765831eed6114826ec1a15bd0c8",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_mem_1.json": "3a6f830ebecf0f1df9e31da366a79ca1b24ff1e54a8fb67938f572149deeb696",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_mem_2.json": "449ef8f28c50928176cb76f610fa9457c1cdbcf069a6f99c63c709fa329440a9",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_mem_3.json": "eec2ab1b6eb84f03d44df26f799fcf63c9e249fafd228080089e59842d4d1423",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_socket_1.json": "560fccc86faf6e6cef2b3d27715946ea94a6782d3de2322b7029778347fd735b",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_socket_2.json": "9c5167dfdbb46027971ecb3206f6ab62e1cf6138f2655cf1e41286d7d98255a8",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_currencyservice_socket_3.json": "f5c871c02d207cd1d213b99c8c2619ac6241f680ad3bcf2f3775b53d0cfdd25b",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_cpu_1.json": "29aa43214f9dc458cb1311e5b045048dff6567fdf113a0be9696d48172c33d6b",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_cpu_2.json": "6794c48514c49884befbcb2724959c92c2c40efd523e15764bd03d3b7b75718f",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_cpu_3.json": "e036f8a9e701f8fee796bf9fc873a286233072ec79ea09fae8f2ee68bda354c2",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_delay_1.json": "783e7332d75d55b7066f09d189813307382c17e8189f7e5b8b959348d1ce3fc9",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_delay_2.json": "8f5c45bb70c3883c3267e60f3739555ae94620a56217aca401c1d03785c142ae",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_delay_3.json": "208e58be752c6f4efa8ffc451724ccfb1685b1bbd70d4eefc89095fccb3a0bc6",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_disk_1.json": "b9d9b34c0d6049a0562305fe942155414162947ada0ad46e500c3c3ce8f9f816",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_disk_2.json": "f6de2d48ad3d4eee49413df73bf9fe78df0e93c7b52212cca14f327bae3ad3e5",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_disk_3.json": "604fd273d74e6283bbd966c26663c9000966303be2c14672de3b975679e5bcac",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_loss_1.json": "8f29b6e3f32956a11ac27efd89ebb556d0d0aa99fff1bed6fb4a01a5e7c85fda",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_loss_2.json": "71ed7cded10e74178d1860fd2ad9024893a9ce7d118b625556def46b2547b740",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_loss_3.json": "4e220d2a0b7490fbf71e3480ea72cdb897f5a6ad135f44f798957ef0c10f3149",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_mem_1.json": "909290b19adf804f910ba54fb4a0c91cf96f36284726713aa0197e75655d98dd",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_mem_2.json": "6be5a9b7c9896cd8aedf49c3bd072048dd9d7fdec0a41c8fd730c7ffb55ec372",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_mem_3.json": "37eb50aa98e53d5f27c1092bf892d0145df51acd6b59e69a782cce4334025847",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_socket_1.json": "39bc2dfce6e974d1127665d6c3afa410e5ccdd59d6f9129a5ee56483ab4b32cb",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_socket_2.json": "f0a73e4e7610cfd4d49142f65c69057b74a22b66f203b76e23b7f71fe5439f6c",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_emailservice_socket_3.json": "91c6439f3c42e16439257d4836893f62b05f7ab7322be5fc84800d8862adf3c6",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_cpu_1.json": "b1f183dec63b513a73745ad3b12f2d6bd04e28629d52953381e17aa50fe1e2b1",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_cpu_2.json": "0cfabec3ae24847964413592af883b896beee5a9406f4c3d3c38a9a02079e120",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_cpu_3.json": "a1e85af15ba9cfce122a60a8140e372aad84cad4853ec42e826deb5bb213411b",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_delay_1.json": "c8883c51a9dbaabc7529f3f776e1ab31178f402cfaa6760febe55539dee473a3",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_delay_2.json": "a71df812f27889420928c2acae200667290beaef50a7a8db0fcba8a5fc7c5add",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_delay_3.json": "ca57df5ead476f59210b9495141ae23152505e9113b32c63bb6555a6ba2aa097",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_disk_1.json": "4153c1ac831540d06bc65b53c1728f793192061a37244a2fa5b357cedf1ac77b",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_disk_2.json": "191188f37d757b591794e0fecb90d1ee9e4c4b3f193f0115c0550cf298567d0f",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_disk_3.json": "2ffe1c946649d485db1a8a28c33d7bc61e6e6ec1f55fbe515748733718b72007",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_loss_1.json": "be930576355962643a5dcce6786a0990f768eddf48c77659ab17077b6e028fcd",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_loss_2.json": "cc1cf0c825b82b9b2e31b3fc9a5a8773dc1b4e5f01d19707b26fc19aec6e5a3a",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_loss_3.json": "0a6e18a2ae6c67e149d9b8c294f6284629d1bb265c2ff416469d7962b341b8b6",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_mem_1.json": "4f79b64542cf17c979bcffcfd89c9e96d6e6922606530e722396c86411e5b467",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_mem_2.json": "d6216807edce1aeacbf0907bdb086eae483cadc7dfd0cf6d2ea8483734d3f615",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_mem_3.json": "a17fa6ae89ce07ea0a6dfb52b1e7b96cfdbfbc4f11ea9504dee28331bd8d4864",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_socket_1.json": "a81f7cf795cd72fe5b657a2bafc6fbc84045cdce13c66dca3b08e7a978c8f522",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_socket_2.json": "d8aed7ff02be5c6bcb776602ef8dbb85e4eab443cfd8f1efd77c7cd527caabbd",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_productcatalogservice_socket_3.json": "089ba84c6ed0f578b4e753fee0956dbb0ee21ca152eca9c11f32e5bc182be420",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_cpu_1.json": "561eb59ca4369f2f80548c98829aeb5e958a3ded96a3e27b3184e1e9c1d7300e",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_cpu_2.json": "f2a6b6dddf2a259df41d487d8f98d6afc2119e52e9df27e457ff0499d1ac3369",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_cpu_3.json": "4d6bb46610b85acf0cfc4fcf29df4b290850d57e9c042e4971aa0b6115518bf7",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_delay_1.json": "5008f08bc876a4738ade64ac39b49b232dc95b15d06625e6aaf8158bf9c5ec55",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_delay_2.json": "edd5b2d687238eb48b1408747a86e7a765c8eb37a518551e7538826c3065bd7d",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_delay_3.json": "62f355f58d17c68b983f33de37f0bd12fedabd51bf0264b12f506a0d00e2c528",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_disk_1.json": "734ca52a61900a736862130f1cbe80616efa006f6d974d16c4556584e50b4597",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_disk_2.json": "49fc63a608dc9ab7756b9d373d0427152dce82bcebbc16e3b7a15d4a82cf072a",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_disk_3.json": "94eb0d46f452f00233aa99b8a3ec50a82ae30512c5f10fe2e00802635d5ea804",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_loss_1.json": "d86a97cd31cd83483cad3096faaed0df00d1e609d0aa15676d7fee070cefe8b5",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_loss_2.json": "c38ccf8de7c0d484caf1028040c4b72e17a32c5d813d1ac7f7076ca157fa3093",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_loss_3.json": "89f150246f9c4cbd5909ec623a0061fcb1c64ddd1942e1c489292b956faaed9c",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_mem_1.json": "ba1df7ae690c131d4314ad6707e4edca2e752f5061e629956b841b0dda1f9ab3",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_mem_2.json": "c586ba038fb7fe04cfdcb60b65c2223d363e472287fb4edcbf253fd3a49fd404",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_mem_3.json": "729d69c2bd96f53e0455119252c43623208c5567b0bc3f39b91de7d0c8c50b9b",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_socket_1.json": "94f92c43eb123e6745a1bf3735371a9a4c0c7f7b738e222bfc8a3479fee7504e",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_socket_2.json": "d12df71852f61cfad7d79066bbaa7be35409eb0112d7e62544ad346f06016f8b",
+    "docs/evidence/phase_a/re2ob/detection_cases/re2ob_recommendationservice_socket_3.json": "dd99f0b99b998a9627cd266044eb45cadde338ebde04e62c70e922c7cc02c6a6",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_cpu_1.json": "37185a225161571f297822c862bcb7cfe1c164f64ef481f765efb6330943052d",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_cpu_2.json": "5b888ad6414d3e55f52be98a6cc431ac343240c211675a88cefbfe7aa3bd4b1f",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_cpu_3.json": "74a3737394521b5f2ed7997837aa4fa6548f2954a588589adf8a71fc81da517d",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_delay_1.json": "0ae7c90e567855788fc42a2ff8c7ac3525c2b11028490bf0c95b72c4f7f1b495",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_delay_2.json": "ab9e20f85385c0a10936be9d39a8d4e648ddaf9ee81f0406fb6ce47eed378bce",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_delay_3.json": "ecbee2ed37df1eeddccfec9e607d62bedd9d9a30e9d1a8a7d4138bdc39ce3bfd",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_disk_1.json": "49c0af0464e353a23304cb499fefc435183a0862c46fe387ca076ef08e6d423e",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_disk_2.json": "492ae3907b359fa1b9f92ed79173271b79e4bc230627635135eb622e21357282",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_disk_3.json": "75d81ee63ad90975ccd20c3d4b55f274c08bc889e437a5579edb1bb65123b31a",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_loss_1.json": "dc21dd5495be92abd2ea3a3410cb4e09253f0cf95cd29a370381f4d6823de90d",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_loss_2.json": "1371d52cd310bad20bd8e386b8d894ab638cf3c7d0d098ac5ac72164f30d5134",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_loss_3.json": "c49f41028f09f74e19c3e2f8507a33904df96e4185fa49d6768874c3a7429be1",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_mem_1.json": "ae8a27bec753257f5406281fec42c2371f0962a9c21e133311d908cf6ff9c90a",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_mem_2.json": "2104226baf17d1187ae99fb7ec64c3148795fdfbfc31fc6063136511092449b4",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_mem_3.json": "0a83012e38eb9712ad12c7a176aea66299bf37732bb1cf4353b89937b85edeb7",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_socket_1.json": "cd73ee3c799b72f07bf0e260c6403e890172d685fa0c4ff96a1df54083382024",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_socket_2.json": "56e7319212bde4d8514b0c24d4ffc58834e759bb2e0299452caf20fb9b1a8800",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_checkoutservice_socket_3.json": "6a9170084cfbd71865c22fed105310898494b90e53055d34792c69a57092f6d8",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_cpu_1.json": "296cceb06e09d834a3185cc6a70d7b2c596d62a0731f412a36998b3b0574e2db",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_cpu_2.json": "d05aec1ca0aad85c17fe3e4737d33258c60e41abf79bafce4cae558ac4a21281",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_cpu_3.json": "6584a96663d1c05c2082c6f6176bff57a2d24a5cc05335d5dd5c54d63b05dcff",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_delay_1.json": "c9b41cc7b030e8ae2f6af11900cae170f9f5cd350200e2cd259f4c8c48051b43",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_delay_2.json": "830fea368a04419bd305e4059c98f8fbaa37d39b2377d1624454bd3a1df219e5",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_delay_3.json": "5b7b11f3505d275cd0e25c108f75f17a8788d3390c567b3979786bc66b6c2d16",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_disk_1.json": "18f9e789ff423f7bf2135247b642b561f69772b7047dced7b5831c70518da55d",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_disk_2.json": "dd400738def43623be05d34adc7d61a7339749c2660d7ea1b2ae5ba4c6906b47",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_disk_3.json": "734b9ff9305d72cc7b0134bd1558a35eb0b2ee5c056921a341dad5cc4d1415b0",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_loss_1.json": "4817eda7d1f454fbf6504c60a5229fa3f122c52dd8ed7492b2c5ccaae39da10a",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_loss_2.json": "aca49f252b430025bec3a7a01c09f94e31c8ed5765af95f2b59ec61f54a41d40",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_loss_3.json": "b2aed72d3be8a6f6e3bb5fad337f0b2976b797f8838fa0a9ebc4a48d15b9158f",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_mem_1.json": "f7e40d900c9b16432f401389b9ab5503eefe6a912e6b12fe809461a780c5c7ba",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_mem_2.json": "807a2ce9a38c591c11cbb194823e841385f089b0e8db5ba8c01d9d51f7cecae1",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_mem_3.json": "d3fcd7484c3d5feea9d9296efd8b4682ceb731461e51515ffcfcb85f637d7131",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_socket_1.json": "c3acd8bab0f154930f7784b1ce1cd6d9904c1230a6b1a069a01f4553ed0b3609",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_socket_2.json": "f66cb464be3f0ff3751651e6c3b2693e928bae07c182267754b93289bd9e8938",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_currencyservice_socket_3.json": "050a86fced8431bc779917f16fb02951ecfeee7a698ec9c049b9d1c076ba61d5",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_cpu_1.json": "7d45b7318ff78c82dede43101c583b6f04d6bd80530fec9c94a77facbcb1927d",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_cpu_2.json": "e5ee8e940573899335cea47934a02dc41e1de76c5e417cdd9c17ae0e99b4cabe",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_cpu_3.json": "5454c96ca8048718af296e9fc30aa3b55d51fdbc08ae3b0b7419d51615a4ba33",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_delay_1.json": "aec56dbf3ed436f94fd7bb5cc1429cc16c1ed3a3cb8aa1a87ea13060b838789c",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_delay_2.json": "3fe53a50e65a641e61b824722e4a9dc0c1681e71af61ac2edb56c2626c876438",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_delay_3.json": "5e6e8f92d1660c781b28e660188f41f36562bac3f634632e1b66955aade3bd91",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_disk_1.json": "d5707b34baaf2e70c520b06a5109fbdc27f8c2612e577bc34eaa9aa05b74c3dd",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_disk_2.json": "513a5e353a5b49e71bd18b4e799fc61630a924e613595b62238394fd905b7b9a",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_disk_3.json": "de39b3f49368e725a80969076ac6a8a807a3b65a19a39f07b754b5791754ffd6",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_loss_1.json": "c484c6736ba5eb6435b8197634b1b19b79bf64ec9cc45de9d9cf7f8b96f48a1f",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_loss_2.json": "07fbe1ffe487c98504044771ea18d05248c2cafddfcd7508fedc611c0c92a94a",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_loss_3.json": "441378ffebe26c9a6ab169943d821962fb4175e08ff1340d786a56e110c7498a",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_mem_1.json": "47cbc6de32c091e4296fec016718972435d9722c94eb0673feaaa703d5d50b4b",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_mem_2.json": "5eba3e83b3a58a2a36228a83458318b528a92a61e2145013a1000b98343c20ba",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_mem_3.json": "b5e1ca2437f18f50301ab9e73d651eb894886913fca95ab7f422da80bbb931ee",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_socket_1.json": "166a26398554e916f8184cd9329090f903126a5317f8ee3a775791be8fc85aec",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_socket_2.json": "358960be8e93387f71d1054bb51e1b8192f47ff5bf70dd02b1baecd83fe25be2",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_emailservice_socket_3.json": "a42e38fbe2cea61bc1abc14807d0757d759a9d7fb3d2e9d11f56b13dc7e1ead3",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_cpu_1.json": "1bdf1eaa473e1156616ec78c9df0b31ef37d59ea6800bec8493427c4ce6286cf",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_cpu_2.json": "0d7b2f48a115c28232d5117f6ecd18512d226b12da49027c09bb105efe12da58",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_cpu_3.json": "9ea3444c14e1355d81e7e3a5485529d57b040d7080ecc126b48087466c6b2683",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_delay_1.json": "ae33eeb1e9cc6192f3d9afd60df3358db4b3b67982b2d481569eaabf749c1c4e",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_delay_2.json": "c61822a9247a3a9d5428d4b7bed5486ed43c70313b2f641fbab37adc42469cfb",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_delay_3.json": "74a24df24e7432874206f9115875b8b5f4d31ca82500c93b71240d124b449e33",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_disk_1.json": "ee76445796a6a8dee738035665a604fba3ebf01e3bf4a890326a36e47fdc8e59",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_disk_2.json": "6f5129796809d40af5ee0a7afd96fb1c580f2b63a4bbff70ec31faf7a473a5dc",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_disk_3.json": "43e1ea0d343bdf4aaed06d1a151e1e7d816148c56b99d38966fef608eaae2a3b",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_loss_1.json": "0a6551a038dce9bff84db9f90b52abfe719efa965975d3e3557853e46a822118",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_loss_2.json": "eaa943e5fc493533df960a8e6cdaa0a8b40968a6622cc85dffbaafbdd1a50009",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_loss_3.json": "d7a3f9e1efcb0d85af79e43cd0a4fe2bc203647dea38174ef22864731f18219a",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_mem_1.json": "0b0be8e178e53c0cbda8b2d56b821ae563070c0a7984930c7e6d2bb8cfd57906",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_mem_2.json": "df56603269e6855fb196962ad4425a4c16c844afe3c68cfb6c3a26ef97f08c3b",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_mem_3.json": "884b5d6f08ca2a4c2aa3f47ee4e606dff7398cf2ebf0e65d83bb0c2ac64ec476",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_socket_1.json": "e866b58217456dc054490b4d1f6226e5701bf232126ebc0b68002511f2a5b369",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_socket_2.json": "22e4350c47f9b0a00194da90631cc67fde5e4cf9fd1006bf165b46e21e1896ba",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_productcatalogservice_socket_3.json": "058b5a85edbc29ddc350b4b76807b49146384ee99d551b28387f19f601e1301f",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_cpu_1.json": "196a6877068751023c906a71ae941035f9f07054fc542eed13832fc3c2b7154b",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_cpu_2.json": "22ed8a6f717abcca58402eb9644a9f137c62b8e5bf59ee9d0861f1675ecb4fd7",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_cpu_3.json": "72079255da0981ce43f5b89fc4804cb1ea9802e888e1173ded8a4b492198f6ec",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_delay_1.json": "b362c826821f4819348624d128bdaf65fe5cb0ffd30e7ad62dcb6b8c2d800667",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_delay_2.json": "cdfd7eca631b656d4a314abb764e359a3fd9992b4db08e6bce11120e31e0a163",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_delay_3.json": "4451f01590e676a6510d3b80426289cec7624e620acd10251e71ec074575510f",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_disk_1.json": "5f51defefbfcd28bbad5dac990afa980a3c0bdfb8aaaa0a650a392777502451b",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_disk_2.json": "10ae21dfc65f2135739894281fb845e9f296829faa2323fad20967b6f10cf81a",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_disk_3.json": "fe02fc311b06031f2d1165a8a1de5148bd5f18f71b87a1d59c02a2a469c38966",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_loss_1.json": "124ac16d2fc5a185d0782060b8e69873b0a3cce6e8dad505891a450ff9443311",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_loss_2.json": "b410cf21a91817b8738b094f5521715608478c7245148c7d15aaf5a72b20b66c",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_loss_3.json": "7ec647bc7b7c9084e9dbd84ede3b4a8d45f4fe887c3d310a3d7c5289b90054dc",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_mem_1.json": "1bc4ffc4df3a7d91e1a4c082446c79d3e4aaf15874b8e0add4ffd00bae441a62",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_mem_2.json": "2ebfe453cc80f7cc822c3d24981d97a258f83f96f287d2cd362a6b6d8366a750",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_mem_3.json": "98c3fb79254b379d7798bce75f566ffd1e95847ef7cd98990fbcbbbb061b5fc6",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_socket_1.json": "3a8029631910de83359aa708a146e7f48890b661f06a0d1972a7c4588afd6d8d",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_socket_2.json": "6f49e93734f8af759356e1c99614c0f800fdf96d7d20eba34215bae314cf6c28",
+    "docs/evidence/phase_a/re2ob/pagerank_cases/re2ob_recommendationservice_socket_3.json": "cbbd8553f1c72e68ec660c760c53f6df0fa7cba4854413adae455b56d7c0e119",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_cpu_1.json": "8577849d22a5898460c5f5cec78327520471c4d5fa9c0680fb62e500846a7d0f",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_cpu_2.json": "d30234852f27453640e6dd4b8fbcb6da40515a43b24210d347f771ce582d3228",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_cpu_3.json": "f61811a9e5072c10e6e4b69526bd1b1585d7818f823762561ece06c97005303d",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_delay_1.json": "ffcac85b2bdbb49d1a09b71cf5ba4bfbed98418ce8feba846d007a4bdf0f4f53",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_delay_2.json": "8285658eecabb92a895b7977cd8302c66ecd9a8f4c302f606addcd9e97a83b9a",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_delay_3.json": "6e67997aae82fd28961a4b4700e1119b966ce00a642638e04eeb645f25e3e841",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_disk_1.json": "d451b302bf0364a33abdd51beaf1d1c78a2f94e57ec3db95599712cbae5b6701",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_disk_2.json": "9a9cb9066f0d3837fc224da88f3442d3128e93efae5c3ef452665785dac85c60",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_disk_3.json": "1d744e7b366cd8bbfa746b996d066ed0c47a2481b98f877834776282cca8c78a",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_loss_1.json": "a39560fedabaa9063acaa00de935661c5f03ee3fc73aa57b217c7baa42266884",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_loss_2.json": "2acb167658659d7daa068f65914f584ae7c5ae9c1f814bd786e32c27a13ca22a",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_loss_3.json": "b3ae83bbb3aaa4c1c96b6cd9ce2081e54ba70bc9139f80241884c868a26dc632",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_mem_1.json": "8d0fec62835c452e2544780cec7055f46a112188458738baba2323ed7b5f3451",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_mem_2.json": "1e33a7131e6e1ec53a6804d24877dc5c4acdb71ef8642a2781d0c3c2abeab455",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_mem_3.json": "4cc3e259467fa4fdae58184901197232cd039d77b37cfb7c3d01efb4f792ebb3",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_socket_1.json": "df8831330613a527e458aa0dea41716dc7ae3946cd007000d15f67259ea0fdbe",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_socket_2.json": "34fc57bbd851da32c6e481f9b3a3bc1076754d1883877da7b7afc9cd08c6a729",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_checkoutservice_socket_3.json": "ef1dee6e30f608f060be1cb85f7684bdb47d0ede38af72ea395ac220d6068e10",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_cpu_1.json": "520538492c8263e3e0523acf542a81fdf8087c8a34553e1b93f7ff1d81f40763",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_cpu_2.json": "48427081c6f2ad33b83ab5ae3decdcd62e621078fbf5c27b77f8aca590e1ef86",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_cpu_3.json": "eed32b37513f26074d73368f6bf612562a342e866a55fa08e2daec5a11b956da",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_delay_1.json": "24c442594d7cb80fdd225527cd00bdd03b9d10d37e99b22c346ec317332af38d",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_delay_2.json": "936458422358af79a4018d35fbb097a8be751c656ac2eae97d13ced57cf1ab9d",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_delay_3.json": "226a7fcfa4a2a1d3b064fbe3ad7ddfae960562b3ee9d428442ecb8ce29d2d32c",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_disk_1.json": "90e4dd7dd0e488f5c045b294bc77d44488acc2557023b08717578e7b8cc87d25",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_disk_2.json": "e39d1cdfd7e8ea5f52d340ca29667559065f9b7e28cedacc0c7104c37a707a6b",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_disk_3.json": "2244d423a2fe1f16de85d9f87c5915d3f7f1d0177360cced1f9d91350b93aae5",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_loss_1.json": "7c2b9ccf10b47d3ecc9df1040baedd32d35775916b53fa43a67c4119bcb1adf4",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_loss_2.json": "e25d6f9cb20906239c7ae948def3a7a172ad3a6571bc81d87d5e0d60da0b04b7",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_loss_3.json": "fc1176cb5e5bd08394c554f1439793d50ceaf83da4b4e99a5e58a42f14949637",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_mem_1.json": "5d56111279cf22f5d9b3b23794b3a12b2da647a6b27e0e4aaff482c49b26239c",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_mem_2.json": "b75de1199e760c8d51a26e63b5f92267d3d0fb268c1854e8da17de864a5bdd53",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_mem_3.json": "7bc03964d29b2b79e28796da63d86a82a33314efe57d415a19337f48cf0cc632",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_socket_1.json": "5bd3fdeae0cc58a3751ec2f96ba10f521bd2440eeb085a3e060954c1d9be453a",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_socket_2.json": "130f083a1df54893d36380bab71b27de683048522cef63d411e7317e0fe82268",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_currencyservice_socket_3.json": "891ac959820fe86111bfcdf0418c527914627a5cd2f1f5a588d00cfa70c906e4",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_cpu_1.json": "d707a68b0a1245fd97047c8c14d5cd17c0d6e7754f7ec9bbaba5ecfda1880bcd",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_cpu_2.json": "087590d9a9fe70eb394b33e8eab8553c48c71ab2b73709ad2cebdaaf6917aa84",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_cpu_3.json": "cf9797ca5696efdc77d24abb34cec3c781ad769ea57de471633bdf1209645d6a",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_delay_1.json": "8f9fc759ea4846a8402c099b419b9ec097af60d43b9652b5aecf54b3a793e7cd",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_delay_2.json": "8f9a0c919b467bdc70c776b55d3c175e96e5cbbe41b1f15390fa9a80518b2a82",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_delay_3.json": "e5b9fdd30b1d542ee5574d81b332dc60a87655dc5312dc8bd1ce6a8f89438415",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_disk_1.json": "3ddd3c53f7098beb9c463dd17e9117b9812b46c0f86cf9f44c341ac95c52c618",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_disk_2.json": "7af50a6f840687e58b669f564610aa85e39badf13fdf9aaeced1d1dd71f2bde8",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_disk_3.json": "3eb6b571a185e887d4b2872b1160b2825109d1ea8e1e34cc8b2c2b352e56686b",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_loss_1.json": "bf8193b8e14e6e73e5b7af603cf7b0f4291df2f87ae800feaa61f24a4f867f75",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_loss_2.json": "9e6aca6d24c0096285f3ccbdcf59f4bfc8153e2e9c9123c7f60b8b4848a5cf99",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_loss_3.json": "dfee6a5883a735f45ff8dc87a981515617264444b413e4f17500ac6967f03c61",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_mem_1.json": "aaec263aa9b8745d7efe1bea2d943fd912d1eea2f8cb85ffa6a095815f9f7e03",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_mem_2.json": "577c06098a4558d2eed32d5d9ae21f81383770df74692bc0d985bf2e9cf07b5b",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_mem_3.json": "4285534f8e1fa23ba44e4d57b1833f7743cbece50a8cc6344be4ae4bceb9ac38",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_socket_1.json": "fecd42b62a02b45b570fec005c7efe3b276b19c0eb0bd0cd27f11df19adcb538",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_socket_2.json": "502a499c8dff27fe84a92b10c9c3936c9da9b19e001653d58fe00d88014a9dd7",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_emailservice_socket_3.json": "1ed4af51c25059da87513bf0ed246936b9699d73ef9083743177af410a482025",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_cpu_1.json": "7b15a9709299a557e04d00dce1a161fc7a57fa3f9d59be4ea8acd769540289e0",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_cpu_2.json": "7983c510cc7563629824fce3ec9b2ff42bb01b0afe6c3e64ad49e9635aeae2e0",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_cpu_3.json": "9807d80a7308057c8fd657a1db7c992c9aa2a88984f27d08ece35f99215d1ae1",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_delay_1.json": "0d8288c4504ccfb4ee2f03205ebfa5c365aa9af9d379cd5a5c6145191d76b10f",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_delay_2.json": "d2de35de29b81941285faa89e28df6f4451381e4149a71250786fefdcc1831a8",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_delay_3.json": "a3b17855e11a239e9e0d9fd3a692e2eb308c59e99a2d8e0e85cd1baaf37277a9",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_disk_1.json": "c5fc96563524ff2b40edb640f11ec99a9cc4418d7fbfca325a5cc94ea05b7892",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_disk_2.json": "00c6d1fa5d0072a90b4454c2a04966e464760e7aade3695852d40940b9a9b959",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_disk_3.json": "d3d98ee7680486e9d275bda77de9f33abe256e5958db56a618b8ef92cc4b9bf2",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_loss_1.json": "cf52cad15f903c9981294440e9c23f6364adc86e35556b4dccec5bed64017c4f",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_loss_2.json": "860c542a4beb1a125a63389c9532965cbaa44195dcecaaba546cc9cd0b0a51d2",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_loss_3.json": "a211272a82217465964c1912442882c108edd0f5ebcd797a64660b5d60c8007d",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_mem_1.json": "f5e04df1fd48c7b367def2210fdee72f4dfc880ae317a009e6f9d469e22ae8a5",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_mem_2.json": "2d02fc8bc4794afa61a8a406c719361eb7db1739191f2dc0f604ecc5135828d9",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_mem_3.json": "ac32d161da0f66888bae2e16fc4176fcc15e212a7be03303c1f7930bcb930d63",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_socket_1.json": "2442d133b74c3717aca2f4d4aaf51ccc48a0cda547dd98835b3164e232e63347",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_socket_2.json": "8eacf2377ebcc5f1b07bed08b821b6d58a5b403d81807465cc33e0c60ea2c8d7",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_productcatalogservice_socket_3.json": "171269be3606ad74c2e8ceda1675497fd87527b3607a21e7f8c4c5d8cd57f0b9",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_cpu_1.json": "d2677fb91cf8712a92733d976a46937ca45e0c08170cd3f2492100e2b44e00eb",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_cpu_2.json": "111b10da85100a8879e8a84777b235327161415f1ddd6b4abfe63e778323d2f5",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_cpu_3.json": "71188e787740c3e0e042f0f7847dba4bbf635114ab3d7da8c64d0b7886d692ab",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_delay_1.json": "88ee4e5df6c321e3bd7842d0195e66d207b2e668fa9a406b5e87568692ec8314",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_delay_2.json": "24ceefb55b5b9b0d5c15934b0280371df620ba7f52a8b7a07c0821d56ee596e6",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_delay_3.json": "8755ff6837d290ca1a69fb20c0e402b531d0f9b14364c656184c3c04f3e3d5d2",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_disk_1.json": "c90d9699682f230487155cd1bd3e25007cdd475427334d5b66eaa04e5f6fb187",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_disk_2.json": "e0c411e837e2cbf9ead2326b4e3476fd28b76bebb109b7d7962603cfb7f62fdc",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_disk_3.json": "850f4d14660f8d1d7a06e446afd89af67adeaef024b603412539ec7981cc2f80",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_loss_1.json": "4e287a36a2103ef1f860993680a4522b7130cde75222abe2416417b65bf3b2c4",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_loss_2.json": "850529ef98890acddb5e1b8d8a67f781b204e57f3b66908c1788c5f79c3e1b2d",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_loss_3.json": "f383937ab0e8e1cbc71135f249fcfaca9b3e9656ed33f363672bc72115809b80",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_mem_1.json": "2d6eac8ccc80dcc9010b37c9d922d40580c88d26cfcbb420770af3b975f86f0b",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_mem_2.json": "e9257fe375de88b978553abbbf692f90c5f9f0a394b3a259df7fab4f5f4d5f66",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_mem_3.json": "291e41d860031a1909ca3d1ac8e0630bf2fb997d841fb4d4d937092f2db0d018",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_socket_1.json": "0f7a5a099d09ea8906effa9654b45ab66727da38f59a32498f6febdc324ffdb5",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_socket_2.json": "9b640dffb2b8a5dfacf1f39cc76dbd691b6a16f21c1565aec3f3abd6e53781bc",
+    "docs/evidence/phase_a/re2ob/random_cases/re2ob_recommendationservice_socket_3.json": "00b3805845052d081eee8126621d108ce2bd9c9c8172c28249a1d7757ec86de2",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_cpu_1.json": "a07eff2f84b4f54ddb6558c27ad83954172318ed0b4b1ad57f617b7eccf66eca",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_cpu_2.json": "9cb36b796b86075f645fff5d52b7c07a631ace06a38efd5f313a96d0c2958a1e",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_cpu_3.json": "55a7cf103edf303e22e669eb9de2b57859a1785102e2375f1d41d503d2507f78",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_delay_1.json": "7c5829428f82fb44eeaaf145f8184eca4892f92c90422d48c6f7a7928c23569f",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_delay_2.json": "cba072b309706abd83c53077d492c28a4d60b35068db918c6bae5d388655583b",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_delay_3.json": "ed195065aa28763e8e73b8866942ef2f4e328c9f7c59bbb7c3906f2b7fb4113a",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_disk_1.json": "2e71cb182f8bab5678863a68603ee10cca8a011e92f84f3080ae3f60ece80cd2",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_disk_2.json": "4ba72f1e5fa6490953bd36180c78911d29677afb6d18a9cf152ee929714ee4f4",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_disk_3.json": "5177985b411cc13d961102229ec462e393e2b3c1f7bf2e883d06d224185810f3",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_loss_1.json": "596f3f49dedc31ecdb310b63aa55af4bfb19b276603c68e53a94e67b02e99ba8",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_loss_2.json": "1b96b5234ed89ba58f8526c29fb8ab496a7bee1ee85d47431c79840746f77a5e",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_loss_3.json": "a69a207b9f456dd2078867122da3bd106f42d1778bc9696d0632521aca3c1e77",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_mem_1.json": "79f7c4d56dfd75ba5b538f23db855d7f2a10462ad204fe138766a73fe295d390",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_mem_2.json": "50612b94c6f29f04ba579bcd52fefdad3047f5bc9d3e61acbda646a0d1e32f29",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_mem_3.json": "a2cb947ec7926063cf6d006bf7ee1830cf14889d8f45564082033ee00e15a062",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_socket_1.json": "a5c3a61351ab2e266573ddf94c3e293ce10981e5838002ea39e9dbe1b4b20d5f",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_socket_2.json": "8a5e1489cb6c41449fbebac019ae36ce8ebe7f966b7ea6602b2d48d069fea695",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_checkoutservice_socket_3.json": "cd86ef3b8d32116b13dc0889f085dfb6fd4492523252a0ff4625c94c9c3d6d2a",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_cpu_1.json": "259b10d54312585b12ff86dc60d28d4a36acce572ca6e282c1fd78a5f9b765de",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_cpu_2.json": "923e2bb3e6266a8cd17a60bad0a7df619ec694a894406891f1ade3c50d280e19",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_cpu_3.json": "58760306102afd3c9a69a63ba4b49cd12b1a0fd3492e8b7837f244a76650a449",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_delay_1.json": "75ed80daf796c9e17e88eb65b5b14c133f76ec26ec0967de500e0474c97a66e0",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_delay_2.json": "631f028e1fda0e0fdf91590ed2b06cb084459e75f90bf4d6ef7e8fc34081a163",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_delay_3.json": "7c7649397126d2f0d25d7caaccb0d923fb54cd75e759bdb09141e0b64025f7f8",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_disk_1.json": "8535a295879d567a3a62289acf7e9dc8b2190450e1a3001b9ce05891ae57274c",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_disk_2.json": "755b8bb0467ca386d64c038715067a5bffc525c351c30cdc706c549f84dfc0f7",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_disk_3.json": "b4555486d9b629f100fe2adeee0c1ceedd228824a6bcc1e1ff2015e26bd94c15",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_loss_1.json": "f0c046669e4733fc3b9b342f65814aaf3aa68bc16eba247cc43db97bf6f51516",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_loss_2.json": "2de6a6d403de5bff0d60b082461337f7a6f0f665a5453341f868d06d79845cda",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_loss_3.json": "5a4b6e1c55ff5cbfc26353130b88667ff0df9f9cd6c352e8996d0dec4b816f0c",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_mem_1.json": "2e16168bc2420d4e517d50b01bb3c1c6af40feeb0d7a254b65d3b66927f229d9",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_mem_2.json": "8f0cfbdaf6d4043847cf251b8ff5ff9d6aba7ddc947b5c822301bf23f00a227b",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_mem_3.json": "ddb9039c8237cfe6c28a69dac4480aeacde2f05f9c0911c44757349eb72637dd",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_socket_1.json": "559e56ba6f753ca107aee4e0369dac3049de551a55a05d01b3b41dcf9b2eb5ac",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_socket_2.json": "51dc27656edd0ca676b340d7da71c563f2cd74123d2c827b826fdc98c3d5a518",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_currencyservice_socket_3.json": "d78fa3ce55ebb181acbc31c04d07375c20357ec1f0cfa02fe3df54df41c896c8",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_cpu_1.json": "8733445e11be866cf2f0628f9bd1fdb052cea206276e38fb45b85383e92628cb",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_cpu_2.json": "3ef86b9eb0cc13168b03a20276f22fb62575a6095f7b624949160c0c9860dc28",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_cpu_3.json": "3852093ab8be31068124bf86bed083f7a177d51b7d157b7426a10776ede4b701",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_delay_1.json": "d1a9d8ddbb2c17dd5b00e2d5c139d6f092ed2d660b7e56675fbb372ae6d2a26a",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_delay_2.json": "30d8d9da7cff84a59537fc11c32fd023352fce376bd4394df313bd6e08dd111f",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_delay_3.json": "83c63b405e2afb19260074086daa97d35d44cf5aec597b7556c6ec1ef6c6f2a5",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_disk_1.json": "9167ce3e9539e72bda7ba8f9a3497384ed9ede19304299009718080dfa2201b7",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_disk_2.json": "1a131851f20112c4f2f0db20fa9ebe07d5500af0d4f78e2e88c351fc56fd7998",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_disk_3.json": "2546f1c2012cae92c5414a3cf299b4a3062c69baad9878d9c4398b7369fd82cb",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_loss_1.json": "6d7576c0b9881cbbdb1a6e7e0fc52de72f5544be8f096bf5c54f915b5cc77e9b",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_loss_2.json": "af5e007e0ed2666741d345187d656c6267bf76aa4e1ee39da722c4abce829dbe",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_loss_3.json": "99cfcdd5cadd451ae78bb5511fc84bd99505a1f341f0c4d5a8b872d336c17590",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_mem_1.json": "8dfd29237e12ec4f4c4077c2137c22fe8b6530a079f48c834bcafb49fe45ba67",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_mem_2.json": "e5b170244a930321ef07117138b98c9a0eb9324f7e67c43324cf7f2b9d5c8206",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_mem_3.json": "0d0dfe11218d157d4ae310800e7cb8299db526f28dbbddeee1bf8f7e12ab1869",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_socket_1.json": "7860c0480831a91066cb445500a0eace992a568cf21679437eac25c55c17a7a6",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_socket_2.json": "9fa3f70a7169d986639569953af70b3d3c994c68347bfa34e545dff82b1fb70e",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_emailservice_socket_3.json": "ee4a92ef39ab432709a55897f277e2ff2b3acc5ea0d30ae3e9e943c7e0d57111",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_cpu_1.json": "d571c7777ca36db7c311eece1d63c8b8fbfb037a0a8765a6ebeaedf361396620",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_cpu_2.json": "af7fb52a9962a21aff60eb7780fd610b7f0099efe6bf8d07e571e40285c02db5",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_cpu_3.json": "4b18d79be646bd169aeb1e80a6b2859991f756a35193882c3cfb0efb23d85c3c",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_delay_1.json": "33b5bf3f9bc3f9b429e38d2f4a49116cd07063b046b7194350cf7dcd1ee0c5c7",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_delay_2.json": "97c6e70df3ef3902b3bd1345c01634d56f7769fd9dc0f2bf711f662f97ae2f40",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_delay_3.json": "e0181cd46c6831e849933903685e6fc512a236d9f826c9a3702e98a8fec28f41",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_disk_1.json": "42ea1fe3e43c17a1b909290cd2bf9adad58fee5f4887359e10b29f77f3c3b30b",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_disk_2.json": "026eefd51767c9034c7c64b9c8ac1bb0955299b789bf78f1a3aae374f393ebf5",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_disk_3.json": "20b3bedbb007fb7ecc31033d86f2cc4360039e43e3bc9a1cf55567919357d784",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_loss_1.json": "5d6bfae9160cd34eb1ffe54463f2df2d54734f3d2671501e9d54e05306e25d24",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_loss_2.json": "93ff888f8d48a2e5fe988414c8cf1a951b3fdddca7265ae31e2f32aff223163d",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_loss_3.json": "4c3ec72ded1db86b6b18a014e35d8006a7fd1b5707ac30a5bc3587edc87776a4",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_mem_1.json": "bcbd5a61fde988fe22d9a4b7d48d3edda25bf0f875a26b2344a981858f8487cf",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_mem_2.json": "0cf05679d34db7471ab3cefd58e269b11b81c81afcc81cf0d2d9451c25adc3b3",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_mem_3.json": "882f4a859b381f4f8bec2f786a25bfa306e1e286cfd2c6992055514e251fa1b7",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_socket_1.json": "a6d662ee85c4d13500b85f7c1b830806cfa16832d7c7bed8d7dbcd02213f7803",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_socket_2.json": "9e91347e2fa691b5ffc8aff3eed98732f89a63a94433d877755eecd7989cf102",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_productcatalogservice_socket_3.json": "9618fedd2092866710d9e1c08d6012c512b54eaeb7829302a77affe8aa019cb0",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_cpu_1.json": "507fc93dd5294b88f60992fbf4a99bd01c5afd2f8fad50aa9e5be999bd174da8",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_cpu_2.json": "8bf1d9537d51158f8d80d4fc84be5362f31eb44155cee31e577b80f4c84dd283",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_cpu_3.json": "851585796e7c6d5fd5e61e39facfe80e99fd4cd3246fce04d2eb32c472832e29",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_delay_1.json": "ab2aa53a917fd959ecfacf579dea513196c17276078aa6463a8272c9eda5c539",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_delay_2.json": "a0d4edd2c5e13545adb7d7dd1b26335fb35f3dcb578af71aacd795d1f629f25b",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_delay_3.json": "720cd8faa70e79e8e77f16a462fff561fe76651ddde5e37f684dd6a47d9250c9",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_disk_1.json": "d5966438df3ecc98871cd89a955c50ab23adcbd381b601d38455105d35ec425e",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_disk_2.json": "eaed1794e10e41fa406eb76f9211e689f5ada7e549aa3f54ebabf2a2cdebe6af",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_disk_3.json": "91b41c4945ce45d02e4fc10eb57be2612b3980148eaf8d60c7fc069e60efb0c7",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_loss_1.json": "559810c5236809b7915c60cc1a9faa4a3ef71fca414f68f1a109b056e9325cad",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_loss_2.json": "8c92f672804f10b9579bb4c21968a4cc5c1f911c08fc41e3a8d28d8c62c52521",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_loss_3.json": "35fc92fd0c5c39c08c2745c36c42a0578bbd958792767e5d8704ac9a25d46bf3",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_mem_1.json": "649e6480e005bd65857074c95ce5a5f8dc9951e3e049f9aa54678b7693bc499f",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_mem_2.json": "c702f9c7114c5b3998c88acb36c67e725f2e84297bc51d92b26b0083177acc3e",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_mem_3.json": "fd2cbf4b6e2560cf46d733c2fdc9d9c674c56728925a858f3bc05dd6e064d8ab",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_socket_1.json": "1f40d7a01f05a041b1dfeadadb3e4092e6b88ab2c2ef6cfcd4915183fc6442ef",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_socket_2.json": "de1e2edecfc200a6550f3d7aebe71e9bc3d653055f1f0198cc9bf5ba21f78e14",
+    "docs/evidence/phase_a/re2ob/rca_cases/re2ob_recommendationservice_socket_3.json": "ebc70f3c153eded7e4d5bddea6e57e42b31e5974864fec87456a1222372c6f01",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_cpu_1.json": "0bc73d23d2c4aaffbc9e668048fee646a6cf145d20bf9619f8aef89719792f00",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_cpu_2.json": "41f9d8ea5f5264e297737106447dee5f25a8d63a3d92ece0656569775e0c73fc",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_cpu_3.json": "c087e8b847f2d7707978d05215857730b9204dce8babe6b5a47d3080d2af12bb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_delay_1.json": "85a9da8d28f204e295365bb1e71d735b788a26990b35db66ac8001452f602a10",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_delay_2.json": "66759e2d51fde4fcc9402305bed2140e7780ce1d17f10129bf40659141aae132",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_delay_3.json": "93db6ad1f82c352d5b094fa7b1ed416b2cb368f49ae4e25330d85bf372b5ee57",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_disk_1.json": "012603ce989df3875f62603a70b6ab9c87e06d17cb8b2f7ad0ed2fed9447e738",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_disk_2.json": "f435aef8d4de714fcae81143baea5c649c7e34c86da99b82d518535d0ce4bfd8",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_disk_3.json": "6b3ae8c97238d975e55fde35eaa06916e3ab8b41b47c95a2e508e24a2b208d70",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_loss_1.json": "2ab3a19562d91b27c9fe9106c41c93d5b3fdf365e8c30e9279d7c664f91f5128",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_loss_2.json": "dd306f93321ded14549daf3a8c5dfa4523bd2298b4851a1a1fa6e62415e85b6e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_loss_3.json": "623b37b4594e1a45dc77cafd51a09479ae66875021dbe3a3608f522f12875951",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_mem_1.json": "4e62e261fa13b7bafcf40e1f54c80886caad76d4eee34d163fdc4e74104121b3",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_mem_2.json": "5b0ccd0ab735e76e2f02bbfa033d19ae76d13f347244a302d66be04f807a5590",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_mem_3.json": "3d489b50c794dc643b57b08aa63687afeac41592c9877611f05758ec7e9d8bdb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_socket_1.json": "92a74761d1abbda32632341da2d8aa472851cc9cf961d166ef076308a1d4d473",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_socket_2.json": "c54e3e1688543520d53c8251a7c32f9725a2a28e6d4531078b2020710c427e69",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_checkoutservice_socket_3.json": "c092f1e6cfdcf0f5d456bd47cc25741c04a96e1ee471f424bb6dcbcbd78483e2",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_cpu_1.json": "0c0dab67694cc92dd7527d1ee7b60bbe16c7faaa372ec2d9b46adbddf3caaaeb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_cpu_2.json": "6196ffc6dbae423861331231723cc1b646d21c7766eb62b2d5adb6a15e0635f0",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_cpu_3.json": "537aa45180e5ab55dc2a9e4409dee0fae4c338a9c94cf498337e3bc2b25bb972",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_delay_1.json": "0215c46c98e0c9dbd92a158ba8c2ec853a87b4154b51b779700ca21e8dc34e75",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_delay_2.json": "41338dd82418269adf9ca36325ea0cb5883cc39fc2b38db6f662dc4577dc1b17",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_delay_3.json": "96adef044538b2d6599803cbcee11c698efcff6081b51908b1e6e41a5db5537e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_disk_1.json": "60a0eee799123f0592b964fa29458ba4357ffc1f928a2769fdb95c255341c6f1",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_disk_2.json": "26e60dd0aed69e4e5e3595b3d67c803b1c0a2de146400e42653d08d9cbfe7ec0",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_disk_3.json": "90a3e445a2df5e393f8f36caa66fb29d46588bf9f349ca5e6656de1fddbbbe95",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_loss_1.json": "302dc612094490c68e0278c4e26f914c3e6a7cc87547d49be155c27bcdd484a5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_loss_2.json": "baa506e91d6906a096770a820759a70eef2b0fe14b676c6eb2036049e33e5d1f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_loss_3.json": "a6baa3f9b6f378e404771cb74e3fb7986f82343a338c0a66235e86b464a72bdc",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_mem_1.json": "00da8cf0393244918abf733570ce8f5519e35cc0e4fc1c51ad751ee3f0178c7c",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_mem_2.json": "a7f47085413c3ffa158f8055c7b4601aa78ba7ea52660398457b45d0a7c4d5c6",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_mem_3.json": "b23fba4ef277d794b2f6ccf9e7a2641a30bf314766585e22c27d1302ddeb6603",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_socket_1.json": "aa3cbbd2a7fc963f1d1841aa7f9b50dd36034a2c13a43caa8192c1af84460e69",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_socket_2.json": "4c35eb4b3840da745fa7486e13e3a56018772c1a9f3bc1c7b9ccfc27bd94c98d",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_currencyservice_socket_3.json": "6c24b580229bb5ce769f48229ac8a92ad57e4e7e74bddb14a02e87c6d469f2c4",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_cpu_1.json": "1b178ca1eb37e2ea35a376c560fba4c270929034046cf7bb25c968c4352963cb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_cpu_2.json": "8dee1e5844063a55617e6d3a43db39dc7f7a05325a4c5478553d9dc67493dd98",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_cpu_3.json": "5034137a637c5941a3dbe03c0c63f7e6abf304ff3b3dcdb68a74fdcb54db3abb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_delay_1.json": "18b415676fc194085375331da418cde44e0181d8faf3f280ddd6f8233481e81a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_delay_2.json": "9b3cf1c5e46e7b21797c1901fcafe64756001ae966e393d76efef670d44285df",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_delay_3.json": "0c0b361b426c9e948d0ff29e9675921ddecc3bacd5c5fb3fe464b40e6375d2d0",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_disk_1.json": "c3a020fa8046c1a6ed8eb086ae487fb6ac32a02001d87e8e29877157e3d62555",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_disk_2.json": "8c5944991cb310f19ca89b3fba9d119218ba3fd08d8496b00e5f872112ae64fd",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_disk_3.json": "5c7686bff79a372f4c14de6a5c1c374aa6617569e31cf0090e9e0e64db751e30",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_loss_1.json": "a22298844beb3f7967e0829c173f0cf34061bf3c1ea3722a8f7c758d826a084d",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_loss_2.json": "e1f583c4bf11b8e30df49f70550bafada7c3a8def94dd0f04505f66d3703de93",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_loss_3.json": "f961a0155adb25a8f17a86d7469d15e6a8837e60a1faecb8bf79b0c6dfa890a3",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_mem_1.json": "669a561c51da1adcfefcc5e3c7fb685e9e4951735f38694b441407171cc6751a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_mem_2.json": "ba5f34270e5ca655873c8f8dafc1abf9fcb0542080ad81e1005db95404242883",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_mem_3.json": "e82ed6e3a6144dedab28a122043316953c6e3c93ab378964e63dd6438dcac328",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_socket_1.json": "833787c52171e631c2dd5bab1bc587cf53d1c46d69c1825a9d0bdb10dc0e9d9b",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_socket_2.json": "c8e02e772d6fc62b08155127d11e1400a7577f2c09c74fd5181e43e78a2635ec",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_emailservice_socket_3.json": "298c9a65871a619c2138d993f67d087722e13642073e14aa046b00b0182e115e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_cpu_1.json": "12dc15c3e069ed46686ea5aa3e784c8e8a9e2c6249a4bb888fea21cd26918ac6",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_cpu_2.json": "75228d5fb0b0f52c88b2e5c2382c66c32ef15c958abd2170a916ce2dd6f65c6f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_cpu_3.json": "da57bb466909431da01a33e6a21aa1ae2dc6a137a5555960f9ccdf5afdbea065",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_delay_1.json": "bee11d047ad147c20c1f7793a1c138855cb3bf095e1bd2de7969824a3ed0ef71",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_delay_2.json": "a0d31e9f35504376eff5f3b9a63b2a0458e7d319688261ab0d15f1bd2533e491",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_delay_3.json": "9038783c11315bcce2be29157852cb49cdb21e9905fbff5e8d90cbdb7b1ae802",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_disk_1.json": "85cf200bb73175416dfe4449e8a9df7868730d01d7bf379b4f536c244b77be93",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_disk_2.json": "99fedc6f7e760fe1d7010001463a578a70dfe430af5249f28012642c02e05c5a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_disk_3.json": "f3b37ef89f1d8bbe0820fbbb9c4d47396f47b0ff02d94728e61c52c9b1beb3d1",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_loss_1.json": "fef97bb9d39c3c69b656d27e3e978be3ea0819614aff5aaaa526f4e448169b24",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_loss_2.json": "97b12d4d95e22e699b648d55ec2726b5cbf2aee40cd95592d3657769062b7db3",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_loss_3.json": "597a1057fba3c4013c138e57e56045b85845735f8a83b1976a060d55c9b2d52b",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_mem_1.json": "37fcae7eb7691c996366b492310fb8e446de8531a9c27e9f8ac5bc9e679a8ef6",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_mem_2.json": "8146780bdfcc937f5b0220e5216b5d02959808edb1658e505a5367ad667cc6c2",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_mem_3.json": "8a8a33cf3c7483fdbad0e93753bcf791578f03dd045d857e4e3b29c600aeb00a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_socket_1.json": "9e789eb26cd41408f2e447fda2c418b8b9bf30e30b8db5254d4f28657ea4662e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_socket_2.json": "fd4f9ef1cbdd5302a0d0b4155a4f16191ec592fa1fce5dbd0a5a2569a654bc11",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_productcatalogservice_socket_3.json": "df73fea65bc01bbf797902c5efbf3664ecbb25e3ea2db025de8c14e43ced0e03",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_cpu_1.json": "20a45657394d569e230c8da6556ffda7a1b2a3727e644d6504edf415dfc567fb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_cpu_2.json": "91c88591c56ae16ff520926d7998d753c3a186fd5aba6a414d52bbe8fd84131a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_cpu_3.json": "ef56cfdd951aecb9939a7caed6f9160fb029e877ff022d60bd50be7bb6bc6421",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_delay_1.json": "f3680f15acfa35c2feeb67332a9d90130157e397bb0f02fa185f8e326e6b9f00",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_delay_2.json": "f1890acf93ae33af24d855f266a523820506db2234d6693dd45f8c6f966bf190",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_delay_3.json": "2741cbeee43177a69f315a95ecea413b8eefa5f8bd483420bd918c798033106d",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_disk_1.json": "0f4bc1e1905d9023b78cf481e762a2c9eebe6568bd26607fa92376b85915f645",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_disk_2.json": "7bb06e16c330bbc9fd35f1b24f07ac42c38bbfaff17b6fad90676d2c3521779a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_disk_3.json": "f769be280488ae0e4145d8ea7598d8b041acdfa2098b66ab16372fe5b84863bb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_loss_1.json": "e6cd668c3be1938d42c7983578a8889ba42f211a998a6e309783261ca0c81de9",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_loss_2.json": "9ceb1054e3f792cbc9c0bdbb736175ed8b77333a1060e66a8ef52469fc5368e7",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_loss_3.json": "e762f41c9a828eb38722a40e04c5779dc9026467cc128234242ef6573b495569",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_mem_1.json": "7b3eb71aaa193aac1fbcefc09132e02869bd1d38dc33693040a43a590e2dd734",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_mem_2.json": "86acb74229bd8911030b43a55321cdaa588b10f01f0e8bd0bfa2545fdd9a8ddf",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_mem_3.json": "546f0765229df2ab9cb18687175d8063702e80d56c8e260d09dca70ec797e594",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_socket_1.json": "76e2907826ca8f2f08c66da61d5e960d615140d36c836f68febfb2c1c29a08df",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_socket_2.json": "a25701c838c048aac4002bdc8c95aec341c026d979602da96a443c6d82e62306",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro/re2ob_recommendationservice_socket_3.json": "87948cb445a65a9894a7065ca463aba64635fa19b5879f43370a788cb17e3fab",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/baro_summary.json": "1ce41eb707248ae45e067deb83a2bb092c8321b9e24219ea1f3e28fe750c075c",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_cpu_1.json": "8de443da6581cc91e91fec498367ccea727fd6f0120d9a2650532f30feefdee5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_cpu_2.json": "4c4ee266163ed8f89af497da1d069d49e37afb3595abd9d1561b7d38174297c0",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_cpu_3.json": "d3ba3d9eb491dfc5c0c2672b3e3610649f042632583231573883cea40a9462c1",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_delay_1.json": "0fe556201892858c9ed5016e8d5f3a6ddd3915d27354ec025c70f464741029af",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_delay_2.json": "953578537097e211212e5c6463b1c96a91377116d8dd69e6baafe5784cc7c4d6",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_delay_3.json": "96b2048411c63e85918e0027db234e6d4bc668e5ef5ede3973c355ba19d0d040",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_disk_1.json": "b93a8af6457c5834a522e966ca3ba6165dfb28af9e6f2aec3083c6a7983dbb79",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_disk_2.json": "cd5e5a18fba0973bd7098fc51320e49d201b0af7c94ec361683b9b690b5c0666",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_disk_3.json": "d863a9f254eea6ff53240f47e087e68802fca937ee91d1f9324a0e30ddde12fe",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_loss_1.json": "7de5c5a83db912b5d8736356f2b38faacc67fd7df28c96d5d617b21cded0b2bf",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_loss_2.json": "03d062bbb4d9e089a3267bffa215bbcfbdec9a8d8bffed5f05e8632745700fac",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_loss_3.json": "f1f8a77f084bc5e1af019c12715a154a0558ff0f99e977684bd3bc57e653838f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_mem_1.json": "db3bd41d45c73902ab1bdb3454c9b1e23c42b4cb2768f7cd99d8bcf917235158",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_mem_2.json": "1bf4f829dc78c91c207a145ab1351a0ca2cadac6306e95d79adcda47c1d17dbf",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_mem_3.json": "47d41e7363e1e67894915b038812337f9c0729ddd451e773f9524d528d3d5e0b",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_socket_1.json": "1bcfdacfa94f770ddb3dfcea331211c8c58df780bd00f127ce36d74a78255f40",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_socket_2.json": "42e3b212b44636b43962f51739512cece4786c2ad694f3222d9e64726ff47b66",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_checkoutservice_socket_3.json": "1ebdd6d543f9767c5adafabaf84062efa44187696d30df6da2fa750e34d04b94",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_cpu_1.json": "bf92553f2c99d8966a32ed17cb0acce4dc61e7d1e21d82425ea46576d6a6d332",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_cpu_2.json": "25c9b40e9047f9ccd93a6fe514f57fd7ee6ed619edcdbeb69b637676bc2f1f83",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_cpu_3.json": "a8a731be4d2bde2415aeb7c3be75cf8caac592c23c7dfea5609db7e57890f27b",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_delay_1.json": "6ff6ea6cd34aa4ea1c9eff9f6c30cc064e5877ce503905a2c265dca1f2495e4e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_delay_2.json": "e9f25ae0ff2fb905209d2a44994fc9aebce3693852e59a7714ca20975942617b",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_delay_3.json": "582161e8dff76c4aa0efa5d0de92e35dd0d27e2a03f71465c058701522559cad",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_disk_1.json": "54d8129ab0a61bf0bb7cf2440f6ca2914de39b121dbde9d8e6ac146562b96127",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_disk_2.json": "db22705ce5dccee309c9e69ecaf4e727c9a18f54ed58cec4e974fe117c809d0d",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_disk_3.json": "5d32a29896c5fda4365370f68581a8be6e6674fd00691ab7953fd6b3ceec2caa",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_loss_1.json": "f3fdc4a34092e0590990bb9cd1581fa6817b02f225c361138db9bd30b678e4c5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_loss_2.json": "a1a6eabf36d259001e878dce2dcbef29353416fab08e4c13bd6795f0ad7a64b6",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_loss_3.json": "50ebb1dbcf2dc8d60e57aa540e11e85c1a1d1021b229f4da1446da7cba7a44de",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_mem_1.json": "9546cc4bf1d62cfeef2fd26d0123582a9fd7cc5e2c2e47c10f96d4d5affef4ff",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_mem_2.json": "363c8b5ebc1551e909c6008c3284555beb689e071952159b7e3e233562536454",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_mem_3.json": "0537e81ec8d94824e4596826a1ddca7e94462fe1f55075298ccca61d55b24e6a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_socket_1.json": "1bbfe63ade378be7bc386abbbb4060b06e3a5d19f3306768004f9104bab2bd7e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_socket_2.json": "327c402fa1a52158c142ad0f0324a100a8c48c0d714de71cef6a177bb473c968",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_currencyservice_socket_3.json": "42eb99b4232bfe1ca28bf5f07ba7e0276b2a2a72de47a7daa06638e5c68736c3",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_cpu_1.json": "b84debc5cc73c7ae39058b86436aaf777218f7672a697e0a8f30f39702793037",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_cpu_2.json": "94e658403ade7be3eb79f74a90c768bd4e18676b3c1fa1431f4ca154f24ce18b",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_cpu_3.json": "4aa7b27a14496757b84377396697ff9b4f96418b99ab1bebd3e6f6187f47acef",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_delay_1.json": "f265d95d82b932dc71260d1d75441c0b77c65cb1e18edfa8d53cff6c4817a8a3",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_delay_2.json": "015045b357ff7fd4bf249af2ddcf45461d10a8cfe98e35999620dcd5fc385a46",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_delay_3.json": "2d8311074d42be3ab356472edac3452f9c73540b95d92bea9518374fe38f845e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_disk_1.json": "da2143a0cff3c2d7cb524f30f2c8a88783ed58e599a183a84f7b8eb119cef700",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_disk_2.json": "6b3de287aa5a0c67d73362d8d425f0921e71d4778cedcd7c4120059b718ca750",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_disk_3.json": "8fd5f72a684b6569c2f2c3547c7bf5de75716eb18dc97eca8817729d0c4a6abb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_loss_1.json": "80c57f8735fa4d537b19d47d075dd5054139c46cbdabcf24118af3e3041eb179",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_loss_2.json": "75b6c20872182d0ffba12e64bd27d29cb67f85e23f8d64aa71231c471d0b897f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_loss_3.json": "d8a797ffd2e1519361757268a809823b1f3668cb932b21e1e3197c8d9dc4434f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_mem_1.json": "25559f3352db1509fa25bbdb36b7d6d81792be3e480b9d1cbb573756dff72f8e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_mem_2.json": "fb4dc2a01a8cd77b13b4a5e6e7efac9cf10bf456bdcc879143bf74c14e22b4a9",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_mem_3.json": "e551a3c42944ce7611326e101592b988c4b71268b61c57e851f3a7144aa09eb5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_socket_1.json": "4fb928484aa5ee05ea51ba65142da135e03ab81d87bae7d428ee4bd260f98b7f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_socket_2.json": "16effb6799c753018c62a9b33e1f46cd13158b75b3db9fec4239f68b6b2d7059",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_emailservice_socket_3.json": "657485cdca865b8bb5e70f3db8251232d89ec10c326cc1cbc45076d90f2c216e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_cpu_1.json": "5d35b952cf7407bac545914bfa0134dbed00f39de960625ae25a3223ffb1ff95",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_cpu_2.json": "60ecc22c5ed4682ac311b6ab76721e7bc97f5f23ab09c6bdc2237e78e0a9576c",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_cpu_3.json": "6d188bdb44e6597b6e02fea7e9b200f2602d8f939662082815e2deae6d1eaa7f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_delay_1.json": "b08df8bd2cd01f8cc17ce88b6104e68493ed10f8380cc418635b1858312705fb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_delay_2.json": "fab6c73fef52c06e7defb193d3e5e6c9ea6272ccd193dbb6366cd93698526956",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_delay_3.json": "53639598bb2363c87f66c7553a4de6ac745085115a4debed898f3b2714187237",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_disk_1.json": "9611be477e36a4970ffbbbf9da8377cc67303178287be624f168565112612336",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_disk_2.json": "0ac1f5d9fe1d7d1dbd21a916b3b87873515ed3a6c4a498f2aca32785de77125a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_disk_3.json": "38fd94573482abbf50e96cf3875a35aceda2cceb5e81e7837b1039305dd2a3df",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_loss_1.json": "cc2a3ccebe66df0d14029142bf0f9fce3dd8326c5a44f3c7a51c818794266cce",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_loss_2.json": "12c803d591eda7826c07da9277d15b4a05cc226a100b47e50f4bd0e07499ebb1",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_loss_3.json": "432685d9e470ecc68283eb3171489f712e2474f10ed1eeea1b720488b62960ba",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_mem_1.json": "3a762797ce07008ef57cff341c334b2d3242ded81c95847380db45bd18ddb2d5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_mem_2.json": "0b483f0227faf47f25ac9f8a1d3495642470fa9ac9560c062c6f5b576db556ba",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_mem_3.json": "468489f0de486d55d3c2333fede112782ea0a176e097b9c2b837f1a115bdf337",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_socket_1.json": "1c2e25d334780958a939da7afd3ec4df27eacdb3d0ce8f75496052b6cff78266",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_socket_2.json": "e8758b4400d019d4b2ca65f3b2a223745e15900cbade630ad951e8e0fa167bc6",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_productcatalogservice_socket_3.json": "98f87e973ff2ba103a9504532038e026de22cd60073f89ebccd590c62aa53ddd",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_cpu_1.json": "80c225d64a1b6d7e179a284f29e367e62e7bcdc1eebe16e7e9ac2abd39dc0519",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_cpu_2.json": "d8420047b89b8e78fce470cb672136e1657770a07df3d1f6d100f2e4df965bdd",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_cpu_3.json": "64c4080a2d2dfb3a6e72bbeec3dafc4c0f8655299432879b485ecd4d437643e0",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_delay_1.json": "8ee7efc96029e2712c5d2fc01178512646c2f45a8601fd597b3ec39f2832da9e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_delay_2.json": "62fda63b9dbb8c26a8279e38d590670e64552cafd8fc42b3eae4911d994cded5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_delay_3.json": "4105b59f1a81a00ab5a30c4f7b3a5afed83725560af69f44b2898d2d993da24c",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_disk_1.json": "8ae86085836cdf55e113698e23f0c27397a04705c1221964e3608010924eeca8",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_disk_2.json": "a398311dcf4f57eaa0b3e80dbe4158d2431a6a4d3e088811f4d41f2becc2a5cc",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_disk_3.json": "fbf8762de31fdaf9211d5ec85bc45ffbb97297253a33e7b8fdb1207a33b26607",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_loss_1.json": "7897c77baff33a00df654f9a1e5d1e6d7fed4030e20822f7b55724a2d9e40237",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_loss_2.json": "10ad7ef4dbf504c5d7ec739e36adb0d2584dc3ad6953a586530a681536246d06",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_loss_3.json": "6dff0c712de4775e366a3260b965cf59781c8f98360086de4a372f6deea5b92a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_mem_1.json": "4e581ee356d55f1f93b7387400c426298a1706b5b69ad8a05a177ccdd26e3fa5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_mem_2.json": "68e92a9a492762eab53c3d8b993422fe14f16906b214b344d9bbbea10c836bc4",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_mem_3.json": "766107d85b73300c1f306722c1ebd5416cd76fafd05b95c342d69522b98f201e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_socket_1.json": "dfeb855f7134c672a6bd14c50bd5c4333a5b85d30323a5b3c47af59833a78296",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_socket_2.json": "da64dd4da69d99ab21acd944912655aaca87924c04b847c0d8bb49de95a08bef",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa/re2ob_recommendationservice_socket_3.json": "61e41c3b19695d90cb4e3624c5d47f0471e6e1b696d795e92e1abd13634d93ca",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/circa_summary.json": "85146a4e0f2515c910ac73a91aa422ee41bd2efbe672c9790ed2d097d0f2929b",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_cpu_1.json": "7e61a6adfc02118e21c7b2c4855c62e1986fbf7b766b228aae59403c0cc15f64",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_cpu_2.json": "2f70da5552746156bc056b10b5a1921fd4c10dc26bad70819919f13aa04e9be2",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_cpu_3.json": "2d5b60566ba1a1153fd42a8d476a9994c6a0961bda04b6d07b48ec4daa1a75a9",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_delay_1.json": "c04da56a007c28fb8e4d3287c09ef4a0d8aaebf701c47377dc4b31bd003cf1b5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_delay_2.json": "66af0b41dc35fb2f013db029ff295a8fef9016ee7b9e3fde3cdaefcd7f34caa9",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_delay_3.json": "ef296f9014cca97d7c6544870c1219b346c1730332ab0e0d4cc06863688aa4de",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_disk_1.json": "8fa5afb65b82252f64e95c73945d09486e0b006c594bf530249b6ef00d32801b",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_disk_2.json": "25fb9ccc5a8aa84677a6e57a8e9131efeaf4b04a94bd062226948d6fa82fabd7",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_disk_3.json": "6471a718e8284721a04791846ef89febd30239f8b30e01ce0213de92535e569e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_loss_1.json": "ef381be9658150a21dc4e0dd3fc44ded59d5ca76aa7861dbb84e0dfe58fd1d4f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_loss_2.json": "da72d1044727a674ef5f539cb1521a5728b17824d63ed4520fd5c1dbe30c5ee5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_loss_3.json": "4d7e9f4aaf02377a8cd675fb1bf3c41e55ef8b0e336a50a4fb5e78dc25666225",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_mem_1.json": "0a5754a6cd315d6897726ba220156d91c3acf8ba984da0c1ff3412689b5e2c50",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_mem_2.json": "d7bd3660e42357e32799222d9fcf13b8f4ca95300b415b77d7a944c0c062354f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_mem_3.json": "3439b0c7d67f8370ee4bff5b5dd4908351d894795e77a12b31ce4e5f0a30eb77",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_socket_1.json": "d88189ea203c06ea8a42354521cd6f8811f311146237d5702b355d70ff38aea2",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_socket_2.json": "b7584958dc6a78c03a33cf422ef7b91be2020fea7d515b06e5a6172f6a727034",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_checkoutservice_socket_3.json": "97f849d124234245da5fd03a25b4ee23d39b10acb61bf54e254545878db1fa79",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_cpu_1.json": "ddbc9e6384aae92c308f2234d769d59270c8c3994fd0fcc459b91ea11897b825",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_cpu_2.json": "1047e5e8180dbe52adbc935ae5018debfe087cf9dfc5c86c98334bfbf41186da",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_cpu_3.json": "5030b3e19cf2f82e88521b8198bcbb2095e740305c031f94252d4fef5c86ea85",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_delay_1.json": "944a21978104e2f93e4d3de5ccc7fd418ffc855e8445a974c3753d0742be44c2",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_delay_2.json": "530a6919a297e31f6e50cb13ddb89f1e4077ddd14f22b426cd0e7d158ff5a4fb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_delay_3.json": "292cad024ec41e0e18667adb95363c3f0c23311fdbf6e015cd5f64ad63ecdd18",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_disk_1.json": "cbbd3962f6fe01f0118d21d9f4d4b046df664fac474ce9035f866f8c6f0200f9",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_disk_2.json": "855acd8c120efd0b475a0397d99dc5df372534c936a96e18a050c97d4ce05e1a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_disk_3.json": "dfe357c6fe6f6965db4e01b1eb5978f2ecc206900f91de85e758ff63c1b9fe03",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_loss_1.json": "3ea1d71b5b6ba4abc4e3f4cca45b401038343a81c3f2adeb68d281991023e97d",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_loss_2.json": "adfeccdd958bc45d2a6526008950571a52d4ee3cf53754c948417942be28fb44",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_loss_3.json": "8c0703ee855f7a7b26f82b73e5366e6ff7e69669ec16959aba58e18cb42e1a77",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_mem_1.json": "4afbc645acaff31cc02c14de0591d710923e38510c1352fcd1aff5ff8e3c8e96",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_mem_2.json": "9ec6739bbd06baa747d1e468252e89e4b49a7c5a489d9c5f1baa04862f371a71",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_mem_3.json": "96299b50d4d30135012c6c6589289764ad890fb040946e6b23e86f4885c98acc",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_socket_1.json": "b792420f0a3f1a200ec18da746552541dac826afaf29bda3ed2dbb5ddb2c873b",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_socket_2.json": "461cebcaf407e848b9bec3abc7f1ac6f1f49546ebf8cd6e56d252fd055779cfa",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_currencyservice_socket_3.json": "b83da5182bce0e26b397fd14c6454168d7280fb40326146d513f3ff80c57dee5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_cpu_1.json": "f8afdf8822b6c2a55ffef27ad5dffdf451d001abbdd6dd03a4bf2c32ec3f45e9",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_cpu_2.json": "a6edf2c6fa16f9777069e9026c93b95e1ad17bce3ff472af130b29f7f4c19b9a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_cpu_3.json": "fadddac10fe1a5440e577fb646bd9ca8c7b291e3a67f4e4789aac7681661f32e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_delay_1.json": "2ec18c6872ac33fc5c3c6e731a300e7ac3a6ac65fbf8c9264e52f6097a74b401",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_delay_2.json": "dfecaaf6a69d46796f1ff76091f92c0163969115ee3d4553fdf24818b113f843",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_delay_3.json": "238813fd368bc5a3210d1168aa1f837606a017a8ada2921ef267df4417d2cae7",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_disk_1.json": "68d634f2b177d7ef86c47b80e0de0ca7741a8ce5a2559fe0ec6e525bf53fef28",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_disk_2.json": "7176d8e9561efb1335f9f2f40875329d1bc01e9772109b28d413dfa1bf4735af",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_disk_3.json": "8a112562d93c79ed4fe7053b8dbe9a9a5df2c69735df4affbac7a17d881190c4",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_loss_1.json": "c31fa00e76b6a53ec255601757286d37fbf05e6a1f8e4f38dc1197b608ac3ccf",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_loss_2.json": "88f73dc87af82672da4cbaa49ce0b35c6393e5c452caa00d4be19423333895c3",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_loss_3.json": "29e4cb5c1b8c160f6f550cc47eec19ae38fed82888f1601a420623f1cf9e574f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_mem_1.json": "14c26a57f1d8752a50a39db67f21624e4cf80235fd97224b8995f7d62544d2a5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_mem_2.json": "986787e51f96468bef1ff054589e87c32a2309c4cec4274697884e55d9ca9981",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_mem_3.json": "e3c330b50d650552ba222814ac411c7811fe09aee15bc7da2818fdcbea150be6",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_socket_1.json": "b17558c8bc0c2b1046718ad86e182a1d30ad7717fb70d804713d9cd4837d7196",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_socket_2.json": "cb5264d40ddf906298d867d2f274680fec476d244029a6f0e36a55b3f225f39c",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_emailservice_socket_3.json": "2fdd4f59e997a5890375cc343e08947b73c1ad5ebb3d50a6db77592fbe163cb1",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_cpu_1.json": "dcb4a1b6f01cb633520d9b4416297033699e82ddd7ddeec7c2ec09cc386266e0",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_cpu_2.json": "1677ad2e4f7ba7ba15a3aa5280d5c26f25563877b1d6d722c9dca6f2171b643a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_cpu_3.json": "3bcfedc821c5cf86c6c5622e14cdbddab37cd95dbea1b4c8223b0169837246d7",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_delay_1.json": "c91798a9a7bfffae044da32a5f8e61e81e6d7ccc57bba0160e900748d3594b68",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_delay_2.json": "721632f28d360ea190047661cefe6acc0fa3ae83e34cb7056e1f9ec7f17320e7",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_delay_3.json": "853c09a804f116a0e98016d478fdd1190b7c0450797accc66a1a2684b6ce7768",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_disk_1.json": "192fd19b93710f284f82dd2a58e44d9b0effbf0e8824b4fc7a149a002d4fec84",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_disk_2.json": "2e41073d990647d762667df96318f82ba6fc4d4909decae05c11d00a37d07a68",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_disk_3.json": "42d71a9a2803caf24213cf042a49547b5a7ad7edd503ee0eabe9febd125353bd",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_loss_1.json": "302104253237f2d7dffcd626dc08f7cd112144375d79069a7880308d8d0d0dd1",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_loss_2.json": "3f921d176dbfdc9dd9e005052a3a410293f458be953532eea9e4cfc6f450efcc",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_loss_3.json": "859a28da8e2a3f2bc59ef214c1444a155b35ce278554db104526b34374bfbdf5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_mem_1.json": "963f7cbf98f7fc68e20dedb8c0d9defa9d637625846dded799d5cfe77437bd5d",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_mem_2.json": "80aacd071d6b5d4f090cfc7268397575a653339f4f2a75163cdabf7e3578d67f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_mem_3.json": "5853114298bb6bdd7923e07c0fe57d7f1e5c731804160ca84a9b9bd8b309fa09",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_socket_1.json": "f5885c47a6f2ff8dffae984a743069de136210f01d888778ab130913f3ea806d",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_socket_2.json": "676ef4a168e019cc3b7d7f8283accf0a2b11b3f8856810d9803f43a735cd7b6c",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_productcatalogservice_socket_3.json": "ebb7673fb09823c52622250aaa84baef2249224424c5758dcbe1d7e71a7c4681",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_cpu_1.json": "5427e26e580ad0dba614b83bf990612d04110111962c8064c50ce80174d68178",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_cpu_2.json": "0c05d197541b204faa56212189a695457bbafba9dc7543cdc9fff144cad4fc58",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_cpu_3.json": "a9c827b8fc0f8714af0d0b8a717b841258716e7afcefa69e09990ca4e891f0a2",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_delay_1.json": "d3675a96cea79805df5a17835b9a39bd3d938492bf30075fcd6439ef04a30667",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_delay_2.json": "cc63a6a6dc24188c0be73e4a19da785570ab59fb55744b0d7c45c0a6cfea1871",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_delay_3.json": "cb4344bf736975fa3b50bb5960fcb782140c2d3277216a1a818be04d6044e825",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_disk_1.json": "bde05f0ce5fdfbed40e9fa55ec28b04b1480805e90d774b041565269ee4127ce",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_disk_2.json": "d62cd30f9241d68ce8c789ad91ddb81c245bb65d4c3b9bcdc6fe148b5f19bda8",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_disk_3.json": "c4bdb7c9df45e0d704a96ace5c9308c6e01443f0d8a8a1b3333cff5b5c932f34",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_loss_1.json": "fe7d453460d65d428fc5279217bf80695f9d784133eca48e2d97513c1a05a067",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_loss_2.json": "da8640ed1f60dc3090f1802eea4c617e1ca69593d79bb732265623a8c0620ebe",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_loss_3.json": "1d1312f4bdee5a8f7381846db2658a957b8dada985626a659a959b64add79dc1",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_mem_1.json": "a1a0c9d0c7d7113c4bc4d60e3781f7d479b9a77ff4024a2cab0870ef441d88ac",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_mem_2.json": "6e811c944e2fcbe1649f1ecb80affc92439ef2e9753bb22a7bc93120a373c7f9",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_mem_3.json": "cbb2c1f6b3f4452b0cb1f27a41305642fe40a74600d4ad9cb034eb262e51f44e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_socket_1.json": "f5638fb84cb8151ba01e2b1836e5a3a894c9bbe72e251132f34e8f30138bdb41",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_socket_2.json": "2a270ae2f0dc47d4607001a49f53dced71b6b56421eb29edd90d4c668426bd6d",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro/re2ob_recommendationservice_socket_3.json": "855b278b30ec89b53321080dede855107f8ae01a39fd8653a17ae9569e191d75",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmbaro_summary.json": "c8294b4fa6fae6a35a2f821fde8634ae1aedb8e8cacbca060d7eedc1bb0678a5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_cpu_1.json": "b86da6d33ce6e4663cf77a255ea5a500206278b4076e6b0f45d947b572f3b259",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_cpu_2.json": "d202a33e18f79fe475cee79c13fb077eb3c4ec627ed32dacc1f94549c2047890",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_cpu_3.json": "3ab15911cb967a5c05ef866f1a9e00334f20594d168d0cb2e5685e33e5834b17",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_delay_1.json": "6015542bdb798a1fbf1e5001fee87edd31f4110f18a62ef5117cd39dbb7c7631",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_delay_2.json": "45bb4c67ba79261ed81a7f15d0554a1523f81f69a7628b27b30963021ce803c4",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_delay_3.json": "3ebbdcc9600a4fd0bd19c8db50f5e245912550317a19f486964e432e9428ab72",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_disk_1.json": "17a1298a7f35795b4ba5aa348218700162bc8b4259316c27879549cc2619d1a0",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_disk_2.json": "c2eabe5efd76e4cb38baf490500a0d2ece83f6559454b8c817e1436d972eba3b",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_disk_3.json": "9982fabc365ccffffea364f2b09bd36d179ecbf9bad31a417ed0e40d3361a069",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_loss_1.json": "1f383ace8ca950d74c747e18e71d30f54518dce5a08b4d0c4cd1b2d50206f05f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_loss_2.json": "aedff5f65efef3552e23ce6a49a2ae959a321077b71d20c23c171701183d05ad",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_loss_3.json": "301ed7f9a3c5682352d4359298e092c3c8af46bfb8e9b0f9619ac47c45126e96",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_mem_1.json": "000a97c02579e77778b704de32f070dabf03fc927c68b1aee635bf4984375856",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_mem_2.json": "c82ae37b2179604ccc1d133e192c06557a49a8d2ce772d2a2df52b0a4ff2d4b1",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_mem_3.json": "658e929dd3ca73ed58a3c6931e08461efd27759f8ab0ba6f9dea545821eb2672",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_socket_1.json": "79bf09f8aba6e4ae4f4d13b99e9dbf4a15241490503b33bd4c1310a03544c0f8",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_socket_2.json": "5a29855cd310ce1f5d089099e8cbecf76a2ebb33b804f12a8d0141533dd287b9",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_checkoutservice_socket_3.json": "44239446a394eccfc88afdafb1cc02d233f3b585a859f07a380b8c6fc3b9dbc8",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_cpu_1.json": "bd75d9c19c5bb0483357255d577c5aef365fbd7eab7c7815433e4d82c7c50bc7",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_cpu_2.json": "fec7388a5d5d43ce1c669544b19819a6dd5818f2616435a9a32440e1b83d82d0",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_cpu_3.json": "f3834e9f250825af17976588992fccba150dd3437cbeeb2d8092977f8978f356",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_delay_1.json": "eaa444701d69681794517d4185ce6fd14dba830c59743bae50b2a6a78671c848",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_delay_2.json": "0700ef0f454f57caec5f9dfafd4e4fa80fe18023c83d03bfd1ddb0943ed8b036",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_delay_3.json": "28a7fa2be78c7df77f68f079aa76886d039f4085a059f2a654524030fc1c6513",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_disk_1.json": "38f2e088635412989bcf37c8b605376858f3963da9d5c4bb93eec3ae2fe50bdd",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_disk_2.json": "fe56940db55009c8ed2e6a7a62b081a9177d7f6048522503606284cf5eb4c0ab",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_disk_3.json": "8318d6d37ecd04d3e4f016b61f89c9e4898cd309e42f7abdb3ce0c0d59234029",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_loss_1.json": "e20b8aaa3b3bbf4d614c964f2b183998e16a8668c31d5b90fc59848202e313b3",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_loss_2.json": "17521c16bb1ee75602b3ee44e2b1f6665b270e3759fdd48d45e190c18849c4c1",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_loss_3.json": "6047265f5eaecdb55e549f5abe8c04eb6cf7391e00522963df3f3178f72e9bc6",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_mem_1.json": "5c2dda0bb03e7cd877c4b6e688d3c22107efa213a89c4038ccf6dfd8b2c19b2e",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_mem_2.json": "81d90ef20f0faf3d126ef8aeb42aa73bd283b2794ba6158e3b6c86eacc898163",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_mem_3.json": "302a85d0855e15ff6bb416b582dee866bced76c05a9a161310f32cb251928f07",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_socket_1.json": "29287260a7bdaaeec6ec40f81d9563d3a0fd3795eff5b7695b9017f958cae7e7",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_socket_2.json": "a19ae64e10f9dbbc66abfe9abbc49e7f2622ffc78114ff91e2b8d388f4bc1a60",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_currencyservice_socket_3.json": "58b61af3ab7643b89395f4cbe9cd786b386391e5cfe266489724747f37b71e90",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_cpu_1.json": "cf7c04f5f39cfb24a393e621c631e2ce90ddc125e220acad522f7d81e641dfeb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_cpu_2.json": "e8ebe3b48c7f7150bc912bb0297940601015adc1df1d8cd9c70abfeadbb55250",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_cpu_3.json": "c1f4e83371ada3020a31e2741685704806ad19327b49a1b956340d587b68fec2",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_delay_1.json": "126e3a96e58cbd64ed6a5add236f99f8d9f9e81acb4df8991537bc0b469d906a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_delay_2.json": "1b32323362702cda7c75612e4d5cb1df8f6bcbfafd1543dd1618e2a9b977dc28",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_delay_3.json": "3608e677e300cd564fc4378c4213f59f5f1f002f3bb1ef61f431b662ba5cb811",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_disk_1.json": "d9816b320ff807490453281854012ba6c99deed38dec045e7d0870097c18529b",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_disk_2.json": "0416cbea64ae71c10edc6c7951f113718a27100ca752779167bc0edf16e79926",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_disk_3.json": "42e6a7229f8a8241537a011fc14b1409b68ea3237d80efce5425a06a7d26aca4",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_loss_1.json": "37e2d4159f5749e867587c1a31b96eaf22b5960042d8a00c0643543d4fa9f091",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_loss_2.json": "f5ba8594a711d08f590dacc7bd455f12ef7cd8f02710272c2af4f417cb882dff",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_loss_3.json": "99853751c3875845c94f75ef194be3790420c5c379d661020997cebc4bff0284",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_mem_1.json": "e9da47f2615259bbf8a692064aebf6b748d010a57c99a88f993243142bcdfd80",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_mem_2.json": "489f0d9829334f98b005a585a7a5b2fa250204ced597485a63b5de471c44eec5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_mem_3.json": "24dc20ffc1266b096f982aa901f8f26df1c6f428a1d6190bb47e13c7ef23afa2",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_socket_1.json": "6e9a51b48608e8bf9ae796a16599baa62a7a36f3859991e9e761272bca7e08c8",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_socket_2.json": "1b288a5cdd0dd4036e26aa2b7b3c5bb65a7dfe52dda1fcded29fba365005a020",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_emailservice_socket_3.json": "1b1cb3abb256faed5de70c49751d38431350e7ddc413bb80a49c159f35e4fec6",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_cpu_1.json": "6868760272c55bea7247af2ae2fcfcee695060cef529ee647ba0a13566552653",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_cpu_2.json": "45a84dbfa4330db9af2b235110cf0f763a0a7b18f0766cc7d52f3a6b2cb7a0f5",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_cpu_3.json": "d87925fb8bc1fea739e2da8144aeb0c0a22da3d8be7bbf68677b001526db7218",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_delay_1.json": "da8184d5a5f52b5c01dedc2bc8079aa5554b9ae34119f509bce1cf3d2e49489d",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_delay_2.json": "a2ba65de2fa4bd3d4d5384043f14d1d4a19d35d8158866dc66edb5d4ef6bbec3",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_delay_3.json": "4c1ecfd9b1dc0f95bb2b7c148cc03f26b6e0af1ff570f267a9f64fb76efd0e4f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_disk_1.json": "ae376d160fca598737f977cb89de336186d3766d58fb04339e10c8234e4ef012",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_disk_2.json": "ba2180bc3794decf002ed788eefb36bae672be1392ec0e565a67fd434f927ae7",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_disk_3.json": "7e1c2b41d10c3549ead2cb81e35d20ae1c72c189ae311d54be02eaf324f676fb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_loss_1.json": "8633236ee7498ac408f25354df18b27607d6787917ec65e95b4febe60739b283",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_loss_2.json": "ca9ce06fbf8cdb94b820ef60da80f689ab52e53890da19551eafee1c6510561a",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_loss_3.json": "5fd09e0d0f6088d91fceeda54e9b8fcda508805553a044a2ed76988f6c64f992",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_mem_1.json": "d33a47da1d4ddbb6bde9e3cb4ba89d327ad623f5c6c99b8f5749892c5cdbf7ad",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_mem_2.json": "04df709f547ac62d187e0d7206adae42f909e3bf77b5781467d244d419dd861c",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_mem_3.json": "59eb0e634efad96b392729b2ed84d598002f4eb75bda6f731f1f64e3f6fa6296",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_socket_1.json": "b3b60947e15a54b32e48ec49ae1b3f5a53ce590caaf157be797364904f1d79fb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_socket_2.json": "a8ced8d557a160c06d8a6842d50adf33f94c3dc91847c4f814faf1dfc6194d71",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_productcatalogservice_socket_3.json": "5b141baac7b7c88ab529eab1e44745461e9db5085a87df688d882e56f31dad88",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_cpu_1.json": "24f0e837e8c07f990db56eba60302d15eb055ef95e56023cedbdfcf48c1907cb",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_cpu_2.json": "53e9f5804bee2581c2c666898660b214e0112de4baa68c1caaef52fa08b98d72",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_cpu_3.json": "c75a0938d8325e037f4d774048d082ca15b1945dbf9b2bd168999e950091ea35",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_delay_1.json": "9e49232150dcdc30a9405e3023458dd774e95f6d7392080b33d6768a36cd3aef",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_delay_2.json": "9bf6f4c7b2cdb0f7083fd0c1e0fc7e61d456a20c1176325b8c68ec039a65b245",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_delay_3.json": "380276689b24986384871c233affc5b5e2dbb664f63999c0407c562d9a4b5a8d",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_disk_1.json": "700fce10d49ab0c76ca9876828d53e99d6334937d52bb534cb366543fd603e97",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_disk_2.json": "faa958cc09c71e80b7a391ba7c37633b09b70d9080ef33528d1d4053f08eb26d",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_disk_3.json": "6c550cdd963e054de309717ccf19834d01d20f81e8be2fec81dda9e4a373ae17",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_loss_1.json": "8e54bbf532ef50413d9f91ad03a1b5aa73448f162c00716ee0c58dbbfe4dbd5c",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_loss_2.json": "883174ab99159a09e493bf3e2afc0fbf10a7ee66cd728b536e6730fdfc40ddca",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_loss_3.json": "bc626b129a104635b559d55a24da23af7b8adc0100082e6dd98b825f44152e2f",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_mem_1.json": "acafff3123df7f6a5a75a48dde447c823af699a9fd20b0fb8d7cfd9a6a0b5d41",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_mem_2.json": "6dbcb14d8bb4b5e1feb9be1acbaa3cb3a74f8edae0277b86ad85e1ff16e74f71",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_mem_3.json": "73bd81e032ad334be53c28199b53c577470c73d32571b22c6de1ff15d13dec1c",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_socket_1.json": "f6a8831317dc3ee8ec0655addc60a43c66d0e4de05c0ddf949031ea483c712f2",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_socket_2.json": "1fb80e81d2d85132e5adc44433002dc0012208d320b514506b3503fb94ea6cec",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca/re2ob_recommendationservice_socket_3.json": "600424ffadeb8bba99f2f55e5b90de763b00bfebbac2a73fb5c4ee5f28d1a3ea",
+    "docs/evidence/phase_a/re2ob/rcaeval_baseline_cases/mmcirca_summary.json": "b8826b063452cbb8e8e49ed120c7fbbe3e483ca785b57519298dab5857e116e9",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_cpu_1.json": "5e435f3c136174f00fae6568945e2daabfdc72447693fb45b0cd8fcb27c7c56c",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_cpu_2.json": "3cd1f55508e71a4d6ec0ba5cb09ebb7a6e882ffce513d586c6748511f7388c6a",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_cpu_3.json": "0d25891cc7de6aa1c1839a3a73638ae1a8bda31df769ccdb142a8d85ddd6f32b",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_delay_1.json": "f2f2750c76b3e10edf9e512e3ca76e62009edaf9c56606822695893dea199e5d",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_delay_2.json": "e4d88c2dae06f643ebd647040665ea7ee35615ac45babcb76793c1f8990efb87",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_delay_3.json": "9e15b5650c9f5e3687a5edbb93a202c2c21655a053b694124f089d619514e0a6",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_disk_1.json": "c8ceb6176d928cef168acfe2ef08e3c7a6384ce15f23291a4e15ec8e54a89430",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_disk_2.json": "49f3a2c340d7c120e8f3d5def560635586151e9d7bcd9bf6774e72ed722ef5d8",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_disk_3.json": "f516de286283a60fe71e9d3885f035a618e2f92cf7ecbb17e35787549c127ce2",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_loss_1.json": "93a695e36c368e8bfb75c184448afdeb866c886f93f0eae9ca1171be996e3c10",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_loss_2.json": "5ae3fdf30e567e7e4ab076ae0f1122a3562949d00762e4103dcd82feb99f4b75",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_loss_3.json": "e9bbf1a2ff6c00aa2d6437c8bb00fb9e693e7335124266dfdd97c4cf665cb670",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_mem_1.json": "78867347cbecf6ec534d2a2b287608ed2f01cf0e39288485d4c673cb5473b2b7",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_mem_2.json": "1fef8eed1c71f7d2fb2c145b70454912c20afaca4feadd08d4a95f6460c15e09",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_mem_3.json": "d578d274256b650983323075f5a99cf9453b89bee4d029b4c743032279dfa67f",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_socket_1.json": "77bca8e69fd04061bd1a9637bf8ae1555721427e708254b332e6be374cc56f71",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_socket_2.json": "89288dc5451c3dddaf8a8ce117d186fd4e55a415269d0053dfd52a0fd12f03ce",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_checkoutservice_socket_3.json": "cbed0fad3b61e87658fe3d948d4fd9453a319860605f5e8683f1a2e3e25d85bf",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_cpu_1.json": "b64e67d9116db4a2e626e2c1f66c50643edd7b74ff1293a6a3e3851addacc6ac",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_cpu_2.json": "459724530f83d622641f50a44502a9fbba22bdd2f2914ff486d973f6fe997220",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_cpu_3.json": "ec3303ac79560b2914eb20bdacd23a5b33c56c4b204217034953422868a89b79",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_delay_1.json": "ac75f89278290fb70947802e7f8c1f5a860b0d6013d5b0a38e383efbe7953fec",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_delay_2.json": "605066e4b5f2a50dbf87bdda92b9104d24819c0fc650436bfe3368d8b10a65ad",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_delay_3.json": "807078c8398b09c126dc8fef91c2a518c4408f45caedad7809cf10753d7d1f64",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_disk_1.json": "b9d3ea080a79a442993754d12f6b8d838675c12272cdfecdfd90de2e15f30a8e",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_disk_2.json": "565e2f02cc69da68974fce86f399a40c4fda8e883fc626d4cc7a129c84efff81",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_disk_3.json": "7476a0ef70a1925dbff344ba44b719bc784b8c76e2ed8a91675fbe8b9522d614",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_loss_1.json": "0564039a89e7d29100b8dab50fb5915ef903753591b227e7b5efe2e39d8d3d84",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_loss_2.json": "46256bd16e122f5cb643b5b31d98f03751cadde79f065f1bb1f0cb35e4ffc234",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_loss_3.json": "502d86c15236044194af6298de19354daa3f506ad3b8c68f56e218611d7acc86",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_mem_1.json": "4e971c03231638880a31906f040e0e330dc3b3ae2a1d274fbe9e8fd919bd0492",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_mem_2.json": "f252c54c33f7cfd7492d5fe3112dbc0062c9a82834e88713392851540416ef45",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_mem_3.json": "14f976df0aa7b7885af271f1c462e8ea21227d825a27c1e76fbc7730ccf71490",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_socket_1.json": "f8d4779e91dd335b7271b6f91c34eae90f3ba888c843e019fa0cef0fd56a0431",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_socket_2.json": "114770084b17e7809d3a98e2ba0a6601392758fd211efc0b0fea5abd64a63940",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_currencyservice_socket_3.json": "9978f9d41c4059113edcf07a0d7ce7d792488306f94c1d47aea8f51224c84c18",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_cpu_1.json": "58aa60cfde5e64a377dd5ce4f147f551a842a547b6d7995b6e9ca292a89e16f0",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_cpu_2.json": "20d54c8b18a4e0ce9d0dde95282bd73177fdff854378b6dff3f5a4849c580c00",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_cpu_3.json": "6f309fdba83ebf816f22fe6a44b32d92427dd60aa193035c1b5cbb66e81d49e6",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_delay_1.json": "7e0e5e19e73b32fb79ce674c87bed9f2cc8863ecb2342a6696754ec2ecc98fc6",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_delay_2.json": "52cceaf843af17b09507700ddf1e510e33d319fdf376105054c84da4b79f033f",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_delay_3.json": "c60575fa3bc5cba957d11deb3e6b75dd96114e80434fa40af5081b2ed30c0f91",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_disk_1.json": "f0f00790a5b667390ff2f2429f4e7d2a2e14ed297cd101588300fd90142d16d4",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_disk_2.json": "e4dc805fe495a7dd9f52306cbe4c031472780a01fe48cc6de71686087a3809ea",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_disk_3.json": "1e2f44a19975528718f273cd3b23ff3c356e31082e4d03270b2d783a4f189b24",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_loss_1.json": "b914adb9d4b233e28a0618bd8c8fecaffb0b60bef359705599104e15eeb1aa99",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_loss_2.json": "c1744de8698492fcc2cf0a8817587434854224107a642a164521ed4c89acde7a",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_loss_3.json": "40a48389941ca3daa5e6a6cc10f9a62c7939c3c519103e2ff1b27abfa169f8b9",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_mem_1.json": "1bc3d22feffe0bc8af90fc9524dbec5078123044af40c3fed424bd3716b4d704",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_mem_2.json": "2674eac90f2e369b0e413e74df8cf5dd9884b1f5b4b78911460a57c1968522e4",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_mem_3.json": "c53b92d741c1295bdd4cb01d91f68821c07f3f33c1fa6e129bbc9f007a16e4f8",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_socket_1.json": "270d3987e94175c46de4d09dfcc5a49bf40ca9266622cb05b0032a7c30a6fb27",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_socket_2.json": "c14fa9a301ca38423a46612fcaf3325eb918dae9d96f2f0a974f10268be37e68",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_emailservice_socket_3.json": "628bab8825e247cae48fd26516f2abd0d227ea2595a2072e45123f974c04ad4e",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_cpu_1.json": "5c5cbba75e9df04e0e5c4fbf45a6a773e107b6894bf0d04d59508532941a0565",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_cpu_2.json": "a13b70943661f1b783025740b0880b925463f22889bdecc65698ff194b4db8f3",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_cpu_3.json": "1d04869da690094e2bb7cd4b39ee2926d785630654435a1d495e5b2ac920a1d9",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_delay_1.json": "52c0e2f78e0d4b73b1970bbd32da2c154b8e172352233e2696539d507a6d23c2",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_delay_2.json": "78a7511bdd5b131f059a4909d73c59cc0f06c4436c3ad993cc796205ee47f92a",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_delay_3.json": "ea59b76fe1793ac25c54749de9e1eb258d2073a66fad9cfd3639802ea17d7976",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_disk_1.json": "2e3ed5f17d4aa5070648a7de403d64ae974ecbc5d97fdb0378d6bdd1c69a8e48",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_disk_2.json": "3f7a3db4909f78f6426000d68f4afa1ac41a21ad7dbdc958c938b4e9439bdab6",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_disk_3.json": "e4305c72a97f66b08bf5e549eacb0a1ccdb21d3459cfd8631957ba6fc15aa7ab",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_loss_1.json": "28697d073af0e1be6b37816cebb96b9ac1799ec858c947a117503f0416c2ec6d",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_loss_2.json": "1a249c1bef7ebbbe92090e5a67e479f83a3a9f375321625471ffa399f629c032",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_loss_3.json": "be8f2c7049aba1b61137939d1df8fba10523ec3fea9df5dd9ed901b0c26a47d4",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_mem_1.json": "8e6412bf7152d70030d7e5063c6f0209705d0c25d6926d0b4b739f4829eab9d8",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_mem_2.json": "122c74207d0c42f3a25d114e162a0ad608fc07c66e1f2048d3657e07ca03d5e5",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_mem_3.json": "9da2593ba6a6044785eb8967dca6f90d24550331ca3877489a10699982780f22",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_socket_1.json": "9c265b905fd830094b756a472f37c9e26e4f0239e221e7c0a78551beed05af84",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_socket_2.json": "19a41d110b2ec916f340e7fd03376dc035a015fc86495d1437c2025c89f29a8b",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_productcatalogservice_socket_3.json": "0fe6e4b92f19ae221358049cab9f9cd148a4d0daf1ce896af3ea5975168348e3",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_cpu_1.json": "0f6e2fae1895e52aad5b20c407348cfa48ac6c2a4b5b24372423ccd13ba77b3e",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_cpu_2.json": "c8d8b2a0e5aea50fab317c8daf66cc5930c0dc5ccf9d65f224750b2a9d1627de",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_cpu_3.json": "6f1b6c83f51e7abbafff44bda790d58a6530ffc24da58464d1aa8364abd3c872",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_delay_1.json": "975170e0a89a3c05597330f6fe8db4b39982487eeec54a5c91fc6807859ee874",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_delay_2.json": "0b466f48ca372d648da37e3a7249fc2c69e9cc2c078fdecbca19db08fa7f6a25",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_delay_3.json": "951cea7614fd2176b86ecbeb56d89f0175497971402cf113a3d5c2682386d4a0",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_disk_1.json": "b826e7bcea6d66180767b70d34f86cdfb868a9b9214b77b5771fbc4c686211d6",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_disk_2.json": "ae0123d28a8c2f40e034ed12eb40af5b82f275974155d3f51ebb1e5026cdffaf",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_disk_3.json": "8a95326076e955c03465fb3e0db0407b6852cab20949faee7471d02cedf9a658",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_loss_1.json": "17f26eb8bb982dd81953077a33b28915b0cae27177961171b747afc1498d0ab4",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_loss_2.json": "cbf8765c76a169cf124b540635fe2adfdde81716a9d3ba5ff65b84c32e44859c",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_loss_3.json": "394cf26103e0318bd2d6f4684409f9f410996eb1c40fd3f537d7eb2351f9ad6a",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_mem_1.json": "ac13160435578efc4baab1bf34be47af0d6d4060fa99a79460c3a25b45d7e0c3",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_mem_2.json": "e8776d9e12e032190b697286b119c1e72fd3e2e10ad5ad886fc9017fa6df1c82",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_mem_3.json": "8f87f66e24497325c36e7d8d87ab34829f2bd3ef46a0127952cc8c5a91f40e96",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_socket_1.json": "78f9ce37856c8f8ddcc55a56df1afcedb9c09344e81af2878ebbf6a877ddc498",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_socket_2.json": "0ebc13f617656c3d6fadff71e9d9e9e4aa1b1f0da32fe7a1457d5aca15c84af1",
+    "docs/evidence/phase_a/re2ob/threshold_cases/re2ob_recommendationservice_socket_3.json": "62b1b9bf5845621946b126d4e004726a01b21a0e56b3a14efcf323625989919b"
+  },
+  "stop_at_step": 25
+}

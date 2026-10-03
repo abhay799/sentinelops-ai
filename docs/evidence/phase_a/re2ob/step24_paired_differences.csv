@@ -1,0 +1,295 @@
+variant,fault,comparison,denominator,metric,difference,ci95_lower,ci95_upper
+primary_trace_topology,overall,SentinelOps minus BARO,90,AC@1,0.06666666666666667,-0.05555555555555555,0.18888888888888888
+primary_trace_topology,overall,SentinelOps minus BARO,90,AC@3,-0.13333333333333333,-0.24444444444444444,-0.022222222222222223
+primary_trace_topology,overall,SentinelOps minus BARO,90,AC@5,0.022222222222222223,-0.03333333333333333,0.08888888888888889
+primary_trace_topology,overall,SentinelOps minus CIRCA,90,AC@1,-0.45555555555555555,-0.5777777777777777,-0.3333333333333333
+primary_trace_topology,overall,SentinelOps minus CIRCA,90,AC@3,-0.13333333333333333,-0.23333333333333334,-0.03333333333333333
+primary_trace_topology,overall,SentinelOps minus CIRCA,90,AC@5,0.06666666666666667,0.0,0.14444444444444443
+primary_trace_topology,overall,SentinelOps minus PageRank,90,AC@1,0.011111111111111112,-0.1111111111111111,0.14444444444444443
+primary_trace_topology,overall,SentinelOps minus PageRank,90,AC@3,0.08888888888888889,0.011111111111111112,0.16666666666666666
+primary_trace_topology,overall,SentinelOps minus PageRank,90,AC@5,-0.011111111111111112,-0.03333333333333333,0.0
+primary_trace_topology,overall,SentinelOps minus mmBARO,90,AC@1,0.044444444444444446,-0.07777777777777778,0.16666666666666666
+primary_trace_topology,overall,SentinelOps minus mmBARO,90,AC@3,-0.13333333333333333,-0.24444444444444444,-0.022222222222222223
+primary_trace_topology,overall,SentinelOps minus mmBARO,90,AC@5,-0.03333333333333333,-0.07777777777777778,0.0
+primary_trace_topology,overall,SentinelOps minus mmCIRCA,90,AC@1,-0.34444444444444444,-0.4666666666666667,-0.2222222222222222
+primary_trace_topology,overall,SentinelOps minus mmCIRCA,90,AC@3,-0.07777777777777778,-0.2,0.05555555555555555
+primary_trace_topology,overall,SentinelOps minus mmCIRCA,90,AC@5,0.044444444444444446,-0.022222222222222223,0.1111111111111111
+primary_trace_topology,overall,SentinelOps minus random,90,AC@1,0.17777777777777778,0.08861111111111136,0.2777777777777778
+primary_trace_topology,overall,SentinelOps minus random,90,AC@3,0.5777777777777777,0.45555555555555555,0.7
+primary_trace_topology,overall,SentinelOps minus random,90,AC@5,0.5444444444444444,0.43333333333333335,0.6555555555555556
+primary_trace_topology,overall,SentinelOps minus threshold,90,AC@1,-0.6555555555555556,-0.7444444444444445,-0.5555555555555556
+primary_trace_topology,overall,SentinelOps minus threshold,90,AC@3,-0.2222222222222222,-0.3111111111111111,-0.13333333333333333
+primary_trace_topology,overall,SentinelOps minus threshold,90,AC@5,-0.03333333333333333,-0.07777777777777778,0.0
+POST-HOC static-topology sensitivity,overall,SentinelOps minus BARO,90,AC@1,0.05555555555555555,-0.06666666666666667,0.16666666666666666
+POST-HOC static-topology sensitivity,overall,SentinelOps minus BARO,90,AC@3,-0.2777777777777778,-0.3888888888888889,-0.16666666666666666
+POST-HOC static-topology sensitivity,overall,SentinelOps minus BARO,90,AC@5,-0.12222222222222222,-0.2111111111111111,-0.03333333333333333
+POST-HOC static-topology sensitivity,overall,SentinelOps minus CIRCA,90,AC@1,-0.4666666666666667,-0.5888888888888889,-0.34444444444444444
+POST-HOC static-topology sensitivity,overall,SentinelOps minus CIRCA,90,AC@3,-0.2777777777777778,-0.3888888888888889,-0.16666666666666666
+POST-HOC static-topology sensitivity,overall,SentinelOps minus CIRCA,90,AC@5,-0.07777777777777778,-0.17777777777777778,0.022222222222222223
+POST-HOC static-topology sensitivity,overall,SentinelOps minus PageRank,90,AC@1,0.0,-0.12222222222222222,0.12222222222222222
+POST-HOC static-topology sensitivity,overall,SentinelOps minus PageRank,90,AC@3,0.34444444444444444,0.24444444444444444,0.4444444444444444
+POST-HOC static-topology sensitivity,overall,SentinelOps minus PageRank,90,AC@5,0.28888888888888886,0.18888888888888888,0.3888888888888889
+POST-HOC static-topology sensitivity,overall,SentinelOps minus mmBARO,90,AC@1,0.03333333333333333,-0.07777777777777778,0.15555555555555556
+POST-HOC static-topology sensitivity,overall,SentinelOps minus mmBARO,90,AC@3,-0.2777777777777778,-0.3888888888888889,-0.16666666666666666
+POST-HOC static-topology sensitivity,overall,SentinelOps minus mmBARO,90,AC@5,-0.17777777777777778,-0.25555555555555554,-0.1
+POST-HOC static-topology sensitivity,overall,SentinelOps minus mmCIRCA,90,AC@1,-0.35555555555555557,-0.4777777777777778,-0.23333333333333334
+POST-HOC static-topology sensitivity,overall,SentinelOps minus mmCIRCA,90,AC@3,-0.2222222222222222,-0.3558333333333331,-0.08888888888888889
+POST-HOC static-topology sensitivity,overall,SentinelOps minus mmCIRCA,90,AC@5,-0.1,-0.2,0.0
+POST-HOC static-topology sensitivity,overall,SentinelOps minus random,90,AC@1,0.16666666666666666,0.07777777777777778,0.26666666666666666
+POST-HOC static-topology sensitivity,overall,SentinelOps minus random,90,AC@3,0.43333333333333335,0.3,0.5666666666666667
+POST-HOC static-topology sensitivity,overall,SentinelOps minus random,90,AC@5,0.4,0.26666666666666666,0.5333333333333333
+POST-HOC static-topology sensitivity,overall,SentinelOps minus threshold,90,AC@1,-0.6666666666666666,-0.7666666666666667,-0.5666666666666667
+POST-HOC static-topology sensitivity,overall,SentinelOps minus threshold,90,AC@3,-0.36666666666666664,-0.4666666666666667,-0.26666666666666666
+POST-HOC static-topology sensitivity,overall,SentinelOps minus threshold,90,AC@5,-0.17777777777777778,-0.25555555555555554,-0.1
+primary_trace_topology,cpu,SentinelOps minus BARO,15,AC@1,0.26666666666666666,0.06666666666666667,0.46833333333330907
+primary_trace_topology,cpu,SentinelOps minus BARO,15,AC@3,-0.13333333333333333,-0.4666666666666667,0.2
+primary_trace_topology,cpu,SentinelOps minus BARO,15,AC@5,0.06666666666666667,-0.13333333333333333,0.26666666666666666
+primary_trace_topology,cpu,SentinelOps minus CIRCA,15,AC@1,-0.3333333333333333,-0.6,-0.13333333333333333
+primary_trace_topology,cpu,SentinelOps minus CIRCA,15,AC@3,-0.13333333333333333,-0.4,0.13333333333333333
+primary_trace_topology,cpu,SentinelOps minus CIRCA,15,AC@5,0.13333333333333333,-0.13333333333333333,0.4
+primary_trace_topology,cpu,SentinelOps minus PageRank,15,AC@1,0.06666666666666667,-0.2,0.3333333333333333
+primary_trace_topology,cpu,SentinelOps minus PageRank,15,AC@3,0.0,-0.2,0.2
+primary_trace_topology,cpu,SentinelOps minus PageRank,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,cpu,SentinelOps minus mmBARO,15,AC@1,0.26666666666666666,0.06666666666666667,0.46833333333330907
+primary_trace_topology,cpu,SentinelOps minus mmBARO,15,AC@3,-0.13333333333333333,-0.4666666666666667,0.2
+primary_trace_topology,cpu,SentinelOps minus mmBARO,15,AC@5,-0.06666666666666667,-0.2,0.0
+primary_trace_topology,cpu,SentinelOps minus mmCIRCA,15,AC@1,-0.3333333333333333,-0.6,0.0
+primary_trace_topology,cpu,SentinelOps minus mmCIRCA,15,AC@3,-0.26666666666666666,-0.5333333333333333,-0.06666666666666667
+primary_trace_topology,cpu,SentinelOps minus mmCIRCA,15,AC@5,0.0,-0.2,0.2
+primary_trace_topology,cpu,SentinelOps minus random,15,AC@1,0.26666666666666666,0.06666666666666667,0.46833333333330907
+primary_trace_topology,cpu,SentinelOps minus random,15,AC@3,0.6,0.3333333333333333,0.8666666666666667
+primary_trace_topology,cpu,SentinelOps minus random,15,AC@5,0.6666666666666666,0.4,0.8666666666666667
+primary_trace_topology,cpu,SentinelOps minus threshold,15,AC@1,-0.6,-0.8666666666666667,-0.3333333333333333
+primary_trace_topology,cpu,SentinelOps minus threshold,15,AC@3,-0.3333333333333333,-0.6,-0.13333333333333333
+primary_trace_topology,cpu,SentinelOps minus threshold,15,AC@5,-0.06666666666666667,-0.2,0.0
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus BARO,15,AC@1,0.26666666666666666,0.06666666666666667,0.46833333333330907
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus BARO,15,AC@3,-0.2,-0.4666666666666667,0.06666666666666667
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus BARO,15,AC@5,-0.13333333333333333,-0.4,0.13333333333333333
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus CIRCA,15,AC@1,-0.3333333333333333,-0.6,-0.13333333333333333
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus CIRCA,15,AC@3,-0.2,-0.4666666666666667,0.06666666666666667
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus CIRCA,15,AC@5,-0.06666666666666667,-0.26666666666666666,0.13333333333333333
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus PageRank,15,AC@1,0.06666666666666667,-0.2,0.3333333333333333
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus PageRank,15,AC@3,0.4,0.13333333333333333,0.6666666666666666
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus PageRank,15,AC@5,0.13333333333333333,-0.13333333333333333,0.4
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus mmBARO,15,AC@1,0.26666666666666666,0.06666666666666667,0.46833333333330907
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus mmBARO,15,AC@3,-0.2,-0.4666666666666667,0.06666666666666667
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus mmBARO,15,AC@5,-0.26666666666666666,-0.5333333333333333,-0.06666666666666667
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus mmCIRCA,15,AC@1,-0.3333333333333333,-0.6,0.0
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus mmCIRCA,15,AC@3,-0.3333333333333333,-0.6,-0.13333333333333333
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus mmCIRCA,15,AC@5,-0.2,-0.4,0.0
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus random,15,AC@1,0.26666666666666666,0.06666666666666667,0.46833333333330907
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus random,15,AC@3,0.5333333333333333,0.26666666666666666,0.8
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus random,15,AC@5,0.4666666666666667,0.2,0.7333333333333333
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus threshold,15,AC@1,-0.6,-0.8666666666666667,-0.3333333333333333
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus threshold,15,AC@3,-0.4,-0.6666666666666666,-0.13333333333333333
+POST-HOC static-topology sensitivity,cpu,SentinelOps minus threshold,15,AC@5,-0.26666666666666666,-0.5333333333333333,-0.06666666666666667
+primary_trace_topology,delay,SentinelOps minus BARO,15,AC@1,0.3333333333333333,0.13333333333333333,0.6
+primary_trace_topology,delay,SentinelOps minus BARO,15,AC@3,0.06666666666666667,-0.13333333333333333,0.26666666666666666
+primary_trace_topology,delay,SentinelOps minus BARO,15,AC@5,0.06666666666666667,0.0,0.2
+primary_trace_topology,delay,SentinelOps minus CIRCA,15,AC@1,-0.13333333333333333,-0.4666666666666667,0.2
+primary_trace_topology,delay,SentinelOps minus CIRCA,15,AC@3,0.06666666666666667,-0.13333333333333333,0.26666666666666666
+primary_trace_topology,delay,SentinelOps minus CIRCA,15,AC@5,0.13333333333333333,0.0,0.3333333333333333
+primary_trace_topology,delay,SentinelOps minus PageRank,15,AC@1,0.13333333333333333,-0.20166666666666516,0.4666666666666667
+primary_trace_topology,delay,SentinelOps minus PageRank,15,AC@3,0.2,0.0,0.4
+primary_trace_topology,delay,SentinelOps minus PageRank,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,delay,SentinelOps minus mmBARO,15,AC@1,0.3333333333333333,0.13333333333333333,0.6
+primary_trace_topology,delay,SentinelOps minus mmBARO,15,AC@3,0.13333333333333333,0.0,0.3333333333333333
+primary_trace_topology,delay,SentinelOps minus mmBARO,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,delay,SentinelOps minus mmCIRCA,15,AC@1,0.13333333333333333,-0.13333333333333333,0.4
+primary_trace_topology,delay,SentinelOps minus mmCIRCA,15,AC@3,0.4666666666666667,0.13333333333333333,0.7333333333333333
+primary_trace_topology,delay,SentinelOps minus mmCIRCA,15,AC@5,0.26666666666666666,0.06666666666666667,0.5333333333333333
+primary_trace_topology,delay,SentinelOps minus random,15,AC@1,0.26666666666666666,0.0,0.5333333333333333
+primary_trace_topology,delay,SentinelOps minus random,15,AC@3,0.5333333333333333,0.2,0.8
+primary_trace_topology,delay,SentinelOps minus random,15,AC@5,0.4666666666666667,0.2,0.7333333333333333
+primary_trace_topology,delay,SentinelOps minus threshold,15,AC@1,-0.4666666666666667,-0.7333333333333333,-0.2
+primary_trace_topology,delay,SentinelOps minus threshold,15,AC@3,0.0,0.0,0.0
+primary_trace_topology,delay,SentinelOps minus threshold,15,AC@5,0.0,0.0,0.0
+POST-HOC static-topology sensitivity,delay,SentinelOps minus BARO,15,AC@1,0.3333333333333333,0.13333333333333333,0.6
+POST-HOC static-topology sensitivity,delay,SentinelOps minus BARO,15,AC@3,-0.06666666666666667,-0.3333333333333333,0.2
+POST-HOC static-topology sensitivity,delay,SentinelOps minus BARO,15,AC@5,0.0,-0.2,0.2
+POST-HOC static-topology sensitivity,delay,SentinelOps minus CIRCA,15,AC@1,-0.13333333333333333,-0.4666666666666667,0.2
+POST-HOC static-topology sensitivity,delay,SentinelOps minus CIRCA,15,AC@3,-0.06666666666666667,-0.3333333333333333,0.2
+POST-HOC static-topology sensitivity,delay,SentinelOps minus CIRCA,15,AC@5,0.06666666666666667,-0.13333333333333333,0.26666666666666666
+POST-HOC static-topology sensitivity,delay,SentinelOps minus PageRank,15,AC@1,0.13333333333333333,-0.20166666666666516,0.4666666666666667
+POST-HOC static-topology sensitivity,delay,SentinelOps minus PageRank,15,AC@3,0.3333333333333333,0.13333333333333333,0.6
+POST-HOC static-topology sensitivity,delay,SentinelOps minus PageRank,15,AC@5,0.4666666666666667,0.2,0.7333333333333333
+POST-HOC static-topology sensitivity,delay,SentinelOps minus mmBARO,15,AC@1,0.3333333333333333,0.13333333333333333,0.6
+POST-HOC static-topology sensitivity,delay,SentinelOps minus mmBARO,15,AC@3,0.0,-0.26666666666666666,0.26666666666666666
+POST-HOC static-topology sensitivity,delay,SentinelOps minus mmBARO,15,AC@5,-0.06666666666666667,-0.2,0.0
+POST-HOC static-topology sensitivity,delay,SentinelOps minus mmCIRCA,15,AC@1,0.13333333333333333,-0.13333333333333333,0.4
+POST-HOC static-topology sensitivity,delay,SentinelOps minus mmCIRCA,15,AC@3,0.3333333333333333,-0.06666666666666667,0.7333333333333333
+POST-HOC static-topology sensitivity,delay,SentinelOps minus mmCIRCA,15,AC@5,0.2,-0.06666666666666667,0.4666666666666667
+POST-HOC static-topology sensitivity,delay,SentinelOps minus random,15,AC@1,0.26666666666666666,0.0,0.5333333333333333
+POST-HOC static-topology sensitivity,delay,SentinelOps minus random,15,AC@3,0.4,0.06666666666666667,0.6666666666666666
+POST-HOC static-topology sensitivity,delay,SentinelOps minus random,15,AC@5,0.4,0.06666666666666667,0.6666666666666666
+POST-HOC static-topology sensitivity,delay,SentinelOps minus threshold,15,AC@1,-0.4666666666666667,-0.7333333333333333,-0.2
+POST-HOC static-topology sensitivity,delay,SentinelOps minus threshold,15,AC@3,-0.13333333333333333,-0.3333333333333333,0.0
+POST-HOC static-topology sensitivity,delay,SentinelOps minus threshold,15,AC@5,-0.06666666666666667,-0.2,0.0
+primary_trace_topology,disk,SentinelOps minus BARO,15,AC@1,0.06666666666666667,-0.13333333333333333,0.26666666666666666
+primary_trace_topology,disk,SentinelOps minus BARO,15,AC@3,-0.13333333333333333,-0.3333333333333333,0.0
+primary_trace_topology,disk,SentinelOps minus BARO,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,disk,SentinelOps minus CIRCA,15,AC@1,-0.6666666666666666,-0.8666666666666667,-0.4
+primary_trace_topology,disk,SentinelOps minus CIRCA,15,AC@3,0.0,-0.2,0.2
+primary_trace_topology,disk,SentinelOps minus CIRCA,15,AC@5,0.13333333333333333,0.0,0.3333333333333333
+primary_trace_topology,disk,SentinelOps minus PageRank,15,AC@1,0.0,-0.3333333333333333,0.3333333333333333
+primary_trace_topology,disk,SentinelOps minus PageRank,15,AC@3,0.26666666666666666,0.06666666666666667,0.5333333333333333
+primary_trace_topology,disk,SentinelOps minus PageRank,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,disk,SentinelOps minus mmBARO,15,AC@1,0.13333333333333333,0.0,0.3333333333333333
+primary_trace_topology,disk,SentinelOps minus mmBARO,15,AC@3,-0.13333333333333333,-0.3333333333333333,0.0
+primary_trace_topology,disk,SentinelOps minus mmBARO,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,disk,SentinelOps minus mmCIRCA,15,AC@1,-0.7333333333333333,-0.9333333333333333,-0.5333333333333333
+primary_trace_topology,disk,SentinelOps minus mmCIRCA,15,AC@3,-0.13333333333333333,-0.3333333333333333,0.0
+primary_trace_topology,disk,SentinelOps minus mmCIRCA,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,disk,SentinelOps minus random,15,AC@1,0.2,0.0,0.4
+primary_trace_topology,disk,SentinelOps minus random,15,AC@3,0.7333333333333333,0.4,1.0
+primary_trace_topology,disk,SentinelOps minus random,15,AC@5,0.7333333333333333,0.4666666666666667,0.9333333333333333
+primary_trace_topology,disk,SentinelOps minus threshold,15,AC@1,-0.6666666666666666,-0.8666666666666667,-0.4
+primary_trace_topology,disk,SentinelOps minus threshold,15,AC@3,-0.13333333333333333,-0.3333333333333333,0.0
+primary_trace_topology,disk,SentinelOps minus threshold,15,AC@5,0.0,0.0,0.0
+POST-HOC static-topology sensitivity,disk,SentinelOps minus BARO,15,AC@1,0.06666666666666667,-0.13333333333333333,0.26666666666666666
+POST-HOC static-topology sensitivity,disk,SentinelOps minus BARO,15,AC@3,-0.3333333333333333,-0.6,-0.13333333333333333
+POST-HOC static-topology sensitivity,disk,SentinelOps minus BARO,15,AC@5,0.0,0.0,0.0
+POST-HOC static-topology sensitivity,disk,SentinelOps minus CIRCA,15,AC@1,-0.6666666666666666,-0.8666666666666667,-0.4
+POST-HOC static-topology sensitivity,disk,SentinelOps minus CIRCA,15,AC@3,-0.2,-0.4666666666666667,0.06666666666666667
+POST-HOC static-topology sensitivity,disk,SentinelOps minus CIRCA,15,AC@5,0.13333333333333333,0.0,0.3333333333333333
+POST-HOC static-topology sensitivity,disk,SentinelOps minus PageRank,15,AC@1,0.0,-0.3333333333333333,0.3333333333333333
+POST-HOC static-topology sensitivity,disk,SentinelOps minus PageRank,15,AC@3,0.4666666666666667,0.2,0.7333333333333333
+POST-HOC static-topology sensitivity,disk,SentinelOps minus PageRank,15,AC@5,0.4666666666666667,0.2,0.7333333333333333
+POST-HOC static-topology sensitivity,disk,SentinelOps minus mmBARO,15,AC@1,0.13333333333333333,0.0,0.3333333333333333
+POST-HOC static-topology sensitivity,disk,SentinelOps minus mmBARO,15,AC@3,-0.3333333333333333,-0.6,-0.13333333333333333
+POST-HOC static-topology sensitivity,disk,SentinelOps minus mmBARO,15,AC@5,0.0,0.0,0.0
+POST-HOC static-topology sensitivity,disk,SentinelOps minus mmCIRCA,15,AC@1,-0.7333333333333333,-0.9333333333333333,-0.5333333333333333
+POST-HOC static-topology sensitivity,disk,SentinelOps minus mmCIRCA,15,AC@3,-0.3333333333333333,-0.6,-0.13333333333333333
+POST-HOC static-topology sensitivity,disk,SentinelOps minus mmCIRCA,15,AC@5,0.0,0.0,0.0
+POST-HOC static-topology sensitivity,disk,SentinelOps minus random,15,AC@1,0.2,0.0,0.4
+POST-HOC static-topology sensitivity,disk,SentinelOps minus random,15,AC@3,0.5333333333333333,0.2,0.8
+POST-HOC static-topology sensitivity,disk,SentinelOps minus random,15,AC@5,0.7333333333333333,0.4666666666666667,0.9333333333333333
+POST-HOC static-topology sensitivity,disk,SentinelOps minus threshold,15,AC@1,-0.6666666666666666,-0.8666666666666667,-0.4
+POST-HOC static-topology sensitivity,disk,SentinelOps minus threshold,15,AC@3,-0.3333333333333333,-0.6,-0.13333333333333333
+POST-HOC static-topology sensitivity,disk,SentinelOps minus threshold,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,loss,SentinelOps minus BARO,15,AC@1,-0.3333333333333333,-0.6,-0.06666666666666667
+primary_trace_topology,loss,SentinelOps minus BARO,15,AC@3,-0.26666666666666666,-0.6,0.06666666666666667
+primary_trace_topology,loss,SentinelOps minus BARO,15,AC@5,-0.06666666666666667,-0.2,0.0
+primary_trace_topology,loss,SentinelOps minus CIRCA,15,AC@1,-0.6,-0.8666666666666667,-0.3333333333333333
+primary_trace_topology,loss,SentinelOps minus CIRCA,15,AC@3,-0.26666666666666666,-0.5333333333333333,0.0
+primary_trace_topology,loss,SentinelOps minus CIRCA,15,AC@5,0.0,-0.2,0.2
+primary_trace_topology,loss,SentinelOps minus PageRank,15,AC@1,-0.13333333333333333,-0.4,0.13333333333333333
+primary_trace_topology,loss,SentinelOps minus PageRank,15,AC@3,0.0,0.0,0.0
+primary_trace_topology,loss,SentinelOps minus PageRank,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,loss,SentinelOps minus mmBARO,15,AC@1,-0.4,-0.6666666666666666,-0.13333333333333333
+primary_trace_topology,loss,SentinelOps minus mmBARO,15,AC@3,-0.26666666666666666,-0.6,0.06666666666666667
+primary_trace_topology,loss,SentinelOps minus mmBARO,15,AC@5,-0.06666666666666667,-0.2,0.0
+primary_trace_topology,loss,SentinelOps minus mmCIRCA,15,AC@1,-0.4,-0.6666666666666666,-0.13333333333333333
+primary_trace_topology,loss,SentinelOps minus mmCIRCA,15,AC@3,-0.26666666666666666,-0.6,0.06666666666666667
+primary_trace_topology,loss,SentinelOps minus mmCIRCA,15,AC@5,0.0,-0.2,0.2
+primary_trace_topology,loss,SentinelOps minus random,15,AC@1,0.0,-0.2,0.2
+primary_trace_topology,loss,SentinelOps minus random,15,AC@3,0.4,0.06666666666666667,0.668333333333309
+primary_trace_topology,loss,SentinelOps minus random,15,AC@5,0.5333333333333333,0.26666666666666666,0.8
+primary_trace_topology,loss,SentinelOps minus threshold,15,AC@1,-0.7333333333333333,-0.9333333333333333,-0.5333333333333333
+primary_trace_topology,loss,SentinelOps minus threshold,15,AC@3,-0.3333333333333333,-0.6,0.0
+primary_trace_topology,loss,SentinelOps minus threshold,15,AC@5,-0.06666666666666667,-0.2,0.0
+POST-HOC static-topology sensitivity,loss,SentinelOps minus BARO,15,AC@1,-0.3333333333333333,-0.6,-0.06666666666666667
+POST-HOC static-topology sensitivity,loss,SentinelOps minus BARO,15,AC@3,-0.4666666666666667,-0.7333333333333333,-0.2
+POST-HOC static-topology sensitivity,loss,SentinelOps minus BARO,15,AC@5,-0.3333333333333333,-0.6,-0.13333333333333333
+POST-HOC static-topology sensitivity,loss,SentinelOps minus CIRCA,15,AC@1,-0.6,-0.8666666666666667,-0.3333333333333333
+POST-HOC static-topology sensitivity,loss,SentinelOps minus CIRCA,15,AC@3,-0.4666666666666667,-0.7333333333333333,-0.2
+POST-HOC static-topology sensitivity,loss,SentinelOps minus CIRCA,15,AC@5,-0.26666666666666666,-0.5333333333333333,0.0
+POST-HOC static-topology sensitivity,loss,SentinelOps minus PageRank,15,AC@1,-0.13333333333333333,-0.4,0.13333333333333333
+POST-HOC static-topology sensitivity,loss,SentinelOps minus PageRank,15,AC@3,0.2,0.0,0.4
+POST-HOC static-topology sensitivity,loss,SentinelOps minus PageRank,15,AC@5,0.2,0.0,0.4
+POST-HOC static-topology sensitivity,loss,SentinelOps minus mmBARO,15,AC@1,-0.4,-0.6666666666666666,-0.13333333333333333
+POST-HOC static-topology sensitivity,loss,SentinelOps minus mmBARO,15,AC@3,-0.4666666666666667,-0.7333333333333333,-0.2
+POST-HOC static-topology sensitivity,loss,SentinelOps minus mmBARO,15,AC@5,-0.3333333333333333,-0.6,-0.13333333333333333
+POST-HOC static-topology sensitivity,loss,SentinelOps minus mmCIRCA,15,AC@1,-0.4,-0.6666666666666666,-0.13333333333333333
+POST-HOC static-topology sensitivity,loss,SentinelOps minus mmCIRCA,15,AC@3,-0.4666666666666667,-0.8,-0.06666666666666667
+POST-HOC static-topology sensitivity,loss,SentinelOps minus mmCIRCA,15,AC@5,-0.26666666666666666,-0.5333333333333333,0.0
+POST-HOC static-topology sensitivity,loss,SentinelOps minus random,15,AC@1,0.0,-0.2,0.2
+POST-HOC static-topology sensitivity,loss,SentinelOps minus random,15,AC@3,0.2,-0.06666666666666667,0.4666666666666667
+POST-HOC static-topology sensitivity,loss,SentinelOps minus random,15,AC@5,0.26666666666666666,-0.06666666666666667,0.6
+POST-HOC static-topology sensitivity,loss,SentinelOps minus threshold,15,AC@1,-0.7333333333333333,-0.9333333333333333,-0.5333333333333333
+POST-HOC static-topology sensitivity,loss,SentinelOps minus threshold,15,AC@3,-0.5333333333333333,-0.8,-0.26666666666666666
+POST-HOC static-topology sensitivity,loss,SentinelOps minus threshold,15,AC@5,-0.3333333333333333,-0.6,-0.13333333333333333
+primary_trace_topology,mem,SentinelOps minus BARO,15,AC@1,-0.26666666666666666,-0.5333333333333333,0.0
+primary_trace_topology,mem,SentinelOps minus BARO,15,AC@3,-0.3333333333333333,-0.6,-0.13333333333333333
+primary_trace_topology,mem,SentinelOps minus BARO,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,mem,SentinelOps minus CIRCA,15,AC@1,-0.7333333333333333,-0.9333333333333333,-0.4666666666666667
+primary_trace_topology,mem,SentinelOps minus CIRCA,15,AC@3,-0.3333333333333333,-0.6,-0.13333333333333333
+primary_trace_topology,mem,SentinelOps minus CIRCA,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,mem,SentinelOps minus PageRank,15,AC@1,-0.13333333333333333,-0.4,0.13333333333333333
+primary_trace_topology,mem,SentinelOps minus PageRank,15,AC@3,0.0,0.0,0.0
+primary_trace_topology,mem,SentinelOps minus PageRank,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,mem,SentinelOps minus mmBARO,15,AC@1,-0.4,-0.7333333333333333,-0.06666666666666667
+primary_trace_topology,mem,SentinelOps minus mmBARO,15,AC@3,-0.3333333333333333,-0.6,-0.13333333333333333
+primary_trace_topology,mem,SentinelOps minus mmBARO,15,AC@5,0.0,0.0,0.0
+primary_trace_topology,mem,SentinelOps minus mmCIRCA,15,AC@1,-0.5333333333333333,-0.8,-0.26666666666666666
+primary_trace_topology,mem,SentinelOps minus mmCIRCA,15,AC@3,-0.26666666666666666,-0.5333333333333333,0.0
+primary_trace_topology,mem,SentinelOps minus mmCIRCA,15,AC@5,0.06666666666666667,0.0,0.2
+primary_trace_topology,mem,SentinelOps minus random,15,AC@1,0.06666666666666667,0.0,0.2
+primary_trace_topology,mem,SentinelOps minus random,15,AC@3,0.5333333333333333,0.2,0.8
+primary_trace_topology,mem,SentinelOps minus random,15,AC@5,0.4666666666666667,0.2,0.7333333333333333
+primary_trace_topology,mem,SentinelOps minus threshold,15,AC@1,-0.9333333333333333,-1.0,-0.8
+primary_trace_topology,mem,SentinelOps minus threshold,15,AC@3,-0.3333333333333333,-0.6,-0.13333333333333333
+primary_trace_topology,mem,SentinelOps minus threshold,15,AC@5,0.0,0.0,0.0
+POST-HOC static-topology sensitivity,mem,SentinelOps minus BARO,15,AC@1,-0.3333333333333333,-0.6,-0.13333333333333333
+POST-HOC static-topology sensitivity,mem,SentinelOps minus BARO,15,AC@3,-0.5333333333333333,-0.8,-0.26666666666666666
+POST-HOC static-topology sensitivity,mem,SentinelOps minus BARO,15,AC@5,-0.26666666666666666,-0.5333333333333333,-0.06666666666666667
+POST-HOC static-topology sensitivity,mem,SentinelOps minus CIRCA,15,AC@1,-0.8,-1.0,-0.6
+POST-HOC static-topology sensitivity,mem,SentinelOps minus CIRCA,15,AC@3,-0.5333333333333333,-0.8,-0.26666666666666666
+POST-HOC static-topology sensitivity,mem,SentinelOps minus CIRCA,15,AC@5,-0.26666666666666666,-0.5333333333333333,-0.06666666666666667
+POST-HOC static-topology sensitivity,mem,SentinelOps minus PageRank,15,AC@1,-0.2,-0.4,0.0
+POST-HOC static-topology sensitivity,mem,SentinelOps minus PageRank,15,AC@3,0.26666666666666666,0.06666666666666667,0.4666666666666667
+POST-HOC static-topology sensitivity,mem,SentinelOps minus PageRank,15,AC@5,0.13333333333333333,0.0,0.3333333333333333
+POST-HOC static-topology sensitivity,mem,SentinelOps minus mmBARO,15,AC@1,-0.4666666666666667,-0.7333333333333333,-0.2
+POST-HOC static-topology sensitivity,mem,SentinelOps minus mmBARO,15,AC@3,-0.5333333333333333,-0.8,-0.26666666666666666
+POST-HOC static-topology sensitivity,mem,SentinelOps minus mmBARO,15,AC@5,-0.26666666666666666,-0.5333333333333333,-0.06666666666666667
+POST-HOC static-topology sensitivity,mem,SentinelOps minus mmCIRCA,15,AC@1,-0.6,-0.8666666666666667,-0.3333333333333333
+POST-HOC static-topology sensitivity,mem,SentinelOps minus mmCIRCA,15,AC@3,-0.4666666666666667,-0.7333333333333333,-0.2
+POST-HOC static-topology sensitivity,mem,SentinelOps minus mmCIRCA,15,AC@5,-0.2,-0.4666666666666667,0.06666666666666667
+POST-HOC static-topology sensitivity,mem,SentinelOps minus random,15,AC@1,0.0,0.0,0.0
+POST-HOC static-topology sensitivity,mem,SentinelOps minus random,15,AC@3,0.3333333333333333,-0.06666666666666667,0.6666666666666666
+POST-HOC static-topology sensitivity,mem,SentinelOps minus random,15,AC@5,0.2,-0.2,0.6
+POST-HOC static-topology sensitivity,mem,SentinelOps minus threshold,15,AC@1,-1.0,-1.0,-1.0
+POST-HOC static-topology sensitivity,mem,SentinelOps minus threshold,15,AC@3,-0.5333333333333333,-0.8,-0.26666666666666666
+POST-HOC static-topology sensitivity,mem,SentinelOps minus threshold,15,AC@5,-0.26666666666666666,-0.5333333333333333,-0.06666666666666667
+primary_trace_topology,socket,SentinelOps minus BARO,15,AC@1,0.3333333333333333,0.13333333333333333,0.6
+primary_trace_topology,socket,SentinelOps minus BARO,15,AC@3,0.0,-0.3333333333333333,0.3333333333333333
+primary_trace_topology,socket,SentinelOps minus BARO,15,AC@5,0.06666666666666667,-0.13333333333333333,0.26666666666666666
+primary_trace_topology,socket,SentinelOps minus CIRCA,15,AC@1,-0.26666666666666666,-0.6,0.06666666666666667
+primary_trace_topology,socket,SentinelOps minus CIRCA,15,AC@3,-0.13333333333333333,-0.4,0.13333333333333333
+primary_trace_topology,socket,SentinelOps minus CIRCA,15,AC@5,0.0,-0.2,0.2
+primary_trace_topology,socket,SentinelOps minus PageRank,15,AC@1,0.13333333333333333,-0.26666666666666666,0.4666666666666667
+primary_trace_topology,socket,SentinelOps minus PageRank,15,AC@3,0.06666666666666667,-0.13333333333333333,0.26666666666666666
+primary_trace_topology,socket,SentinelOps minus PageRank,15,AC@5,-0.06666666666666667,-0.2,0.0
+primary_trace_topology,socket,SentinelOps minus mmBARO,15,AC@1,0.3333333333333333,0.13333333333333333,0.6
+primary_trace_topology,socket,SentinelOps minus mmBARO,15,AC@3,-0.06666666666666667,-0.3333333333333333,0.2
+primary_trace_topology,socket,SentinelOps minus mmBARO,15,AC@5,-0.06666666666666667,-0.2,0.0
+primary_trace_topology,socket,SentinelOps minus mmCIRCA,15,AC@1,-0.2,-0.5333333333333333,0.13333333333333333
+primary_trace_topology,socket,SentinelOps minus mmCIRCA,15,AC@3,0.0,-0.3333333333333333,0.3333333333333333
+primary_trace_topology,socket,SentinelOps minus mmCIRCA,15,AC@5,-0.06666666666666667,-0.2,0.0
+primary_trace_topology,socket,SentinelOps minus random,15,AC@1,0.26666666666666666,0.0,0.5333333333333333
+primary_trace_topology,socket,SentinelOps minus random,15,AC@3,0.6666666666666666,0.3333333333333333,0.9333333333333333
+primary_trace_topology,socket,SentinelOps minus random,15,AC@5,0.4,0.06666666666666667,0.6666666666666666
+primary_trace_topology,socket,SentinelOps minus threshold,15,AC@1,-0.5333333333333333,-0.8,-0.26666666666666666
+primary_trace_topology,socket,SentinelOps minus threshold,15,AC@3,-0.2,-0.4,0.0
+primary_trace_topology,socket,SentinelOps minus threshold,15,AC@5,-0.06666666666666667,-0.2,0.0
+POST-HOC static-topology sensitivity,socket,SentinelOps minus BARO,15,AC@1,0.3333333333333333,0.13333333333333333,0.6
+POST-HOC static-topology sensitivity,socket,SentinelOps minus BARO,15,AC@3,-0.06666666666666667,-0.3333333333333333,0.2
+POST-HOC static-topology sensitivity,socket,SentinelOps minus BARO,15,AC@5,0.0,-0.26666666666666666,0.26666666666666666
+POST-HOC static-topology sensitivity,socket,SentinelOps minus CIRCA,15,AC@1,-0.26666666666666666,-0.6,0.06666666666666667
+POST-HOC static-topology sensitivity,socket,SentinelOps minus CIRCA,15,AC@3,-0.2,-0.4,0.0
+POST-HOC static-topology sensitivity,socket,SentinelOps minus CIRCA,15,AC@5,-0.06666666666666667,-0.26666666666666666,0.13333333333333333
+POST-HOC static-topology sensitivity,socket,SentinelOps minus PageRank,15,AC@1,0.13333333333333333,-0.26666666666666666,0.4666666666666667
+POST-HOC static-topology sensitivity,socket,SentinelOps minus PageRank,15,AC@3,0.4,0.13333333333333333,0.6666666666666666
+POST-HOC static-topology sensitivity,socket,SentinelOps minus PageRank,15,AC@5,0.3333333333333333,0.13333333333333333,0.6
+POST-HOC static-topology sensitivity,socket,SentinelOps minus mmBARO,15,AC@1,0.3333333333333333,0.13333333333333333,0.6
+POST-HOC static-topology sensitivity,socket,SentinelOps minus mmBARO,15,AC@3,-0.13333333333333333,-0.4,0.13333333333333333
+POST-HOC static-topology sensitivity,socket,SentinelOps minus mmBARO,15,AC@5,-0.13333333333333333,-0.3333333333333333,0.0
+POST-HOC static-topology sensitivity,socket,SentinelOps minus mmCIRCA,15,AC@1,-0.2,-0.5333333333333333,0.13333333333333333
+POST-HOC static-topology sensitivity,socket,SentinelOps minus mmCIRCA,15,AC@3,-0.06666666666666667,-0.3333333333333333,0.2
+POST-HOC static-topology sensitivity,socket,SentinelOps minus mmCIRCA,15,AC@5,-0.13333333333333333,-0.3333333333333333,0.0
+POST-HOC static-topology sensitivity,socket,SentinelOps minus random,15,AC@1,0.26666666666666666,0.0,0.5333333333333333
+POST-HOC static-topology sensitivity,socket,SentinelOps minus random,15,AC@3,0.6,0.26666666666666666,0.8666666666666667
+POST-HOC static-topology sensitivity,socket,SentinelOps minus random,15,AC@5,0.3333333333333333,-0.06666666666666667,0.6666666666666666
+POST-HOC static-topology sensitivity,socket,SentinelOps minus threshold,15,AC@1,-0.5333333333333333,-0.8,-0.26666666666666666
+POST-HOC static-topology sensitivity,socket,SentinelOps minus threshold,15,AC@3,-0.26666666666666666,-0.5333333333333333,-0.06666666666666667
+POST-HOC static-topology sensitivity,socket,SentinelOps minus threshold,15,AC@5,-0.13333333333333333,-0.3333333333333333,0.0
