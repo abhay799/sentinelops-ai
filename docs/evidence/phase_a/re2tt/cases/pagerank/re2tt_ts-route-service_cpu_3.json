@@ -1,0 +1,392 @@
+{
+  "candidate_count": 68,
+  "case_id": "re2tt_ts-route-service_cpu_3",
+  "damping": 0.85,
+  "e3_filtered_service_ranking": [
+    "ts-station-service",
+    "ts-basic-service",
+    "ts-order-service",
+    "ts-order-other-service",
+    "ts-route-service",
+    "ts-train-service",
+    "ts-travel-service",
+    "ts-travel2-service",
+    "ts-price-service",
+    "ts-seat-service",
+    "ts-consign-price-service",
+    "ts-config-service",
+    "ts-payment-service",
+    "ts-food-service",
+    "ts-user-service",
+    "ts-assurance-service",
+    "ts-security-service",
+    "ts-contacts-service",
+    "ts-admin-user-service",
+    "ts-avatar-service",
+    "ts-inside-payment-service",
+    "ts-preserve-other-service",
+    "ts-voucher-service",
+    "ts-admin-travel-service",
+    "ts-admin-basic-info-service",
+    "ts-verification-code-service",
+    "ts-preserve-service",
+    "ts-execute-service",
+    "ts-auth-service",
+    "ts-cancel-service",
+    "ts-route-plan-service",
+    "ts-consign-service",
+    "ts-admin-route-service",
+    "ts-admin-order-service",
+    "ts-news-service",
+    "ts-travel-plan-service",
+    "ts-notification-service",
+    "ts-rebook-service",
+    "ts-ticket-office-service"
+  ],
+  "ground_truth_used_for_ranking": false,
+  "method": "pagerank",
+  "personalization_source": "continuous v1 fault-window anomaly strength",
+  "ranking": [
+    {
+      "rank": 1,
+      "score": 0.07315876361411161,
+      "service": "ts-station-service"
+    },
+    {
+      "rank": 2,
+      "score": 0.029783477255196936,
+      "service": "ts-basic-service"
+    },
+    {
+      "rank": 3,
+      "score": 0.029622554196097998,
+      "service": "ts-order-service"
+    },
+    {
+      "rank": 4,
+      "score": 0.029104498956602783,
+      "service": "ts-order-other-service"
+    },
+    {
+      "rank": 5,
+      "score": 0.026077837587349554,
+      "service": "ts-route-service"
+    },
+    {
+      "rank": 6,
+      "score": 0.025710235692003158,
+      "service": "ts-train-service"
+    },
+    {
+      "rank": 7,
+      "score": 0.024665786178074495,
+      "service": "ts-travel-service"
+    },
+    {
+      "rank": 8,
+      "score": 0.021743615244172818,
+      "service": "ts-ticketinfo-service"
+    },
+    {
+      "rank": 9,
+      "score": 0.02143290785751491,
+      "service": "ts-travel2-service"
+    },
+    {
+      "rank": 10,
+      "score": 0.02056390471960487,
+      "service": "ts-price-service"
+    },
+    {
+      "rank": 11,
+      "score": 0.02053463077487595,
+      "service": "ts-seat-service"
+    },
+    {
+      "rank": 12,
+      "score": 0.020431104158046557,
+      "service": "ts-consign-price-service"
+    },
+    {
+      "rank": 13,
+      "score": 0.02029714314317739,
+      "service": "ts-config-service"
+    },
+    {
+      "rank": 14,
+      "score": 0.015402661718994671,
+      "service": "ts-food-map-service"
+    },
+    {
+      "rank": 15,
+      "score": 0.0151720538177129,
+      "service": "ts-payment-service"
+    },
+    {
+      "rank": 16,
+      "score": 0.013907040241199785,
+      "service": "ts-food-service"
+    },
+    {
+      "rank": 17,
+      "score": 0.01385345022717088,
+      "service": "ts-user-service"
+    },
+    {
+      "rank": 18,
+      "score": 0.013554165173841354,
+      "service": "ts-assurance-service"
+    },
+    {
+      "rank": 19,
+      "score": 0.0133383355206858,
+      "service": "ts-security-service"
+    },
+    {
+      "rank": 20,
+      "score": 0.012883798755598148,
+      "service": "ts-contacts-service"
+    },
+    {
+      "rank": 21,
+      "score": 0.011913219666442189,
+      "service": "ts-admin-user-service"
+    },
+    {
+      "rank": 22,
+      "score": 0.011913219666442189,
+      "service": "ts-auth-mongo"
+    },
+    {
+      "rank": 23,
+      "score": 0.011913219666442189,
+      "service": "ts-avatar-service"
+    },
+    {
+      "rank": 24,
+      "score": 0.011913219666442189,
+      "service": "ts-consign-price-mongo"
+    },
+    {
+      "rank": 25,
+      "score": 0.011913219666442189,
+      "service": "ts-food-map-mongo"
+    },
+    {
+      "rank": 26,
+      "score": 0.011913219666442189,
+      "service": "ts-inside-payment-service"
+    },
+    {
+      "rank": 27,
+      "score": 0.011913219666442189,
+      "service": "ts-preserve-other-service"
+    },
+    {
+      "rank": 28,
+      "score": 0.011913219666442189,
+      "service": "ts-travel-mongo"
+    },
+    {
+      "rank": 29,
+      "score": 0.011913219666442189,
+      "service": "ts-travel2-mongo"
+    },
+    {
+      "rank": 30,
+      "score": 0.011913219666442189,
+      "service": "ts-voucher-mysql"
+    },
+    {
+      "rank": 31,
+      "score": 0.011913219666442189,
+      "service": "ts-voucher-service"
+    },
+    {
+      "rank": 32,
+      "score": 0.011913211937540198,
+      "service": "ts-config-mongo"
+    },
+    {
+      "rank": 33,
+      "score": 0.011802934025833545,
+      "service": "ts-admin-travel-service"
+    },
+    {
+      "rank": 34,
+      "score": 0.011776996903020823,
+      "service": "ts-ui-dashboard"
+    },
+    {
+      "rank": 35,
+      "score": 0.011764071347603636,
+      "service": "ts-admin-basic-info-service"
+    },
+    {
+      "rank": 36,
+      "score": 0.011763392293659606,
+      "service": "ts-preserve-mongo"
+    },
+    {
+      "rank": 37,
+      "score": 0.011758507152285831,
+      "service": "ts-order-mongo"
+    },
+    {
+      "rank": 38,
+      "score": 0.011739448194385643,
+      "service": "ts-train-mongo"
+    },
+    {
+      "rank": 39,
+      "score": 0.01173740648003036,
+      "service": "ts-verification-code-service"
+    },
+    {
+      "rank": 40,
+      "score": 0.011724777864681311,
+      "service": "ts-inside-payment-mongo"
+    },
+    {
+      "rank": 41,
+      "score": 0.01169071123176415,
+      "service": "ts-food-mongo"
+    },
+    {
+      "rank": 42,
+      "score": 0.011672554097404387,
+      "service": "ts-ticket-office-mongo"
+    },
+    {
+      "rank": 43,
+      "score": 0.011565277897672156,
+      "service": "ts-contacts-mongo"
+    },
+    {
+      "rank": 44,
+      "score": 0.011543066096930083,
+      "service": "ts-preserve-service"
+    },
+    {
+      "rank": 45,
+      "score": 0.01154084491881136,
+      "service": "ts-execute-service"
+    },
+    {
+      "rank": 46,
+      "score": 0.01143180623231379,
+      "service": "ts-auth-service"
+    },
+    {
+      "rank": 47,
+      "score": 0.011272161877847228,
+      "service": "ts-cancel-service"
+    },
+    {
+      "rank": 48,
+      "score": 0.011129830263180249,
+      "service": "ts-order-other-mongo"
+    },
+    {
+      "rank": 49,
+      "score": 0.011087775567394173,
+      "service": "ts-route-plan-service"
+    },
+    {
+      "rank": 50,
+      "score": 0.011070940859323239,
+      "service": "ts-security-mongo"
+    },
+    {
+      "rank": 51,
+      "score": 0.011042506501756129,
+      "service": "ts-preserve-other-mongo"
+    },
+    {
+      "rank": 52,
+      "score": 0.010915556230012183,
+      "service": "ts-consign-service"
+    },
+    {
+      "rank": 53,
+      "score": 0.010865297966740881,
+      "service": "ts-assurance-mongo"
+    },
+    {
+      "rank": 54,
+      "score": 0.01082126362825416,
+      "service": "ts-station-mongo"
+    },
+    {
+      "rank": 55,
+      "score": 0.01081287623101278,
+      "service": "ts-admin-route-service"
+    },
+    {
+      "rank": 56,
+      "score": 0.010812261283707061,
+      "service": "ts-notification-mongo"
+    },
+    {
+      "rank": 57,
+      "score": 0.010808443250358447,
+      "service": "ts-user-mongo"
+    },
+    {
+      "rank": 58,
+      "score": 0.010736015320029579,
+      "service": "ts-admin-order-service"
+    },
+    {
+      "rank": 59,
+      "score": 0.010721099108634573,
+      "service": "ts-price-mongo"
+    },
+    {
+      "rank": 60,
+      "score": 0.010706308990582867,
+      "service": "ts-consign-mongo"
+    },
+    {
+      "rank": 61,
+      "score": 0.010609709995421053,
+      "service": "ts-news-service"
+    },
+    {
+      "rank": 62,
+      "score": 0.0105668536881908,
+      "service": "ts-travel-plan-service"
+    },
+    {
+      "rank": 63,
+      "score": 0.010508899021455092,
+      "service": "ts-payment-mongo"
+    },
+    {
+      "rank": 64,
+      "score": 0.010403145589792207,
+      "service": "ts-notification-service"
+    },
+    {
+      "rank": 65,
+      "score": 0.010280939845324476,
+      "service": "ts-route-mongo"
+    },
+    {
+      "rank": 66,
+      "score": 0.009670867246304919,
+      "service": "ts-rebook-service"
+    },
+    {
+      "rank": 67,
+      "score": 0.008982807896232643,
+      "service": "ts-food-mysql"
+    },
+    {
+      "rank": 68,
+      "score": 0.008466051801611842,
+      "service": "ts-ticket-office-service"
+    }
+  ],
+  "status": "ok"
+}

@@ -1,0 +1,732 @@
+{
+  "candidate_count": 68,
+  "case_id": "re2tt_ts-route-service_delay_3",
+  "e3_filtered_service_ranking": [
+    "ts-route-service",
+    "ts-admin-travel-service",
+    "ts-travel2-service",
+    "ts-food-service",
+    "ts-seat-service",
+    "ts-travel-service",
+    "ts-admin-basic-info-service",
+    "ts-inside-payment-service",
+    "ts-ticket-office-service",
+    "ts-basic-service",
+    "ts-rebook-service",
+    "ts-contacts-service",
+    "ts-preserve-other-service",
+    "ts-config-service",
+    "ts-preserve-service",
+    "ts-payment-service",
+    "ts-route-plan-service",
+    "ts-travel-plan-service",
+    "ts-assurance-service",
+    "ts-train-service",
+    "ts-price-service",
+    "ts-admin-order-service",
+    "ts-security-service",
+    "ts-auth-service",
+    "ts-admin-route-service",
+    "ts-order-other-service",
+    "ts-consign-service",
+    "ts-order-service",
+    "ts-avatar-service",
+    "ts-news-service",
+    "ts-consign-price-service",
+    "ts-verification-code-service",
+    "ts-admin-user-service",
+    "ts-execute-service",
+    "ts-user-service",
+    "ts-notification-service",
+    "ts-voucher-service",
+    "ts-cancel-service",
+    "ts-station-service"
+  ],
+  "ground_truth_used_for_ranking": false,
+  "method": "v2a",
+  "ranking": [
+    {
+      "anomaly_strength": 821.1801796101067,
+      "change_signal": 0.0,
+      "graph_impact": 0.13432835820895522,
+      "primary_service_bonus": 1.0,
+      "rank": 1,
+      "rca_score": 369.657946,
+      "service": "ts-route-service"
+    },
+    {
+      "anomaly_strength": 205.26314338617496,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 2,
+      "rca_score": 92.368415,
+      "service": "ts-admin-travel-service"
+    },
+    {
+      "anomaly_strength": 68.4530035274635,
+      "change_signal": 0.0,
+      "graph_impact": 0.08955223880597014,
+      "primary_service_bonus": 0.0,
+      "rank": 3,
+      "rca_score": 30.821762,
+      "service": "ts-travel2-service"
+    },
+    {
+      "anomaly_strength": 52.06920753988884,
+      "change_signal": 0.0,
+      "graph_impact": 0.029850746268656716,
+      "primary_service_bonus": 0.0,
+      "rank": 4,
+      "rca_score": 23.437114,
+      "service": "ts-food-service"
+    },
+    {
+      "anomaly_strength": 51.79821161933776,
+      "change_signal": 0.0,
+      "graph_impact": 0.04477611940298507,
+      "primary_service_bonus": 0.0,
+      "rank": 5,
+      "rca_score": 23.31815,
+      "service": "ts-food-map-service"
+    },
+    {
+      "anomaly_strength": 49.25437687711091,
+      "change_signal": 0.0,
+      "graph_impact": 0.08955223880597014,
+      "primary_service_bonus": 0.0,
+      "rank": 6,
+      "rca_score": 22.18238,
+      "service": "ts-seat-service"
+    },
+    {
+      "anomaly_strength": 47.212522458682876,
+      "change_signal": 0.0,
+      "graph_impact": 0.08955223880597014,
+      "primary_service_bonus": 0.0,
+      "rank": 7,
+      "rca_score": 21.263546,
+      "service": "ts-travel-service"
+    },
+    {
+      "anomaly_strength": 31.84416414195708,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 8,
+      "rca_score": 14.329874,
+      "service": "ts-admin-basic-info-service"
+    },
+    {
+      "anomaly_strength": 19.01901799894265,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 9,
+      "rca_score": 8.558558,
+      "service": "ts-inside-payment-service"
+    },
+    {
+      "anomaly_strength": 14.76715789738819,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 10,
+      "rca_score": 6.645221,
+      "service": "ts-notification-mongo"
+    },
+    {
+      "anomaly_strength": 14.248104105752411,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 11,
+      "rca_score": 6.411647,
+      "service": "ts-ticket-office-service"
+    },
+    {
+      "anomaly_strength": 13.312122317044079,
+      "change_signal": 0.0,
+      "graph_impact": 0.11940298507462686,
+      "primary_service_bonus": 0.0,
+      "rank": 12,
+      "rca_score": 6.014336,
+      "service": "ts-basic-service"
+    },
+    {
+      "anomaly_strength": 7.658113571378483,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 13,
+      "rca_score": 3.446151,
+      "service": "ts-ui-dashboard"
+    },
+    {
+      "anomaly_strength": 6.490917665510344,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 14,
+      "rca_score": 2.920913,
+      "service": "ts-rebook-service"
+    },
+    {
+      "anomaly_strength": 5.768145151164464,
+      "change_signal": 0.0,
+      "graph_impact": 0.1044776119402985,
+      "primary_service_bonus": 0.0,
+      "rank": 15,
+      "rca_score": 2.616561,
+      "service": "ts-ticketinfo-service"
+    },
+    {
+      "anomaly_strength": 4.85607995085106,
+      "change_signal": 0.0,
+      "graph_impact": 0.029850746268656716,
+      "primary_service_bonus": 0.0,
+      "rank": 16,
+      "rca_score": 2.191206,
+      "service": "ts-contacts-service"
+    },
+    {
+      "anomaly_strength": 4.860222579392384,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 17,
+      "rca_score": 2.1871,
+      "service": "ts-preserve-other-service"
+    },
+    {
+      "anomaly_strength": 4.035693847598828,
+      "change_signal": 0.0,
+      "graph_impact": 0.11940298507462686,
+      "primary_service_bonus": 0.0,
+      "rank": 18,
+      "rca_score": 1.839943,
+      "service": "ts-config-service"
+    },
+    {
+      "anomaly_strength": 4.019201119224564,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 19,
+      "rca_score": 1.808641,
+      "service": "ts-preserve-service"
+    },
+    {
+      "anomaly_strength": 3.918455155675513,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 20,
+      "rca_score": 1.763305,
+      "service": "ts-user-mongo"
+    },
+    {
+      "anomaly_strength": 3.471587317853103,
+      "change_signal": 0.0,
+      "graph_impact": 0.014925373134328358,
+      "primary_service_bonus": 0.0,
+      "rank": 21,
+      "rca_score": 1.565199,
+      "service": "ts-payment-service"
+    },
+    {
+      "anomaly_strength": 3.2796476692018,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 22,
+      "rca_score": 1.475841,
+      "service": "ts-preserve-other-mongo"
+    },
+    {
+      "anomaly_strength": 3.2389276530520132,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 23,
+      "rca_score": 1.457517,
+      "service": "ts-route-plan-service"
+    },
+    {
+      "anomaly_strength": 3.070551489930472,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 24,
+      "rca_score": 1.381748,
+      "service": "ts-travel-plan-service"
+    },
+    {
+      "anomaly_strength": 2.9836519701217363,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 25,
+      "rca_score": 1.342643,
+      "service": "ts-security-mongo"
+    },
+    {
+      "anomaly_strength": 2.4793430374510184,
+      "change_signal": 0.0,
+      "graph_impact": 0.029850746268656716,
+      "primary_service_bonus": 0.0,
+      "rank": 26,
+      "rca_score": 1.121675,
+      "service": "ts-assurance-service"
+    },
+    {
+      "anomaly_strength": 2.0980386089528964,
+      "change_signal": 0.0,
+      "graph_impact": 0.13432835820895522,
+      "primary_service_bonus": 0.0,
+      "rank": 27,
+      "rca_score": 0.970983,
+      "service": "ts-train-service"
+    },
+    {
+      "anomaly_strength": 2.0661802313144837,
+      "change_signal": 0.0,
+      "graph_impact": 0.14925373134328357,
+      "primary_service_bonus": 0.0,
+      "rank": 28,
+      "rca_score": 0.959632,
+      "service": "ts-price-service"
+    },
+    {
+      "anomaly_strength": 2.0052114187008603,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 29,
+      "rca_score": 0.902345,
+      "service": "ts-admin-order-service"
+    },
+    {
+      "anomaly_strength": 1.9902687432452002,
+      "change_signal": 0.0,
+      "graph_impact": 0.029850746268656716,
+      "primary_service_bonus": 0.0,
+      "rank": 30,
+      "rca_score": 0.901591,
+      "service": "ts-security-service"
+    },
+    {
+      "anomaly_strength": 1.9904518173765071,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 31,
+      "rca_score": 0.895703,
+      "service": "ts-order-mongo"
+    },
+    {
+      "anomaly_strength": 1.9803991965137764,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 32,
+      "rca_score": 0.89118,
+      "service": "ts-food-mongo"
+    },
+    {
+      "anomaly_strength": 1.9262795756973186,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 33,
+      "rca_score": 0.866826,
+      "service": "ts-payment-mongo"
+    },
+    {
+      "anomaly_strength": 1.865173203938145,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 34,
+      "rca_score": 0.839328,
+      "service": "ts-auth-service"
+    },
+    {
+      "anomaly_strength": 1.8566828775898887,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 35,
+      "rca_score": 0.835507,
+      "service": "ts-inside-payment-mongo"
+    },
+    {
+      "anomaly_strength": 1.8239770044048154,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 36,
+      "rca_score": 0.82079,
+      "service": "ts-admin-route-service"
+    },
+    {
+      "anomaly_strength": 1.719779641139814,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 37,
+      "rca_score": 0.773901,
+      "service": "ts-preserve-mongo"
+    },
+    {
+      "anomaly_strength": 1.571651278486004,
+      "change_signal": 0.0,
+      "graph_impact": 0.13432835820895522,
+      "primary_service_bonus": 0.0,
+      "rank": 38,
+      "rca_score": 0.734109,
+      "service": "ts-order-other-service"
+    },
+    {
+      "anomaly_strength": 1.5766509856139646,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 39,
+      "rca_score": 0.709493,
+      "service": "ts-assurance-mongo"
+    },
+    {
+      "anomaly_strength": 1.547567400660635,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 40,
+      "rca_score": 0.696405,
+      "service": "ts-route-mongo"
+    },
+    {
+      "anomaly_strength": 1.4882738648783096,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 41,
+      "rca_score": 0.669723,
+      "service": "ts-train-mongo"
+    },
+    {
+      "anomaly_strength": 1.4821278651932657,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 42,
+      "rca_score": 0.666958,
+      "service": "ts-travel2-mongo"
+    },
+    {
+      "anomaly_strength": 1.3962435138159481,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 43,
+      "rca_score": 0.62831,
+      "service": "ts-price-mongo"
+    },
+    {
+      "anomaly_strength": 1.3413441490236047,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 44,
+      "rca_score": 0.603605,
+      "service": "ts-consign-service"
+    },
+    {
+      "anomaly_strength": 1.3044532038195473,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 45,
+      "rca_score": 0.587004,
+      "service": "ts-ticket-office-mongo"
+    },
+    {
+      "anomaly_strength": 1.2157104794073097,
+      "change_signal": 0.0,
+      "graph_impact": 0.13432835820895522,
+      "primary_service_bonus": 0.0,
+      "rank": 46,
+      "rca_score": 0.573935,
+      "service": "ts-order-service"
+    },
+    {
+      "anomaly_strength": 1.2441348225246884,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 47,
+      "rca_score": 0.559861,
+      "service": "ts-contacts-mongo"
+    },
+    {
+      "anomaly_strength": 1.2039444614444479,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 48,
+      "rca_score": 0.541775,
+      "service": "ts-config-mongo"
+    },
+    {
+      "anomaly_strength": 1.202147672446009,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 49,
+      "rca_score": 0.540966,
+      "service": "ts-consign-mongo"
+    },
+    {
+      "anomaly_strength": 1.1998225341475781,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 50,
+      "rca_score": 0.53992,
+      "service": "ts-travel-mongo"
+    },
+    {
+      "anomaly_strength": 1.1609245376299577,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 51,
+      "rca_score": 0.522416,
+      "service": "ts-avatar-service"
+    },
+    {
+      "anomaly_strength": 1.1535379962282295,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 52,
+      "rca_score": 0.519092,
+      "service": "ts-news-service"
+    },
+    {
+      "anomaly_strength": 1.1498724078331868,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 53,
+      "rca_score": 0.517443,
+      "service": "ts-order-other-mongo"
+    },
+    {
+      "anomaly_strength": 1.1447871840173216,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 54,
+      "rca_score": 0.515154,
+      "service": "ts-voucher-mysql"
+    },
+    {
+      "anomaly_strength": 1.0135162887620839,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 55,
+      "rca_score": 0.456082,
+      "service": "ts-station-mongo"
+    },
+    {
+      "anomaly_strength": 0.9957479006051834,
+      "change_signal": 0.0,
+      "graph_impact": 0.014925373134328358,
+      "primary_service_bonus": 0.0,
+      "rank": 56,
+      "rca_score": 0.451072,
+      "service": "ts-consign-price-service"
+    },
+    {
+      "anomaly_strength": 0.9534164824747208,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 57,
+      "rca_score": 0.429037,
+      "service": "ts-food-map-mongo"
+    },
+    {
+      "anomaly_strength": 0.9463674646858666,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 58,
+      "rca_score": 0.425865,
+      "service": "ts-consign-price-mongo"
+    },
+    {
+      "anomaly_strength": 0.9367053126564198,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 59,
+      "rca_score": 0.421517,
+      "service": "ts-verification-code-service"
+    },
+    {
+      "anomaly_strength": 0.9237290415906668,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 60,
+      "rca_score": 0.415678,
+      "service": "ts-food-mysql"
+    },
+    {
+      "anomaly_strength": 0.9211042717096989,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 61,
+      "rca_score": 0.414497,
+      "service": "ts-admin-user-service"
+    },
+    {
+      "anomaly_strength": 0.8824169644997504,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 62,
+      "rca_score": 0.397088,
+      "service": "ts-execute-service"
+    },
+    {
+      "anomaly_strength": 0.7976278683167605,
+      "change_signal": 0.0,
+      "graph_impact": 0.029850746268656716,
+      "primary_service_bonus": 0.0,
+      "rank": 63,
+      "rca_score": 0.364903,
+      "service": "ts-user-service"
+    },
+    {
+      "anomaly_strength": 0.8026024436469351,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 64,
+      "rca_score": 0.361171,
+      "service": "ts-notification-service"
+    },
+    {
+      "anomaly_strength": 0.776989628297669,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 65,
+      "rca_score": 0.349645,
+      "service": "ts-auth-mongo"
+    },
+    {
+      "anomaly_strength": 0.7665435904974074,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 66,
+      "rca_score": 0.344945,
+      "service": "ts-voucher-service"
+    },
+    {
+      "anomaly_strength": 0.7106913253723609,
+      "change_signal": 0.0,
+      "graph_impact": 0.0,
+      "primary_service_bonus": 0.0,
+      "rank": 67,
+      "rca_score": 0.319811,
+      "service": "ts-cancel-service"
+    },
+    {
+      "anomaly_strength": 0.5443002341541646,
+      "change_signal": 0.0,
+      "graph_impact": 0.19402985074626866,
+      "primary_service_bonus": 0.0,
+      "rank": 68,
+      "rca_score": 0.283741,
+      "service": "ts-station-service"
+    }
+  ],
+  "status": "ok",
+  "unclipped_strengths": {
+    "ts-admin-basic-info-service": 31.84416414195708,
+    "ts-admin-order-service": 2.0052114187008603,
+    "ts-admin-route-service": 1.8239770044048154,
+    "ts-admin-travel-service": 205.26314338617496,
+    "ts-admin-user-service": 0.9211042717096989,
+    "ts-assurance-mongo": 1.5766509856139646,
+    "ts-assurance-service": 2.4793430374510184,
+    "ts-auth-mongo": 0.776989628297669,
+    "ts-auth-service": 1.865173203938145,
+    "ts-avatar-service": 1.1609245376299577,
+    "ts-basic-service": 13.312122317044079,
+    "ts-cancel-service": 0.7106913253723609,
+    "ts-config-mongo": 1.2039444614444479,
+    "ts-config-service": 4.035693847598828,
+    "ts-consign-mongo": 1.202147672446009,
+    "ts-consign-price-mongo": 0.9463674646858666,
+    "ts-consign-price-service": 0.9957479006051834,
+    "ts-consign-service": 1.3413441490236047,
+    "ts-contacts-mongo": 1.2441348225246884,
+    "ts-contacts-service": 4.85607995085106,
+    "ts-execute-service": 0.8824169644997504,
+    "ts-food-map-mongo": 0.9534164824747208,
+    "ts-food-map-service": 51.79821161933776,
+    "ts-food-mongo": 1.9803991965137764,
+    "ts-food-mysql": 0.9237290415906668,
+    "ts-food-service": 52.06920753988884,
+    "ts-inside-payment-mongo": 1.8566828775898887,
+    "ts-inside-payment-service": 19.01901799894265,
+    "ts-news-service": 1.1535379962282295,
+    "ts-notification-mongo": 14.76715789738819,
+    "ts-notification-service": 0.8026024436469351,
+    "ts-order-mongo": 1.9904518173765071,
+    "ts-order-other-mongo": 1.1498724078331868,
+    "ts-order-other-service": 1.571651278486004,
+    "ts-order-service": 1.2157104794073097,
+    "ts-payment-mongo": 1.9262795756973186,
+    "ts-payment-service": 3.471587317853103,
+    "ts-preserve-mongo": 1.719779641139814,
+    "ts-preserve-other-mongo": 3.2796476692018,
+    "ts-preserve-other-service": 4.860222579392384,
+    "ts-preserve-service": 4.019201119224564,
+    "ts-price-mongo": 1.3962435138159481,
+    "ts-price-service": 2.0661802313144837,
+    "ts-rebook-service": 6.490917665510344,
+    "ts-route-mongo": 1.547567400660635,
+    "ts-route-plan-service": 3.2389276530520132,
+    "ts-route-service": 821.1801796101067,
+    "ts-seat-service": 49.25437687711091,
+    "ts-security-mongo": 2.9836519701217363,
+    "ts-security-service": 1.9902687432452002,
+    "ts-station-mongo": 1.0135162887620839,
+    "ts-station-service": 0.5443002341541646,
+    "ts-ticket-office-mongo": 1.3044532038195473,
+    "ts-ticket-office-service": 14.248104105752411,
+    "ts-ticketinfo-service": 5.768145151164464,
+    "ts-train-mongo": 1.4882738648783096,
+    "ts-train-service": 2.0980386089528964,
+    "ts-travel-mongo": 1.1998225341475781,
+    "ts-travel-plan-service": 3.070551489930472,
+    "ts-travel-service": 47.212522458682876,
+    "ts-travel2-mongo": 1.4821278651932657,
+    "ts-travel2-service": 68.4530035274635,
+    "ts-ui-dashboard": 7.658113571378483,
+    "ts-user-mongo": 3.918455155675513,
+    "ts-user-service": 0.7976278683167605,
+    "ts-verification-code-service": 0.9367053126564198,
+    "ts-voucher-mysql": 1.1447871840173216,
+    "ts-voucher-service": 0.7665435904974074
+  }
+}
