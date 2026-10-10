@@ -1,0 +1,81 @@
+{
+  "classification": "non_registry",
+  "configured_protocol_seconds": {
+    "baseline": 120,
+    "cooldown": 120,
+    "injection": 180
+  },
+  "dry_run": true,
+  "dry_run_timing_note": "control-path dry run; configured long waits are not slept and no registered timing/result inference is permitted",
+  "emergency_cleanup": {
+    "counted_as_remediation": false,
+    "performed": false
+  },
+  "execution": {
+    "action_http_status": 200,
+    "candidate_service": "payment-service",
+    "execution_attempted": true,
+    "execution_request_id": "DRY-EXEC-1",
+    "execution_status": "executed_verified",
+    "final_gate_passed": true,
+    "gate_failures": [],
+    "incident_id": "DRY-INC-1",
+    "plan_id": "DRY-PLAN-1",
+    "post_live": true,
+    "post_ready": true,
+    "pre_live": true,
+    "pre_ready": true,
+    "recommended_action": "rollback",
+    "recovery_verified": true,
+    "rollback_attempted": false,
+    "rollback_succeeded": false,
+    "target_url": "http://localhost:8103"
+  },
+  "guard_decision": {
+    "candidate_service": "payment-service",
+    "checks_passed": 9,
+    "checks_total": 9,
+    "execution_allowed": false,
+    "fail_closed": true,
+    "failed_checks": [],
+    "guard_decision": "eligible_pending_human",
+    "guard_technical_approval": true,
+    "human_approval_required": true,
+    "human_approval_status": "pending",
+    "incident_id": "DRY-INC-1",
+    "phase14_candidate": true,
+    "plan_id": "DRY-PLAN-1",
+    "recommended_action": "rollback",
+    "rollback_available": true
+  },
+  "registered_result_eligible": false,
+  "resources": {
+    "cpu_system_seconds": 0.0044370000000000034,
+    "cpu_user_seconds": 0.010165000000000035,
+    "memory_after_kib": {
+      "MemAvailable": 3297048,
+      "MemTotal": 3887732
+    },
+    "memory_before_kib": {
+      "MemAvailable": 3297048,
+      "MemTotal": 3887732
+    },
+    "service_kill_note": null,
+    "service_killed": false,
+    "wall_clock_seconds": 0.014557696998963365,
+    "wsl_memory_note": "host WSL environment approximately 3.7 GiB"
+  },
+  "run_record": {
+    "detection_time": "2026-10-10T18:35:15.843098Z",
+    "guard_decision_time": "2026-10-10T18:35:15.847781Z",
+    "injection_end": "2026-10-10T18:35:15.850927Z",
+    "injection_start": "2026-10-10T18:35:15.840286Z",
+    "rca_output_time": "2026-10-10T18:35:15.843447Z",
+    "recovery_time": "2026-10-10T18:35:15.854324Z",
+    "remediation_time": "2026-10-10T18:35:15.850927Z",
+    "run_id": "C03-DRY-bad_deployment_rollback-1003",
+    "scenario": "bad_deployment_rollback",
+    "seed": 1003,
+    "verification_time": "2026-10-10T18:35:15.854324Z"
+  }
+}
