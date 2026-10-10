@@ -18,14 +18,20 @@ Primary protocol:
 
 `docs/evidence/PHASE_A_EVALUATION_SPEC.md`
 
-Frozen revisions:
+Revision chain actually used:
 
-- SentinelOps: `9fd8b0967fbf94607e5e2b5213a7895669d07a4e`
+- pre-existing core detector/RCA reference: `9fd8b0967fbf94607e5e2b5213a7895669d07a4e`
+- V2 development freeze/selection: `d840a5a23197fde54b3e8c2586a3fecb7eba41fc`
+- RE2-TT runner/scorer freeze: `c4c42241ed9f89ff05b923798078846c57de5e56`
+- audited Step 27 producing scripts: `05dc014c08278eb48c0f361456f35ee17b04e788`
+- certification closeout revision: this commit; the exact SHA cannot be embedded in its own content-addressed commit without changing that SHA, so the final Git hash is reported externally at closeout
 - RCAEval: `259ea4167160256a74ad30004aa3d96a998c846e`
 - RCAEval dataset: `afeacb11bcc94dadfd1c8f483ee4377b2b8b614e`
 - bootstrap/random seed: `42`
 - bootstrap resamples: `10000`
 - interval: 95% percentile case bootstrap
+
+The pre-existing core detector/RCA diff `d840a5a..9fd8b09` is empty for `src/sentinelops/anomaly/detectors.py` and the core `src/sentinelops/rca/` implementation. The Phase A evaluation-specific detector/ranking layer (`src/sentinelops/evaluation/rcaeval_*.py` and related Phase A scripts) postdates `9fd8b09`, so the broader evaluation-layer diff is not empty.
 
 This is not an external, regulatory, production, safety, or security certification.
 
@@ -93,7 +99,19 @@ CIRCA's RE2-TT all-90 row is a compute-budget outcome: 80 timeouts and 10 fallba
 | BARO | 0.742222 | 0.948889 | 0.806667 | -0.142222 |
 | CIRCA | 0.833333 | 0.920000 | 0.000000 | -0.920000 |
 
-RE2-TT is harder than RE2-SS for every runnable method in this seven-method matrix on Avg@5.
+Raw top-k accuracy is lower on RE2-TT than RE2-SS for the methods with valid rankings, but the suites are not directly comparable because RE2-TT has a much larger effective candidate set: 39 versus 8, with Chance@5 0.128205 versus 0.625000. Lift@5 therefore provides necessary context beside raw AC@5:
+
+| Method | SS AC@5 | SS Lift@5 | TT AC@5 | TT Lift@5 |
+|---|---:|---:|---:|---:|
+| v1 | 0.888889 | 1.422222 | 0.555556 | 4.333333 |
+| V2a | 0.977778 | 1.564444 | 0.877778 | 6.846667 |
+| threshold | 0.988889 | 1.582222 | 0.888889 | 6.933333 |
+| random | 0.633333 | 1.013333 | 0.133333 | 1.040000 |
+| PageRank | 0.944444 | 1.511111 | 0.544444 | 4.246667 |
+| BARO | 1.000000 | 1.600000 | 0.866667 | 6.760000 |
+| CIRCA | 0.977778 | 1.564444 | 0.000000 | 0.000000* |
+
+`*` CIRCA has 0/90 valid RE2-TT rankings, so its TT raw score and lift are compute-budget outcomes rather than an accuracy comparison.
 
 V2a addresses the v1 saturation/tie pathology seen in RE2-OB: v1 had 78 top-score ties, while V2a had 0. The V2a strength audit records all 90 case maxima above 1.0 and 774/990 E3 service strengths above 1.0, preserving information that v1 clipping had collapsed.
 
@@ -259,7 +277,12 @@ Phase A is certified internally under the frozen local/synthetic evaluation prot
 
 Permitted claim text:
 
-> SentinelOps Phase A shows that V2a fixes the v1 saturation/tie pathology observed on RE2-OB and carries that correction into both held-out suites. On RE2-SS, V2a is comparable to the frozen threshold baseline; on RE2-TT it is modestly lower than the threshold baseline and lower than BARO on Avg@5. RE2-TT is harder than RE2-SS for all seven runnable methods in the cross-suite matrix. CIRCA's RE2-TT result is compute-budget-limited, and mmBARO/mmCIRCA are n/a under the pinned held-out input contract.
+> SentinelOps Phase A shows that V2a removes the v1 saturation/tie pathology diagnosed on the RE2-OB development suite and retains substantially higher Avg@5 than v1 on both held-out suites. On RE2-SS, V2a and the frozen threshold baseline are comparable on Avg@5: the paired V2a-minus-threshold difference is +0.002222 with 95% CI [-0.008889, 0.015556], so the evidence does not support a superiority claim. On RE2-TT, V2a has a lower Avg@5 point estimate than threshold (difference -0.037778; paired 95% CI approximately [-0.080000, 0.000000]) and is below BARO on Avg@5 (difference -0.064444; 95% CI [-0.122222, -0.006667]). Raw top-k accuracy is lower on RE2-TT, but RE2-TT has a much larger effective candidate set than RE2-SS (39 versus 8; Chance@5 0.128205 versus 0.625000), so the suites are not directly comparable; for V2a, AC@5/Lift@5 is 0.977778/1.564444 on SS versus 0.877778/6.846667 on TT. CIRCA's RE2-TT values are excluded from accuracy interpretation because the run produced zero valid rankings. mmBARO/mmCIRCA are n/a under the pinned held-out input contract.
+
+Additional certification caveats:
+
+- run-summary JSON files do not embed runner SHA-256 values; runner provenance is established by the freeze/integrity records rather than by a per-summary embedded hash;
+- BARO and CIRCA ran through `scripts/phase_a_step27_rcaeval_run.py`, while v1, V2a, threshold, random, and PageRank ran through `scripts/phase_a_step27_run.py`.
 
 Not permitted:
 
