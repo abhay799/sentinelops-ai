@@ -1,0 +1,110 @@
+{
+  "base_commit_before_amendment_commit": "0e34e3d8159834e2815904f16130b5e71f4d504d",
+  "files": {
+    "configs/anomaly.yaml": {
+      "sha256": "2b57a76a1cd6514574f98e02a82691dfd7c9385cba0984df7be896573911dbb0"
+    },
+    "configs/chaos_bad_deployment_v1.yaml": {
+      "sha256": "62e22a74c6714b505e4c8f91e707ba0b94fada5559b253ac3a62d2a01d291c2e"
+    },
+    "configs/chaos_scenarios_v1.yaml": {
+      "sha256": "91de2d7235ce1736150a1dfb7997f61a6ec9c4e84622ea143833955fa9291983"
+    },
+    "configs/remediation.yaml": {
+      "sha256": "ac98a07fa1b43f3cf9995ae1970bc2970670c72eeae47e1135eca136d616b447"
+    },
+    "configs/sentinelguard.yaml": {
+      "sha256": "6e4946041c4eddad25969d932e04a9367b3bf08c264c7e6a90cf66a0ce399a96"
+    },
+    "docs/design/chaos_harness_v1.md": {
+      "sha256": "52a37f8791b71e782d335b42dde9ce5bc94fa3564c9fb6483d4fbf59f947318b"
+    },
+    "evidence/C/C04_detector_fit_procedure.md": {
+      "sha256": "75915cf22008a990b9a108fffc32ca9d80b0b530090704869658a4ba42b861de"
+    },
+    "evidence/C/C04_feature_schema.json": {
+      "sha256": "477c38f1ff1a31ec1c132ca7dc90eda445c7e34f2de8aed507aaf716af6ea4db"
+    },
+    "evidence/C/C04_invalid_run_policy.md": {
+      "sha256": "27ee261541c7164cd2a8be9f51f3efba9b92a27f4ca4fe0252f82f37d247c0e5"
+    },
+    "evidence/C/C04_preregistration.md": {
+      "sha256": "3f451e973e4f40aeba7248348b0371259eb9d07c098ccd94d3fabae49c907ae8"
+    },
+    "evidence/C/C04_prerun_amendment_v2.md": {
+      "sha256": "64c494eb2727a77b5609979993717e55b4639807015a32b6c45bc8e1390adbbe"
+    },
+    "evidence/C/C04_run_registry.json": {
+      "sha256": "e88ff4b8363a7cfc89d709175d50127a46a1880290961a66c694d7c64b79df07"
+    },
+    "evidence/C/DEVIATION_LOG.md": {
+      "sha256": "b4d9f1a9cd3c2d69d994668c5811a3b452153a3cdf660b3b86acedb40c638da7"
+    },
+    "scripts/phase5_frozen_detector.py": {
+      "sha256": "121b5287f58e272945c1b948c2180c29de2189900e1908c21ca1fdbc4e49aeda"
+    },
+    "scripts/phase_c04_build_registry.py": {
+      "sha256": "dccc8147011f42404d2449bd81cf093c692107fd05a89e4280e9be9695bdba82"
+    },
+    "scripts/phase_c06_run_registered.py": {
+      "sha256": "c7e73d512eb06245fe5c165f249624b9f29ab4d43572c442325a5699247857bc"
+    },
+    "scripts/phase_c_registered_analysis.py": {
+      "sha256": "edddb37238599fae52d02b33f85e72c20277510ef0b0f783cb8d7be366fdec2b"
+    },
+    "src/sentinelops/anomaly/frozen_detector.py": {
+      "sha256": "6913ce5d3bd69958533889286144c5eaa136a45f383d2e21d222ecd327fcf267"
+    },
+    "src/sentinelops/chaos/analysis.py": {
+      "sha256": "08c4aca0353959eeaf5e4d09d5d643b02b2314e579cf535e38a0b210a6657de8"
+    },
+    "src/sentinelops/chaos/dry_run_stages.py": {
+      "sha256": "f415e4e569529030c69a06178ba82e8167273638313f28f31e86e3f8ad881508"
+    },
+    "src/sentinelops/chaos/ground_truth.py": {
+      "sha256": "d98bb1efe1a4440383b95fced2f1dafa3e511a6ab809262f76357a7eb16d4ecf"
+    },
+    "src/sentinelops/chaos/harness.py": {
+      "sha256": "873faf2c6357cbed67f4988c6bcee6398cd25d97581228be22f9ed7ed76c832c"
+    },
+    "src/sentinelops/chaos/registered_harness.py": {
+      "sha256": "52b52adf53daee3dcb3118e11a2d4f07885b5eea10da873f2ccbc78abbab923d"
+    },
+    "src/sentinelops/chaos/registry.py": {
+      "sha256": "da8bbaaae5884c6b7013d2502f6784eb967a022d8c290f82bb009055e1b68cc0"
+    },
+    "src/sentinelops/chaos/schema.py": {
+      "sha256": "874a2f31fb42c55754fc43096c42a677d24a59f1b098ba3d46a4ba59ec0a8ad5"
+    },
+    "src/sentinelops/chaos/stage_events.py": {
+      "sha256": "1c4110ba26cb96dfc4a064d405c6043fd9dc56ea63fc89a0e76c1b92bb49613a"
+    },
+    "tests/test_phase_c2_c3.py": {
+      "sha256": "04a2fb1d03dc577c6206723d1626e2fe1fe08455d3815a1cca93151d28ff2b44"
+    },
+    "tests/test_phase_c4_analysis.py": {
+      "sha256": "41b32dbfa6050384ac3605c9ff8cd523a19be13429ad477e84e17092cec13969"
+    },
+    "tests/test_phase_c4_registry.py": {
+      "sha256": "adab071485efac357a565eaf2b7627f63aa961b6e744e4427f084cbe880a2743"
+    },
+    "tests/test_phase_c6_registered_harness.py": {
+      "sha256": "80bef367de60e8b584d639421512784b392852e045a83306d1dfc3a6310bdd19"
+    }
+  },
+  "freeze_version": "C-prerun-v2",
+  "master_seed": 42,
+  "order_rule": "within each partition, sort registered runs by first 16 hex chars of SHA256('42|order|partition|run_id'); execute TRAIN, then fit/freeze detector, then VALIDATION, then TEST",
+  "planned_tag": "freeze/C-prerun-v2",
+  "preserves_original_tag": true,
+  "registered_counts": {
+    "TEST": 12,
+    "TRAIN": 36,
+    "VALIDATION": 12
+  },
+  "registered_run_count": 60,
+  "reserved_spare_count": 18,
+  "seed_derivation_rule": "seed = first 8 bytes of SHA256('42|seed|partition|scenario|kind|ordinal') interpreted unsigned big-endian, modulo 2147483646, plus 1",
+  "status": "frozen_before_registered_execution",
+  "supersedes_for_execution": "freeze/C-prerun"
+}

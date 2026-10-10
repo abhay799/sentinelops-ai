@@ -9,3 +9,12 @@
 - **Interpretation:** this is code-identity evidence only. It is not equivalent to an empirical byte-identical output regression.
 - **Registered-fit consequence:** no registered detector fit has been run. The explicit baseline-fit/freeze path remains the only preregistered registered-fit path.
 - **Windows-side read-only check:** `C:\Users\DELL\sentinelops-ai\data` does not exist. `C:\Users\DELL\Projects\sentinelops-ai\data` exists, but no files named `temporal_features_v1.parquet`, `anomaly_scores_v1.parquet`, or `early_warning_v1.parquet` were found in its processed tree during the C4 check; no matching Isolation Forest model was found in its models tree.
+
+## C-DEV-002 — Registered executor omitted from original prerun freeze
+
+- **Stage:** C6 start gate, before registered run 1.
+- **Observed limitation:** `freeze/C-prerun` froze the registry, scenario/config hashes, analysis and evidence schema, but the repository had only the non-registry dry-run harness and no executable registered-run orchestration entry point.
+- **Results visible:** no. Zero registered runs had started and no registered result existed when this was discovered and amended.
+- **Action:** add the registered TRAIN executor and tests without changing any frozen registry identity, seed, partition, scenario parameter, Guard threshold, analysis metric, or replacement rule.
+- **Freeze treatment:** preserve `freeze/C-prerun` unchanged and create a new preregistration freeze `freeze/C-prerun-v2` before run 1.
+- **Methodology note:** C6 TRAIN uses the existing legacy Phase 5 detector only for development-chain evidence. The registered detector-fit gate remains C7: TRAIN baselines only, artifact SHA-256 frozen before VALIDATION.
