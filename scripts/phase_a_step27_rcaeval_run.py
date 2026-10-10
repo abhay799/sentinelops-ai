@@ -4,6 +4,7 @@ import argparse
 import contextlib
 import io
 import json
+import multiprocessing as mp
 import sys
 import time
 from pathlib import Path
@@ -66,6 +67,8 @@ ALLOW = {
     "ts-wait-order-service",
 }
 METHODS = ("baro", "circa")
+# Frozen pre-result runtime policy for remaining CIRCA cases; not result-dependent tuning.
+CIRCA_TIMEOUT_SECONDS = 1800
 
 sys.path.insert(0, str(RCA_ROOT))
 from RCAEval.e2e import baro, circa  # noqa: E402
@@ -163,6 +166,69 @@ def run_case(case_id: str, method: str) -> dict[str, object]:
     }
 
 
+def _circa_worker(case_id: str, conn) -> None:
+    try:
+        conn.send(("ok", run_case(case_id, "circa")))
+    except BaseException as exc:
+        conn.send(
+            (
+                "error",
+                {
+                    "error_type": type(exc).__name__,
+                    "error": str(exc),
+                },
+            )
+        )
+    finally:
+        conn.close()
+
+
+def run_circa_with_timeout(case_id: str) -> dict[str, object]:
+    ctx = mp.get_context("fork")
+    parent_conn, child_conn = ctx.Pipe(duplex=False)
+    process = ctx.Process(target=_circa_worker, args=(case_id, child_conn))
+    process.start()
+    child_conn.close()
+
+    if parent_conn.poll(CIRCA_TIMEOUT_SECONDS):
+        try:
+            kind, result = parent_conn.recv()
+        finally:
+            parent_conn.close()
+
+        process.join(10)
+        if process.is_alive():
+            process.terminate()
+            process.join(10)
+        if process.is_alive():
+            process.kill()
+            process.join()
+
+        if kind == "error":
+            raise RuntimeError(
+                f"CIRCA worker failed: {result['error_type']}: {result['error']}"
+            )
+
+        return result
+
+    process.terminate()
+    process.join(10)
+    if process.is_alive():
+        process.kill()
+        process.join()
+
+    parent_conn.close()
+
+    return {
+        "status": "timeout_unranked",
+        "case_id": case_id,
+        "method": "circa",
+        "timeout_seconds": CIRCA_TIMEOUT_SECONDS,
+        "ground_truth_used_for_ranking": False,
+        "e3_filtered_service_ranking": [],
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--method", choices=METHODS, required=True)
@@ -178,19 +244,29 @@ def main() -> None:
     completed = 0
     failures = 0
     fallbacks = 0
+    timeouts = 0
 
     selected_ids = case_ids()[args.shard_index :: args.shard_count]
     for case_id in selected_ids:
         path = out_dir / f"{case_id}.json"
         if path.exists():
             cached = json.loads(path.read_text())
-            if cached.get("status") in {"ok", "fallback_unranked", "hard_failed"}:
+            if cached.get("status") in {
+                "ok",
+                "fallback_unranked",
+                "timeout_unranked",
+                "hard_failed",
+            }:
                 completed += 1
                 failures += int(cached.get("status") == "hard_failed")
                 fallbacks += int(cached.get("status") == "fallback_unranked")
+                timeouts += int(cached.get("status") == "timeout_unranked")
                 continue
         try:
-            payload = run_case(case_id, method)
+            if method == "circa":
+                payload = run_circa_with_timeout(case_id)
+            else:
+                payload = run_case(case_id, method)
         except Exception as exc:
             payload = {
                 "status": "hard_failed",
@@ -205,6 +281,7 @@ def main() -> None:
         completed += 1
         failures += int(payload["status"] == "hard_failed")
         fallbacks += int(payload["status"] == "fallback_unranked")
+        timeouts += int(payload["status"] == "timeout_unranked")
         print(method, case_id, payload["status"], flush=True)
 
     summary = {
@@ -215,6 +292,7 @@ def main() -> None:
         "case_count_written_or_cached": completed,
         "hard_failed": failures,
         "fallback_unranked": fallbacks,
+        "timeout_unranked": timeouts,
         "runtime_seconds": time.perf_counter() - started,
         "resumable": True,
         "ground_truth_used_for_ranking": False,

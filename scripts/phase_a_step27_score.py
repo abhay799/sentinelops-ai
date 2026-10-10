@@ -262,12 +262,18 @@ def main() -> None:
             "case_count": 90,
             "ok": statuses["ok"],
             "fallback_unranked": statuses["fallback_unranked"],
+            "timeout_unranked": statuses["timeout_unranked"],
             "hard_failed": statuses["hard_failed"],
             "input_unavailable": 0,
             "other_statuses": {
                 key: value
                 for key, value in statuses.items()
-                if key not in {"ok", "fallback_unranked", "hard_failed"}
+                if key not in {
+                    "ok",
+                    "fallback_unranked",
+                    "timeout_unranked",
+                    "hard_failed",
+                }
             },
             "valid_fraction": statuses["ok"] / 90,
             "excluded_from_numerical_comparison": False,
@@ -278,6 +284,7 @@ def main() -> None:
             "case_count": 90,
             "ok": 0,
             "fallback_unranked": 0,
+            "timeout_unranked": 0,
             "hard_failed": 0,
             "input_unavailable": 90,
             "other_statuses": {},
@@ -427,8 +434,8 @@ def main() -> None:
     lines = [
         "# Step 27 RE2-TT Held-out Results",
         "",
-        "| Method | AC@1 | AC@3 | AC@5 | Avg@5 | Lift@5 | OK | Fallback | Hard fail |",
-        "|---|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "| Method | AC@1 | AC@3 | AC@5 | Avg@5 | Lift@5 | OK | Fallback | Timeout | Hard fail |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for method in METHODS:
         m = overall[method]
@@ -437,17 +444,18 @@ def main() -> None:
             f"| {method} | {m['AC@1']:.6f} | {m['AC@3']:.6f} | "
             f"{m['AC@5']:.6f} | {m['Avg@5']:.6f} | "
             f"{m['Lift@5']:.6f} | {c['ok']} | "
-            f"{c['fallback_unranked']} | {c['hard_failed']} |"
+            f"{c['fallback_unranked']} | {c['timeout_unranked']} | "
+            f"{c['hard_failed']} |"
         )
     for method in UNAVAILABLE_METHODS:
         lines.append(
-            f"| {method} | n/a | n/a | n/a | n/a | n/a | 0 | 0 | 0 |"
+            f"| {method} | n/a | n/a | n/a | n/a | n/a | 0 | 0 | 0 | 0 |"
         )
     lines.extend(
         [
             "",
             "Primary denominator is all 90 held-out RE2-TT cases for runnable methods.",
-            "Fallbacks and hard failures count as misses under E4/E6.",
+            "Fallbacks, timeouts, and hard failures count as misses under the frozen scoring policy.",
             "mmBARO/mmCIRCA are n/a (outside pinned input contract), excluded from numerical "
             "comparison, and are not scored as 90 misses.",
             "See step27_results.json for paired CIs, per-fault tables, "
