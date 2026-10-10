@@ -1,0 +1,52 @@
+chaos_bad_deployment_v1:
+  version: v1
+  scope: local_synthetic
+  target_service: payment-service
+
+  deployment_change:
+    at: injection_start
+    change_type: deployment
+    version_before: "2.7"
+    version_after: "2.8"
+    actor: chaos-harness-v1
+
+  degraded_profile:
+    implementation: sequential_failure_modes
+    stages:
+      - name: latency_shift
+        offset_seconds: 0
+        duration_seconds: 90
+        failure_mode:
+          mode: latency
+          latency_ms: 300
+          error_rate: 0.0
+
+      - name: error_shift
+        offset_seconds: 90
+        duration_seconds: 90
+        failure_mode:
+          mode: errors
+          latency_ms: 0
+          error_rate: 1.0
+
+  total_injection_duration_seconds: 180
+
+  remediation:
+    action: rollback
+    mechanism:
+      method: POST
+      path: /failure-mode/reset
+    semantics: restore_prior_normal_mode
+
+  verification:
+    required:
+      - /live
+      - /ready
+
+  mechanism_limit:
+    simultaneous_latency_and_errors_supported: false
+    reason: >
+      The current service runtime exposes one active failure_state.mode at a time
+      (normal, latency, or errors). Therefore v1 models the bad deployment as
+      two deterministic sequential stages rather than simultaneous latency and
+      error injection.
