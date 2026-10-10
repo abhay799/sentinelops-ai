@@ -41,15 +41,15 @@ def build_remediation_plans(
         in rca_disposition.to_dicts()
     }
 
-    allowed_actions = set(
-        config[
-            "allowed_actions"
-        ]
-    )
-
     planner_config = config[
         "planner"
     ]
+
+    allowed_actions = set(
+        planner_config[
+            "allowed_actions"
+        ]
+    )
 
     rows: list[
         dict[str, Any]

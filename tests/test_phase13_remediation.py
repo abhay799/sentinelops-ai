@@ -1,20 +1,23 @@
+from pathlib import Path
+
 import polars as pl
 
 from sentinelops.remediation.planner import (
     build_remediation_plans,
 )
 from sentinelops.remediation.sentinelguard import (
+    SENTINELGUARD_CONFIG_PATH,
     evaluate_sentinelguard,
 )
 
 CONFIG = {
-    "allowed_actions": [
-        "rollback",
-        "traffic_shift",
-        "restart",
-    ],
-
     "planner": {
+        "allowed_actions": [
+            "rollback",
+            "traffic_shift",
+            "restart",
+        ],
+
         "minimum_causal_score":
             0.65,
 
@@ -24,39 +27,8 @@ CONFIG = {
         "minimum_net_benefit":
             0.01,
     },
-
-    "sentinelguard": {
-        "fail_closed":
-            True,
-
-        "minimum_causal_score":
-            0.70,
-
-        "minimum_priority_score":
-            0.35,
-
-        "minimum_net_benefit":
-            0.01,
-
-        "maximum_projected_failure_risk":
-            0.70,
-
-        "require_supported_rca":
-            True,
-
-        "require_counterfactual_recommendation":
-            True,
-
-        "require_rollback":
-            True,
-
-        "require_human_approval":
-            True,
-
-        "require_traceable_evidence":
-            True,
-    },
 }
+
 
 
 def counterfactual():
@@ -162,7 +134,6 @@ def test_guard_can_mark_phase14_candidate():
     decisions = (
         evaluate_sentinelguard(
             build_plans(),
-            CONFIG,
         )
     )
 
@@ -183,7 +154,6 @@ def test_guard_still_blocks_execution():
     decisions = (
         evaluate_sentinelguard(
             build_plans(),
-            CONFIG,
         )
     )
 
@@ -214,7 +184,6 @@ def test_guard_fail_closed_on_missing_rollback():
     decisions = (
         evaluate_sentinelguard(
             plans,
-            CONFIG,
         )
     )
 
@@ -228,3 +197,39 @@ def test_guard_fail_closed_on_missing_rollback():
         ][0]
         == "blocked"
     )
+
+
+def test_guard_reads_only_canonical_config(monkeypatch):
+
+    expected = SENTINELGUARD_CONFIG_PATH.resolve()
+    original_read_text = Path.read_text
+    seen: list[Path] = []
+
+    def guarded_read_text(path: Path, *args, **kwargs):
+
+        resolved = path.resolve()
+        seen.append(resolved)
+
+        if resolved != expected:
+            raise AssertionError(
+                f"SentinelGuard read non-canonical config: {resolved}"
+            )
+
+        return original_read_text(
+            path,
+            *args,
+            **kwargs,
+        )
+
+    monkeypatch.setattr(
+        Path,
+        "read_text",
+        guarded_read_text,
+    )
+
+    decisions = evaluate_sentinelguard(
+        build_plans(),
+    )
+
+    assert decisions.height == 1
+    assert seen == [expected]

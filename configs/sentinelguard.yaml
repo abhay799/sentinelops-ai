@@ -1,49 +1,74 @@
 sentinelguard:
+  version: v1
   enabled: true
   default_mode: recommend_only
 
-  decisions:
-    - AUTO_EXECUTE
-    - APPROVAL_REQUIRED
-    - RECOMMEND_ONLY
-    - BLOCK
+  # Enforced Phase 13 policy. Values are behavior-preserving copies of the
+  # previous remediation.yaml SentinelGuard section.
+  allowed_actions:
+    - rollback
+    - traffic_shift
+    - restart
 
-  requirements:
-    evidence_required: true
-    confidence_required: true
-    rollback_required: true
-    permissions_required: true
-    blast_radius_check_required: true
-    service_criticality_check_required: true
+  fail_closed: true
+  minimum_causal_score: 0.70
+  minimum_priority_score: 0.35
+  minimum_net_benefit: 0.01
+  maximum_projected_failure_risk: 0.70
 
-  confidence:
-    auto_execute_min: 0.95
-    approval_required_min: 0.80
-    recommend_only_min: 0.60
+  require_supported_rca: true
+  require_counterfactual_recommendation: true
+  require_rollback: true
+  require_human_approval: true
+  require_traceable_evidence: true
 
-  auto_execute:
-    enabled: false
+  output:
+    path: data/processed/remediation/sentinelguard_decisions_v1.parquet
 
-    allowed_risk_levels:
-      - low
+  # Declared policy vocabulary retained from the pre-consolidation file.
+  # These entries are NOT enforced by the current Phase 13 guard.
+  declared_but_not_enforced:
+    decisions:
+      - AUTO_EXECUTE
+      - APPROVAL_REQUIRED
+      - RECOMMEND_ONLY
+      - BLOCK
 
-  blocked_actions:
-    - restart_production_database
-    - delete_database
-    - delete_persistent_volume
-    - disable_authentication
-    - remove_all_replicas
+    requirements:
+      evidence_required: true
+      confidence_required: true
+      rollback_required: true
+      permissions_required: true
+      blast_radius_check_required: true
+      service_criticality_check_required: true
 
-  rollback:
-    required: true
-    verify_before_execution: true
+    confidence:
+      auto_execute_min: 0.95
+      approval_required_min: 0.80
+      recommend_only_min: 0.60
 
-  verification:
-    required_after_action: true
-    rollback_on_failed_recovery: true
+    auto_execute:
+      enabled: false
+      allowed_risk_levels:
+        - low
 
-  audit:
-    log_every_decision: true
-    log_evidence: true
-    log_confidence: true
-    log_actor: true
+    blocked_actions:
+      - restart_production_database
+      - delete_database
+      - delete_persistent_volume
+      - disable_authentication
+      - remove_all_replicas
+
+    rollback:
+      required: true
+      verify_before_execution: true
+
+    verification:
+      required_after_action: true
+      rollback_on_failed_recovery: true
+
+    audit:
+      log_every_decision: true
+      log_evidence: true
+      log_confidence: true
+      log_actor: true

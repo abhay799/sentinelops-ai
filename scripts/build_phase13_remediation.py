@@ -8,6 +8,7 @@ from sentinelops.remediation.planner import (
 )
 from sentinelops.remediation.sentinelguard import (
     evaluate_sentinelguard,
+    load_sentinelguard_config,
 )
 
 COUNTERFACTUAL = Path(
@@ -75,11 +76,11 @@ plans_path = Path(
     ]
 )
 
+guard_config = load_sentinelguard_config()
+
 guard_path = Path(
-    config[
+    guard_config[
         "output"
-    ][
-        "guard"
     ][
         "path"
     ]
@@ -99,7 +100,6 @@ plans.write_parquet(
 
 decisions = evaluate_sentinelguard(
     plans,
-    config,
 )
 
 

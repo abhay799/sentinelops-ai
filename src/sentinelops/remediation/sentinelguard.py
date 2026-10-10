@@ -1,24 +1,37 @@
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any
 
 import polars as pl
+import yaml
+
+SENTINELGUARD_CONFIG_PATH = (
+    Path(__file__).resolve().parents[3]
+    / "configs"
+    / "sentinelguard.yaml"
+)
+
+
+def load_sentinelguard_config() -> dict[str, Any]:
+    payload = yaml.safe_load(
+        SENTINELGUARD_CONFIG_PATH.read_text(
+            encoding="utf-8",
+        )
+    )
+    return payload["sentinelguard"]
 
 
 def evaluate_sentinelguard(
     plans: pl.DataFrame,
-    config: dict[str, Any],
 ) -> pl.DataFrame:
 
     if plans.is_empty():
         return pl.DataFrame()
 
-    guard = config[
-        "sentinelguard"
-    ]
-
+    guard = load_sentinelguard_config()
     allowed_actions = set(
-        config[
+        guard[
             "allowed_actions"
         ]
     )
