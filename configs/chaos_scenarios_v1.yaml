@@ -1,0 +1,25 @@
+chaos_scenarios_v1:
+  version: v1
+  scope: local_synthetic
+  target_service: payment-service
+
+  baseline_seconds: 120
+  cooldown_seconds: 120
+
+  scenarios:
+    latency:
+      duration_seconds: 120
+      failure_mode:
+        mode: latency
+        latency_ms: 300
+        error_rate: 0.0
+
+    errors:
+      duration_seconds: 120
+      failure_mode:
+        mode: errors
+        latency_ms: 0
+        error_rate: 1.0
+
+    bad_deployment_rollback:
+      profile_path: configs/chaos_bad_deployment_v1.yaml

@@ -1,0 +1,17 @@
+{
+  "schema_version": "C-v1",
+  "source_config": "configs/anomaly.yaml",
+  "ordered_features": [
+    "request_rate_60s",
+    "error_rate_60s",
+    "latency_mean_60s",
+    "latency_p95_60s",
+    "request_rate_300s",
+    "error_rate_300s",
+    "latency_mean_300s",
+    "latency_p95_300s",
+    "latency_p99_300s",
+    "trace_count_300s",
+    "change_count_300s"
+  ]
+}

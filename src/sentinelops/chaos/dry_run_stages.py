@@ -11,22 +11,57 @@ from sentinelops.chaos.stage_events import write_stage_event
 from sentinelops.execution.runtime import execute_local_sandbox
 from sentinelops.remediation.sentinelguard import evaluate_sentinelguard
 
+INJECTED_SERVICE = "payment-service"
+SCRIPTED_APPROVER = "scripted_approver_v1"
+
 
 def detection_stage(run_dir: Path) -> datetime:
-    return write_stage_event(run_dir, "detection", {"dry_run": True, "detected": True})
+    return write_stage_event(
+        run_dir,
+        "detection",
+        {
+            "dry_run": True,
+            "detected": True,
+            "candidate_service": INJECTED_SERVICE,
+        },
+    )
 
 
 def correlation_stage(run_dir: Path) -> datetime:
-    return write_stage_event(run_dir, "correlation", {"dry_run": True, "incident_created": True})
+    return write_stage_event(
+        run_dir,
+        "correlation",
+        {
+            "dry_run": True,
+            "incident_created": True,
+            "candidate_service": INJECTED_SERVICE,
+        },
+    )
 
 
 def rca_stage(run_dir: Path) -> datetime:
-    return write_stage_event(run_dir, "rca", {"dry_run": True, "candidate": "payment-service"})
+    return write_stage_event(
+        run_dir,
+        "rca",
+        {
+            "dry_run": True,
+            "ranking": [
+                INJECTED_SERVICE,
+                "order-service",
+                "inventory-service",
+            ],
+        },
+    )
 
 
 def challenge_stage(run_dir: Path) -> datetime:
     return write_stage_event(
-        run_dir, "challenge", {"dry_run": True, "disposition": "supported_candidate"}
+        run_dir,
+        "challenge",
+        {
+            "dry_run": True,
+            "disposition": "supported_candidate",
+        },
     )
 
 
@@ -36,7 +71,7 @@ def plan_stage(run_dir: Path) -> tuple[datetime, pl.DataFrame]:
             {
                 "plan_id": "DRY-PLAN-1",
                 "incident_id": "DRY-INC-1",
-                "candidate_service": "payment-service",
+                "candidate_service": INJECTED_SERVICE,
                 "recommended_action": "rollback",
                 "planner_ready": True,
                 "final_rca_disposition": "supported_candidate",
@@ -49,23 +84,48 @@ def plan_stage(run_dir: Path) -> tuple[datetime, pl.DataFrame]:
             }
         ]
     )
-    timestamp = write_stage_event(run_dir, "plan", {"dry_run": True, "action": "rollback"})
+    timestamp = write_stage_event(
+        run_dir,
+        "plan",
+        {
+            "dry_run": True,
+            "action": "rollback",
+        },
+    )
     return timestamp, plan
 
 
-def guard_stage(run_dir: Path, plan: pl.DataFrame) -> tuple[datetime, dict[str, Any]]:
+def guard_stage(
+    run_dir: Path,
+    plan: pl.DataFrame,
+) -> tuple[datetime, dict[str, Any]]:
     decision = evaluate_sentinelguard(plan).to_dicts()[0]
     timestamp = write_stage_event(
         run_dir,
         "guard_decision",
-        {"dry_run": True, "guard_decision": decision["guard_decision"]},
+        {
+            "dry_run": True,
+            "guard_decision": decision["guard_decision"],
+        },
     )
     return timestamp, decision
 
 
-def human_authorization_stage(run_dir: Path) -> tuple[datetime, dict[str, str]]:
-    approval = {"approval_status": "approved", "approved_by": "c03-dry-run"}
-    timestamp = write_stage_event(run_dir, "human_authorization", {"dry_run": True, **approval})
+def human_authorization_stage(
+    run_dir: Path,
+) -> tuple[datetime, dict[str, str]]:
+    approval = {
+        "approval_status": "approved",
+        "approved_by": SCRIPTED_APPROVER,
+    }
+    timestamp = write_stage_event(
+        run_dir,
+        "human_authorization",
+        {
+            "dry_run": True,
+            **approval,
+        },
+    )
     return timestamp, approval
 
 
@@ -78,7 +138,7 @@ def remediation_and_verification_stages(
         "execution_request_id": "DRY-EXEC-1",
         "plan_id": "DRY-PLAN-1",
         "incident_id": "DRY-INC-1",
-        "candidate_service": "payment-service",
+        "candidate_service": INJECTED_SERVICE,
         "recommended_action": "rollback",
         "target_url": "http://localhost:8103",
         "preapproval_ready": True,
@@ -96,7 +156,11 @@ def remediation_and_verification_stages(
     remediation_time = write_stage_event(
         run_dir,
         "remediation",
-        {"dry_run": True, "action": "rollback", "adapter": "/failure-mode/reset"},
+        {
+            "dry_run": True,
+            "action": "rollback",
+            "adapter": "/failure-mode/reset",
+        },
     )
     result = execute_local_sandbox(
         request,
@@ -107,6 +171,9 @@ def remediation_and_verification_stages(
     verification_time = write_stage_event(
         run_dir,
         "verification",
-        {"dry_run": True, "recovery_verified": bool(result["recovery_verified"])},
+        {
+            "dry_run": True,
+            "recovery_verified": bool(result["recovery_verified"]),
+        },
     )
     return remediation_time, verification_time, result

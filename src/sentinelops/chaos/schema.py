@@ -6,6 +6,7 @@ from typing import Literal
 from pydantic import BaseModel, ConfigDict, field_validator, model_validator
 
 Scenario = Literal["latency", "errors", "bad_deployment_rollback"]
+Approver = Literal["scripted_approver_v1"]
 
 _TIMESTAMP_FIELDS = (
     "injection_start",
@@ -25,6 +26,7 @@ class ChaosRunRecord(BaseModel):
     run_id: str
     seed: int
     scenario: Scenario
+    approver: Approver
     injection_start: datetime
     injection_end: datetime
     recovery_time: datetime | None
@@ -58,6 +60,13 @@ class ChaosRunRecord(BaseModel):
             self.recovery_time,
         ]
         observed = [value for value in ordered if value is not None]
-        if any(later < earlier for earlier, later in zip(observed, observed[1:], strict=False)):
+        if any(
+            later < earlier
+            for earlier, later in zip(
+                observed,
+                observed[1:],
+                strict=False,
+            )
+        ):
             raise ValueError("timestamps are out of order")
         return self

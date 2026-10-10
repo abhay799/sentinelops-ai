@@ -1,0 +1,1255 @@
+{
+  "execution_schedule": [
+    {
+      "global_execution_index": 1,
+      "partition": "TRAIN",
+      "partition_execution_index": 1,
+      "run_id": "C-TRAIN-BDR-12",
+      "scenario": "bad_deployment_rollback",
+      "seed": 681377953
+    },
+    {
+      "global_execution_index": 2,
+      "partition": "TRAIN",
+      "partition_execution_index": 2,
+      "run_id": "C-TRAIN-LAT-11",
+      "scenario": "latency",
+      "seed": 693336793
+    },
+    {
+      "global_execution_index": 3,
+      "partition": "TRAIN",
+      "partition_execution_index": 3,
+      "run_id": "C-TRAIN-LAT-06",
+      "scenario": "latency",
+      "seed": 77315373
+    },
+    {
+      "global_execution_index": 4,
+      "partition": "TRAIN",
+      "partition_execution_index": 4,
+      "run_id": "C-TRAIN-LAT-09",
+      "scenario": "latency",
+      "seed": 891148628
+    },
+    {
+      "global_execution_index": 5,
+      "partition": "TRAIN",
+      "partition_execution_index": 5,
+      "run_id": "C-TRAIN-BDR-01",
+      "scenario": "bad_deployment_rollback",
+      "seed": 911106243
+    },
+    {
+      "global_execution_index": 6,
+      "partition": "TRAIN",
+      "partition_execution_index": 6,
+      "run_id": "C-TRAIN-BDR-05",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1666578435
+    },
+    {
+      "global_execution_index": 7,
+      "partition": "TRAIN",
+      "partition_execution_index": 7,
+      "run_id": "C-TRAIN-LAT-05",
+      "scenario": "latency",
+      "seed": 1435760323
+    },
+    {
+      "global_execution_index": 8,
+      "partition": "TRAIN",
+      "partition_execution_index": 8,
+      "run_id": "C-TRAIN-ERR-07",
+      "scenario": "errors",
+      "seed": 50322595
+    },
+    {
+      "global_execution_index": 9,
+      "partition": "TRAIN",
+      "partition_execution_index": 9,
+      "run_id": "C-TRAIN-ERR-11",
+      "scenario": "errors",
+      "seed": 1309748957
+    },
+    {
+      "global_execution_index": 10,
+      "partition": "TRAIN",
+      "partition_execution_index": 10,
+      "run_id": "C-TRAIN-BDR-02",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1958928176
+    },
+    {
+      "global_execution_index": 11,
+      "partition": "TRAIN",
+      "partition_execution_index": 11,
+      "run_id": "C-TRAIN-LAT-04",
+      "scenario": "latency",
+      "seed": 33380265
+    },
+    {
+      "global_execution_index": 12,
+      "partition": "TRAIN",
+      "partition_execution_index": 12,
+      "run_id": "C-TRAIN-BDR-07",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1283164081
+    },
+    {
+      "global_execution_index": 13,
+      "partition": "TRAIN",
+      "partition_execution_index": 13,
+      "run_id": "C-TRAIN-ERR-02",
+      "scenario": "errors",
+      "seed": 1006145802
+    },
+    {
+      "global_execution_index": 14,
+      "partition": "TRAIN",
+      "partition_execution_index": 14,
+      "run_id": "C-TRAIN-BDR-08",
+      "scenario": "bad_deployment_rollback",
+      "seed": 909465678
+    },
+    {
+      "global_execution_index": 15,
+      "partition": "TRAIN",
+      "partition_execution_index": 15,
+      "run_id": "C-TRAIN-LAT-12",
+      "scenario": "latency",
+      "seed": 1817902703
+    },
+    {
+      "global_execution_index": 16,
+      "partition": "TRAIN",
+      "partition_execution_index": 16,
+      "run_id": "C-TRAIN-BDR-04",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1926564664
+    },
+    {
+      "global_execution_index": 17,
+      "partition": "TRAIN",
+      "partition_execution_index": 17,
+      "run_id": "C-TRAIN-ERR-10",
+      "scenario": "errors",
+      "seed": 1369559267
+    },
+    {
+      "global_execution_index": 18,
+      "partition": "TRAIN",
+      "partition_execution_index": 18,
+      "run_id": "C-TRAIN-BDR-11",
+      "scenario": "bad_deployment_rollback",
+      "seed": 791417877
+    },
+    {
+      "global_execution_index": 19,
+      "partition": "TRAIN",
+      "partition_execution_index": 19,
+      "run_id": "C-TRAIN-LAT-01",
+      "scenario": "latency",
+      "seed": 2065222995
+    },
+    {
+      "global_execution_index": 20,
+      "partition": "TRAIN",
+      "partition_execution_index": 20,
+      "run_id": "C-TRAIN-LAT-10",
+      "scenario": "latency",
+      "seed": 614671919
+    },
+    {
+      "global_execution_index": 21,
+      "partition": "TRAIN",
+      "partition_execution_index": 21,
+      "run_id": "C-TRAIN-BDR-09",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1847046978
+    },
+    {
+      "global_execution_index": 22,
+      "partition": "TRAIN",
+      "partition_execution_index": 22,
+      "run_id": "C-TRAIN-LAT-08",
+      "scenario": "latency",
+      "seed": 1721598930
+    },
+    {
+      "global_execution_index": 23,
+      "partition": "TRAIN",
+      "partition_execution_index": 23,
+      "run_id": "C-TRAIN-BDR-03",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1569484987
+    },
+    {
+      "global_execution_index": 24,
+      "partition": "TRAIN",
+      "partition_execution_index": 24,
+      "run_id": "C-TRAIN-BDR-10",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1575775239
+    },
+    {
+      "global_execution_index": 25,
+      "partition": "TRAIN",
+      "partition_execution_index": 25,
+      "run_id": "C-TRAIN-ERR-06",
+      "scenario": "errors",
+      "seed": 1219052510
+    },
+    {
+      "global_execution_index": 26,
+      "partition": "TRAIN",
+      "partition_execution_index": 26,
+      "run_id": "C-TRAIN-ERR-04",
+      "scenario": "errors",
+      "seed": 242574947
+    },
+    {
+      "global_execution_index": 27,
+      "partition": "TRAIN",
+      "partition_execution_index": 27,
+      "run_id": "C-TRAIN-ERR-09",
+      "scenario": "errors",
+      "seed": 1773670449
+    },
+    {
+      "global_execution_index": 28,
+      "partition": "TRAIN",
+      "partition_execution_index": 28,
+      "run_id": "C-TRAIN-ERR-05",
+      "scenario": "errors",
+      "seed": 1234485144
+    },
+    {
+      "global_execution_index": 29,
+      "partition": "TRAIN",
+      "partition_execution_index": 29,
+      "run_id": "C-TRAIN-LAT-07",
+      "scenario": "latency",
+      "seed": 1427704395
+    },
+    {
+      "global_execution_index": 30,
+      "partition": "TRAIN",
+      "partition_execution_index": 30,
+      "run_id": "C-TRAIN-LAT-03",
+      "scenario": "latency",
+      "seed": 1447616141
+    },
+    {
+      "global_execution_index": 31,
+      "partition": "TRAIN",
+      "partition_execution_index": 31,
+      "run_id": "C-TRAIN-ERR-08",
+      "scenario": "errors",
+      "seed": 619038818
+    },
+    {
+      "global_execution_index": 32,
+      "partition": "TRAIN",
+      "partition_execution_index": 32,
+      "run_id": "C-TRAIN-ERR-01",
+      "scenario": "errors",
+      "seed": 709913942
+    },
+    {
+      "global_execution_index": 33,
+      "partition": "TRAIN",
+      "partition_execution_index": 33,
+      "run_id": "C-TRAIN-LAT-02",
+      "scenario": "latency",
+      "seed": 264045693
+    },
+    {
+      "global_execution_index": 34,
+      "partition": "TRAIN",
+      "partition_execution_index": 34,
+      "run_id": "C-TRAIN-ERR-12",
+      "scenario": "errors",
+      "seed": 1186114899
+    },
+    {
+      "global_execution_index": 35,
+      "partition": "TRAIN",
+      "partition_execution_index": 35,
+      "run_id": "C-TRAIN-BDR-06",
+      "scenario": "bad_deployment_rollback",
+      "seed": 345138559
+    },
+    {
+      "global_execution_index": 36,
+      "partition": "TRAIN",
+      "partition_execution_index": 36,
+      "run_id": "C-TRAIN-ERR-03",
+      "scenario": "errors",
+      "seed": 1042088407
+    },
+    {
+      "global_execution_index": 37,
+      "partition": "VALIDATION",
+      "partition_execution_index": 1,
+      "run_id": "C-VALIDATION-BDR-03",
+      "scenario": "bad_deployment_rollback",
+      "seed": 2122986880
+    },
+    {
+      "global_execution_index": 38,
+      "partition": "VALIDATION",
+      "partition_execution_index": 2,
+      "run_id": "C-VALIDATION-BDR-04",
+      "scenario": "bad_deployment_rollback",
+      "seed": 136743704
+    },
+    {
+      "global_execution_index": 39,
+      "partition": "VALIDATION",
+      "partition_execution_index": 3,
+      "run_id": "C-VALIDATION-ERR-02",
+      "scenario": "errors",
+      "seed": 914046018
+    },
+    {
+      "global_execution_index": 40,
+      "partition": "VALIDATION",
+      "partition_execution_index": 4,
+      "run_id": "C-VALIDATION-ERR-03",
+      "scenario": "errors",
+      "seed": 806757939
+    },
+    {
+      "global_execution_index": 41,
+      "partition": "VALIDATION",
+      "partition_execution_index": 5,
+      "run_id": "C-VALIDATION-LAT-02",
+      "scenario": "latency",
+      "seed": 184811583
+    },
+    {
+      "global_execution_index": 42,
+      "partition": "VALIDATION",
+      "partition_execution_index": 6,
+      "run_id": "C-VALIDATION-LAT-04",
+      "scenario": "latency",
+      "seed": 1446622738
+    },
+    {
+      "global_execution_index": 43,
+      "partition": "VALIDATION",
+      "partition_execution_index": 7,
+      "run_id": "C-VALIDATION-LAT-03",
+      "scenario": "latency",
+      "seed": 1013158075
+    },
+    {
+      "global_execution_index": 44,
+      "partition": "VALIDATION",
+      "partition_execution_index": 8,
+      "run_id": "C-VALIDATION-LAT-01",
+      "scenario": "latency",
+      "seed": 29706870
+    },
+    {
+      "global_execution_index": 45,
+      "partition": "VALIDATION",
+      "partition_execution_index": 9,
+      "run_id": "C-VALIDATION-BDR-02",
+      "scenario": "bad_deployment_rollback",
+      "seed": 938869345
+    },
+    {
+      "global_execution_index": 46,
+      "partition": "VALIDATION",
+      "partition_execution_index": 10,
+      "run_id": "C-VALIDATION-BDR-01",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1661526966
+    },
+    {
+      "global_execution_index": 47,
+      "partition": "VALIDATION",
+      "partition_execution_index": 11,
+      "run_id": "C-VALIDATION-ERR-01",
+      "scenario": "errors",
+      "seed": 413480517
+    },
+    {
+      "global_execution_index": 48,
+      "partition": "VALIDATION",
+      "partition_execution_index": 12,
+      "run_id": "C-VALIDATION-ERR-04",
+      "scenario": "errors",
+      "seed": 75343703
+    },
+    {
+      "global_execution_index": 49,
+      "partition": "TEST",
+      "partition_execution_index": 1,
+      "run_id": "C-TEST-ERR-04",
+      "scenario": "errors",
+      "seed": 1362212796
+    },
+    {
+      "global_execution_index": 50,
+      "partition": "TEST",
+      "partition_execution_index": 2,
+      "run_id": "C-TEST-BDR-01",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1670630872
+    },
+    {
+      "global_execution_index": 51,
+      "partition": "TEST",
+      "partition_execution_index": 3,
+      "run_id": "C-TEST-BDR-03",
+      "scenario": "bad_deployment_rollback",
+      "seed": 49135258
+    },
+    {
+      "global_execution_index": 52,
+      "partition": "TEST",
+      "partition_execution_index": 4,
+      "run_id": "C-TEST-ERR-03",
+      "scenario": "errors",
+      "seed": 876841791
+    },
+    {
+      "global_execution_index": 53,
+      "partition": "TEST",
+      "partition_execution_index": 5,
+      "run_id": "C-TEST-LAT-04",
+      "scenario": "latency",
+      "seed": 31008932
+    },
+    {
+      "global_execution_index": 54,
+      "partition": "TEST",
+      "partition_execution_index": 6,
+      "run_id": "C-TEST-BDR-04",
+      "scenario": "bad_deployment_rollback",
+      "seed": 2114238877
+    },
+    {
+      "global_execution_index": 55,
+      "partition": "TEST",
+      "partition_execution_index": 7,
+      "run_id": "C-TEST-ERR-01",
+      "scenario": "errors",
+      "seed": 1884700709
+    },
+    {
+      "global_execution_index": 56,
+      "partition": "TEST",
+      "partition_execution_index": 8,
+      "run_id": "C-TEST-LAT-02",
+      "scenario": "latency",
+      "seed": 2095941323
+    },
+    {
+      "global_execution_index": 57,
+      "partition": "TEST",
+      "partition_execution_index": 9,
+      "run_id": "C-TEST-LAT-01",
+      "scenario": "latency",
+      "seed": 1798797562
+    },
+    {
+      "global_execution_index": 58,
+      "partition": "TEST",
+      "partition_execution_index": 10,
+      "run_id": "C-TEST-BDR-02",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1282676709
+    },
+    {
+      "global_execution_index": 59,
+      "partition": "TEST",
+      "partition_execution_index": 11,
+      "run_id": "C-TEST-ERR-02",
+      "scenario": "errors",
+      "seed": 1855619954
+    },
+    {
+      "global_execution_index": 60,
+      "partition": "TEST",
+      "partition_execution_index": 12,
+      "run_id": "C-TEST-LAT-03",
+      "scenario": "latency",
+      "seed": 958134232
+    }
+  ],
+  "master_seed": 42,
+  "order_rule": "within each partition, sort registered runs by first 16 hex chars of SHA256('42|order|partition|run_id'); execute TRAIN, then fit/freeze detector, then VALIDATION, then TEST",
+  "partition_gate": [
+    "complete all TRAIN registered runs",
+    "fit and freeze registered detector from TRAIN baseline only",
+    "execute VALIDATION registered runs",
+    "execute TEST registered runs"
+  ],
+  "registered_counts": {
+    "TEST": 12,
+    "TRAIN": 36,
+    "VALIDATION": 12
+  },
+  "registered_run_count": 60,
+  "registered_runs": [
+    {
+      "order_key": "914eb523e1376a55",
+      "ordinal": 1,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-LAT-01",
+      "scenario": "latency",
+      "seed": 2065222995,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "e8226211f8f5456d",
+      "ordinal": 2,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-LAT-02",
+      "scenario": "latency",
+      "seed": 264045693,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "cd1789659def5a81",
+      "ordinal": 3,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-LAT-03",
+      "scenario": "latency",
+      "seed": 1447616141,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "6902a2cb5113127c",
+      "ordinal": 4,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-LAT-04",
+      "scenario": "latency",
+      "seed": 33380265,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "4413ae64fcbf569e",
+      "ordinal": 5,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-LAT-05",
+      "scenario": "latency",
+      "seed": 1435760323,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "2f7be7a2b0e89dc1",
+      "ordinal": 6,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-LAT-06",
+      "scenario": "latency",
+      "seed": 77315373,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "ca0dc92fcb967b25",
+      "ordinal": 7,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-LAT-07",
+      "scenario": "latency",
+      "seed": 1427704395,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "a44f95ad6f9f47c9",
+      "ordinal": 8,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-LAT-08",
+      "scenario": "latency",
+      "seed": 1721598930,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "39b90a39e0d7dca8",
+      "ordinal": 9,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-LAT-09",
+      "scenario": "latency",
+      "seed": 891148628,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "9eadb2a25c2d5ac2",
+      "ordinal": 10,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-LAT-10",
+      "scenario": "latency",
+      "seed": 614671919,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "0ab5500deba69f40",
+      "ordinal": 11,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-LAT-11",
+      "scenario": "latency",
+      "seed": 693336793,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "84974d65807fc5b0",
+      "ordinal": 12,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-LAT-12",
+      "scenario": "latency",
+      "seed": 1817902703,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "e64d3baa78034870",
+      "ordinal": 1,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-ERR-01",
+      "scenario": "errors",
+      "seed": 709913942,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "823fb50708aa9624",
+      "ordinal": 2,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-ERR-02",
+      "scenario": "errors",
+      "seed": 1006145802,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "f5ea525d42e3a8b2",
+      "ordinal": 3,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-ERR-03",
+      "scenario": "errors",
+      "seed": 1042088407,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "c06872b88e75e896",
+      "ordinal": 4,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-ERR-04",
+      "scenario": "errors",
+      "seed": 242574947,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "c5f9c44a6b816822",
+      "ordinal": 5,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-ERR-05",
+      "scenario": "errors",
+      "seed": 1234485144,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "bdd9ec38effab394",
+      "ordinal": 6,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-ERR-06",
+      "scenario": "errors",
+      "seed": 1219052510,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "577ac8d4ca71be6f",
+      "ordinal": 7,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-ERR-07",
+      "scenario": "errors",
+      "seed": 50322595,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "d7b1a93f0a6a29b1",
+      "ordinal": 8,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-ERR-08",
+      "scenario": "errors",
+      "seed": 619038818,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "c4d4d3871fa60175",
+      "ordinal": 9,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-ERR-09",
+      "scenario": "errors",
+      "seed": 1773670449,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "87f26a768d9b8a25",
+      "ordinal": 10,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-ERR-10",
+      "scenario": "errors",
+      "seed": 1369559267,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "57e69414ea730b1e",
+      "ordinal": 11,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-ERR-11",
+      "scenario": "errors",
+      "seed": 1309748957,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "e905324b3fb5e886",
+      "ordinal": 12,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-ERR-12",
+      "scenario": "errors",
+      "seed": 1186114899,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "39bedfcf24408d45",
+      "ordinal": 1,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-BDR-01",
+      "scenario": "bad_deployment_rollback",
+      "seed": 911106243,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "604e6fc42efb5652",
+      "ordinal": 2,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-BDR-02",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1958928176,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "a58dc5da125a0f80",
+      "ordinal": 3,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-BDR-03",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1569484987,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "85c201ba9437842e",
+      "ordinal": 4,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-BDR-04",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1926564664,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "413fbff6224861c4",
+      "ordinal": 5,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-BDR-05",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1666578435,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "f058eccfda309add",
+      "ordinal": 6,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-BDR-06",
+      "scenario": "bad_deployment_rollback",
+      "seed": 345138559,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "7218b56379c49112",
+      "ordinal": 7,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-BDR-07",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1283164081,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "833012e606272c0d",
+      "ordinal": 8,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-BDR-08",
+      "scenario": "bad_deployment_rollback",
+      "seed": 909465678,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "a42f5e02d84e30a5",
+      "ordinal": 9,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-BDR-09",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1847046978,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "b3898cfce7249a69",
+      "ordinal": 10,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-BDR-10",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1575775239,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "8833201b498b23a3",
+      "ordinal": 11,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-BDR-11",
+      "scenario": "bad_deployment_rollback",
+      "seed": 791417877,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "02a802b2f41b9ed9",
+      "ordinal": 12,
+      "partition": "TRAIN",
+      "replacement_for": null,
+      "run_id": "C-TRAIN-BDR-12",
+      "scenario": "bad_deployment_rollback",
+      "seed": 681377953,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "af380850537842e3",
+      "ordinal": 1,
+      "partition": "VALIDATION",
+      "replacement_for": null,
+      "run_id": "C-VALIDATION-LAT-01",
+      "scenario": "latency",
+      "seed": 29706870,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "3c40b7ab648eb533",
+      "ordinal": 2,
+      "partition": "VALIDATION",
+      "replacement_for": null,
+      "run_id": "C-VALIDATION-LAT-02",
+      "scenario": "latency",
+      "seed": 184811583,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "51a44f08c6821ed1",
+      "ordinal": 3,
+      "partition": "VALIDATION",
+      "replacement_for": null,
+      "run_id": "C-VALIDATION-LAT-03",
+      "scenario": "latency",
+      "seed": 1013158075,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "47aa712503891826",
+      "ordinal": 4,
+      "partition": "VALIDATION",
+      "replacement_for": null,
+      "run_id": "C-VALIDATION-LAT-04",
+      "scenario": "latency",
+      "seed": 1446622738,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "d184443ea6dfd1ee",
+      "ordinal": 1,
+      "partition": "VALIDATION",
+      "replacement_for": null,
+      "run_id": "C-VALIDATION-ERR-01",
+      "scenario": "errors",
+      "seed": 413480517,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "2342ac317c12475a",
+      "ordinal": 2,
+      "partition": "VALIDATION",
+      "replacement_for": null,
+      "run_id": "C-VALIDATION-ERR-02",
+      "scenario": "errors",
+      "seed": 914046018,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "2896e9ca583a51e0",
+      "ordinal": 3,
+      "partition": "VALIDATION",
+      "replacement_for": null,
+      "run_id": "C-VALIDATION-ERR-03",
+      "scenario": "errors",
+      "seed": 806757939,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "eb82fa46cca121f7",
+      "ordinal": 4,
+      "partition": "VALIDATION",
+      "replacement_for": null,
+      "run_id": "C-VALIDATION-ERR-04",
+      "scenario": "errors",
+      "seed": 75343703,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "ceddf2c1203269bc",
+      "ordinal": 1,
+      "partition": "VALIDATION",
+      "replacement_for": null,
+      "run_id": "C-VALIDATION-BDR-01",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1661526966,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "b197888c992b2241",
+      "ordinal": 2,
+      "partition": "VALIDATION",
+      "replacement_for": null,
+      "run_id": "C-VALIDATION-BDR-02",
+      "scenario": "bad_deployment_rollback",
+      "seed": 938869345,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "078972582b7e7dbb",
+      "ordinal": 3,
+      "partition": "VALIDATION",
+      "replacement_for": null,
+      "run_id": "C-VALIDATION-BDR-03",
+      "scenario": "bad_deployment_rollback",
+      "seed": 2122986880,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "1247456dd28e05e7",
+      "ordinal": 4,
+      "partition": "VALIDATION",
+      "replacement_for": null,
+      "run_id": "C-VALIDATION-BDR-04",
+      "scenario": "bad_deployment_rollback",
+      "seed": 136743704,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "a3e8ff9fbf54160e",
+      "ordinal": 1,
+      "partition": "TEST",
+      "replacement_for": null,
+      "run_id": "C-TEST-LAT-01",
+      "scenario": "latency",
+      "seed": 1798797562,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "68e3c231247800dc",
+      "ordinal": 2,
+      "partition": "TEST",
+      "replacement_for": null,
+      "run_id": "C-TEST-LAT-02",
+      "scenario": "latency",
+      "seed": 2095941323,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "dfba8ada67b1f9bc",
+      "ordinal": 3,
+      "partition": "TEST",
+      "replacement_for": null,
+      "run_id": "C-TEST-LAT-03",
+      "scenario": "latency",
+      "seed": 958134232,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "2a5d27e767e745d9",
+      "ordinal": 4,
+      "partition": "TEST",
+      "replacement_for": null,
+      "run_id": "C-TEST-LAT-04",
+      "scenario": "latency",
+      "seed": 31008932,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "666a9b9bc5fa7d44",
+      "ordinal": 1,
+      "partition": "TEST",
+      "replacement_for": null,
+      "run_id": "C-TEST-ERR-01",
+      "scenario": "errors",
+      "seed": 1884700709,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "d4039f463b3b8559",
+      "ordinal": 2,
+      "partition": "TEST",
+      "replacement_for": null,
+      "run_id": "C-TEST-ERR-02",
+      "scenario": "errors",
+      "seed": 1855619954,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "27aaba66915aa9f3",
+      "ordinal": 3,
+      "partition": "TEST",
+      "replacement_for": null,
+      "run_id": "C-TEST-ERR-03",
+      "scenario": "errors",
+      "seed": 876841791,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "0f1681c21f81ca71",
+      "ordinal": 4,
+      "partition": "TEST",
+      "replacement_for": null,
+      "run_id": "C-TEST-ERR-04",
+      "scenario": "errors",
+      "seed": 1362212796,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "10df906bb300c3e7",
+      "ordinal": 1,
+      "partition": "TEST",
+      "replacement_for": null,
+      "run_id": "C-TEST-BDR-01",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1670630872,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "bc28feb5bcddedef",
+      "ordinal": 2,
+      "partition": "TEST",
+      "replacement_for": null,
+      "run_id": "C-TEST-BDR-02",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1282676709,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "268da9b043355350",
+      "ordinal": 3,
+      "partition": "TEST",
+      "replacement_for": null,
+      "run_id": "C-TEST-BDR-03",
+      "scenario": "bad_deployment_rollback",
+      "seed": 49135258,
+      "status": "preregistered_not_started"
+    },
+    {
+      "order_key": "4daf86c23801ad21",
+      "ordinal": 4,
+      "partition": "TEST",
+      "replacement_for": null,
+      "run_id": "C-TEST-BDR-04",
+      "scenario": "bad_deployment_rollback",
+      "seed": 2114238877,
+      "status": "preregistered_not_started"
+    }
+  ],
+  "registry_version": "C-v1",
+  "reserved_spare_count": 18,
+  "reserved_spares": [
+    {
+      "partition": "TRAIN",
+      "run_id": "C-SPARE-TRAIN-LAT-01",
+      "scenario": "latency",
+      "seed": 966240221,
+      "spare_ordinal": 1,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "TRAIN",
+      "run_id": "C-SPARE-TRAIN-LAT-02",
+      "scenario": "latency",
+      "seed": 76438254,
+      "spare_ordinal": 2,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "TRAIN",
+      "run_id": "C-SPARE-TRAIN-ERR-01",
+      "scenario": "errors",
+      "seed": 873397247,
+      "spare_ordinal": 1,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "TRAIN",
+      "run_id": "C-SPARE-TRAIN-ERR-02",
+      "scenario": "errors",
+      "seed": 1954037413,
+      "spare_ordinal": 2,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "TRAIN",
+      "run_id": "C-SPARE-TRAIN-BDR-01",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1359673832,
+      "spare_ordinal": 1,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "TRAIN",
+      "run_id": "C-SPARE-TRAIN-BDR-02",
+      "scenario": "bad_deployment_rollback",
+      "seed": 300872472,
+      "spare_ordinal": 2,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "VALIDATION",
+      "run_id": "C-SPARE-VALIDATION-LAT-01",
+      "scenario": "latency",
+      "seed": 661199346,
+      "spare_ordinal": 1,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "VALIDATION",
+      "run_id": "C-SPARE-VALIDATION-LAT-02",
+      "scenario": "latency",
+      "seed": 1742723334,
+      "spare_ordinal": 2,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "VALIDATION",
+      "run_id": "C-SPARE-VALIDATION-ERR-01",
+      "scenario": "errors",
+      "seed": 1701493636,
+      "spare_ordinal": 1,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "VALIDATION",
+      "run_id": "C-SPARE-VALIDATION-ERR-02",
+      "scenario": "errors",
+      "seed": 351328414,
+      "spare_ordinal": 2,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "VALIDATION",
+      "run_id": "C-SPARE-VALIDATION-BDR-01",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1403242530,
+      "spare_ordinal": 1,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "VALIDATION",
+      "run_id": "C-SPARE-VALIDATION-BDR-02",
+      "scenario": "bad_deployment_rollback",
+      "seed": 1885701845,
+      "spare_ordinal": 2,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "TEST",
+      "run_id": "C-SPARE-TEST-LAT-01",
+      "scenario": "latency",
+      "seed": 1561149927,
+      "spare_ordinal": 1,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "TEST",
+      "run_id": "C-SPARE-TEST-LAT-02",
+      "scenario": "latency",
+      "seed": 1352462152,
+      "spare_ordinal": 2,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "TEST",
+      "run_id": "C-SPARE-TEST-ERR-01",
+      "scenario": "errors",
+      "seed": 264056571,
+      "spare_ordinal": 1,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "TEST",
+      "run_id": "C-SPARE-TEST-ERR-02",
+      "scenario": "errors",
+      "seed": 1699565255,
+      "spare_ordinal": 2,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "TEST",
+      "run_id": "C-SPARE-TEST-BDR-01",
+      "scenario": "bad_deployment_rollback",
+      "seed": 623648327,
+      "spare_ordinal": 1,
+      "status": "reserved_spare_not_started"
+    },
+    {
+      "partition": "TEST",
+      "run_id": "C-SPARE-TEST-BDR-02",
+      "scenario": "bad_deployment_rollback",
+      "seed": 755971118,
+      "spare_ordinal": 2,
+      "status": "reserved_spare_not_started"
+    }
+  ],
+  "scenario_registered_counts": {
+    "bad_deployment_rollback": 20,
+    "errors": 20,
+    "latency": 20
+  },
+  "seed_derivation_rule": "seed = first 8 bytes of SHA256('42|seed|partition|scenario|kind|ordinal') interpreted unsigned big-endian, modulo 2147483646, plus 1",
+  "spares_per_scenario_partition": 2
+}
