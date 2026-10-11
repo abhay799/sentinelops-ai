@@ -1,0 +1,20 @@
+{
+  "evidence_version": "C6-start-gate-amendment3",
+  "new_c6_targeted": {
+    "failed": 0,
+    "passed": 12
+  },
+  "requested_combined_suite": {
+    "failed": 0,
+    "includes": [
+      "tests/test_phase13_remediation.py",
+      "tests/test_phase13_validation.py",
+      "tests/test_phase14_execution_gate.py",
+      "tests/test_phase14_runtime.py",
+      "tests/test_phase_c6_registered_harness.py",
+      "tests/test_phase_c6_train_loop.py"
+    ],
+    "passed": 33
+  },
+  "ruff_new_or_modified_amendment3_files": "PASS"
+}

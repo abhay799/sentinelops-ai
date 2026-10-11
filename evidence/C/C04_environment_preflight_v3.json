@@ -1,0 +1,79 @@
+{
+  "captured_utc": "2026-10-11T18:01:18.012025Z",
+  "clock": {
+    "windows_utc_ms": 1791741470606,
+    "wsl_minus_windows_ms": -2243,
+    "wsl_utc_ms": 1791741468363
+  },
+  "disk": {
+    "available": "934G",
+    "filesystem": "/dev/sdf",
+    "size": "1007G",
+    "use_percent": "3%",
+    "used": "23G"
+  },
+  "docker_ps_inside_wsl": {
+    "note": "docker ps returned exit 0 inside Ubuntu WSL",
+    "passed": true
+  },
+  "evidence_version": "C6-start-gate-amendment3",
+  "ports_before_service_start": {
+    "8100": "free",
+    "8101": "free",
+    "8102": "free",
+    "8103": "free",
+    "8104": "free",
+    "8105": "free",
+    "8106": "free"
+  },
+  "registered_artifacts": {
+    "control_files": 0,
+    "data_chaos_registered_work_files": 0,
+    "evidence_C_C06_train_run_files": 0
+  },
+  "registered_execution_started": false,
+  "services_after_start": {
+    "8100": {
+      "docker_health": "healthy",
+      "ready": true,
+      "service": "api-gateway",
+      "telemetry": "connected"
+    },
+    "8101": {
+      "docker_health": "healthy",
+      "ready": true,
+      "service": "user-service",
+      "telemetry": "connected"
+    },
+    "8102": {
+      "docker_health": "healthy",
+      "ready": true,
+      "service": "order-service",
+      "telemetry": "connected"
+    },
+    "8103": {
+      "docker_health": "healthy",
+      "ready": true,
+      "service": "payment-service",
+      "telemetry": "connected"
+    },
+    "8104": {
+      "docker_health": "healthy",
+      "ready": true,
+      "service": "inventory-service",
+      "telemetry": "connected"
+    },
+    "8105": {
+      "docker_health": "healthy",
+      "ready": true,
+      "service": "notification-service",
+      "telemetry": "connected"
+    },
+    "8106": {
+      "docker_health": "healthy",
+      "ready": true,
+      "service": "auth-service",
+      "telemetry": "connected"
+    }
+  }
+}

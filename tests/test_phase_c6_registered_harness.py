@@ -76,3 +76,16 @@ def test_frozen_scenario_durations(scenario: str, expected: int):
     else:
         duration = int(config["scenarios"][scenario]["duration_seconds"])
     assert duration == expected
+
+
+def test_non_registry_seed_collision_rejected():
+    used = registered_harness.registered_and_spare_seeds()
+    assert len(used) == 78
+    collision = min(used)
+    with pytest.raises(ValueError, match="collides"):
+        registered_harness.assert_non_registry_seed(collision)
+
+
+def test_non_registry_validation_seeds_have_zero_collisions():
+    validation_seeds = {1900000101, 1900000102, 1900000103}
+    assert validation_seeds.isdisjoint(registered_harness.registered_and_spare_seeds())

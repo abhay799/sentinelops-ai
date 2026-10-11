@@ -1,0 +1,400 @@
+{
+  "file_count": 103,
+  "files": {
+    "configs/anomaly.yaml": {
+      "sha256": "2b57a76a1cd6514574f98e02a82691dfd7c9385cba0984df7be896573911dbb0"
+    },
+    "configs/app.yaml": {
+      "sha256": "c0cc053ca987c2b5e206d4f3d764c6aeb89c260467efa4881a8efa16d83e7b47"
+    },
+    "configs/chaos_bad_deployment_v1.yaml": {
+      "sha256": "62e22a74c6714b505e4c8f91e707ba0b94fada5559b253ac3a62d2a01d291c2e"
+    },
+    "configs/chaos_scenarios_v1.yaml": {
+      "sha256": "91de2d7235ce1736150a1dfb7997f61a6ec9c4e84622ea143833955fa9291983"
+    },
+    "configs/counterfactual.yaml": {
+      "sha256": "54f9c470b5a91aa7587a54f30fb2ac0eb55fa2c6a641281aa48784fb93784c96"
+    },
+    "configs/evaluation.yaml": {
+      "sha256": "41fa0c7862a49dfc259faf96bf7673ab5571f80fca1b8163683668beda807adb"
+    },
+    "configs/execution.yaml": {
+      "sha256": "0598dd0ba5a41a5c014a73298afc977c82b527232f085f057cda3a1a2f69434e"
+    },
+    "configs/failure_prediction.yaml": {
+      "sha256": "2e0bad04e73e79fda13bd0e69dabfd1a6de948258062d54f2e876a5b46659bb9"
+    },
+    "configs/failure_scenarios.yaml": {
+      "sha256": "0d39ccee98335494045db5bbc9638c15d122d38d9d46565ab7e177949bdb4797"
+    },
+    "configs/features.yaml": {
+      "sha256": "de35ba01819479fcc0bd72ceb7b4ef5918cc54e50d7cbda347b82d9462c78d13"
+    },
+    "configs/graph.yaml": {
+      "sha256": "aa0a91b611a6fa6ec9b2547702bbdf3ea4c3cd7ed527c8a77ff3599075bc2a19"
+    },
+    "configs/incident_correlation.yaml": {
+      "sha256": "14ba3edb907228bc131ed6f2c6ec6b819fcff82ba60ac29d5f28e722567149ff"
+    },
+    "configs/incident_priority.yaml": {
+      "sha256": "e71e5c29a391a2074c1d6aee01a4394cb59efaf91c491cc1ee4a88f53ca3f78a"
+    },
+    "configs/investigation.yaml": {
+      "sha256": "765600f700e1392b968df7a62c272d0dd38d888126975021a940191bf2958c61"
+    },
+    "configs/rca.yaml": {
+      "sha256": "507a6dd76dd89b72d08fadab98a7fd8a063ef6a7488e90b08878526420a3c32d"
+    },
+    "configs/rca_challenger.yaml": {
+      "sha256": "849bed102fd4ce4226745c620ca2af63d3d76402e6e8eb4d2bd562b798aec8d5"
+    },
+    "configs/remediation.yaml": {
+      "sha256": "ac98a07fa1b43f3cf9995ae1970bc2970670c72eeae47e1135eca136d616b447"
+    },
+    "configs/security.yaml": {
+      "sha256": "6def1470d36354b0540719a7e5784b44ec4ec3464ca8d6bd6e1d50efa60d2e7d"
+    },
+    "configs/sentinelguard.yaml": {
+      "sha256": "6e4946041c4eddad25969d932e04a9367b3bf08c264c7e6a90cf66a0ce399a96"
+    },
+    "configs/services.yaml": {
+      "sha256": "d25130550191882b62d804a0cb3755d00b10925b966a7bee75fa5144ad652932"
+    },
+    "configs/slo_business_impact.yaml": {
+      "sha256": "5a84762d17e2a6c8de8a4926883d08e1b77b221762f7b32319cbb70b55df2492"
+    },
+    "configs/telemetry.yaml": {
+      "sha256": "31005a70773645a09d6a42975eaa3caf3aa206e76b28a66e03de75d0cacf34e6"
+    },
+    "configs/topology.yaml": {
+      "sha256": "aa0d059cba9e15222b0e4ed4bd375aa35fd13e5528e57ccb892066a7034b07d7"
+    },
+    "docs/design/chaos_harness_v1.md": {
+      "sha256": "52a37f8791b71e782d335b42dde9ce5bc94fa3564c9fb6483d4fbf59f947318b"
+    },
+    "evidence/C/C04_detector_fit_procedure.md": {
+      "sha256": "75915cf22008a990b9a108fffc32ca9d80b0b530090704869658a4ba42b861de"
+    },
+    "evidence/C/C04_feature_schema.json": {
+      "sha256": "477c38f1ff1a31ec1c132ca7dc90eda445c7e34f2de8aed507aaf716af6ea4db"
+    },
+    "evidence/C/C04_invalid_run_policy.md": {
+      "sha256": "27ee261541c7164cd2a8be9f51f3efba9b92a27f4ca4fe0252f82f37d247c0e5"
+    },
+    "evidence/C/C04_preregistration.md": {
+      "sha256": "3f451e973e4f40aeba7248348b0371259eb9d07c098ccd94d3fabae49c907ae8"
+    },
+    "evidence/C/C04_run_registry.json": {
+      "sha256": "e88ff4b8363a7cfc89d709175d50127a46a1880290961a66c694d7c64b79df07"
+    },
+    "infra/docker-compose.core.yml": {
+      "sha256": "fd402bc2c3b10579720af5f7b4145785b4c606bbbc37311373b989003f227138"
+    },
+    "infra/docker-compose.kafka.yml": {
+      "sha256": "2fd3e0ba8207c388e4a9c70a3c348cff61f541109a515357135e0de594762fbc"
+    },
+    "infra/docker-compose.observability.yml": {
+      "sha256": "81edafdb79ed2ccc98142c0df3d181a046689ce6f9aba17c5c3f1a4e186d3dd9"
+    },
+    "infra/docker-compose.phase2.yml": {
+      "sha256": "d74a154cd98e92316e4ac8e84eee8f70419dfd10ad160342e84fbc89ab8c94b3"
+    },
+    "pyproject.toml": {
+      "sha256": "8a64f091b2fede2ba51cb1d692e1db8887d6fec05a29ac72bd6de541714980ad"
+    },
+    "scripts/build_phase10_early_warning.py": {
+      "sha256": "f705e260c1347a7a01e72a750c26b1d48394b3190f39e7e4e49fb28b5715b75a"
+    },
+    "scripts/build_phase11_counterfactual.py": {
+      "sha256": "6e7c62e448f281410fc6819ab6b723b4711b568109cb63f9bdc4d511eae07952"
+    },
+    "scripts/build_phase11_counterfactual_summary.py": {
+      "sha256": "383ef3b79154b04645e0d4ca0366ef62bababb942550a21260dc4afd03ed7b91"
+    },
+    "scripts/build_phase12_incident_priority.py": {
+      "sha256": "65d982caca396961846fe87c81b6c513129746a9cf2a47d54606db4a25890fba"
+    },
+    "scripts/build_phase12_service_impact.py": {
+      "sha256": "5bf38aeeeb7a642003481df29cd2d9f47d08fc6b055c95a25b64f871cb64ac8f"
+    },
+    "scripts/build_phase13_remediation.py": {
+      "sha256": "b73b890d2a77cc6292324fb03da46011452ad0250a1f86da541fb638bbf2d439"
+    },
+    "scripts/build_phase14_approval_queue.py": {
+      "sha256": "dd329c62fe9d2d292fbad08356be3d575a411230c58e7160159e5659c8c707fc"
+    },
+    "scripts/build_phase14_execution_requests.py": {
+      "sha256": "482b0f2cc549bea81182d165e3be3546e7bed86ed69f1b196050aa3d461e9a24"
+    },
+    "scripts/build_phase4_temporal_features.py": {
+      "sha256": "aeef3bce1a57cde16e82aa45f3f19750ace8b932ef850a7670665308107f211e"
+    },
+    "scripts/build_phase6_graph.py": {
+      "sha256": "789c0de4d518d986498beb71060906feb5492537f4e44d13a458ad99508f9dd9"
+    },
+    "scripts/build_phase7_incident_intelligence.py": {
+      "sha256": "34a2d90b28da395336b5b10a1e842b269bfcfabe25878701f6bd8f8b7210ed46"
+    },
+    "scripts/build_phase7_incidents.py": {
+      "sha256": "2cafeab1ed88224e0b662b47f467e4abc6e1a70e13b42aae05abca1fcfc8911d"
+    },
+    "scripts/build_phase8_rca.py": {
+      "sha256": "b01f29e66d635643de81d37912b6ed62179c468a20071d237ff5544c8d515950"
+    },
+    "scripts/build_phase8_rca_summary.py": {
+      "sha256": "948980eb19ec1d9908e93985dbabc7c95fe825f9875aae9fa7ddbb014fcbfc93"
+    },
+    "scripts/build_phase9_causal_disposition.py": {
+      "sha256": "b37d917950642260aa69ea3d5702165482a31e2544813ffdfd0a522295f5a366"
+    },
+    "scripts/build_phase9_challenger.py": {
+      "sha256": "ac4ef069c22354fb10267b11ea72238037dfc734bfed6afc77f25680ad0befdb"
+    },
+    "scripts/execute_phase14_request.py": {
+      "sha256": "f723f42de58b40386fcdba389d57070a14864bdf6d75c4a09e955f4f9aa13343"
+    },
+    "scripts/phase14_approve.py": {
+      "sha256": "c83ad4b270e27eb52ee1edfe607611b8313b36222ce438b5c9404838eacce7c6"
+    },
+    "scripts/phase5_frozen_detector.py": {
+      "sha256": "121b5287f58e272945c1b948c2180c29de2189900e1908c21ca1fdbc4e49aeda"
+    },
+    "scripts/phase_c06_run_registered.py": {
+      "sha256": "4e46f5f30767ccef263cf0a1e69d4d8678e832bb8a752938a92597b85ea824bc"
+    },
+    "scripts/phase_c06_train_loop.py": {
+      "sha256": "f3ea5aa01161bbedb726bc04aa4cec4f73fe00957af8ef3f7ce858ce4353d3cc"
+    },
+    "scripts/phase_c_registered_analysis.py": {
+      "sha256": "edddb37238599fae52d02b33f85e72c20277510ef0b0f783cb8d7be366fdec2b"
+    },
+    "scripts/train_phase10_predictor.py": {
+      "sha256": "ee388752e176298b20150a36374324ef38708dc2ca20c92e02bb6bd9a02f1fb3"
+    },
+    "scripts/train_phase5_anomaly.py": {
+      "sha256": "41ee6538b96a0a8e32d3c5a9f4a9d9410f60aceddd062a9ec5c5f224e6f91a1e"
+    },
+    "services/auth/Dockerfile": {
+      "sha256": "5ccd67a514ff01df2aef1a00a537eac1675f19be9a0ef3b22dd098eefbc5e42b"
+    },
+    "services/auth/app.py": {
+      "sha256": "8b0ef9e866148e935a2510a55b53c4d3b42dd18ba8e939e5b53d3629562cdb4a"
+    },
+    "services/common/runtime.py": {
+      "sha256": "c6954a7d39a534879745a1486d71c5e9029fae3127e8b1ee130e47a2dd7f74dc"
+    },
+    "services/gateway/Dockerfile": {
+      "sha256": "6b26b20dc9ee2b49d7969a73b718be6caf46d95d1becb36497b7f9cf59b72df9"
+    },
+    "services/gateway/app.py": {
+      "sha256": "8b0ef9e866148e935a2510a55b53c4d3b42dd18ba8e939e5b53d3629562cdb4a"
+    },
+    "services/inventory/Dockerfile": {
+      "sha256": "a717e165d89690e715f36c521d322553f88ca9cf1caf90529c0693c30571fa86"
+    },
+    "services/inventory/app.py": {
+      "sha256": "8b0ef9e866148e935a2510a55b53c4d3b42dd18ba8e939e5b53d3629562cdb4a"
+    },
+    "services/notification/Dockerfile": {
+      "sha256": "988231e7d9c92539a77a8f0184d287f643582247229880f71f129bf90e8c4946"
+    },
+    "services/notification/app.py": {
+      "sha256": "8b0ef9e866148e935a2510a55b53c4d3b42dd18ba8e939e5b53d3629562cdb4a"
+    },
+    "services/order/Dockerfile": {
+      "sha256": "ad32ecb2eeb3eaa75deac7df11d7c2e7b7b53ca6a48ba2e5d614443fddb1feb0"
+    },
+    "services/order/app.py": {
+      "sha256": "8b0ef9e866148e935a2510a55b53c4d3b42dd18ba8e939e5b53d3629562cdb4a"
+    },
+    "services/payment/Dockerfile": {
+      "sha256": "2d6b8a9d9143a7a647377045f5ebf02d65c324cc59ea14bc26c09afec34f95a6"
+    },
+    "services/payment/app.py": {
+      "sha256": "8b0ef9e866148e935a2510a55b53c4d3b42dd18ba8e939e5b53d3629562cdb4a"
+    },
+    "services/requirements.txt": {
+      "sha256": "3e968d351f00c30b49a5fdd3c43d7cd68d66e3524a6070b4891c8975af1ae0f9"
+    },
+    "services/user/Dockerfile": {
+      "sha256": "6f26a4a4ec456fe0f63c89cf73d8028385bb058d90c04f4ea3fe50e17ccb8a8f"
+    },
+    "services/user/app.py": {
+      "sha256": "8b0ef9e866148e935a2510a55b53c4d3b42dd18ba8e939e5b53d3629562cdb4a"
+    },
+    "src/sentinelops/anomaly/detectors.py": {
+      "sha256": "ee09e798f753132e019353d69d65207f834f611577c22066d760e670696c499f"
+    },
+    "src/sentinelops/anomaly/frozen_detector.py": {
+      "sha256": "6913ce5d3bd69958533889286144c5eaa136a45f383d2e21d222ecd327fcf267"
+    },
+    "src/sentinelops/chaos/analysis.py": {
+      "sha256": "08c4aca0353959eeaf5e4d09d5d643b02b2314e579cf535e38a0b210a6657de8"
+    },
+    "src/sentinelops/chaos/dry_run_stages.py": {
+      "sha256": "f415e4e569529030c69a06178ba82e8167273638313f28f31e86e3f8ad881508"
+    },
+    "src/sentinelops/chaos/ground_truth.py": {
+      "sha256": "d98bb1efe1a4440383b95fced2f1dafa3e511a6ab809262f76357a7eb16d4ecf"
+    },
+    "src/sentinelops/chaos/harness.py": {
+      "sha256": "873faf2c6357cbed67f4988c6bcee6398cd25d97581228be22f9ed7ed76c832c"
+    },
+    "src/sentinelops/chaos/registered_harness.py": {
+      "sha256": "926e03ea54636eb308a2d097b87e66efae8f2c3bd694a043e6a072d911892111"
+    },
+    "src/sentinelops/chaos/schema.py": {
+      "sha256": "874a2f31fb42c55754fc43096c42a677d24a59f1b098ba3d46a4ba59ec0a8ad5"
+    },
+    "src/sentinelops/chaos/stage_events.py": {
+      "sha256": "1c4110ba26cb96dfc4a064d405c6043fd9dc56ea63fc89a0e76c1b92bb49613a"
+    },
+    "src/sentinelops/counterfactual/engine.py": {
+      "sha256": "07b825c5e439fe2fe4893bf463e992ec0df7f07fe0d155a4167e1c7cd50c59c0"
+    },
+    "src/sentinelops/counterfactual/ranking.py": {
+      "sha256": "a543a74080879204ae6d534e8f9584966e196dc97ee39822e21415eb9c70289a"
+    },
+    "src/sentinelops/counterfactual/validation.py": {
+      "sha256": "20028fcdf6aefa556603583de2793b28e144cd87be923cb0ae99932de36560e5"
+    },
+    "src/sentinelops/execution/gate.py": {
+      "sha256": "3d076563eec371e28e66daa7c280b05219539b98a6eb81d5cefdf333d324a982"
+    },
+    "src/sentinelops/execution/runtime.py": {
+      "sha256": "384263f1a257ee626d9db9619db6872bb26dfa7d88f9a514ce6ea9923011dc50"
+    },
+    "src/sentinelops/features/builder.py": {
+      "sha256": "2fb7a77f4461d9b6108fa5878bc6e2ef924dd065dbae207bd878736cf2072bba"
+    },
+    "src/sentinelops/features/temporal.py": {
+      "sha256": "838078f571f9112d9a8a6c862212ca94f62740e48955d481d1828f880e9fc1e9"
+    },
+    "src/sentinelops/graph/service_graph.py": {
+      "sha256": "45616c1d3456caf3314019f637496774333426f841d965e725c1484ae03e3914"
+    },
+    "src/sentinelops/impact/engine.py": {
+      "sha256": "c86fbd8898e99cd0a9709cda9bd9fdfb9a4503f263538873e21f3ae3c1c8df23"
+    },
+    "src/sentinelops/impact/prioritization.py": {
+      "sha256": "e469653339dadc528ec9954268018887e387ede48d03dbb50bf7026987618356"
+    },
+    "src/sentinelops/incidents/correlator.py": {
+      "sha256": "e7fb0a3e36b64b633d655b8e6b13f0d4a39c259395ca7fbcec231c9daa913c4c"
+    },
+    "src/sentinelops/incidents/intelligence.py": {
+      "sha256": "ef61cb750439719f954ff09a96019cd565e1180b82df26a389d2c74316ab4221"
+    },
+    "src/sentinelops/prediction/early_warning.py": {
+      "sha256": "cbfc7c2d90e2c8b3d3356e7b34096c669dab563c19b00e22bc56639d0f62d1d3"
+    },
+    "src/sentinelops/prediction/evaluation.py": {
+      "sha256": "5d9f995ea28693449643aaea397d17e83629e3bd0d1dfc6a4d56d478b378dfc4"
+    },
+    "src/sentinelops/rca/causal.py": {
+      "sha256": "c96c268da6dc2eef4329bf9f652541b8b320557af3f64306d926282206277410"
+    },
+    "src/sentinelops/rca/challenger.py": {
+      "sha256": "e759d98add33feb2d0094e5461a60468619b03e6912f5f100eac16373e2baf9f"
+    },
+    "src/sentinelops/rca/engine.py": {
+      "sha256": "e11c073d73fea2f2c47a7598a382ef1a36f44ff9b81986307f44864ec3e05525"
+    },
+    "src/sentinelops/rca/validation.py": {
+      "sha256": "e586a32426f450c5e00d7ef4883684fcfb0132919b1a0ba9c1c8c27b76dad099"
+    },
+    "src/sentinelops/remediation/planner.py": {
+      "sha256": "ce2fde2c1d454bc233ffb455df92f0f642e9b2685024d3581de80b4d3dfecac5"
+    },
+    "src/sentinelops/remediation/sentinelguard.py": {
+      "sha256": "f965dde70defdf5e36cb81e61770c694d5ec47ace06dfcb3ef9c9ca9ca5c21a1"
+    }
+  },
+  "inventory_version": "C6-TRAIN-runtime-v3",
+  "not_covered_by_v2": [
+    "configs/app.yaml",
+    "configs/counterfactual.yaml",
+    "configs/evaluation.yaml",
+    "configs/execution.yaml",
+    "configs/failure_prediction.yaml",
+    "configs/failure_scenarios.yaml",
+    "configs/features.yaml",
+    "configs/graph.yaml",
+    "configs/incident_correlation.yaml",
+    "configs/incident_priority.yaml",
+    "configs/investigation.yaml",
+    "configs/rca.yaml",
+    "configs/rca_challenger.yaml",
+    "configs/security.yaml",
+    "configs/services.yaml",
+    "configs/slo_business_impact.yaml",
+    "configs/telemetry.yaml",
+    "configs/topology.yaml",
+    "infra/docker-compose.core.yml",
+    "infra/docker-compose.kafka.yml",
+    "infra/docker-compose.observability.yml",
+    "infra/docker-compose.phase2.yml",
+    "pyproject.toml",
+    "scripts/build_phase10_early_warning.py",
+    "scripts/build_phase11_counterfactual.py",
+    "scripts/build_phase11_counterfactual_summary.py",
+    "scripts/build_phase12_incident_priority.py",
+    "scripts/build_phase12_service_impact.py",
+    "scripts/build_phase13_remediation.py",
+    "scripts/build_phase14_approval_queue.py",
+    "scripts/build_phase14_execution_requests.py",
+    "scripts/build_phase4_temporal_features.py",
+    "scripts/build_phase6_graph.py",
+    "scripts/build_phase7_incident_intelligence.py",
+    "scripts/build_phase7_incidents.py",
+    "scripts/build_phase8_rca.py",
+    "scripts/build_phase8_rca_summary.py",
+    "scripts/build_phase9_causal_disposition.py",
+    "scripts/build_phase9_challenger.py",
+    "scripts/execute_phase14_request.py",
+    "scripts/phase14_approve.py",
+    "scripts/phase_c06_train_loop.py",
+    "scripts/train_phase10_predictor.py",
+    "scripts/train_phase5_anomaly.py",
+    "services/auth/Dockerfile",
+    "services/auth/app.py",
+    "services/common/runtime.py",
+    "services/gateway/Dockerfile",
+    "services/gateway/app.py",
+    "services/inventory/Dockerfile",
+    "services/inventory/app.py",
+    "services/notification/Dockerfile",
+    "services/notification/app.py",
+    "services/order/Dockerfile",
+    "services/order/app.py",
+    "services/payment/Dockerfile",
+    "services/payment/app.py",
+    "services/requirements.txt",
+    "services/user/Dockerfile",
+    "services/user/app.py",
+    "src/sentinelops/anomaly/detectors.py",
+    "src/sentinelops/counterfactual/engine.py",
+    "src/sentinelops/counterfactual/ranking.py",
+    "src/sentinelops/counterfactual/validation.py",
+    "src/sentinelops/execution/gate.py",
+    "src/sentinelops/execution/runtime.py",
+    "src/sentinelops/features/builder.py",
+    "src/sentinelops/features/temporal.py",
+    "src/sentinelops/graph/service_graph.py",
+    "src/sentinelops/impact/engine.py",
+    "src/sentinelops/impact/prioritization.py",
+    "src/sentinelops/incidents/correlator.py",
+    "src/sentinelops/incidents/intelligence.py",
+    "src/sentinelops/prediction/early_warning.py",
+    "src/sentinelops/prediction/evaluation.py",
+    "src/sentinelops/rca/causal.py",
+    "src/sentinelops/rca/challenger.py",
+    "src/sentinelops/rca/engine.py",
+    "src/sentinelops/rca/validation.py",
+    "src/sentinelops/remediation/planner.py",
+    "src/sentinelops/remediation/sentinelguard.py"
+  ],
+  "not_covered_by_v2_count": 81,
+  "scope": "conservative transitive repository-file closure for registered TRAIN, non-registry validation, local service adapters, analysis and detector boundary"
+}

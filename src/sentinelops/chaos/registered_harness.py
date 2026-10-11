@@ -20,6 +20,7 @@ from sentinelops.chaos.ground_truth import (
     build_injection_record,
     persist_injection_record,
 )
+from sentinelops.chaos.harness import run_dry_run
 from sentinelops.chaos.schema import ChaosRunRecord
 from sentinelops.chaos.stage_events import utc_now
 
@@ -107,12 +108,52 @@ def _load_yaml(path: Path, key: str) -> dict[str, Any]:
         return yaml.safe_load(handle)[key]
 
 
+def _load_registry() -> dict[str, Any]:
+    return json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+
+
 def _load_registry_entry(run_id: str) -> dict[str, Any]:
-    registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
+    registry = _load_registry()
     for row in registry["execution_schedule"]:
         if row["run_id"] == run_id:
             return row
+    for row in registry["reserved_spares"]:
+        if row["run_id"] == run_id:
+            return {
+                "partition": row["partition"],
+                "run_id": row["run_id"],
+                "scenario": row["scenario"],
+                "seed": row["seed"],
+                "spare_ordinal": row["spare_ordinal"],
+                "reserved_spare": True,
+            }
     raise ValueError(f"unknown registered run_id: {run_id}")
+
+
+def registered_and_spare_seeds() -> set[int]:
+    registry = _load_registry()
+    primary = {int(row["seed"]) for row in registry["registered_runs"]}
+    spares = {int(row["seed"]) for row in registry["reserved_spares"]}
+    return primary | spares
+
+
+def assert_non_registry_seed(seed: int) -> None:
+    if seed in registered_and_spare_seeds():
+        raise ValueError(
+            f"non-registry seed {seed} collides with the frozen registry or reserved spares"
+        )
+
+
+def run_non_registry_dry_run(scenario: str, seed: int) -> Path:
+    assert_non_registry_seed(seed)
+    run_dir = run_dry_run(scenario, seed)
+    summary_path = run_dir / "run_summary.json"
+    summary = json.loads(summary_path.read_text(encoding="utf-8"))
+    if summary.get("classification") != "non_registry":
+        raise RuntimeError("non-registry executor produced wrong classification")
+    if summary.get("registered_result_eligible") is not False:
+        raise RuntimeError("non-registry executor produced result-eligible output")
+    return run_dir
 
 
 def _prepare_workdir(run_id: str) -> Path:
@@ -444,7 +485,11 @@ def _execution_result(workdir: Path, request_id: str) -> dict[str, Any] | None:
     return rows[0] if rows else None
 
 
-async def run_registered_train(run_id: str) -> Path:
+async def run_registered_train(
+    run_id: str,
+    *,
+    replacement_for: str | None = None,
+) -> Path:
     entry = _load_registry_entry(run_id)
     if entry["partition"] != "TRAIN":
         raise RuntimeError("C6 runner accepts TRAIN entries only")
@@ -490,6 +535,7 @@ async def run_registered_train(run_id: str) -> Path:
                     "status": "infrastructure_invalid_before_injection",
                     "invalid_reason": "baseline_health_failed",
                     "registry_entry": entry,
+                    "replacement_for": replacement_for,
                 },
             )
             return run_dir
@@ -732,6 +778,7 @@ async def run_registered_train(run_id: str) -> Path:
         "partition": "TRAIN",
         "status": chain_status,
         "registry_entry": entry,
+        "replacement_for": replacement_for,
         "run_record": record.model_dump(mode="json"),
         "telemetry_manifest": telemetry_manifest,
         "selected_execution_request_id": selected_request_id,

@@ -1,0 +1,34 @@
+{
+  "classification": "non_registry_validation_only",
+  "evidence_version": "C6-start-gate-amendment3",
+  "registered_result_eligible": false,
+  "runs": [
+    {
+      "full_chain": "PASS",
+      "scenario": "latency",
+      "schema_valid": "PASS",
+      "seed": 1900000101,
+      "utc_order": "PASS"
+    },
+    {
+      "full_chain": "PASS",
+      "scenario": "errors",
+      "schema_valid": "PASS",
+      "seed": 1900000102,
+      "utc_order": "PASS"
+    },
+    {
+      "full_chain": "PASS",
+      "scenario": "bad_deployment_rollback",
+      "schema_valid": "PASS",
+      "seed": 1900000103,
+      "utc_order": "PASS"
+    }
+  ],
+  "seed_collision_count": 0,
+  "validation_seeds": [
+    1900000101,
+    1900000102,
+    1900000103
+  ]
+}
