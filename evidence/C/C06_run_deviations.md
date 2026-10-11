@@ -34,3 +34,16 @@ This file is post-freeze operational evidence. It is outside the `freeze/C-preru
 - **Registered-result state at discovery:** no registered algorithmic result existed. The two preserved interruption records above were both pre-injection and remain infrastructure-invalid under the corrected rule.
 - **Amendment 4 rule:** failures before `injection_start` are infrastructure-invalid and replaceable; failures at or after the recorded `injection_start` are `run_failed_after_injection`, retain traceback/stage evidence, are registered results, are never replaced, and remain in the analysis denominator. A recorded host-level boot change overrides this and is infrastructure-invalid with host-check evidence.
 - **Restart rule:** an unfinished run is classified from the persisted execution/stage state and recorded host check rather than from the mere fact that the loop restarted.
+
+
+## C6-DEV-004 — Pre-resume environment adjustment after v4 freeze
+
+- **Change window (UTC):** OpenTelemetry collector start initiated at approximately `2026-10-11T20:26:16Z` and reached a stable running state by approximately `2026-10-11T20:27:23Z`; Grafana was stopped at approximately `2026-10-11T20:28:20Z`.
+- **Reason:** reduce nonessential resource pressure for the registered C6 TRAIN chain while restoring the configured OTLP endpoint so service exporters no longer repeatedly fail DNS resolution for `sentinelops-otel`.
+- **Started:** `sentinelops-otel`. No collector configuration was edited. Final status sample showed `sentinelops-otel` Up, exposing ports 4317-4318.
+- **Stopped:** `sentinelops-grafana`. Grafana is not required by the registered executor/evidence chain.
+- **Left stopped:** `sentinelops-prometheus`. Prometheus is not required by the registered executor/evidence chain.
+- **Required chain left running:** the seven demo services, Kafka, Postgres, and Redis.
+- **Post-change readiness:** all seven service `/ready` endpoints returned HTTP 200 with `status=ready` and `telemetry=connected`.
+- **Resource check:** three `docker stats --no-stream` samples were taken about 30 seconds apart. Kafka CPU was 10.10%, 35.08%, and 13.30%; Kafka memory was approximately 217.9-218.2 MiB. OTEL remained approximately 190.1 MiB and 0.10-0.25% CPU. WSL `MemAvailable` was 1,998,748 kB at the post-change sample.
+- **Methodology:** this is an environment-only operational change. No registered row was started, `--detach` was not invoked, and no code, config, frozen v4 file, registry row, C7 fit, VALIDATION, or TEST execution was changed or started.
