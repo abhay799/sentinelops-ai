@@ -28,6 +28,23 @@ def analyze_run(
     ground_truth_root: Path,
 ) -> dict[str, Any]:
     summary = _load_json(run_dir / "run_summary.json")
+    if summary.get("status") == "run_failed_after_injection":
+        record = summary["run_record"]
+        return {
+            "run_id": record["run_id"],
+            "scenario": record["scenario"],
+            "classification": summary["classification"],
+            "status": "run_failed_after_injection",
+            "detection_present": False,
+            "detection_delay_seconds": None,
+            "correlation_correct": False,
+            "rca_hit_at_1": False,
+            "rca_hit_at_3": False,
+            "rca_hit_at_5": False,
+            "guard_decision": "run_failed_after_injection",
+            "remediation_success": False,
+            "recovery_time_seconds": None,
+        }
     record = summary["run_record"]
     ground_truth = _load_json(ground_truth_root / f"{record['run_id']}.json")
     injected_service_raw = ground_truth.get("injected_service")
@@ -224,6 +241,8 @@ def analyze_evidence_root(
             continue
         summary = _load_json(summary_path)
         if summary.get("classification") != "registered" and not allow_non_registry:
+            continue
+        if str(summary.get("status", "")).startswith("infrastructure_invalid"):
             continue
         rows.append(analyze_run(run_dir, ground_truth_root))
 

@@ -94,6 +94,35 @@ def _write_json(path: Path, payload: dict[str, Any]) -> None:
     )
 
 
+def _execution_state_path(run_dir: Path) -> Path:
+    return run_dir / "execution_state.json"
+
+
+def _update_execution_state(run_dir: Path, **updates: Any) -> dict[str, Any]:
+    path = _execution_state_path(run_dir)
+    if path.exists():
+        state = json.loads(path.read_text(encoding="utf-8"))
+    else:
+        state = {}
+    state.update(updates)
+    _write_json(path, state)
+    return state
+
+
+def _record_stage_state(run_dir: Path, stage: str, event: str) -> str:
+    timestamp = utc_now().isoformat()
+    path = _execution_state_path(run_dir)
+    state = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+    stage_timestamps = dict(state.get("stage_timestamps", {}))
+    stage_state = dict(stage_timestamps.get(stage, {}))
+    stage_state[event] = timestamp
+    stage_timestamps[stage] = stage_state
+    state["current_stage"] = stage
+    state["stage_timestamps"] = stage_timestamps
+    _write_json(path, state)
+    return timestamp
+
+
 def _memory_snapshot() -> dict[str, int]:
     values: dict[str, int] = {}
     for line in Path("/proc/meminfo").read_text(encoding="utf-8").splitlines():
@@ -239,6 +268,8 @@ async def _activate_scenario(
     client: httpx.AsyncClient,
     scenario: str,
     seed: int,
+    *,
+    run_dir: Path | None = None,
 ) -> tuple[datetime, int]:
     scenario_config = _load_yaml(
         SCENARIO_CONFIG_PATH,
@@ -261,12 +292,19 @@ async def _activate_scenario(
         )
         change_response.raise_for_status()
         first = profile["degradation_stages"][0]
+        injection_start = utc_now()
+        if run_dir is not None:
+            _update_execution_state(
+                run_dir,
+                injection_start=injection_start.isoformat(),
+                current_stage="injection",
+            )
+            _record_stage_state(run_dir, "injection", "started")
         response = await client.post(
             "http://localhost:8103/failure-mode",
             json=first["failure_mode"],
         )
         response.raise_for_status()
-        injection_start = utc_now()
         await _workload(client, float(first["duration_seconds"]))
         second = profile["degradation_stages"][1]
         response = await client.post(
@@ -278,12 +316,19 @@ async def _activate_scenario(
         return injection_start, int(profile["total_injection_duration_seconds"])
 
     failure = spec["failure_mode"]
+    injection_start = utc_now()
+    if run_dir is not None:
+        _update_execution_state(
+            run_dir,
+            injection_start=injection_start.isoformat(),
+            current_stage="injection",
+        )
+        _record_stage_state(run_dir, "injection", "started")
     response = await client.post(
         "http://localhost:8103/failure-mode",
         json=failure,
     )
     response.raise_for_status()
-    injection_start = utc_now()
     duration = int(spec["duration_seconds"])
     await _workload(client, float(duration))
     return injection_start, duration
@@ -312,6 +357,7 @@ def _run_stage(
     workdir: Path,
     stage: str,
 ) -> tuple[datetime | None, bool, list[dict[str, Any]]]:
+    _record_stage_state(run_dir, stage, "started")
     logs: list[dict[str, Any]] = []
     for script in PIPELINE_SCRIPTS[stage]:
         result = _run_script(workdir, script)
@@ -326,6 +372,7 @@ def _run_stage(
                     "scripts": logs,
                 },
             )
+            _record_stage_state(run_dir, stage, "failed")
             return None, False, logs
     timestamp = utc_now()
     _write_json(
@@ -337,6 +384,7 @@ def _run_stage(
             "scripts": logs,
         },
     )
+    _record_stage_state(run_dir, stage, "completed")
     return timestamp, True, logs
 
 
@@ -498,6 +546,19 @@ async def run_registered_train(
     if run_dir.exists():
         raise RuntimeError(f"registered evidence already exists for {run_id}")
     run_dir.mkdir(parents=True)
+    _update_execution_state(
+        run_dir,
+        run_id=run_id,
+        partition="TRAIN",
+        scenario=str(entry["scenario"]),
+        seed=int(entry["seed"]),
+        replacement_for=replacement_for,
+        injected_service=TARGET_SERVICE,
+        started_utc=utc_now().isoformat(),
+        injection_start=None,
+        current_stage="preflight",
+        stage_timestamps={},
+    )
     workdir = _prepare_workdir(run_id)
     ground_truth_root = TRAIN_EVIDENCE_ROOT / "_ground_truth_injection_only"
 
@@ -540,7 +601,9 @@ async def run_registered_train(
             )
             return run_dir
 
+        _record_stage_state(run_dir, "pre_injection_reset", "started")
         await _reset_payment(client)
+        _record_stage_state(run_dir, "pre_injection_reset", "completed")
         await consumer.start()
         consume_task = asyncio.create_task(_consume(consumer, events, stop_consumer))
 
@@ -552,10 +615,12 @@ async def run_registered_train(
         cooldown_seconds = int(scenario_config["cooldown_seconds"])
 
         await _workload(client, float(baseline_seconds))
+        _record_stage_state(run_dir, "injection_activation", "started")
         injection_start, injection_seconds = await _activate_scenario(
             client,
             str(entry["scenario"]),
             int(entry["seed"]),
+            run_dir=run_dir,
         )
         planned_injection_complete_time = utc_now()
         injection_end: datetime | None = None
@@ -656,6 +721,7 @@ async def run_registered_train(
                                         },
                                     )
                                     if approval["returncode"] == 0:
+                                        _record_stage_state(run_dir, "remediation", "started")
                                         remediation_time = utc_now()
                                         injection_end = remediation_time
                                         execution = _execute_request(
@@ -663,6 +729,7 @@ async def run_registered_train(
                                             selected_request_id,
                                         )
                                         verification_time = utc_now()
+                                        _record_stage_state(run_dir, "verification", "started")
                                         execution_result = _execution_result(
                                             workdir,
                                             selected_request_id,
@@ -682,6 +749,7 @@ async def run_registered_train(
                                         )
                                         if recovered:
                                             recovery_time = verification_time
+                                        _record_stage_state(run_dir, "verification", "completed")
                                         _write_json(
                                             run_dir / "verification.json",
                                             {
@@ -793,5 +861,6 @@ async def run_registered_train(
             "service_killed": service_killed,
         },
     }
+    _update_execution_state(run_dir, current_stage="completed", completed_utc=utc_now().isoformat())
     _write_json(run_dir / "run_summary.json", summary)
     return run_dir

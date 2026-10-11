@@ -6,6 +6,7 @@ import json
 import os
 import subprocess
 import sys
+import traceback as traceback_module
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Callable
@@ -23,10 +24,83 @@ PID_PATH = CONTROL_ROOT / "train_loop.pid"
 LOG_PATH = CONTROL_ROOT / "train_loop.log"
 
 INFRASTRUCTURE_INVALID_PREFIX = "infrastructure_invalid"
+RUN_FAILED_AFTER_INJECTION = "run_failed_after_injection"
 
 
 def utc_iso() -> str:
     return datetime.now(UTC).isoformat().replace("+00:00", "Z")
+
+
+def host_check() -> dict[str, Any]:
+    boot_id_path = Path("/proc/sys/kernel/random/boot_id")
+    uptime_path = Path("/proc/uptime")
+    return {
+        "timestamp_utc": utc_iso(),
+        "boot_id": (
+            boot_id_path.read_text(encoding="utf-8").strip()
+            if boot_id_path.exists()
+            else None
+        ),
+        "uptime_seconds": (
+            float(uptime_path.read_text(encoding="utf-8").split()[0])
+            if uptime_path.exists()
+            else None
+        ),
+    }
+
+
+def _host_event_reason(
+    start_check: dict[str, Any] | None,
+    current_check: dict[str, Any],
+) -> str | None:
+    if not start_check:
+        return None
+    start_boot = start_check.get("boot_id")
+    current_boot = current_check.get("boot_id")
+    if start_boot and current_boot and start_boot != current_boot:
+        return "host_boot_id_changed"
+    return None
+
+
+def _execution_state(
+    evidence_root: Path,
+    run_id: str,
+) -> dict[str, Any]:
+    path = evidence_root / run_id / "execution_state.json"
+    if not path.exists():
+        return {}
+    return read_json(path)
+
+
+def classify_interruption(
+    active: dict[str, Any],
+    *,
+    evidence_root: Path,
+    current_host_check: dict[str, Any] | None = None,
+) -> tuple[str, str, dict[str, Any], dict[str, Any]]:
+    current_check = current_host_check or host_check()
+    host_reason = _host_event_reason(active.get("host_check"), current_check)
+    state = _execution_state(evidence_root, str(active["run_id"]))
+    if host_reason:
+        return (
+            "infrastructure_invalid_host_event",
+            host_reason,
+            state,
+            current_check,
+        )
+    if state.get("injection_start"):
+        return (
+            RUN_FAILED_AFTER_INJECTION,
+            "executor_failed_at_or_after_injection_start",
+            state,
+            current_check,
+        )
+    return (
+        "infrastructure_invalid_interrupted",
+        "executor_failed_before_injection_start",
+        state,
+        current_check,
+    )
 
 
 def load_registry(path: Path = REGISTRY_PATH) -> dict[str, Any]:
@@ -101,6 +175,7 @@ def _mark_active(
         "seed": int(entry["seed"]),
         "replacement_for": replacement_for,
         "started_utc": utc_iso(),
+        "host_check": host_check(),
     }
     _save_state(control_root, state)
 
@@ -117,18 +192,34 @@ def _record_interruption(
     evidence_root: Path,
     control_root: Path,
     reason: str,
+    traceback_text: str | None = None,
+    current_host_check: dict[str, Any] | None = None,
 ) -> Path:
     timestamp = utc_iso()
     safe_stamp = timestamp.replace(":", "").replace("-", "")
+    status, classified_reason, execution_state, current_check = classify_interruption(
+        active,
+        evidence_root=evidence_root,
+        current_host_check=current_host_check,
+    )
     record = {
         "classification": "registered_control_record",
         "event": "interruption",
         "timestamp_utc": timestamp,
         "reason": reason,
+        "classified_status": status,
+        "classified_reason": classified_reason,
         "run": active,
-        "registered_result": False,
+        "execution_state": execution_state,
+        "host_check_at_interruption": current_check,
+        "traceback": traceback_text,
+        "registered_result": status == RUN_FAILED_AFTER_INJECTION,
     }
-    interruption_path = control_root / "interruptions" / f"{safe_stamp}_{active['run_id']}.json"
+    interruption_path = (
+        control_root
+        / "interruptions"
+        / f"{safe_stamp}_{active['run_id']}.json"
+    )
     write_json(interruption_path, record)
 
     summary_path = run_summary_path(
@@ -137,20 +228,44 @@ def _record_interruption(
     )
     if not summary_path.exists():
         summary_path.parent.mkdir(parents=True, exist_ok=True)
-        write_json(
-            summary_path,
-            {
-                "classification": "registered",
-                "partition": active["partition"],
+        summary: dict[str, Any] = {
+            "classification": "registered",
+            "partition": active["partition"],
+            "run_id": active["run_id"],
+            "scenario": active["scenario"],
+            "seed": active["seed"],
+            "replacement_for": active.get("replacement_for"),
+            "status": status,
+            "invalid_reason": (
+                classified_reason
+                if status.startswith(INFRASTRUCTURE_INVALID_PREFIX)
+                else None
+            ),
+            "failure_reason": (
+                reason if status == RUN_FAILED_AFTER_INJECTION else None
+            ),
+            "interruption_record": str(interruption_path),
+            "execution_state": execution_state,
+            "traceback": traceback_text,
+            "registered_result_eligible": status == RUN_FAILED_AFTER_INJECTION,
+            "counted_in_analysis_denominator": status == RUN_FAILED_AFTER_INJECTION,
+        }
+        if status == RUN_FAILED_AFTER_INJECTION:
+            summary["run_record"] = {
                 "run_id": active["run_id"],
-                "scenario": active["scenario"],
                 "seed": active["seed"],
-                "replacement_for": active.get("replacement_for"),
-                "status": "infrastructure_invalid_interrupted",
-                "invalid_reason": reason,
-                "interruption_record": str(interruption_path),
-            },
-        )
+                "scenario": active["scenario"],
+                "approver": None,
+                "injection_start": execution_state.get("injection_start"),
+                "injection_end": None,
+                "recovery_time": None,
+                "detection_time": None,
+                "rca_output_time": None,
+                "guard_decision_time": None,
+                "remediation_time": None,
+                "verification_time": None,
+            }
+        write_json(summary_path, summary)
     return interruption_path
 
 
@@ -230,6 +345,7 @@ def _execute_once(
             if hasattr(result, "__await__"):
                 asyncio.run(result)
     except BaseException:
+        traceback_text = traceback_module.format_exc()
         state = _state(control_root)
         active = state.get("active_run")
         if active:
@@ -238,6 +354,7 @@ def _execute_once(
                 evidence_root=evidence_root,
                 control_root=control_root,
                 reason="executor_interrupted_or_crashed",
+                traceback_text=traceback_text,
             )
         _clear_active(control_root)
         raise
