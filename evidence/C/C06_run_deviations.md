@@ -1,51 +1,29 @@
-# Phase C6 Registered-Run Deviations
+# Phase C6 Run Deviations
 
-This file is post-freeze operational evidence created after `freeze/C-prerun-v3`.
-It is outside the v3 manifest. It records execution deviations only and does
-not modify any frozen code, configuration, registry, scenario, analysis, or
-detector-fit artifact.
+This file was created after the C6 TRAIN start attempt. It is outside the `freeze/C-prerun-v3` manifest and records post-freeze execution deviations only. No code, config, frozen file, VALIDATION, TEST, or C7 detector-fit action is authorized by this file.
 
-## C6-DEV-001 — Pre-injection payment reset timeout
+## C6-DEV-001 — Pre-injection payment reset timeout on C-TRAIN-BDR-12
 
 - **Run:** `C-TRAIN-BDR-12`
-- **Partition / scenario:** `TRAIN / bad_deployment_rollback`
-- **Seed:** `681377953`
-- **Run start recorded by loop:** `2026-10-11T19:00:21.070984Z`
-- **Interruption record time:** `2026-10-11T19:00:36.425987Z`
-- **Failure location:** the registered executor's initial
-  `POST http://localhost:8103/failure-mode/reset`, before Kafka consumer
-  start, baseline workload, and `injection_start`.
-- **Observed exception:** `httpx.ReadTimeout`.
-- **Executor timeout:** `httpx.AsyncClient(timeout=10.0)`.
-- **Recorded status:** `infrastructure_invalid_interrupted`.
-- **Reason:** `executor_interrupted_or_crashed`.
-- **Result visibility:** no registered algorithmic result was visible. The run
-  directory contained preflight health plus the infrastructure-invalid summary;
-  no injection, detection, RCA, Guard, remediation, verification, or resource
-  result was completed.
-- **Treatment:** keep the invalid run record. Do not delete, rewrite, or rerun
-  the completed invalid primary row.
+- **Partition / scenario / seed:** TRAIN / `bad_deployment_rollback` / `681377953`
+- **Registered run start:** `2026-10-11T19:00:21.070984Z`
+- **Interruption record:** `2026-10-11T19:00:36.425987Z`
+- **Failure point:** before `injection_start`, while the registered executor called `POST http://localhost:8103/failure-mode/reset`.
+- **Observed exception:** `httpx.ReadTimeout` under the frozen executor's `httpx.AsyncClient(timeout=10.0)`.
+- **Recorded classification:** `infrastructure_invalid_interrupted`, reason `executor_interrupted_or_crashed`.
+- **Result visibility:** no registered algorithmic result was visible. Detection, correlation, RCA, Guard, remediation, and verification did not complete.
+- **Server-side evidence:** payment-service remained live/ready. Its log records a reset request as HTTP 200 around the failure window, indicating the endpoint handler completed even though the executor did not receive the response within its client timeout.
+- **Disposition:** keep the invalid run record. Do not rerun this completed/accounted registry row.
 
 ## C6-DEV-002 — Operator-triggered spare start
 
-- **Run:** `C-SPARE-TRAIN-BDR-01`
+- **Spare:** `C-SPARE-TRAIN-BDR-01`
+- **Partition / scenario / seed:** TRAIN / `bad_deployment_rollback` / `1359673832`
 - **Replacement for:** `C-TRAIN-BDR-12`
-- **Partition / scenario:** `TRAIN / bad_deployment_rollback`
-- **Seed:** `1359673832`
-- **Start recorded by loop:** `2026-10-11T19:00:43.252399Z`
-- **Interruption record time:** `2026-10-11T19:01:58.810570Z`
-- **Cause:** during post-failure diagnosis, an operator-triggered second
-  `--detach` invocation started the preregistered replacement spare after the
-  first detached process had already exited.
-- **Stop:** the spare was stopped by operator `SIGINT` immediately after the
-  unintended start was identified.
-- **Recorded status:** `infrastructure_invalid_interrupted`.
-- **Accounting:** the spare is preserved and counted as a consumed TRAIN
-  bad-deployment spare. It is not deleted or rerun.
-- **Result visibility:** no registered algorithmic result was completed.
-- **Operational rule from this point:** `--detach` is never re-invoked during
-  C6 diagnosis or status checking. Any future restart requires an explicit
-  authorized restart decision after diagnosis, using the frozen resumable loop
-  semantics and without rerunning completed rows.
-
-No C7 detector fit, VALIDATION run, or TEST run was started by either deviation.
+- **Start:** `2026-10-11T19:00:43.252399Z`
+- **Cause:** an operator-triggered second invocation of the detached TRAIN-loop start path caused the preregistered BDR spare to begin while diagnosing C6-DEV-001.
+- **Stop:** SIGINT; interruption record `2026-10-11T19:01:58.810570Z`.
+- **Recorded classification:** `infrastructure_invalid_interrupted`, reason `executor_interrupted_or_crashed`.
+- **Spare accounting:** this spare is consumed and must not be rerun.
+- **Rule from this point forward:** `--detach` is never re-invoked for this C6 execution sequence. Any future continuation requires an explicit reviewed resume decision; no implicit restart is permitted.
+- **Result visibility:** no registered algorithmic result was produced by this spare.
