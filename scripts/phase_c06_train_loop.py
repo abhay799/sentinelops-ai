@@ -207,6 +207,42 @@ def run_summary_path(evidence_root: Path, run_id: str) -> Path:
     return evidence_root / run_id / "run_summary.json"
 
 
+def authoritative_reexecution_summary(
+    evidence_root: Path,
+    run_id: str,
+    *,
+    replacement_for: str,
+) -> dict[str, Any] | None:
+    matches: list[dict[str, Any]] = []
+
+    for summary_path in sorted(
+        evidence_root.glob(f"{run_id}__*/run_summary.json")
+    ):
+        summary = read_json(summary_path)
+
+        if summary.get("run_id") != run_id:
+            continue
+
+        if summary.get("replacement_for") != replacement_for:
+            continue
+
+        if summary.get("registered_result_eligible") is not True:
+            continue
+
+        if summary.get("counted_in_analysis_denominator") is not True:
+            continue
+
+        matches.append(summary)
+
+    if len(matches) > 1:
+        raise RuntimeError(
+            "multiple authoritative reexecution summaries found for "
+            f"{run_id} replacing {replacement_for}"
+        )
+
+    return matches[0] if matches else None
+
+
 def is_infrastructure_invalid(summary: dict[str, Any]) -> bool:
     return str(summary.get("status", "")).startswith(INFRASTRUCTURE_INVALID_PREFIX)
 
@@ -570,6 +606,14 @@ def _replacement_complete(
                 control_root=control_root,
                 executor=executor,
             )
+
+        authoritative = authoritative_reexecution_summary(
+            evidence_root,
+            str(spare["run_id"]),
+            replacement_for=str(primary["run_id"]),
+        )
+        if authoritative is not None:
+            return authoritative
 
         if not is_infrastructure_invalid(summary):
             return summary
