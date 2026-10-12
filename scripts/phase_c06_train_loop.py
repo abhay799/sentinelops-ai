@@ -181,6 +181,46 @@ def harness_defect_reexecution_dir(
     return path
 
 
+ENVIRONMENTAL_HTTPX_EXCEPTION_NAMES = {
+    "ReadTimeout",
+    "ConnectTimeout",
+    "ConnectError",
+}
+
+
+def preinjection_environmental_retry_eligible(
+    attempt_dir: Path,
+    *,
+    exception_name: str,
+) -> bool:
+    if exception_name not in ENVIRONMENTAL_HTTPX_EXCEPTION_NAMES:
+        return False
+
+    state_path = attempt_dir / "execution_state.json"
+    if not state_path.is_file():
+        return False
+
+    state = read_json(state_path)
+
+    return state.get("injection_start") is None
+
+
+def environmental_retry_dir(
+    evidence_root: Path,
+    run_id: str,
+    *,
+    attempt_label: str,
+) -> Path:
+    path = evidence_root / f"{run_id}__{attempt_label}"
+
+    if path.exists():
+        raise RuntimeError(
+            f"environmental retry directory already exists: {path}"
+        )
+
+    return path
+
+
 def train_schedule(registry: dict[str, Any]) -> list[dict[str, Any]]:
     return [row for row in registry["execution_schedule"] if row["partition"] == "TRAIN"]
 
