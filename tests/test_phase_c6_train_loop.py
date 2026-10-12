@@ -47,7 +47,7 @@ def _registry(primary: dict, spares: list[dict]) -> dict:
     }
 
 
-def test_loop_resume_after_interruption_never_reruns_primary(
+def test_loop_resume_after_harness_defect_stops_and_uses_no_spare(
     tmp_path: Path,
 ):
     primary = {
@@ -98,40 +98,46 @@ def test_loop_resume_after_interruption_never_reruns_primary(
         )
 
     assert calls == ["NR-TRAIN-LAT-01"]
+
     primary_summary = train_loop.read_json(
         train_loop.run_summary_path(
             evidence,
             primary["run_id"],
         )
     )
-    assert primary_summary["status"] == ("infrastructure_invalid_interrupted")
-    assert (evidence / primary["run_id"] / "partial_marker.txt").read_text(
-        encoding="utf-8"
-    ) == "preserve-me\n"
+
+    assert primary_summary["status"] == "harness_defect"
+    assert primary_summary["counted_in_analysis_denominator"] is False
+    assert primary_summary["registered_result_eligible"] is False
+
+    assert (
+        evidence / primary["run_id"] / "partial_marker.txt"
+    ).read_text(encoding="utf-8") == "preserve-me\n"
 
     def resumed_executor(entry, replacement_for):
         calls.append(entry["run_id"])
-        _write_summary(
-            evidence,
-            entry,
-            "executed_verified",
-            replacement_for=replacement_for,
+
+    with pytest.raises(RuntimeError, match="harness_defect"):
+        train_loop.run_train_loop(
+            registry=registry,
+            evidence_root=evidence,
+            control_root=control,
+            executor=resumed_executor,
         )
 
-    result = train_loop.run_train_loop(
-        registry=registry,
-        evidence_root=evidence,
-        control_root=control,
-        executor=resumed_executor,
+    assert calls == ["NR-TRAIN-LAT-01"]
+    assert not (evidence / spares[0]["run_id"]).exists()
+    assert not (evidence / spares[1]["run_id"]).exists()
+
+    interruption_files = list(
+        (control / "interruptions").glob("*.json")
+    )
+    assert len(interruption_files) == 1
+    assert (
+        train_loop.read_json(interruption_files[0])["event"]
+        == "interruption"
     )
 
-    assert calls.count("NR-TRAIN-LAT-01") == 1
-    assert calls.count("NR-SPARE-TRAIN-LAT-01") == 1
-    assert calls.count("NR-SPARE-TRAIN-LAT-02") == 0
-    assert result["loop_complete"] is True
-    interruption_files = list((control / "interruptions").glob("*.json"))
-    assert len(interruption_files) == 1
-    assert train_loop.read_json(interruption_files[0])["event"] == "interruption"
 
 
 def test_infrastructure_invalid_uses_next_same_cell_spare(

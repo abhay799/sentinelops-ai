@@ -7,6 +7,8 @@ import os
 import subprocess
 import sys
 import traceback as traceback_module
+
+import httpx
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any, Callable
@@ -25,6 +27,7 @@ LOG_PATH = CONTROL_ROOT / "train_loop.log"
 
 INFRASTRUCTURE_INVALID_PREFIX = "infrastructure_invalid"
 RUN_FAILED_AFTER_INJECTION = "run_failed_after_injection"
+HARNESS_DEFECT = "harness_defect"
 
 
 def utc_iso() -> str:
@@ -62,6 +65,18 @@ def _host_event_reason(
     return None
 
 
+def is_environmental_exception(exc: BaseException | None) -> bool:
+    if exc is None:
+        return False
+    return isinstance(
+        exc,
+        (
+            httpx.TimeoutException,
+            httpx.ConnectError,
+        ),
+    )
+
+
 def _execution_state(
     evidence_root: Path,
     run_id: str,
@@ -77,6 +92,7 @@ def classify_interruption(
     *,
     evidence_root: Path,
     current_host_check: dict[str, Any] | None = None,
+    exception: BaseException | None = None,
 ) -> tuple[str, str, dict[str, Any], dict[str, Any]]:
     current_check = current_host_check or host_check()
     host_reason = _host_event_reason(active.get("host_check"), current_check)
@@ -85,6 +101,13 @@ def classify_interruption(
         return (
             "infrastructure_invalid_host_event",
             host_reason,
+            state,
+            current_check,
+        )
+    if exception is not None and not is_environmental_exception(exception):
+        return (
+            HARNESS_DEFECT,
+            f"non_environmental_exception:{type(exception).__name__}",
             state,
             current_check,
         )
@@ -125,6 +148,37 @@ def run_summary_path(evidence_root: Path, run_id: str) -> Path:
 
 def is_infrastructure_invalid(summary: dict[str, Any]) -> bool:
     return str(summary.get("status", "")).startswith(INFRASTRUCTURE_INVALID_PREFIX)
+
+
+def is_harness_defect(summary: dict[str, Any]) -> bool:
+    return summary.get("status") == HARNESS_DEFECT
+
+
+def harness_defect_reexecution_eligible(
+    summary: dict[str, Any],
+) -> bool:
+    if summary.get("status") != HARNESS_DEFECT:
+        return False
+
+    if summary.get("registered_result_eligible") is True:
+        return False
+
+    state = summary.get("execution_state") or {}
+    return state.get("injection_start") is None
+
+
+def harness_defect_reexecution_dir(
+    evidence_root: Path,
+    run_id: str,
+) -> Path:
+    path = evidence_root / f"{run_id}__a5_rerun"
+
+    if path.exists():
+        raise RuntimeError(
+            f"harness-defect reexecution directory already exists: {path}"
+        )
+
+    return path
 
 
 def train_schedule(registry: dict[str, Any]) -> list[dict[str, Any]]:
@@ -194,6 +248,7 @@ def _record_interruption(
     reason: str,
     traceback_text: str | None = None,
     current_host_check: dict[str, Any] | None = None,
+    exception: BaseException | None = None,
 ) -> Path:
     timestamp = utc_iso()
     safe_stamp = timestamp.replace(":", "").replace("-", "")
@@ -201,6 +256,7 @@ def _record_interruption(
         active,
         evidence_root=evidence_root,
         current_host_check=current_host_check,
+        exception=exception,
     )
     record = {
         "classification": "registered_control_record",
@@ -249,6 +305,9 @@ def _record_interruption(
             "traceback": traceback_text,
             "registered_result_eligible": status == RUN_FAILED_AFTER_INJECTION,
             "counted_in_analysis_denominator": status == RUN_FAILED_AFTER_INJECTION,
+            "harness_defect_reason": (
+                classified_reason if status == HARNESS_DEFECT else None
+            ),
         }
         if status == RUN_FAILED_AFTER_INJECTION:
             summary["run_record"] = {
@@ -300,10 +359,13 @@ def recover_interrupted_run(
 async def _default_executor(
     entry: dict[str, Any],
     replacement_for: str | None,
+    *,
+    attempt_label: str | None = None,
 ) -> Path:
     return await run_registered_train(
         str(entry["run_id"]),
         replacement_for=replacement_for,
+        attempt_label=attempt_label,
     )
 
 
@@ -318,10 +380,17 @@ def _execute_once(
         Any,
     ]
     | None = None,
+    attempt_label: str | None = None,
 ) -> dict[str, Any]:
+    artifact_run_id = (
+        f"{entry['run_id']}__{attempt_label}"
+        if attempt_label
+        else str(entry["run_id"])
+    )
+
     summary_path = run_summary_path(
         evidence_root,
-        str(entry["run_id"]),
+        artifact_run_id,
     )
     if summary_path.exists():
         return read_json(summary_path)
@@ -338,13 +407,14 @@ def _execute_once(
                 _default_executor(
                     entry,
                     replacement_for,
+                    attempt_label=attempt_label,
                 )
             )
         else:
             result = executor(entry, replacement_for)
             if hasattr(result, "__await__"):
                 asyncio.run(result)
-    except BaseException:
+    except BaseException as exc:
         traceback_text = traceback_module.format_exc()
         state = _state(control_root)
         active = state.get("active_run")
@@ -355,6 +425,7 @@ def _execute_once(
                 control_root=control_root,
                 reason="executor_interrupted_or_crashed",
                 traceback_text=traceback_text,
+                exception=exc,
             )
         _clear_active(control_root)
         raise
@@ -441,6 +512,12 @@ def run_train_loop(
                 evidence_root=evidence_root,
                 control_root=control_root,
                 executor=executor,
+            )
+
+        if is_harness_defect(summary):
+            raise RuntimeError(
+                "STOP: harness_defect requires harness correction before "
+                f"continuing; run_id={primary['run_id']}"
             )
 
         if is_infrastructure_invalid(summary):

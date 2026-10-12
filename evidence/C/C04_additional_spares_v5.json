@@ -1,0 +1,35 @@
+{
+  "amendment": "C-prerun-v5",
+  "base_registry": "evidence/C/C04_run_registry.json",
+  "base_registry_sha256": "e88ff4b8363a7cfc89d709175d50127a46a1880290961a66c694d7c64b79df07",
+  "master_seed": 42,
+  "seed_derivation_rule": "seed = first 8 bytes of SHA256('42|seed|partition|scenario|kind|ordinal') interpreted unsigned big-endian, modulo 2147483646, plus 1",
+  "kind": "spare",
+  "additional_spares_per_scenario_partition": 2,
+  "ordinals": [3, 4],
+  "additional_spare_count": 18,
+  "collision_count_with_existing_registered_and_spares": 0,
+  "duplicate_count_within_additional_spares": 0,
+  "reserved_spares": [
+    {"run_id":"C-SPARE-TRAIN-LAT-03","partition":"TRAIN","scenario":"latency","spare_ordinal":3,"seed":181019011},
+    {"run_id":"C-SPARE-TRAIN-LAT-04","partition":"TRAIN","scenario":"latency","spare_ordinal":4,"seed":1406391285},
+    {"run_id":"C-SPARE-TRAIN-ERR-03","partition":"TRAIN","scenario":"errors","spare_ordinal":3,"seed":1147848262},
+    {"run_id":"C-SPARE-TRAIN-ERR-04","partition":"TRAIN","scenario":"errors","spare_ordinal":4,"seed":1476794839},
+    {"run_id":"C-SPARE-TRAIN-BDR-03","partition":"TRAIN","scenario":"bad_deployment_rollback","spare_ordinal":3,"seed":1271477519},
+    {"run_id":"C-SPARE-TRAIN-BDR-04","partition":"TRAIN","scenario":"bad_deployment_rollback","spare_ordinal":4,"seed":246301243},
+
+    {"run_id":"C-SPARE-VALIDATION-LAT-03","partition":"VALIDATION","scenario":"latency","spare_ordinal":3,"seed":1225995925},
+    {"run_id":"C-SPARE-VALIDATION-LAT-04","partition":"VALIDATION","scenario":"latency","spare_ordinal":4,"seed":1555174347},
+    {"run_id":"C-SPARE-VALIDATION-ERR-03","partition":"VALIDATION","scenario":"errors","spare_ordinal":3,"seed":1521246460},
+    {"run_id":"C-SPARE-VALIDATION-ERR-04","partition":"VALIDATION","scenario":"errors","spare_ordinal":4,"seed":708097199},
+    {"run_id":"C-SPARE-VALIDATION-BDR-03","partition":"VALIDATION","scenario":"bad_deployment_rollback","spare_ordinal":3,"seed":1798960297},
+    {"run_id":"C-SPARE-VALIDATION-BDR-04","partition":"VALIDATION","scenario":"bad_deployment_rollback","spare_ordinal":4,"seed":1841132532},
+
+    {"run_id":"C-SPARE-TEST-LAT-03","partition":"TEST","scenario":"latency","spare_ordinal":3,"seed":1192512674},
+    {"run_id":"C-SPARE-TEST-LAT-04","partition":"TEST","scenario":"latency","spare_ordinal":4,"seed":714610015},
+    {"run_id":"C-SPARE-TEST-ERR-03","partition":"TEST","scenario":"errors","spare_ordinal":3,"seed":1883540443},
+    {"run_id":"C-SPARE-TEST-ERR-04","partition":"TEST","scenario":"errors","spare_ordinal":4,"seed":1677548166},
+    {"run_id":"C-SPARE-TEST-BDR-03","partition":"TEST","scenario":"bad_deployment_rollback","spare_ordinal":3,"seed":893532154},
+    {"run_id":"C-SPARE-TEST-BDR-04","partition":"TEST","scenario":"bad_deployment_rollback","spare_ordinal":4,"seed":889555894}
+  ]
+}

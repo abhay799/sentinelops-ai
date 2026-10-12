@@ -185,6 +185,16 @@ def run_non_registry_dry_run(scenario: str, seed: int) -> Path:
     return run_dir
 
 
+def reexecution_artifact_id(
+    run_id: str,
+    attempt_label: str | None,
+) -> str:
+    if attempt_label is None:
+        return run_id
+
+    return f"{run_id}__{attempt_label}"
+
+
 def _prepare_workdir(run_id: str) -> Path:
     workdir = WORK_ROOT / run_id
     if workdir.exists():
@@ -279,7 +289,7 @@ async def _activate_scenario(
 
     if scenario == "bad_deployment_rollback":
         profile = _load_yaml(BAD_DEPLOYMENT_PATH, "chaos_bad_deployment_v1")
-        change = profile["change_event"]
+        change = profile["deployment_change"]
         change_response = await client.post(
             "http://localhost:8103/change-event",
             json={
@@ -291,7 +301,7 @@ async def _activate_scenario(
             },
         )
         change_response.raise_for_status()
-        first = profile["degradation_stages"][0]
+        first = profile["degraded_profile"]["stages"][0]
         injection_start = utc_now()
         if run_dir is not None:
             _update_execution_state(
@@ -306,7 +316,7 @@ async def _activate_scenario(
         )
         response.raise_for_status()
         await _workload(client, float(first["duration_seconds"]))
-        second = profile["degradation_stages"][1]
+        second = profile["degraded_profile"]["stages"][1]
         response = await client.post(
             "http://localhost:8103/failure-mode",
             json=second["failure_mode"],
@@ -537,14 +547,22 @@ async def run_registered_train(
     run_id: str,
     *,
     replacement_for: str | None = None,
+    attempt_label: str | None = None,
 ) -> Path:
     entry = _load_registry_entry(run_id)
     if entry["partition"] != "TRAIN":
         raise RuntimeError("C6 runner accepts TRAIN entries only")
 
-    run_dir = TRAIN_EVIDENCE_ROOT / run_id
+    artifact_id = reexecution_artifact_id(
+        run_id,
+        attempt_label,
+    )
+
+    run_dir = TRAIN_EVIDENCE_ROOT / artifact_id
     if run_dir.exists():
-        raise RuntimeError(f"registered evidence already exists for {run_id}")
+        raise RuntimeError(
+            f"registered evidence already exists for {artifact_id}"
+        )
     run_dir.mkdir(parents=True)
     _update_execution_state(
         run_dir,
@@ -559,7 +577,7 @@ async def run_registered_train(
         current_stage="preflight",
         stage_timestamps={},
     )
-    workdir = _prepare_workdir(run_id)
+    workdir = _prepare_workdir(artifact_id)
     ground_truth_root = TRAIN_EVIDENCE_ROOT / "_ground_truth_injection_only"
 
     wall_start = time.perf_counter()
