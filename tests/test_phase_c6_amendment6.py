@@ -4,7 +4,19 @@ from pathlib import Path
 
 import pytest
 
-from scripts import phase_c06_train_loop as train_loop
+import importlib.util
+
+SCRIPT_PATH = Path("scripts/phase_c06_train_loop.py")
+
+spec = importlib.util.spec_from_file_location(
+    "phase_c06_train_loop_a6",
+    SCRIPT_PATH,
+)
+assert spec is not None
+assert spec.loader is not None
+
+train_loop = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(train_loop)
 from sentinelops.chaos import registered_harness
 
 

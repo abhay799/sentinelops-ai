@@ -142,6 +142,67 @@ def read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def finalize_orphaned_post_injection_attempt(
+    attempt_dir: Path,
+    *,
+    failure_reason: str,
+) -> Path:
+    state_path = attempt_dir / "execution_state.json"
+    if not state_path.is_file():
+        raise RuntimeError(
+            f"missing execution_state.json for orphaned attempt: {attempt_dir}"
+        )
+
+    summary_path = attempt_dir / "run_summary.json"
+    if summary_path.exists():
+        raise RuntimeError(
+            f"run_summary.json already exists for orphaned attempt: {attempt_dir}"
+        )
+
+    state = read_json(state_path)
+    injection_start = state.get("injection_start")
+    if injection_start is None:
+        raise RuntimeError(
+            "orphaned attempt is not post-injection: injection_start is null"
+        )
+
+    summary: dict[str, Any] = {
+        "classification": "registered",
+        "partition": state["partition"],
+        "run_id": state["run_id"],
+        "artifact_run_id": attempt_dir.name,
+        "scenario": state["scenario"],
+        "seed": state["seed"],
+        "replacement_for": state.get("replacement_for"),
+        "status": RUN_FAILED_AFTER_INJECTION,
+        "invalid_reason": None,
+        "failure_reason": failure_reason,
+        "interruption_record": None,
+        "execution_state": state,
+        "traceback": None,
+        "registered_result_eligible": True,
+        "counted_in_analysis_denominator": True,
+        "harness_defect_reason": None,
+        "run_record": {
+            "run_id": state["run_id"],
+            "seed": state["seed"],
+            "scenario": state["scenario"],
+            "approver": None,
+            "injection_start": injection_start,
+            "injection_end": None,
+            "recovery_time": None,
+            "detection_time": None,
+            "rca_output_time": None,
+            "guard_decision_time": None,
+            "remediation_time": None,
+            "verification_time": None,
+        },
+    }
+
+    write_json(summary_path, summary)
+    return summary_path
+
+
 def run_summary_path(evidence_root: Path, run_id: str) -> Path:
     return evidence_root / run_id / "run_summary.json"
 
