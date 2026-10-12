@@ -207,6 +207,43 @@ def run_summary_path(evidence_root: Path, run_id: str) -> Path:
     return evidence_root / run_id / "run_summary.json"
 
 
+def preexecutor_launcher_retry_eligible(
+    evidence_root: Path,
+    run_id: str,
+) -> bool:
+    run_dir = evidence_root / run_id
+    summary_path = run_dir / "run_summary.json"
+
+    if not summary_path.is_file():
+        return False
+
+    if (run_dir / "execution_state.json").exists():
+        return False
+
+    summary = read_json(summary_path)
+
+    if summary.get("status") != HARNESS_DEFECT:
+        return False
+
+    if summary.get("registered_result_eligible") is not False:
+        return False
+
+    if summary.get("counted_in_analysis_denominator") is not False:
+        return False
+
+    traceback_text = str(summary.get("traceback") or "")
+
+    required_fragments = (
+        "result = executor(entry, replacement_for)",
+        "TypeError: run_registered_train() takes 1 positional argument but 2 were given",
+    )
+
+    return all(
+        fragment in traceback_text
+        for fragment in required_fragments
+    )
+
+
 def authoritative_reexecution_summary(
     evidence_root: Path,
     run_id: str,
@@ -658,6 +695,31 @@ def run_train_loop(
                 control_root=control_root,
                 executor=executor,
             )
+
+        if (
+            is_harness_defect(summary)
+            and preexecutor_launcher_retry_eligible(
+                evidence_root,
+                str(primary["run_id"]),
+            )
+        ):
+            attempt_label = "launcher_retry_01"
+            retry_summary_path = run_summary_path(
+                evidence_root,
+                f"{primary['run_id']}__{attempt_label}",
+            )
+
+            if retry_summary_path.exists():
+                summary = read_json(retry_summary_path)
+            else:
+                summary = _execute_once(
+                    primary,
+                    replacement_for=None,
+                    evidence_root=evidence_root,
+                    control_root=control_root,
+                    executor=executor,
+                    attempt_label=attempt_label,
+                )
 
         if is_harness_defect(summary):
             raise RuntimeError(
