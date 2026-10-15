@@ -611,6 +611,37 @@ def _execute_once(
     return read_json(summary_path)
 
 
+def registered_spares_exhausted_for_primary(
+    primary: dict[str, Any],
+    registry: dict[str, Any],
+    *,
+    evidence_root: Path,
+) -> bool:
+    spares = train_spares(
+        registry,
+        str(primary["scenario"]),
+    )
+
+    if not spares:
+        return False
+
+    for spare in spares:
+        summary_path = run_summary_path(
+            evidence_root,
+            str(spare["run_id"]),
+        )
+
+        if not summary_path.exists():
+            return False
+
+        summary = read_json(summary_path)
+
+        if summary.get("replacement_for") == str(primary["run_id"]):
+            return False
+
+    return True
+
+
 def _replacement_complete(
     primary: dict[str, Any],
     registry: dict[str, Any],
@@ -728,6 +759,13 @@ def run_train_loop(
             )
 
         if is_infrastructure_invalid(summary):
+            if registered_spares_exhausted_for_primary(
+                primary,
+                registry,
+                evidence_root=evidence_root,
+            ):
+                continue
+
             _replacement_complete(
                 primary,
                 registry,
